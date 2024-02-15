@@ -10,8 +10,8 @@ import ureshino3 from "../assets/ureshinoimage3.png";
 import "~/styles/index.css";
 
 const { generator } = Astro;
-const site = "https://lp-template-alpha.vercel.app/koreasalon/";
-const image = new URL("usocial3.png", site);
+const site = "https://ureshinosalon.vercel.app/koreasalon/";
+const image = new URL("social3.png", site);
 const description =
   "韓国美容整形に特化したオンラインサロン";
 ---
@@ -24,11 +24,11 @@ const description =
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="generator" content={generator} />
 
-    <title>Astro Landing Page</title>
+    <title>KoreaSalon Page</title>
     <meta name="description" content={description} />
 
     <!-- social media -->
-    <meta property="og:title" content="Astro" />
+    <meta property="og:title" content="KoreaSalon" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
