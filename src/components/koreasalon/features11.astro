@@ -1,0 +1,46 @@
+---
+import CompatibilityList from "~/components/koreasalon/compatibility-list.astro";
+import ContentSection from "~/components/common/content-section.astro";
+import type { CompatibilityItem } from "~/types";
+
+const frameworks: Array<CompatibilityItem> = [
+  // {
+  //   title: "React",
+  //   icon: "frameworks/react",
+  //   url: "https://reactjs.org/",
+  // },
+  // {
+  //   title: "Preact",
+  //   icon: "frameworks/preact",
+  //   url: "https://preactjs.com/",
+  // },
+  // {
+  //   title: "Svelte",
+  //   icon: "frameworks/svelte",
+  //   url: "https://svelte.dev/",
+  // },
+  // {
+  //   title: "Vue",
+  //   icon: "frameworks/vue",
+  //   url: "https://vuejs.org/",
+  // },
+  // {
+  //   title: "Solid",
+  //   icon: "frameworks/solid",
+  //   url: "https://www.solidjs.com/",
+  // },
+  // {
+  //   title: "Lit",
+  //   icon: "frameworks/lit",
+  //   url: "https://lit.dev/",
+  // },
+];
+---
+
+<ContentSection title="続き（内容が分かれば下にいくらでも続けること可能）" id="compatibility">
+  <Fragment slot="lead">
+    <span class="text-primary"></span>{" "}
+    <span class="text-primary"></span>
+    <span class="text-primary">text</span>.
+  </Fragment>
+</ContentSection>

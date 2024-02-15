@@ -1,0 +1,18 @@
+---
+import { Image } from "astro:assets";
+import logomark from "../../assets/logomark.png";
+import ContentSection from "~/components/common/content-section.astro";
+
+export interface Props {
+  title: string;
+  id: string;
+}
+const { title, id } = Astro.props;
+---
+
+<ContentSection title={title} id={id}>
+  <Image src={logomark} alt="うれしのサロンロゴ" class="size-32" />
+  <Fragment slot="lead">
+    <slot/>
+  </Fragment>
+</ContentSection>

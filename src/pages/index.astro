@@ -1,0 +1,80 @@
+---
+import "@fontsource-variable/inter";
+import Footer from "~/components/common/footer.astro";
+import Header from "~/components/common/header.astro";
+import Intro from "~/components/common/intro.astro";
+import LinkButtons from "~/components/common/link-buttons.astro";
+import Showcase from "~/components/common/showcase.astro";
+import Splash from "~/components/common/splash.astro";
+
+import ureshino1 from "../assets/ureshinoimage1.png";
+import "~/styles/index.css";
+
+const { generator } = Astro;
+const site = "https://lp-template-alpha.vercel.app/";
+const image = new URL("social.jpg", site);
+const description =
+  "「かわいく賢く生きる」ための女性向けオンラインサロンうれしのサロン";
+---
+
+<!doctype html>
+<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.png" type="image/svg+xml" />
+    <meta name="generator" content={generator} />
+
+    <title>Astro Landing Page</title>
+    <meta name="description" content={description} />
+
+    <!-- social media -->
+    <meta property="og:title" content="ureshinosalon" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={site} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- initialize theme -->
+    <script is:inline>
+      const themeSaved = localStorage.getItem("theme");
+
+      if (themeSaved) {
+        document.documentElement.dataset.theme = themeSaved;
+      } else {
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+      }
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (event) => {
+          if (!localStorage.getItem("theme")) {
+            document.documentElement.dataset.theme = event.matches
+              ? "dark"
+              : "light";
+          }
+        });
+    </script>
+  </head>
+  <body
+    class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
+  >
+    <Header />
+    <Splash src={ureshino1} />
+    <div class="space-y-24 px-8 py-32">
+      <Intro title="「かわいく賢く生きる」ための女性向けオンラインサロン" id="intro">
+        マレーシア在住の経営者・インフルエンサーの
+        <span class="text-primary">嬉野ゆみ から</span>
+        <span class="text-primary">「仕事」「美容」「恋愛」</span>について
+        考え方やノウハウを学びませんか？ <span class="text-primary">本気で人生を</span> 本気で人生を変えたい方はうれしのサロンへ♡
+      </Intro>
+      <LinkButtons />
+      <Showcase />
+    </div>
+    <Footer />
+  </body>
+</html>

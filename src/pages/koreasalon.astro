@@ -1,0 +1,87 @@
+---
+import "@fontsource-variable/inter";
+import Features11 from "~/components/koreasalon/features11.astro";
+import Header from "~/components/common/header.astro";
+import Footer from "~/components/common/footer.astro";
+import Intro from "~/components/common/intro.astro";
+import Splash from "~/components/common/splash.astro";
+
+import ureshino3 from "../assets/ureshinoimage3.png";
+import "~/styles/index.css";
+
+const { generator } = Astro;
+const site = "https://lp-template-alpha.vercel.app/koreasalon/";
+const image = new URL("usocial3.png", site);
+const description =
+  "韓国美容整形に特化したオンラインサロン";
+---
+
+<!doctype html>
+<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="generator" content={generator} />
+
+    <title>Astro Landing Page</title>
+    <meta name="description" content={description} />
+
+    <!-- social media -->
+    <meta property="og:title" content="Astro" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={site} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- initialize theme -->
+    <script is:inline>
+      const themeSaved = localStorage.getItem("theme");
+
+      if (themeSaved) {
+        document.documentElement.dataset.theme = themeSaved;
+      } else {
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+      }
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (event) => {
+          if (!localStorage.getItem("theme")) {
+            document.documentElement.dataset.theme = event.matches
+              ? "dark"
+              : "light";
+          }
+        });
+    </script>
+  </head>
+  <body
+    class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
+  >
+    <Header />
+    <Splash src={ureshino3} />
+    <div class="space-y-24 px-8 py-32">
+      <Intro title="韓国美容整形に特化したオンラインサロン" id="intro">
+        text
+        <span class="text-primary">text</span>
+        <span class="text-primary">text</span>.
+        text<span class="text-primary">text</span> text
+        <div></div>
+        <button class="text-white font-bold py-4 px-6 rounded-full" style="background-color:#3bc0af">
+          韓国美容整形サロンに参加する
+        </button>
+      </Intro>
+      <Features11 />
+      <div class="text-center">
+        <button class="text-white font-bold py-4 px-6 rounded-full" style="background-color:#3bc0af">
+          韓国美容整形サロンに参加する
+        </button>
+      </div>
+    </div>
+    <Footer />
+  </body>
+</html>

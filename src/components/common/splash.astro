@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+
+const widths = [450, 800];
+const sizes = "(min-width: 640px) 42vw, 67vw";
+
+export interface Props {
+  src: ImageMetadata;
+}
+
+const { src } = Astro.props;
+---
+
+<section class="relative h-full bg-white">
+  <Image class="absolute h-full w-full object-cover" src={src} alt="うれしのサロントップ画像"/>
+  <div class="relative grid h-full place-items-center sm:grid-cols-2">
+    <h2
+      class="flex flex-col items-center gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end"
+    >
+      <!-- <Image src={logomark} alt="うれしのサロンロゴ" class="size-24 text-white md:size-32" /> -->
+      <!-- <div
+        class="gradient-text text-center font-extrabold tracking-tighter text-8xl"
+      >
+        Build fast
+        <br /> websites,
+        <br /> faster.
+      </div> -->
+    </h2>
+    <div
+      id="astronaut"
+      class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
+    >
+      <!-- <Image
+        class="h-full w-full object-cover"
+        src={ureshino1} alt="うれしのサロントップ画像"
+        widths={widths}
+        sizes={sizes}
+        loading="eager"
+        alt="A floating astronaut in a space suit"
+      /> -->
+    </div>
+  </div>
+</section>
+
+<noscript>
+  <style>
+    #splash-bg-fallback {
+      display: block;
+    }
+  </style>
+</noscript>

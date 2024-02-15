@@ -1,0 +1,19 @@
+[data-theme="light"] {
+  --color-primary: "#ffffff"; /* 濃背景文字 */
+  --color-secondary: #ddb8b8;
+  --color-text: #f7f1f1; /* 薄背景 */
+  --color-text-offset: #000000; /* 薄背景文字 */
+  --color-background: #ddb8b8; /* 濃背景 */
+  --color-background-offset: "#ffffff";
+  --color-border: "#ffffff";
+}
+
+[data-theme="dark"] {
+  --color-primary: "#ffffff"; /* 濃背景文字 */
+  --color-secondary: #ddb8b8;
+  --color-text: #f7f1f1; /* 薄背景 */
+  --color-text-offset: #000000; /* 薄背景文字 */
+  --color-background: #ddb8b8; /* 濃背景 */
+  --color-background-offset: "#ffffff";
+  --color-border: "#ffffff";
+}
