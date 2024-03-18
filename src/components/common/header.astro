@@ -12,74 +12,37 @@ const navItems: Array<NavItem> = [
 ];
 ---
 
-<header
-  id="page-header"
-  class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
->
-  <a class="flex items-center gap-3 hover:!text-default" href="#">
-    <Image src={logomark} alt="うれしのサロンロゴ" class="size-10" />
-    <h1 class="">ureshino salon</h1>
-    <!-- <Icon name="wordmark" class="hidden h-4 sm:block" /> -->
-  </a>
-  <div>
-    <div class="flex items-center gap-6">
-      <nav class="hidden sm:block">
-        <ul class="flex items-center gap-6">
-          {
-            navItems.map(({ title, url }) => (
-              <li>
-                <a class="text-sm" href={url}>
-                  {title}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </nav>
-      <button
-        id="open-nav-button"
-        type="button"
-        class="btn sm:hidden"
-        aria-label="Navigation"
-      >
-        <Icon name="mdi:menu" class="size-8" />
-      </button>
-      <ThemeSwitcher />
+<div class="fixed z-10 w-full flex justify-center items-center px-16 py-3.5 text-sm text-zinc-500 max-md:px-5" style="background: linear-gradient(0deg, #E5D5CB 11.43%, rgba(248, 239, 233, 0.80) 92.86%);">
+  <div class="flex gap-5 justify-center items-center max-w-full max-md:flex-wrap">
+    <div class="grow self-stretch my-auto tracking-tight">
+      <span class="leading-4 text-zinc-500">2024</span>
+      <span class="text-zinc-500">年</span>
+      <span class="leading-4 text-zinc-500">4</span>
+      <span class="text-zinc-500">月</span>
+      <span class="leading-4 text-zinc-500">21</span>
+      <span class="text-zinc-500">日(日)</span>
+      <span class="leading-4 text-zinc-500">23:59</span>
+      <span class="text-zinc-500">まで</span>
     </div>
-    <div id="menu-modal" class="modal hidden" aria-hidden="true">
-      <div class="fixed inset-0 bg-default px-8 py-4 text-default">
-        <div class="space-y-4" role="dialog" aria-modal="true">
-          <header class="text-right">
-            <button
-              id="close-nav-button"
-              type="button"
-              class="btn"
-              aria-label="Close navigation"
-            >
-              <Icon name="mdi:close" class="size-8" />
-            </button>
-          </header>
-          <div class="flex justify-center">
-            <Image src={logomark} alt="うれしのサロンロゴ" class="size-16" />
-          </div>
-          <nav>
-            <ul class="flex flex-col">
-              {
-                navItems.map(({ title, url }) => (
-                  <li>
-                    <a class="block py-4 text-center text-xl" href={url}>
-                      {title}
-                    </a>
-                  </li>
-                ))
-              }
-            </ul>
-          </nav>
-        </div>
-      </div>
+    <div class="flex-auto self-stretch text-3xl text-zinc-600" style="color: var(--dark-grey, #52525B);
+
+/* H2_j */
+font-family: HannariMincho;
+font-size: 28px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;">
+      期間限定募集(第<span class="leading-8">2</span>期)
+    </div>
+    <div class="flex-auto self-stretch my-auto tracking-tight">
+      <span class="text-zinc-500">限定 </span>
+      <span class="text-2xl font-bold tracking-wider leading-7 text-zinc-500">
+        200
+      </span>
+      <span class="text-zinc-500">名先着順</span>
     </div>
   </div>
-</header>
+</div>
 
 <script>
   import MicroModal from "micromodal";
