@@ -4,9 +4,7 @@ import ContentSection from "~/components/common/content-section.astro";
 import type { FeatureItem } from "~/types";
 
 import { Image } from "astro:assets";
-import ureshinosalon_contents1 from "../../assets/ureshinosalon_contents1.png";
-import ureshinosalon_contents2 from "../../assets/ureshinosalon_contents2.png";
-import ureshinosalon_contents3 from "../../assets/ureshinosalon_contents3.png";
+// import ureshinosalon_contents1 from "../../assets/ureshinosalon_contents1.png";
 
 const ureshinosalon_contents: Array<FeatureItem> = [
   // {
@@ -48,15 +46,13 @@ const ureshinosalon_contents: Array<FeatureItem> = [
 ];
 ---
 
-<ContentSection title="うれしのサロンのコンテンツ" id="ureshinosalon_contents">
+<ContentSection title="title" id="ureshinosalon_contents">
   <Fragment slot="lead">
-    <Image src={ureshinosalon_contents1} alt="うれしのサロンコンテンツ" />
-    コンテンツは、入会後にご招待する会員限定の「Instagram」と「Slack」にて受け取り、利用することができます。
-    サロンの活用方法に困ったり、ご不明な点がある場合にも、運営スタッフがサポートしますのでご安心ください。
+    <!-- <Image src={ureshinosalon_contents1} alt="title" /> -->
+    text
     <div class="flex justify-center">
       <div class="max-w-4xl grid grid-cols-1 gap-2 sm:grid-cols-2">
-        <Image src={ureshinosalon_contents2} alt="うれしのコラム1" />
-        <Image src={ureshinosalon_contents3} alt="うれしのコラム2" />
+        <!-- <Image src={ureshinosalon_contents2} alt="うれしのコラム1" /> -->
       </div>
     </div>
   </Fragment>

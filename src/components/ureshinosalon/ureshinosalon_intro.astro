@@ -4,9 +4,8 @@ import ContentSection from "~/components/common/content-section.astro";
 import type { FeatureItem } from "~/types";
 
 import { Image } from "astro:assets";
-import ureshinosalon_intro1 from "../../assets/ureshinosalon_intro1.png";
-import ureshinosalon_intro2 from "../../assets/ureshinosalon_intro2.png";
-import ureshinosalon_intro3 from "../../assets/ureshinosalon_intro3.png";
+// import ureshinosalon_intro1 from "../../assets/ureshinosalon_intro1.png";
+
 
 const ureshinosalon_intro: Array<FeatureItem> = [
   // {
@@ -48,16 +47,14 @@ const ureshinosalon_intro: Array<FeatureItem> = [
 ];
 ---
 
-<ContentSection title="かわいく賢く生きる" id="ureshinosalon_intro">
+<ContentSection title="title" id="ureshinosalon_intro">
   <Fragment slot="lead">
     うれしのサロンでは <span class="text-primary">「かわいく賢く生きる」ために</span>
     仕事・美容・恋愛において
     <span class="text-primary">以下のゴールを目指します♡</span>
     <div class="flex justify-center">
       <div class="max-w-4xl grid grid-cols-1 gap-2 sm:grid-cols-3">
-        <Image src={ureshinosalon_intro1} alt="かわいく賢く生きる" />
-        <Image src={ureshinosalon_intro2} alt="かわいく賢く生きる" />
-        <Image src={ureshinosalon_intro3} alt="かわいく賢く生きる" />
+        <!-- <Image src={ureshinosalon_intro1} alt="かわいく賢く生きる" /> -->
       </div>
     </div>
   </Fragment>
