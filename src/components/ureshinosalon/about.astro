@@ -4,5 +4,778 @@ import { Image } from "astro:assets";
 import ureshino1 from "~/assets/hero_top1.png";
 import logo from "~/assets/logomark.png";
 import description from "~/assets/upgrade_your_life.png";
+import about from "~/assets/about.png";
 ---
 
+<div class="box">
+    <div class="about">
+      <div class="overlap">
+        <div class="bg">
+          <div class="overlap-group">
+            <div class="pink"></div>
+            <img class="white-bokeh" src="img/white-bokeh-5.png" />
+            <div class="div"></div>
+          </div>
+        </div>
+        <div class="pic">
+          <div class="overlap-2">
+            <Image src={about} alt="オフ会画像" class="rectangle"/>
+            <div class="rectangle-2"></div>
+          </div>
+        </div>
+        <div class="flexcontainer">
+          <p class="text">
+            <span class="text-wrapper">あなたは今の自分に満足していますか？<br /></span>
+          </p>
+          <p class="text">
+            <span class="span">自分らしさ</span>
+            <span class="text-wrapper">を大切にしながら価値観の合う仲間、新しい可能性を一緒に見つけませんか？</span>
+          </p>
+        </div>
+        <div class="text-wrapper-2">Ureshino Salon</div>
+        <div class="rectangle-3"></div>
+        <div class="subtitle">
+          <div class="group">
+            <div class="text-wrapper-3">互いに高め合う</div>
+            <div class="overlap-group-2">
+              <p class="p">
+                <span class="text-wrapper-4">女性限定</span> <span class="text-wrapper-5">コミュニティ</span>
+              </p>
+              <div class="underline"><img class="img" src="img/underline-1.png" /></div>
+            </div>
+          </div>
+        </div>
+        <div class="frame">
+          <div class="header-mark"></div>
+          <div class="overlap-group-wrapper">
+            <div class="overlap-group-3">
+              <div class="text-wrapper-6">うれしのサロン</div>
+              <div class="text-wrapper-7">うれしのサロン</div>
+            </div>
+          </div>
+        </div>
+        <div class="h">
+          <div class="overlap-3">
+            <div class="title-wrapper">
+              <div class="title">
+                <div class="overlap-group-4">
+                  <div class="text-wrapper-8">かわいく</div>
+                  <div class="text-wrapper-9">かわいく</div>
+                </div>
+              </div>
+            </div>
+            <div class="div-wrapper">
+              <div class="title-2">
+                <div class="overlap-group-5">
+                  <div class="text-wrapper-8">賢く</div>
+                  <div class="text-wrapper-9">賢く</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="h-2">
+            <div class="title-3">
+              <div class="overlap-group-6">
+                <div class="text-wrapper-10">生きる</div>
+                <div class="text-wrapper-11">生きる</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group-2">
+          <div class="quotation">
+            <div class="overlap-group-7">
+              <img class="line" src="img/line-11-2.svg" /> <img class="line-2" src="img/line-12.svg" />
+            </div>
+          </div>
+          <div class="overlap-wrapper">
+            <div class="overlap-group-7">
+              <img class="line-3" src="img/line-11.svg" /> <img class="line-4" src="img/image.svg" />
+            </div>
+          </div>
+        </div>
+        <div class="group-3">
+          <div class="overlap-4">
+            <div class="text-wrapper-12">とは？</div>
+            <div class="text-wrapper-13">とは？</div>
+            <div class="text-wrapper-14">とは？</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+:root {
+  --pale-pink: rgba(245, 236, 239, 1);
+  --neutral: rgba(250, 250, 249, 1);
+  --lightest-grey: rgba(228, 228, 231, 1);
+  --light-grey: rgba(161, 161, 170, 1);
+  --grey: rgba(113, 113, 122, 1);
+  --dark-grey: rgba(82, 82, 91, 1);
+  --black: rgba(39, 39, 42, 1);
+  --script-font-family: "Charlotte", Helvetica;
+  --script-font-weight: 400;
+  --script-font-size: 20px;
+  --script-letter-spacing: 0px;
+  --script-line-height: normal;
+  --script-font-style: normal;
+  --h1-e-font-family: "Cinzel Decorative", Helvetica;
+  --h1-e-font-weight: 400;
+  --h1-e-font-size: 64px;
+  --h1-e-letter-spacing: 1.92px;
+  --h1-e-line-height: normal;
+  --h1-e-font-style: normal;
+  --h2-j-font-family: "Hina Mincho", Helvetica;
+  --h2-j-font-weight: 400;
+  --h2-j-font-size: 30px;
+  --h2-j-letter-spacing: 3.6px;
+  --h2-j-line-height: 144.9303150177002%;
+  --h2-j-font-style: normal;
+  --body-j-font-family: "Ryo Gothic PlusN", Helvetica;
+  --body-j-font-weight: 400;
+  --body-j-font-size: 16px;
+  --body-j-letter-spacing: 2.56px;
+  --body-j-line-height: 24px;
+  --body-j-font-style: normal;
+  --small-text-j-font-family: "Ryo Gothic PlusN", Helvetica;
+  --small-text-j-font-weight: 400;
+  --small-text-j-font-size: 14px;
+  --small-text-j-letter-spacing: -0.42px;
+  --small-text-j-line-height: normal;
+  --small-text-j-font-style: normal;
+  --small-title-j-font-family: "Ryo Gothic PlusN", Helvetica;
+  --small-title-j-font-weight: 400;
+  --small-title-j-font-size: 20px;
+  --small-title-j-letter-spacing: 0px;
+  --small-title-j-line-height: normal;
+  --small-title-j-font-style: normal;
+  --montserrat-font-family: "Montserrat", Helvetica;
+  --montserrat-font-weight: 500;
+  --montserrat-font-size: 14px;
+  --montserrat-letter-spacing: 0.10000000149011612px;
+  --montserrat-line-height: 20px;
+  --montserrat-font-style: normal;
+  --h1-j-font-family: "Hina Mincho", Helvetica;
+  --h1-j-font-weight: 400;
+  --h1-j-font-size: 64px;
+  --h1-j-letter-spacing: 4.48px;
+  --h1-j-line-height: normal;
+  --h1-j-font-style: normal;
+  --pink-shadow: 3px 4px 5.800000190734863px 0px rgba(193, 157, 169, 1);
+  --drop: 0px 2px 4px 0px rgba(177, 165, 171, 0.8);
+  --variable-collection-beige: rgba(229, 213, 203, 1);
+  --variable-collection-pink: rgba(198, 151, 165, 1);
+  --variable-collection-white: rgba(255, 255, 255, 1);
+  --variable-collection-pale-pink: rgba(245, 236, 239, 1);
+  --variable-collection-salmon: rgba(215, 169, 159, 1);
+  --variable-collection-beige-gradient: rgba(255, 255, 255, 0);
+  --variable-collection-purple: rgba(158, 135, 190, 1);
+}
+
+  .box {
+    width: 1476px;
+    height: 670px;
+  }
+  
+  .box .about {
+    width: 1480px;
+    height: 670px;
+    top: 0;
+    left: 0;
+  }
+  
+  .box .overlap {
+    position: relative;
+    width: 1476px;
+    height: 670px;
+  }
+  
+  .box .bg {
+    position: absolute;
+    width: 998px;
+    height: 650px;
+    top: 20px;
+    left: 478px;
+  }
+  
+  .box .overlap-group {
+    position: relative;
+    width: 804px;
+    height: 650px;
+  }
+  
+  .box .pink {
+    left: 0;
+    background-color: var(--pale-pink);
+    position: absolute;
+    width: 802px;
+    height: 606px;
+    top: 44px;
+    border-radius: 0px 40px 0px 40px;
+  }
+  
+  .box .white-bokeh {
+    position: absolute;
+    width: 781px;
+    height: 650px;
+    top: 0;
+    left: 23px;
+    mix-blend-mode: lighten;
+    object-fit: cover;
+  }
+  
+  .box .div {
+    left: 1px;
+    mix-blend-mode: multiply;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.22) 0.01%,
+      rgba(221.48, 179.58, 193.4, 0.48) 81.5%
+    );
+    position: absolute;
+    width: 802px;
+    height: 606px;
+    top: 44px;
+    border-radius: 0px 40px 0px 40px;
+  }
+  
+  .box .pic {
+    position: absolute;
+    width: 625px;
+    height: 625px;
+    top: 0;
+    left: 0;
+  }
+  
+  .box .overlap-2 {
+    position: relative;
+    width: 629px;
+    height: 633px;
+  }
+  
+  .box .rectangle {
+    position: absolute;
+    width: 627px;
+    height: 633px;
+    top: 0;
+    left: 2px;
+    mix-blend-mode: multiply;
+    object-fit: cover;
+  }
+  
+  .box .rectangle-2 {
+    position: absolute;
+    width: 625px;
+    height: 625px;
+    top: 0;
+    left: 0;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 0px 4px 4px #00000040;
+    mix-blend-mode: screen;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(245, 236, 239, 0.53) 100%);
+  }
+  
+  .box .flexcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    position: absolute;
+    width: 473px;
+    height: 97px;
+    top: 519px;
+    left: 699px;
+  }
+  
+  .box .text {
+    position: relative;
+    align-self: stretch;
+    text-shadow: 0px 1px 2px #c19da8;
+    font-family: "Ryo Gothic PlusN-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--variable-collection-white);
+    font-size: 16px;
+    letter-spacing: 2.56px;
+    line-height: 31px;
+  }
+  
+  .box .text-wrapper {
+    letter-spacing: 0.41px;
+  }
+  
+  .box .span {
+    font-size: 24px;
+    letter-spacing: 0.92px;
+  }
+  
+  .box .text-wrapper-2 {
+    position: absolute;
+    top: 267px;
+    left: 550px;
+    opacity: 0.32;
+    font-family: var(--h1-e-font-family);
+    font-weight: var(--h1-e-font-weight);
+    color: var(--variable-collection-white);
+    font-size: var(--h1-e-font-size);
+    letter-spacing: var(--h1-e-letter-spacing);
+    line-height: var(--h1-e-line-height);
+    font-style: var(--h1-e-font-style);
+  }
+  
+  .box .rectangle-3 {
+    position: absolute;
+    width: 571px;
+    height: 101px;
+    top: 146px;
+    left: 642px;
+    background-color: #c697a561;
+    filter: blur(50px);
+    opacity: 0.5;
+  }
+  
+  .box .subtitle {
+    position: absolute;
+    width: 457px;
+    height: 136px;
+    top: 354px;
+    left: 596px;
+    background-color: #ffffff80;
+    backdrop-filter: blur(6.3px) brightness(100%);
+    -webkit-backdrop-filter: blur(6.3px) brightness(100%);
+  }
+  
+  .box .group {
+    position: relative;
+    width: 382px;
+    height: 108px;
+    top: 12px;
+    left: 59px;
+  }
+  
+  .box .text-wrapper-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Hina Mincho-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--dark-grey);
+    font-size: 30px;
+    letter-spacing: 3.6px;
+    line-height: 43.5px;
+    white-space: nowrap;
+  }
+  
+  .box .overlap-group-2 {
+    position: absolute;
+    width: 378px;
+    height: 65px;
+    top: 43px;
+    left: 0;
+  }
+  
+  .box .p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Hina Mincho-Regular", Helvetica;
+    font-weight: 400;
+    color: transparent;
+    font-size: 40px;
+    letter-spacing: 4.8px;
+    line-height: 40px;
+  }
+  
+  .box .text-wrapper-4 {
+    color: #c697a5;
+    letter-spacing: 1.92px;
+    line-height: 57.9px;
+  }
+  
+  .box .text-wrapper-5 {
+    color: #52525b;
+    font-size: var(--h2-j-font-size);
+    letter-spacing: var(--h2-j-letter-spacing);
+    line-height: var(--h2-j-line-height);
+    font-family: var(--h2-j-font-family);
+    font-style: var(--h2-j-font-style);
+    font-weight: var(--h2-j-font-weight);
+  }
+  
+  .box .underline {
+    position: absolute;
+    width: 193px;
+    height: 11px;
+    top: 54px;
+    left: 5px;
+    border-radius: 0px 100px 0px 0px;
+  }
+  
+  .box .img {
+    position: absolute;
+    width: 193px;
+    height: 11px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  
+  .box .frame {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 19px;
+    position: absolute;
+    top: 135px;
+    left: 666px;
+  }
+  
+  .box .header-mark {
+    position: relative;
+    width: 54px;
+    height: 8px;
+    margin-left: -23px;
+    background-color: var(--variable-collection-salmon);
+    transform: rotate(90deg);
+  }
+  
+  .box .overlap-group-wrapper {
+    position: relative;
+    width: 479px;
+    height: 93px;
+    margin-right: -4px;
+  }
+  
+  .box .overlap-group-3 {
+    position: relative;
+    width: 475px;
+    height: 93px;
+  }
+  
+  .box .text-wrapper-6 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-shadow: 3px 4px 5.8px #c19da8;
+    font-family: var(--h1-j-font-family);
+    font-weight: var(--h1-j-font-weight);
+    color: var(--variable-collection-white);
+    font-size: var(--h1-j-font-size);
+    letter-spacing: var(--h1-j-letter-spacing);
+    line-height: var(--h1-j-line-height);
+    font-style: var(--h1-j-font-style);
+    box-shadow: var(--pink-shadow);
+  }
+  
+  .box .text-wrapper-7 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(245, 236, 239, 0.56) 50.5%,
+      rgba(221.48, 179.58, 193.4, 0.56) 100%
+    );
+    -webkit-background-clip: text !important;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    opacity: 0.94;
+    font-family: var(--h1-j-font-family);
+    font-weight: var(--h1-j-font-weight);
+    color: transparent;
+    font-size: var(--h1-j-font-size);
+    letter-spacing: var(--h1-j-letter-spacing);
+    line-height: var(--h1-j-line-height);
+    font-style: var(--h1-j-font-style);
+  }
+  
+  .box .h {
+    position: absolute;
+    width: 258px;
+    height: 121px;
+    top: 227px;
+    left: 786px;
+  }
+  
+  .box .overlap-3 {
+    position: absolute;
+    width: 168px;
+    height: 78px;
+    top: 0;
+    left: 0;
+  }
+  
+  .box .title-wrapper {
+    position: absolute;
+    width: 131px;
+    height: 43px;
+    top: 0;
+    left: 0;
+  }
+  
+  .box .title {
+    width: 135px;
+    height: 43px;
+    mix-blend-mode: multiply;
+    opacity: 0.75;
+  }
+  
+  .box .overlap-group-4 {
+    position: relative;
+    width: 131px;
+    height: 43px;
+  }
+  
+  .box .text-wrapper-8 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    font-family: var(--h2-j-font-family);
+    font-weight: var(--h2-j-font-weight);
+    color: var(--variable-collection-pink);
+    font-size: var(--h2-j-font-size);
+    letter-spacing: var(--h2-j-letter-spacing);
+    line-height: var(--h2-j-line-height);
+    white-space: nowrap;
+    font-style: var(--h2-j-font-style);
+  }
+  
+  .box .text-wrapper-9 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(245, 236, 239, 0.48) 50.5%,
+      rgba(221.48, 179.58, 193.4, 0.48) 100%
+    );
+    -webkit-background-clip: text !important;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    font-family: var(--h2-j-font-family);
+    font-weight: var(--h2-j-font-weight);
+    color: transparent;
+    font-size: var(--h2-j-font-size);
+    letter-spacing: var(--h2-j-letter-spacing);
+    line-height: var(--h2-j-line-height);
+    white-space: nowrap;
+    font-style: var(--h2-j-font-style);
+  }
+  
+  .box .div-wrapper {
+    position: absolute;
+    width: 64px;
+    height: 43px;
+    top: 35px;
+    left: 104px;
+  }
+  
+  .box .title-2 {
+    width: 68px;
+    height: 43px;
+    mix-blend-mode: multiply;
+    opacity: 0.75;
+  }
+  
+  .box .overlap-group-5 {
+    position: relative;
+    width: 64px;
+    height: 43px;
+  }
+  
+  .box .h-2 {
+    position: absolute;
+    width: 98px;
+    height: 43px;
+    top: 78px;
+    left: 160px;
+  }
+  
+  .box .title-3 {
+    width: 102px;
+    height: 43px;
+    mix-blend-mode: multiply;
+    opacity: 0.75;
+  }
+  
+  .box .overlap-group-6 {
+    position: relative;
+    width: 98px;
+    height: 43px;
+  }
+  
+  .box .text-wrapper-10 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    font-family: "Hina Mincho-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--variable-collection-pink);
+    font-size: 30px;
+    letter-spacing: 3.6px;
+    line-height: 43.5px;
+    white-space: nowrap;
+  }
+  
+  .box .text-wrapper-11 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(245, 236, 239, 0.48) 50.5%,
+      rgba(221.48, 179.58, 193.4, 0.48) 100%
+    );
+    -webkit-background-clip: text !important;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    font-family: "Hina Mincho-Regular", Helvetica;
+    font-weight: 400;
+    color: transparent;
+    font-size: 30px;
+    letter-spacing: 3.6px;
+    line-height: 43.5px;
+    white-space: nowrap;
+  }
+  
+  .box .group-2 {
+    position: absolute;
+    width: 575px;
+    height: 132px;
+    top: 124px;
+    left: 638px;
+  }
+  
+  .box .quotation {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    opacity: 0.9;
+  }
+  
+  .box .overlap-group-7 {
+    position: relative;
+    height: 32px;
+  }
+  
+  .box .line {
+    position: absolute;
+    width: 2px;
+    height: 32px;
+    top: 0;
+    left: 9px;
+  }
+  
+  .box .line-2 {
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    top: 9px;
+    left: 0;
+  }
+  
+  .box .overlap-wrapper {
+    top: 100px;
+    left: 543px;
+    transform: rotate(-180deg);
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    opacity: 0.9;
+  }
+  
+  .box .line-3 {
+    position: absolute;
+    width: 2px;
+    height: 32px;
+    top: 0;
+    left: 9px;
+    transform: rotate(180deg);
+  }
+  
+  .box .line-4 {
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    top: 9px;
+    left: 0;
+    transform: rotate(180deg);
+  }
+  
+  .box .group-3 {
+    position: absolute;
+    width: 82px;
+    height: 70px;
+    top: 209px;
+    left: 1105px;
+  }
+  
+  .box .overlap-4 {
+    position: relative;
+    width: 76px;
+    height: 70px;
+  }
+  
+  .box .text-wrapper-12 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(255, 252.32, 254.57, 0) 0%, rgba(198, 152, 165, 0.8) 100%);
+    -webkit-background-clip: text !important;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    opacity: 0.41;
+    font-family: "Hina Mincho-Regular", Helvetica;
+    font-weight: 400;
+    color: transparent;
+    font-size: 24px;
+    letter-spacing: 1.68px;
+    line-height: normal;
+  }
+  
+  .box .text-wrapper-13 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-shadow: 0px 2px 7.2px #e4cbd3;
+    mix-blend-mode: multiply;
+    opacity: 0.77;
+    font-family: "Hina Mincho-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--variable-collection-pale-pink);
+    font-size: 24px;
+    letter-spacing: 1.68px;
+    line-height: normal;
+  }
+  
+  .box .text-wrapper-14 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-shadow: 0px 2px 4px #b1a4aacc;
+    mix-blend-mode: multiply;
+    opacity: 0.55;
+    font-family: "Hina Mincho-Regular", Helvetica;
+    font-weight: 400;
+    color: var(--variable-collection-white);
+    font-size: 24px;
+    letter-spacing: 1.68px;
+    line-height: normal;
+    box-shadow: var(--drop);
+  }
+  </style>

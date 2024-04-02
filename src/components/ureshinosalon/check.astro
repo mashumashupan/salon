@@ -4,4 +4,561 @@ import { Image } from "astro:assets";
 import ureshino1 from "~/assets/hero_top1.png";
 import logo from "~/assets/logomark.png";
 import description from "~/assets/upgrade_your_life.png";
+import checkimage from "~/assets/checkimage.png";
+import check from "~/assets/check.svg";
+import checkline1 from "~/assets/checkline1.svg";
+import checkline2 from "~/assets/checkline2.svg";
 ---
+
+<div class="box">
+    <div class="check">
+    <div class="overlap">
+        <img class="element" src="img/4907157-1.png" />
+        <div class="gradient"></div>
+        <div class="items">
+        <div class="frame">
+            <Image class="person-check" src={check} alt="チェックリスト"/>
+            <p class="div">
+            <span class="text-wrapper">女性は「</span>
+            <span class="span">かわいさ</span>
+            <span class="text-wrapper">」だけでなく、「</span>
+            <span class="span">賢さ</span>
+            <span class="text-wrapper">」も必要だと考えている</span>
+            </p>
+        </div>
+        <div class="frame">
+            <Image class="img" src={check} alt="チェックリスト" />
+            <p class="p">
+            <span class="span">向上心</span>
+            <span class="text-wrapper">や</span>
+            <span class="span">成長意欲</span>
+            <span class="text-wrapper">が高い</span>
+            </p>
+        </div>
+        <div class="frame">
+            <Image class="img" src={check} alt="チェックリスト" />
+            <p class="p">
+            <span class="span">夢</span>
+            <span class="text-wrapper">や</span>
+            <span class="span">目標</span>
+            <span class="text-wrapper">を持っている</span>
+            </p>
+        </div>
+        </div>
+        <div class="invest">
+        <Image class="person-check" src={check} alt="チェックリスト" />
+        <p class="div">
+            <span class="text-wrapper">惜しみなく</span>
+            <span class="span">自己投資</span>
+            <span class="text-wrapper">をする覚悟を持っている</span>
+        </p>
+        </div>
+        <div class="business">
+        <Image class="img" src={check} alt="チェックリスト" />
+        <p class="p">
+            <span class="span">美容</span>
+            <span class="text-wrapper">や</span>
+            <span class="span">ビジネス</span>
+            <span class="text-wrapper">の話が好き</span>
+        </p>
+        </div>
+        <div class="global">
+        <Image class="img" src={check} alt="チェックリスト" />
+        <p class="p"><span class="span">グローバル</span> <span class="text-wrapper">な思考を持っている</span></p>
+        </div>
+        <div class="depend">
+        <Image class="img" src={check} alt="チェックリスト" />
+        <p class="p">
+            <span class="text-wrapper">男性には頼るけど、</span> <span class="span">依存はしたくない</span>
+        </p>
+        </div>
+        <Image class="check-image" src={checkimage} alt="こんな人におすすめ"/>
+        <div class="go-on-reading">
+        <p class="element-2">
+            <span class="text-wrapper-2">この続きは</span>
+            <span class="text-wrapper-3">3</span>
+            <span class="text-wrapper-2">つ以上当てはまった人だけ読んでください。</span>
+        </p>
+        </div>
+        <div class="group">
+        <div class="overlap-group">
+            <div class="header-mark"></div>
+            <div class="text-wrapper-4">こんな人におすすめ！</div>
+        </div>
+        </div>
+        <div class="group-2">
+        <div class="text-wrapper-5">あなたはいくつ当てはまる？</div>
+        <Image class="line" src={checkline1} alt="チェックリスト" />
+        <Image class="line-2" src={checkline2} alt="チェックリスト" />
+        </div>
+        <div class="dots">
+        <div class="ellipse"></div>
+        <div class="ellipse-2"></div>
+        <div class="ellipse-3"></div>
+        <div class="ellipse-4"></div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<style>
+
+:root {
+    --pale-pink: rgba(245, 236, 239, 1);
+    --neutral: rgba(250, 250, 249, 1);
+    --lightest-grey: rgba(228, 228, 231, 1);
+    --light-grey: rgba(161, 161, 170, 1);
+    --grey: rgba(113, 113, 122, 1);
+    --dark-grey: rgba(82, 82, 91, 1);
+    --black: rgba(39, 39, 42, 1);
+    --script-font-family: "Charlotte", Helvetica;
+    --script-font-weight: 400;
+    --script-font-size: 20px;
+    --script-letter-spacing: 0px;
+    --script-line-height: normal;
+    --script-font-style: normal;
+    --h1-e-font-family: "Cinzel Decorative", Helvetica;
+    --h1-e-font-weight: 400;
+    --h1-e-font-size: 64px;
+    --h1-e-letter-spacing: 1.92px;
+    --h1-e-line-height: normal;
+    --h1-e-font-style: normal;
+    --h2-j-font-family: "Hina Mincho", Helvetica;
+    --h2-j-font-weight: 400;
+    --h2-j-font-size: 30px;
+    --h2-j-letter-spacing: 3.6px;
+    --h2-j-line-height: 144.9303150177002%;
+    --h2-j-font-style: normal;
+    --body-j-font-family: "Ryo Gothic PlusN", Helvetica;
+    --body-j-font-weight: 400;
+    --body-j-font-size: 16px;
+    --body-j-letter-spacing: 2.56px;
+    --body-j-line-height: 24px;
+    --body-j-font-style: normal;
+    --small-text-j-font-family: "Ryo Gothic PlusN", Helvetica;
+    --small-text-j-font-weight: 400;
+    --small-text-j-font-size: 14px;
+    --small-text-j-letter-spacing: -0.42px;
+    --small-text-j-line-height: normal;
+    --small-text-j-font-style: normal;
+    --small-title-j-font-family: "Ryo Gothic PlusN", Helvetica;
+    --small-title-j-font-weight: 400;
+    --small-title-j-font-size: 20px;
+    --small-title-j-letter-spacing: 0px;
+    --small-title-j-line-height: normal;
+    --small-title-j-font-style: normal;
+    --montserrat-font-family: "Montserrat", Helvetica;
+    --montserrat-font-weight: 500;
+    --montserrat-font-size: 14px;
+    --montserrat-letter-spacing: 0.10000000149011612px;
+    --montserrat-line-height: 20px;
+    --montserrat-font-style: normal;
+    --h1-j-font-family: "Hina Mincho", Helvetica;
+    --h1-j-font-weight: 400;
+    --h1-j-font-size: 64px;
+    --h1-j-letter-spacing: 4.48px;
+    --h1-j-line-height: normal;
+    --h1-j-font-style: normal;
+    --pink-shadow: 3px 4px 5.800000190734863px 0px rgba(193, 157, 169, 1);
+    --drop: 0px 2px 4px 0px rgba(177, 165, 171, 0.8);
+    --variable-collection-beige: rgba(229, 213, 203, 1);
+    --variable-collection-pink: rgba(198, 151, 165, 1);
+    --variable-collection-white: rgba(255, 255, 255, 1);
+    --variable-collection-pale-pink: rgba(245, 236, 239, 1);
+    --variable-collection-salmon: rgba(215, 169, 159, 1);
+    --variable-collection-beige-gradient: rgba(255, 255, 255, 0);
+    --variable-collection-purple: rgba(158, 135, 190, 1);
+  }
+
+.box {
+  width: 1389px;
+  height: 1220px;
+}
+
+.box .check {
+  width: 1389px;
+  left: 0;
+  height: 1220px;
+  top: 0;
+}
+
+.box .overlap {
+  position: relative;
+  width: 1280px;
+  height: 1220px;
+  left: 109px;
+}
+
+.box .element {
+  position: absolute;
+  width: 1280px;
+  height: 926px;
+  top: 86px;
+  left: 0;
+  object-fit: cover;
+}
+
+.box .gradient {
+  position: absolute;
+  width: 1279px;
+  height: 927px;
+  top: 84px;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(245, 236, 239, 0.48) 50.5%,
+    rgba(221.48, 179.58, 193.4, 0.48) 100%
+  );
+}
+
+.box .items {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  position: absolute;
+  top: 392px;
+  left: 280px;
+}
+
+.box .frame {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: var(--variable-collection-white);
+  border-radius: 20px 20px 20px 0px;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: var(--variable-collection-pink);
+}
+
+.box .person-check {
+  margin-bottom: -2.01px;
+  position: relative;
+  flex: 0 0 auto;
+  margin-left: -4px;
+}
+
+.box .div {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: var(--body-j-font-family);
+  font-weight: var(--body-j-font-weight);
+  color: transparent;
+  font-size: var(--body-j-font-size);
+  letter-spacing: var(--body-j-letter-spacing);
+  line-height: var(--body-j-line-height);
+  font-style: var(--body-j-font-style);
+}
+
+.box .text-wrapper {
+  color: #71717a;
+  letter-spacing: var(--body-j-letter-spacing);
+  font-family: var(--body-j-font-family);
+  font-style: var(--body-j-font-style);
+  font-weight: var(--body-j-font-weight);
+  line-height: var(--body-j-line-height);
+  font-size: var(--body-j-font-size);
+}
+
+.box .span {
+  color: #c697a5;
+  letter-spacing: var(--body-j-letter-spacing);
+  font-family: var(--body-j-font-family);
+  font-style: var(--body-j-font-style);
+  font-weight: var(--body-j-font-weight);
+  line-height: var(--body-j-line-height);
+  font-size: var(--body-j-font-size);
+}
+
+.box .img {
+  margin-bottom: -8px;
+  position: relative;
+  flex: 0 0 auto;
+  margin-left: -4px;
+}
+
+.box .p {
+  position: relative;
+  width: fit-content;
+  font-family: var(--body-j-font-family);
+  font-weight: var(--body-j-font-weight);
+  color: transparent;
+  font-size: var(--body-j-font-size);
+  letter-spacing: var(--body-j-letter-spacing);
+  line-height: var(--body-j-line-height);
+  white-space: nowrap;
+  font-style: var(--body-j-font-style);
+}
+
+.box .invest {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  position: absolute;
+  top: 392px;
+  left: 676px;
+  background-color: var(--variable-collection-white);
+  border-radius: 20px 20px 20px 0px;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: var(--variable-collection-pink);
+}
+
+.box .business {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  position: absolute;
+  top: 484px;
+  left: 676px;
+  background-color: var(--variable-collection-white);
+  border-radius: 20px 20px 20px 0px;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: var(--variable-collection-pink);
+}
+
+.box .global {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  position: absolute;
+  top: 568px;
+  left: 676px;
+  background-color: var(--variable-collection-white);
+  border-radius: 20px 20px 20px 0px;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: var(--variable-collection-pink);
+}
+
+.box .depend {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  position: absolute;
+  top: 660px;
+  left: 676px;
+  background-color: var(--variable-collection-white);
+  border-radius: 20px 20px 20px 0px;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: var(--variable-collection-pink);
+}
+
+.box .check-image {
+  position: absolute;
+  width: 813px;
+  left: 190px;
+  object-fit: cover;
+  height: 1220px;
+  top: 0;
+}
+
+.box .go-on-reading {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 56px;
+  position: absolute;
+  top: 811px;
+  left: 286px;
+  background-color: #ffffffb2;
+  border-radius: 4px;
+  backdrop-filter: blur(9.5px) brightness(100%);
+  -webkit-backdrop-filter: blur(9.5px) brightness(100%);
+}
+
+.box .element-2 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Ryo Gothic PlusN-Regular", Helvetica;
+  font-weight: 400;
+  color: transparent;
+  font-size: 16px;
+  letter-spacing: 4.48px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.box .text-wrapper-2 {
+  color: #71717a;
+  letter-spacing: 0.72px;
+}
+
+.box .text-wrapper-3 {
+  color: #d6a99f;
+  font-size: 24px;
+  letter-spacing: 1.61px;
+}
+
+.box .group {
+  position: absolute;
+  width: 715px;
+  height: 93px;
+  top: 189px;
+  left: 283px;
+}
+
+.box .overlap-group {
+  position: relative;
+  width: 713px;
+  height: 93px;
+}
+
+.box .header-mark {
+  position: absolute;
+  width: 66px;
+  height: 8px;
+  top: 48px;
+  left: -29px;
+  background-color: #d7a99f;
+  transform: rotate(90deg);
+}
+
+.box .text-wrapper-4 {
+  position: absolute;
+  top: 0;
+  left: 32px;
+  font-family: var(--h1-j-font-family);
+  font-weight: var(--h1-j-font-weight);
+  color: #71717a;
+  font-size: var(--h1-j-font-size);
+  letter-spacing: var(--h1-j-letter-spacing);
+  line-height: var(--h1-j-line-height);
+  font-style: var(--h1-j-font-style);
+}
+
+.box .group-2 {
+  position: absolute;
+  width: 380px;
+  height: 24px;
+  top: 319px;
+  left: 451px;
+}
+
+.box .text-wrapper-5 {
+  position: absolute;
+  top: 0;
+  left: 43px;
+  font-family: "Ryo Gothic PlusN-M", Helvetica;
+  font-weight: 400;
+  color: var(--variable-collection-pink);
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 7.04px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.box .line {
+  left: -2px;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 2px;
+}
+
+.box .line-2 {
+  left: 358px;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 2px;
+}
+
+.box .dots {
+  position: absolute;
+  width: 217px;
+  height: 14px;
+  top: 189px;
+  left: 686px;
+}
+
+.box .ellipse {
+  left: 0;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 0;
+  border-radius: 7px;
+  filter: blur(4px);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(221, 180, 193, 0.12) 0%,
+    rgba(221, 180, 193, 0.24) 0.01%,
+    rgba(221.48, 179.58, 193.4, 0.84) 100%
+  );
+}
+
+.box .ellipse-2 {
+  left: 67px;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 0;
+  border-radius: 7px;
+  filter: blur(4px);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(221, 180, 193, 0.12) 0%,
+    rgba(221, 180, 193, 0.24) 0.01%,
+    rgba(221.48, 179.58, 193.4, 0.84) 100%
+  );
+}
+
+.box .ellipse-3 {
+  left: 134px;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 0;
+  border-radius: 7px;
+  filter: blur(4px);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(221, 180, 193, 0.12) 0%,
+    rgba(221, 180, 193, 0.24) 0.01%,
+    rgba(221.48, 179.58, 193.4, 0.84) 100%
+  );
+}
+
+.box .ellipse-4 {
+  left: 203px;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 0;
+  border-radius: 7px;
+  filter: blur(4px);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(221, 180, 193, 0.12) 0%,
+    rgba(221, 180, 193, 0.24) 0.01%,
+    rgba(221.48, 179.58, 193.4, 0.84) 100%
+  );
+}
+  
+</style>
