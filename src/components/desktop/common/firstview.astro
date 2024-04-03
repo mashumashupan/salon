@@ -1,0 +1,131 @@
+---
+import { Image } from "astro:assets";
+
+const widths = [450, 800];
+const sizes = "(min-width: 640px) 42vw, 67vw";
+
+import ureshino1 from "~/assets/hero_top1.png";
+import logo from "~/assets/logomark.png";
+import description from "~/assets/upgrade_your_life.png";
+---
+
+<div class="flex flex-col">
+  <div class="self-center w-full max-w-[884px] max-md:max-w-full">
+    <header class="flex gap-5 max-md:flex-col max-md:gap-0 h-12">
+      <div class="flex justify-center grow gap-5 items-start w-full text-sm font-medium tracking-normal leading-5 whitespace-nowrap text-zinc-400 max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
+      </div>
+    </header>
+  </div>
+  <section class="flex overflow-visible relative flex-col justify-center items-start px-16 py-16 w-full min-h-[853px] max-md:px-5 max-md:mt-10 max-md:max-w-full bg-white rounded-t-[60px]">
+    <Image src={logo}
+          alt="Logo"
+          class="relative z-40 top-[-150px] w-48 self-center shrink-0 self-start max-w-full aspect-[1.3] w-[123px]"
+      />
+    <div class="flex relative z-50 flex-col items-start mt-7 ml-80 max-w-full w-[476px]">
+      <div class="flex flex-col ml-4 max-w-full text-zinc-500 max-md:ml-2.5">
+        <p class="text-xs">
+          マレーシア在住起業家&インフルエンサーの嬉野ゆみ
+        </p>
+      </div>
+      <Image src={description} alt="hero" class="inset-0"/>
+      <p class="self-stretch mt-11 text-xl text-zinc-500 max-md:mt-10 max-md:max-w-full" style="color: var(--grey, #71717A);
+      text-shadow: 8px 8px 20px #FFF;
+      
+      /* H2_j */
+      font-family: HannariMincho;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;">
+        「かわいく賢く生きる」女性が集まる 女性のコミュニティ
+      </p>
+      <div class="flex flex-col mt-44 ml-4 max-w-full text-sm w-[186px] max-md:mt-10 max-md:ml-2.5">
+        
+      </div>
+    </div>
+    <div class="absolute right-[88px] top-[-16px] w-[788px]">
+      <Image src={ureshino1} alt="hero" class="inset-0"/>
+    </div>
+  </section>
+</div>
+
+<style>
+  :root {
+  --pale-pink: rgba(245, 236, 239, 1);
+  --neutral: rgba(250, 250, 249, 1);
+  --lightest-grey: rgba(228, 228, 231, 1);
+  --light-grey: rgba(161, 161, 170, 1);
+  --grey: rgba(113, 113, 122, 1);
+  --dark-grey: rgba(82, 82, 91, 1);
+  --black: rgba(39, 39, 42, 1);
+  --script-font-family: "Charlotte", Helvetica;
+  --script-font-weight: 400;
+  --script-font-size: 20px;
+  --script-letter-spacing: 0px;
+  --script-line-height: normal;
+  --script-font-style: normal;
+  --h1-e-font-family: "Cinzel Decorative", Helvetica;
+  --h1-e-font-weight: 400;
+  --h1-e-font-size: 64px;
+  --h1-e-letter-spacing: 1.92px;
+  --h1-e-line-height: normal;
+  --h1-e-font-style: normal;
+  --h2-j-font-family: "Hina Mincho", Helvetica;
+  --h2-j-font-weight: 400;
+  --h2-j-font-size: 30px;
+  --h2-j-letter-spacing: 3.6px;
+  --h2-j-line-height: 144.9303150177002%;
+  --h2-j-font-style: normal;
+  --body-j-font-family: "Ryo Gothic PlusN", Helvetica;
+  --body-j-font-weight: 400;
+  --body-j-font-size: 16px;
+  --body-j-letter-spacing: 2.56px;
+  --body-j-line-height: 24px;
+  --body-j-font-style: normal;
+  --small-text-j-font-family: "Ryo Gothic PlusN", Helvetica;
+  --small-text-j-font-weight: 400;
+  --small-text-j-font-size: 14px;
+  --small-text-j-letter-spacing: -0.42px;
+  --small-text-j-line-height: normal;
+  --small-text-j-font-style: normal;
+  --small-title-j-font-family: "Ryo Gothic PlusN", Helvetica;
+  --small-title-j-font-weight: 400;
+  --small-title-j-font-size: 20px;
+  --small-title-j-letter-spacing: 0px;
+  --small-title-j-line-height: normal;
+  --small-title-j-font-style: normal;
+  --montserrat-font-family: "Montserrat", Helvetica;
+  --montserrat-font-weight: 500;
+  --montserrat-font-size: 14px;
+  --montserrat-letter-spacing: 0.10000000149011612px;
+  --montserrat-line-height: 20px;
+  --montserrat-font-style: normal;
+  --h1-j-font-family: "Hina Mincho", Helvetica;
+  --h1-j-font-weight: 400;
+  --h1-j-font-size: 64px;
+  --h1-j-letter-spacing: 4.48px;
+  --h1-j-line-height: normal;
+  --h1-j-font-style: normal;
+  --pink-shadow: 3px 4px 5.800000190734863px 0px rgba(193, 157, 169, 1);
+  --drop: 0px 2px 4px 0px rgba(177, 165, 171, 0.8);
+  --variable-collection-beige: rgba(229, 213, 203, 1);
+  --variable-collection-pink: rgba(198, 151, 165, 1);
+  --variable-collection-white: rgba(255, 255, 255, 1);
+  --variable-collection-pale-pink: rgba(245, 236, 239, 1);
+  --variable-collection-salmon: rgba(215, 169, 159, 1);
+  --variable-collection-beige-gradient: rgba(255, 255, 255, 0);
+  --variable-collection-purple: rgba(158, 135, 190, 1);
+}
+
+.box {
+  width: 1281px;
+  height: 1146px;
+}
+
+.box .hero {
+  width: 1280px;
+  height: 1146px;
+  top: 0;
+  left: 0;
+}
+</style>

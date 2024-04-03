@@ -1,0 +1,436 @@
+---
+import { Image } from "astro:assets";
+
+import ureshino1 from "~/assets/hero_top1.png";
+import logo from "~/assets/logomark.png";
+import description from "~/assets/upgrade_your_life.png";
+---
+
+<div class="box">
+  <div class="story">
+    <div class="overlap-group">
+      <div class="overlap">
+        <div class="text-wrapper">My Story</div>
+        <p class="div"><span class="span">まるで別人</span> <span class="text-wrapper-2">ですよね？</span></p>
+        <div class="flexcontainer">
+          <p class="text">
+            <span class="text-wrapper-3">当時は、何をやっても上手くいきませんでした。<br /></span>
+          </p>
+          <p class="text">
+            <span class="text-wrapper-3">ほぼ家に引きこもりでファッションや美容にも疎かったです。</span>
+          </p>
+        </div>
+        <img class="single-underline" src="img/single-underline-1.png" />
+      </div>
+      <div class="overlap-2">
+        <div class="highlight"></div>
+        <div class="highlight-2"></div>
+        <div class="highlight-3"></div>
+        <div class="highlight-4"></div>
+        <div class="highlight-5"></div>
+        <div class="flexcontainer-2">
+          <p class="p">
+            <span class="text-wrapper-4">しかし、SNSを始めて、人から見られる機会が増え<br /></span>
+          </p>
+          <p class="p">
+            <span class="text-wrapper-5">自分磨きや美容</span>
+            <span class="text-wrapper-4">を頑張るようになりました。<br /></span>
+          </p>
+          <p class="p">
+            <span class="text-wrapper-4"><br /></span>
+          </p>
+          <p class="p">
+            <span class="text-wrapper-5">環境と意識</span>
+            <span class="text-wrapper-6">を変えた</span>
+            <span class="text-wrapper-4">ことで、見た目だけでなく<br /></span>
+          </p>
+          <p class="p">
+            <span class="text-wrapper-4">出会う人やチャンスも変化しました。<br /></span>
+          </p>
+          <p class="p">
+            <span class="text-wrapper-4"><br /></span>
+          </p>
+          <p class="p">
+            <span class="text-wrapper-5">理想の王子様</span>
+            <span class="text-wrapper-4">との出会い</span>
+            <span class="text-wrapper-7">、</span>
+            <span class="text-wrapper-5">収入UP</span>
+            <span class="text-wrapper-4">、</span>
+            <span class="text-wrapper-5">海外移住</span>
+            <span class="text-wrapper-4">も<br /></span>
+          </p>
+          <p class="p"><span class="text-wrapper-4">実現しました!</span></p>
+        </div>
+      </div>
+      <div class="profile">
+        <button class="button">
+          <button class="state-layer-wrapper">
+            <div class="state-layer">
+              <img class="icon" src="img/icon.svg" />
+              <div class="label-text">プロフィール</div>
+            </div>
+          </button>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  :root {
+  --pale-pink: rgba(245, 236, 239, 1);
+  --neutral: rgba(250, 250, 249, 1);
+  --lightest-grey: rgba(228, 228, 231, 1);
+  --light-grey: rgba(161, 161, 170, 1);
+  --grey: rgba(113, 113, 122, 1);
+  --dark-grey: rgba(82, 82, 91, 1);
+  --black: rgba(39, 39, 42, 1);
+  --script-font-family: "Charlotte", Helvetica;
+  --script-font-weight: 400;
+  --script-font-size: 20px;
+  --script-letter-spacing: 0px;
+  --script-line-height: normal;
+  --script-font-style: normal;
+  --h1-e-font-family: "Cinzel Decorative", Helvetica;
+  --h1-e-font-weight: 400;
+  --h1-e-font-size: 64px;
+  --h1-e-letter-spacing: 1.92px;
+  --h1-e-line-height: normal;
+  --h1-e-font-style: normal;
+  --h2-j-font-family: "Hina Mincho", Helvetica;
+  --h2-j-font-weight: 400;
+  --h2-j-font-size: 30px;
+  --h2-j-letter-spacing: 3.6px;
+  --h2-j-line-height: 144.9303150177002%;
+  --h2-j-font-style: normal;
+  --body-j-font-family: "Ryo Gothic PlusN", Helvetica;
+  --body-j-font-weight: 400;
+  --body-j-font-size: 16px;
+  --body-j-letter-spacing: 2.56px;
+  --body-j-line-height: 24px;
+  --body-j-font-style: normal;
+  --small-text-j-font-family: "Ryo Gothic PlusN", Helvetica;
+  --small-text-j-font-weight: 400;
+  --small-text-j-font-size: 14px;
+  --small-text-j-letter-spacing: -0.42px;
+  --small-text-j-line-height: normal;
+  --small-text-j-font-style: normal;
+  --small-title-j-font-family: "Ryo Gothic PlusN", Helvetica;
+  --small-title-j-font-weight: 400;
+  --small-title-j-font-size: 20px;
+  --small-title-j-letter-spacing: 0px;
+  --small-title-j-line-height: normal;
+  --small-title-j-font-style: normal;
+  --montserrat-font-family: "Montserrat", Helvetica;
+  --montserrat-font-weight: 500;
+  --montserrat-font-size: 14px;
+  --montserrat-letter-spacing: 0.10000000149011612px;
+  --montserrat-line-height: 20px;
+  --montserrat-font-style: normal;
+  --h1-j-font-family: "Hina Mincho", Helvetica;
+  --h1-j-font-weight: 400;
+  --h1-j-font-size: 64px;
+  --h1-j-letter-spacing: 4.48px;
+  --h1-j-line-height: normal;
+  --h1-j-font-style: normal;
+  --pink-shadow: 3px 4px 5.800000190734863px 0px rgba(193, 157, 169, 1);
+  --drop: 0px 2px 4px 0px rgba(177, 165, 171, 0.8);
+  --variable-collection-beige: rgba(229, 213, 203, 1);
+  --variable-collection-pink: rgba(198, 151, 165, 1);
+  --variable-collection-white: rgba(255, 255, 255, 1);
+  --variable-collection-pale-pink: rgba(245, 236, 239, 1);
+  --variable-collection-salmon: rgba(215, 169, 159, 1);
+  --variable-collection-beige-gradient: rgba(255, 255, 255, 0);
+  --variable-collection-purple: rgba(158, 135, 190, 1);
+}
+
+.box {
+  width: 1279px;
+  height: 614px;
+}
+
+.box .story {
+  width: 1287px;
+  height: 614px;
+  top: 0;
+  left: 0;
+}
+
+.box .overlap-group {
+  position: relative;
+  width: 1279px;
+  height: 614px;
+  background-image: url(./img/rectangle-7.svg);
+  background-size: 100% 100%;
+}
+
+.box .overlap {
+  position: absolute;
+  width: 587px;
+  height: 245px;
+  top: 37px;
+  left: 522px;
+}
+
+.box .text-wrapper {
+  position: absolute;
+  height: 149px;
+  top: 0;
+  left: 0;
+  transform: rotate(-12.46deg);
+  font-family: "Charlotte-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffffc9;
+  font-size: 96px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.box .div {
+  position: absolute;
+  top: 115px;
+  left: 109px;
+  font-family: "Hina Mincho-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--dark-grey);
+  font-size: 30px;
+  letter-spacing: 3.6px;
+  line-height: 30px;
+}
+
+.box .span {
+  letter-spacing: var(--h2-j-letter-spacing);
+  line-height: var(--h2-j-line-height);
+  font-family: var(--h2-j-font-family);
+  font-style: var(--h2-j-font-style);
+  font-weight: var(--h2-j-font-weight);
+  font-size: var(--h2-j-font-size);
+}
+
+.box .text-wrapper-2 {
+  font-size: 20px;
+  letter-spacing: 0.48px;
+}
+
+.box .flexcontainer {
+  width: 478px;
+  height: 52px;
+  top: 193px;
+  left: 109px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  position: absolute;
+}
+
+.box .text {
+  color: var(--grey);
+  position: relative;
+  align-self: stretch;
+  font-family: "Ryo Gothic PlusN-Regular", Helvetica;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 1.12px;
+  line-height: 24px;
+}
+
+.box .text-wrapper-3 {
+  letter-spacing: 0.18px;
+}
+
+.box .single-underline {
+  position: absolute;
+  width: 185px;
+  height: 71px;
+  top: 144px;
+  left: 98px;
+  object-fit: cover;
+}
+
+.box .overlap-2 {
+  position: absolute;
+  width: 437px;
+  height: 220px;
+  top: 303px;
+  left: 620px;
+}
+
+.box .highlight {
+  width: 185px;
+  top: 82px;
+  left: 0;
+  position: absolute;
+  height: 25px;
+  opacity: 0.9;
+  background-image: url(./img/highlight-1.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.box .highlight-2 {
+  width: 154px;
+  top: 25px;
+  left: 7px;
+  position: absolute;
+  height: 25px;
+  opacity: 0.9;
+  background-image: url(./img/image.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.box .highlight-3 {
+  width: 131px;
+  top: 165px;
+  left: 7px;
+  position: absolute;
+  height: 25px;
+  opacity: 0.9;
+  background-image: url(./img/highlight-1-4.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.box .highlight-4 {
+  width: 87px;
+  top: 165px;
+  left: 331px;
+  position: absolute;
+  height: 25px;
+  opacity: 0.9;
+  background-image: url(./img/highlight-1-2.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.box .highlight-5 {
+  width: 79px;
+  top: 165px;
+  left: 244px;
+  position: absolute;
+  height: 25px;
+  opacity: 0.9;
+  background-image: url(./img/highlight-1-3.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.box .flexcontainer-2 {
+  width: 426px;
+  height: 220px;
+  top: 0;
+  left: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  position: absolute;
+}
+
+.box .p {
+  color: transparent;
+  position: relative;
+  align-self: stretch;
+  font-family: "Ryo Gothic PlusN-Regular", Helvetica;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 1.12px;
+  line-height: 24px;
+}
+
+.box .text-wrapper-4 {
+  color: #71717a;
+  letter-spacing: 0.18px;
+}
+
+.box .text-wrapper-5 {
+  color: #d6a99f;
+  font-size: 20px;
+  letter-spacing: 0.28px;
+}
+
+.box .text-wrapper-6 {
+  color: #d6a99f;
+  letter-spacing: 0.18px;
+}
+
+.box .text-wrapper-7 {
+  color: #71717a;
+  font-size: 20px;
+  letter-spacing: 0.28px;
+}
+
+.box .profile {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 542px;
+  left: 959px;
+}
+
+.box .button {
+  all: unset;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex: 0 0 auto;
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.box .state-layer-wrapper {
+  all: unset;
+  box-sizing: border-box;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  margin-left: -1px;
+  margin-right: -1px;
+  border-radius: 100px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: var(--variable-collection-salmon);
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.box .state-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 24px 10px 16px;
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.box .icon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.box .label-text {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: var(--montserrat-font-family);
+  font-weight: var(--montserrat-font-weight);
+  color: var(--variable-collection-salmon);
+  font-size: var(--montserrat-font-size);
+  text-align: center;
+  letter-spacing: var(--montserrat-letter-spacing);
+  line-height: var(--montserrat-line-height);
+  white-space: nowrap;
+  font-style: var(--montserrat-font-style);
+}
+</style>
