@@ -1,0 +1,509 @@
+---
+import { Image } from "astro:assets";
+
+import ureshino1 from "~/assets/hero_top1.png";
+import logo from "~/assets/logomark.png";
+import description from "~/assets/upgrade_your_life.png";
+---
+
+<div class="box">
+  <div class="profile">
+    <div class="overlap">
+      <div class="bg"></div>
+      <img class="img" src="img/bg.png" />
+      <div class="div">
+        <div class="header-mark"></div>
+        <div class="text-wrapper">プロフィール</div>
+      </div>
+      <div class="text-wrapper-2">Yumi Ureshino</div>
+      <img class="pic" src="img/pic-1.png" />
+      <div class="frame">
+        <div class="overlap-group">
+          <div class="rectangle"></div>
+          <div class="rectangle-2"></div>
+          <img class="star" src="img/star-7.svg" />
+          <img class="star-2" src="img/star-8.svg" />
+        </div>
+      </div>
+      <div class="name">
+        <div class="text-wrapper-3">嬉野ゆみ</div>
+        <div class="overlap-2">
+          <div class="text-wrapper-4">うれしのサロン代表</div>
+          <div class="text-wrapper-5">起業家/インフルエンサー/モデル</div>
+        </div>
+      </div>
+      <div class="profile-wrapper">
+        <div class="profile-2">
+          <p class="empression-co-ltd">
+            Empression Co., Ltd. CEO / マレーシア在住🇲🇾&nbsp;&nbsp;1996年生まれ。横浜市出身。
+          </p>
+          <div class="element-z-SNS">
+            小中高と規律の厳しい女子校に通うが自主退学し、大検を取得して17歳で米国の大学(日本校)へ進学。大学在学中、19歳の時にモデル・インフルエンサーキャスティング事業の会社を起こす。<br />Z世代向けのイベントが話題となり朝のテレビ番組で取り上げられる。企業のSNS運用代行を行いながら、企業とインフルエンサーのキャスティング・マッチングサービスを開発運営しバイアウト。その後、自身のInstagramを伸ばし（現在のフォロワーは23万人超）インフルエンサー活動を開始。現在のSNS総フォロワー数は45万人を超える。<br />KADOKAWA出版社からのオファーにより写真集を出版。<br />2021年に現在代表を務めるマレーシアで新たに会社（Empression
+            Co.,
+            Ltd.）を設立し、首都クアラルンプールへ移住。現在はマレーシアの製薬会社と共同で、臍帯幹細胞によるアンチエイジング治療を目的とした美容医療ツーリズム事業を展開。また、国内のTikTokerマネジメント、SNS運用事業を行う会社の顧問も務める。
+          </div>
+        </div>
+      </div>
+      <div class="media">
+        <div class="frame-wrapper">
+          <div class="frame-2">
+            <div class="header-mark-2"></div>
+            <div class="text-wrapper-6">メディア掲載</div>
+          </div>
+        </div>
+        <div class="frame-3">
+          <div class="frame-4">
+            <div class="text-wrapper-7">2023.01.24</div>
+            <div class="text-wrapper-8">モデルプレスに嬉野のインタビュー記事が掲載されました。</div>
+          </div>
+          <div class="frame-4">
+            <div class="text-wrapper-7">2023.02.13</div>
+            <div class="text-wrapper-9">overE に嬉野のインタビュー記事が掲載されました。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  :root {
+  --pale-pink: rgba(245, 236, 239, 1);
+  --neutral: rgba(250, 250, 249, 1);
+  --lightest-grey: rgba(228, 228, 231, 1);
+  --light-grey: rgba(161, 161, 170, 1);
+  --grey: rgba(113, 113, 122, 1);
+  --dark-grey: rgba(82, 82, 91, 1);
+  --black: rgba(39, 39, 42, 1);
+  --mobile-h1-font-family: "Hina Mincho", Helvetica;
+  --mobile-h1-font-weight: 400;
+  --mobile-h1-font-size: 40px;
+  --mobile-h1-letter-spacing: 0px;
+  --mobile-h1-line-height: normal;
+  --mobile-h1-font-style: normal;
+  --mobile-h2-font-family: "Hina Mincho", Helvetica;
+  --mobile-h2-font-weight: 400;
+  --mobile-h2-font-size: 24px;
+  --mobile-h2-letter-spacing: 2.88px;
+  --mobile-h2-line-height: 144.9303150177002%;
+  --mobile-h2-font-style: normal;
+  --mobile-body-font-family: "Ryo Gothic PlusN", Helvetica;
+  --mobile-body-font-weight: 400;
+  --mobile-body-font-size: 16px;
+  --mobile-body-letter-spacing: 2.08px;
+  --mobile-body-line-height: 22px;
+  --mobile-body-font-style: normal;
+  --small-title-j-font-family: "Ryo Gothic PlusN", Helvetica;
+  --small-title-j-font-weight: 400;
+  --small-title-j-font-size: 20px;
+  --small-title-j-letter-spacing: 0px;
+  --small-title-j-line-height: normal;
+  --small-title-j-font-style: normal;
+  --small-text-j-font-family: "Ryo Gothic PlusN", Helvetica;
+  --small-text-j-font-weight: 400;
+  --small-text-j-font-size: 14px;
+  --small-text-j-letter-spacing: -0.42px;
+  --small-text-j-line-height: normal;
+  --small-text-j-font-style: normal;
+  --script-font-family: "Charlotte", Helvetica;
+  --script-font-weight: 400;
+  --script-font-size: 20px;
+  --script-letter-spacing: 0px;
+  --script-line-height: normal;
+  --script-font-style: normal;
+  --h1-e-font-family: "Cinzel Decorative", Helvetica;
+  --h1-e-font-weight: 400;
+  --h1-e-font-size: 64px;
+  --h1-e-letter-spacing: 1.92px;
+  --h1-e-line-height: normal;
+  --h1-e-font-style: normal;
+  --h2-j-font-family: "Hina Mincho", Helvetica;
+  --h2-j-font-weight: 400;
+  --h2-j-font-size: 30px;
+  --h2-j-letter-spacing: 3.6px;
+  --h2-j-line-height: 144.9303150177002%;
+  --h2-j-font-style: normal;
+  --body-j-font-family: "Ryo Gothic PlusN", Helvetica;
+  --body-j-font-weight: 400;
+  --body-j-font-size: 16px;
+  --body-j-letter-spacing: 2.56px;
+  --body-j-line-height: 24px;
+  --body-j-font-style: normal;
+  --montserrat-font-family: "Montserrat", Helvetica;
+  --montserrat-font-weight: 500;
+  --montserrat-font-size: 14px;
+  --montserrat-letter-spacing: 0.10000000149011612px;
+  --montserrat-line-height: 20px;
+  --montserrat-font-style: normal;
+  --h1-j-font-family: "Hina Mincho", Helvetica;
+  --h1-j-font-weight: 400;
+  --h1-j-font-size: 64px;
+  --h1-j-letter-spacing: 4.48px;
+  --h1-j-line-height: normal;
+  --h1-j-font-style: normal;
+  --pink-shadow: 3px 4px 5.800000190734863px 0px rgba(193, 157, 169, 1);
+  --drop: 0px 2px 4px 0px rgba(177, 165, 171, 0.8);
+  --variable-collection-beige: rgba(229, 213, 203, 1);
+  --variable-collection-pink: rgba(198, 151, 165, 1);
+  --variable-collection-white: rgba(255, 255, 255, 1);
+  --variable-collection-pale-pink: rgba(245, 236, 239, 1);
+  --variable-collection-salmon: rgba(215, 169, 159, 1);
+  --variable-collection-beige-gradient: rgba(255, 255, 255, 0);
+  --variable-collection-purple: rgba(158, 135, 190, 1);
+}
+
+.box {
+  width: 360px;
+  height: 1212px;
+}
+
+.box .profile {
+  width: 362px;
+  height: 1212px;
+  top: 0;
+  left: 0;
+}
+
+.box .overlap {
+  position: relative;
+  width: 360px;
+  height: 1212px;
+}
+
+.box .bg {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(245, 236, 239, 0.48) 50.5%,
+    rgba(221.48, 179.58, 193.4, 0.48) 100%
+  );
+  position: absolute;
+  width: 360px;
+  height: 1185px;
+  top: 27px;
+  left: 0;
+}
+
+.box .img {
+  mix-blend-mode: luminosity;
+  object-fit: cover;
+  position: absolute;
+  width: 360px;
+  height: 1185px;
+  top: 27px;
+  left: 0;
+}
+
+.box .div {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  position: absolute;
+  top: 79px;
+  left: 25px;
+}
+
+.box .header-mark {
+  width: 54px;
+  position: relative;
+  height: 8px;
+  background-color: var(--variable-collection-salmon);
+}
+
+.box .text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: var(--mobile-h1-font-family);
+  font-weight: var(--mobile-h1-font-weight);
+  color: var(--grey);
+  font-size: var(--mobile-h1-font-size);
+  letter-spacing: var(--mobile-h1-letter-spacing);
+  line-height: var(--mobile-h1-line-height);
+  font-style: var(--mobile-h1-font-style);
+}
+
+.box .text-wrapper-2 {
+  position: absolute;
+  top: 19px;
+  left: 32px;
+  transform: rotate(-9.9deg);
+  font-family: "Charlotte-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--variable-collection-pink);
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.box .pic {
+  position: absolute;
+  width: 360px;
+  height: 386px;
+  top: 138px;
+  left: 0;
+  object-fit: cover;
+}
+
+.box .frame {
+  position: absolute;
+  width: 345px;
+  height: 440px;
+  top: 426px;
+  left: 3px;
+}
+
+.box .overlap-group {
+  position: relative;
+  height: 440px;
+}
+
+.box .rectangle {
+  top: 18px;
+  left: 9px;
+  background-color: var(--variable-collection-white);
+  opacity: 0.93;
+  position: absolute;
+  width: 336px;
+  height: 422px;
+  border-radius: 8px;
+}
+
+.box .rectangle-2 {
+  top: 9px;
+  left: 0;
+  border: 3px solid;
+  border-color: var(--variable-collection-white);
+  opacity: 0.85;
+  position: absolute;
+  width: 336px;
+  height: 422px;
+  border-radius: 8px;
+}
+
+.box .star {
+  left: 307px;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 0;
+}
+
+.box .star-2 {
+  left: 9px;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 0;
+}
+
+.box .name {
+  position: absolute;
+  width: 207px;
+  height: 84px;
+  top: 455px;
+  left: 65px;
+}
+
+.box .text-wrapper-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: var(--mobile-h2-font-family);
+  font-weight: var(--mobile-h2-font-weight);
+  color: var(--dark-grey);
+  font-size: var(--mobile-h2-font-size);
+  letter-spacing: var(--mobile-h2-letter-spacing);
+  line-height: var(--mobile-h2-line-height);
+  white-space: nowrap;
+  font-style: var(--mobile-h2-font-style);
+}
+
+.box .overlap-2 {
+  position: absolute;
+  width: 201px;
+  height: 49px;
+  top: 35px;
+  left: 0;
+}
+
+.box .text-wrapper-4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: var(--small-text-j-font-family);
+  font-weight: var(--small-text-j-font-weight);
+  color: var(--grey);
+  font-size: var(--small-text-j-font-size);
+  letter-spacing: var(--small-text-j-letter-spacing);
+  line-height: var(--small-text-j-line-height);
+  font-style: var(--small-text-j-font-style);
+}
+
+.box .text-wrapper-5 {
+  position: absolute;
+  top: 21px;
+  left: 0;
+  font-family: var(--small-text-j-font-family);
+  font-weight: var(--small-text-j-font-weight);
+  color: var(--grey);
+  font-size: var(--small-text-j-font-size);
+  letter-spacing: var(--small-text-j-letter-spacing);
+  line-height: var(--small-text-j-line-height);
+  font-style: var(--small-text-j-font-style);
+}
+
+.box .profile-wrapper {
+  position: absolute;
+  width: 336px;
+  height: 282px;
+  top: 550px;
+  left: 12px;
+  overflow: hidden;
+  box-shadow: var(--drop);
+  overflow-y: scroll;
+}
+
+.box .profile-2 {
+  display: flex;
+  flex-direction: column;
+  width: 296px;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+  top: 3px;
+  left: 20px;
+}
+
+.box .empression-co-ltd {
+  position: relative;
+  width: 296px;
+  margin-top: -1px;
+  font-family: var(--body-j-font-family);
+  font-weight: var(--body-j-font-weight);
+  color: var(--grey);
+  font-size: var(--body-j-font-size);
+  letter-spacing: var(--body-j-letter-spacing);
+  line-height: var(--body-j-line-height);
+  font-style: var(--body-j-font-style);
+}
+
+.box .element-z-SNS {
+  position: relative;
+  width: 296px;
+  font-family: var(--mobile-body-font-family);
+  font-weight: var(--mobile-body-font-weight);
+  color: var(--dark-grey);
+  font-size: var(--mobile-body-font-size);
+  letter-spacing: var(--mobile-body-letter-spacing);
+  line-height: var(--mobile-body-line-height);
+  font-style: var(--mobile-body-font-style);
+}
+
+.box .media {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  position: absolute;
+  top: 904px;
+  left: 29px;
+}
+
+.box .frame-wrapper {
+  position: relative;
+  width: 134px;
+  height: 40px;
+}
+
+.box .frame-2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  position: relative;
+}
+
+.box .header-mark-2 {
+  width: 28px;
+  margin-left: -10px;
+  transform: rotate(90deg);
+  position: relative;
+  height: 8px;
+  background-color: var(--variable-collection-salmon);
+}
+
+.box .text-wrapper-6 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: var(--small-title-j-font-family);
+  font-weight: var(--small-title-j-font-weight);
+  color: var(--grey);
+  font-size: var(--small-title-j-font-size);
+  letter-spacing: var(--small-title-j-letter-spacing);
+  line-height: var(--small-title-j-line-height);
+  font-style: var(--small-title-j-font-style);
+}
+
+.box .frame-3 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.box .frame-4 {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 0px 0px 8px;
+  position: relative;
+  flex: 0 0 auto;
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  border-color: var(--light-grey);
+}
+
+.box .text-wrapper-7 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: var(--body-j-font-family);
+  font-weight: var(--body-j-font-weight);
+  color: var(--grey);
+  font-size: var(--body-j-font-size);
+  letter-spacing: var(--body-j-letter-spacing);
+  line-height: var(--body-j-line-height);
+  white-space: nowrap;
+  font-style: var(--body-j-font-style);
+}
+
+.box .text-wrapper-8 {
+  position: relative;
+  width: 168px;
+  margin-top: -1px;
+  font-family: var(--body-j-font-family);
+  font-weight: var(--body-j-font-weight);
+  color: var(--grey);
+  font-size: var(--body-j-font-size);
+  letter-spacing: var(--body-j-letter-spacing);
+  line-height: var(--body-j-line-height);
+  font-style: var(--body-j-font-style);
+}
+
+.box .text-wrapper-9 {
+  position: relative;
+  width: 167px;
+  margin-top: -1px;
+  font-family: var(--body-j-font-family);
+  font-weight: var(--body-j-font-weight);
+  color: var(--grey);
+  font-size: var(--body-j-font-size);
+  letter-spacing: var(--body-j-letter-spacing);
+  line-height: var(--body-j-line-height);
+  font-style: var(--body-j-font-style);
+}
+</style>
