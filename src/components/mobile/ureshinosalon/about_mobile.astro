@@ -1,17 +1,18 @@
 ---
 import { Image } from "astro:assets";
 
-import ureshino1 from "~/assets/hero_top1.png";
-import logo from "~/assets/logomark.png";
-import description from "~/assets/upgrade_your_life.png";
-import about from "~/assets/about.png";
+import aboutover from "~/assets/layer/about_white_bokeh.png";
+import aboutpink from "~/assets/layer/about_pink.png";
+import aboutimage from "~/assets/aboutimage.png";
+import underline4 from "~/assets/underline4.png";
+import underline5 from "~/assets/underline5.png";
 ---
 
 <div class="box">
   <div class="about">
     <div class="overlap">
-      <img class="white-bokeh" src="img/white-bokeh-5.png" />
-      <img class="pink" src="img/pink.png" />
+      <Image class="white-bokeh" src={aboutover} alt="" />
+      <Image class="pink" src={aboutpink} alt="" />
       <div class="div"></div>
       <div class="title">
         <div class="overlap-group">
@@ -23,6 +24,7 @@ import about from "~/assets/about.png";
         </div>
       </div>
       <div class="pic">
+        <Image class="aboutimage" src={aboutimage} alt="" />
         <div class="rectangle-wrapper"><div class="rectangle-2"></div></div>
       </div>
       <div class="subtitle">
@@ -38,8 +40,8 @@ import about from "~/assets/about.png";
         <span class="text-wrapper-5">新しい可能性</span>
         <span class="text-wrapper-6">を<br />一緒に見つけませんか？</span>
       </p>
-      <img class="underline-2" src="img/underline-4.png" />
-      <img class="underline-3" src="img/underline-5.png" />
+      <Image class="underline-2" src={underline4} alt="" />
+      <Image class="underline-3" src={underline4} alt="" />
     </div>
   </div>
 </div>
@@ -268,6 +270,10 @@ import about from "~/assets/about.png";
   mix-blend-mode: screen;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(245, 236, 239, 0.56) 100%);
   opacity: 0.8;
+}
+
+.box .aboutimage {
+  position: absolute;
 }
 
 .box .subtitle {
