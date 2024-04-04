@@ -1,9 +1,10 @@
 ---
 import { Image } from "astro:assets";
 
-import ureshino1 from "~/assets/hero_top1.png";
-import logo from "~/assets/logomark.png";
-import description from "~/assets/upgrade_your_life.png";
+import pearl1 from "~/assets/pearl1.png";
+import pearl2 from "~/assets/pearl2.png";
+import arrow_forward_x from "~/assets/icon_x_arrow_message_ios.svg";
+import icon_x from "~/assets/icon_x_message.svg";
 ---
 
 <div class="box">
@@ -71,10 +72,10 @@ import description from "~/assets/upgrade_your_life.png";
             </div>
           </div>
         </div>
-        <img class="pearl" src="img/pearl2-6.png" />
+        <Image class="pearl" src={pearl1} alt="" />
       </div>
-      <img class="img" src="img/pearl2-7.png" />
-      <img class="pearl-2" src="img/pearl1-4.png" />
+      <Image class="img" src={pearl1} alt="" />
+      <Image class="pearl-2" src={pearl2} alt="" />
       <div class="button">
         <p class="div-2">
           <span class="text-wrapper-7">*決済完了を以って</span>
@@ -99,10 +100,10 @@ import description from "~/assets/upgrade_your_life.png";
           target="_blank"
           rel="noopener noreferrer"
           ><div class="tweet">
-            <img class="twitter-x" src="img/twitter-x-1.svg" />
+            <Image class="twitter-x" src={icon_x} alt="" />
             <div class="frame-2">
               <div class="text-wrapper-9">2023.01.15 投稿を読む</div>
-              <img class="arrow-forward-ios-2" src="img/arrow-forward-ios-2.svg" />
+              <Image class="arrow-forward-ios-2" src={arrow_forward_x} alt="" />
             </div></div
         ></a>
         <a
@@ -110,10 +111,10 @@ import description from "~/assets/upgrade_your_life.png";
           target="_blank"
           rel="noopener noreferrer"
           ><div class="tweet-2">
-            <img class="twitter-x" src="img/twitter-x-1.svg" />
+            <Image class="twitter-x" src={icon_x} alt="" />
             <div class="frame-2">
               <div class="text-wrapper-9">2023.05.25 投稿を読む</div>
-              <img class="arrow-forward-ios-2" src="img/image.svg" />
+              <Image class="arrow-forward-ios-2" src={arrow_forward_x} alt="" />
             </div></div
         ></a>
       </div>
