@@ -1,9 +1,12 @@
 ---
 import { Image } from "astro:assets";
 
+import layer from "~/assets/layer/layer_voice2.png";
+import layer2 from "~/assets/layer/layer_voice2_2.png";
+
 import arrow from "~/assets/voice/arrow.png";
 import underline from "~/assets/voice/underline.png";
-import layer from "~/assets/layer/layer_voice2.png";
+
 import voice2image from "~/assets/voice/voice2image.png";
 import voice_reina from "~/assets/voice/voice_reina.png";
 import voice_haru from "~/assets/voice/voice_haru.png";
@@ -13,7 +16,7 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 <div class="box">
   <div class="support">
     <div class="overlap">
-      <img class="bg" src="img/bg-2.png" />
+      <Image class="bg" src={layer} alt="" />
       <div class="title">
         <div class="overlap-group">
           <div class="group">
@@ -88,7 +91,7 @@ import voice_karen from "~/assets/voice/voice_karen.png";
           </div>
         </div>
       </div>
-      <Image class="bg-2" src={layer} alt="" />
+      <Image class="bg-2" src={layer2} alt="" />
       <div class="bubbles">
         <div class="member">
           <div class="overlap-3">

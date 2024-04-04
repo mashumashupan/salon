@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
 
-import ureshino1 from "~/assets/hero_top1.png";
-import logo from "~/assets/logomark.png";
-import description from "~/assets/upgrade_your_life.png";
+import layer1 from "~/assets/layer/layer_contents1.png";
+import layer2 from "~/assets/layer/layer_contents2.png";
+
 import contents1_live from "~/assets/contents/contents1_live.png";
 import contents2_meetup from "~/assets/contents/contents2_meetup.png";
 import contents3_korea from "~/assets/contents/contents3_korea.png";
@@ -11,7 +11,8 @@ import contents4_column from "~/assets/contents/contents4_column.png";
 import contents5_slack from "~/assets/contents/contents5_slack.png";
 import contents6_bukatu from "~/assets/contents/contents6_bukatu.png";
 import subtract from "~/assets/contents/Subtract.svg";
-import leaf_shadow2 from "~/assets/contents/leaf_shadow2.png";
+import Line1 from "~/assets/contents/Line1.svg";
+import Line2 from "~/assets/contents/Line2.svg";
 
 import meetup1 from "~/assets/contents/meetup1.png";
 import meetup2 from "~/assets/aboutimage.png";
@@ -22,13 +23,15 @@ import meetup6 from "~/assets/contents/meetup6.png";
 import meetup7 from "~/assets/communityimage.png";
 import meetup8 from "~/assets/contents/meetup8.png";
 import meetup9 from "~/assets/contents/meetup9.png";
+
+import button from "~/assets/button.svg";
 ---
 
 <div class="box">
   <div class="contents">
     <div class="overlap">
-      <img class="leaf-shadow" src="img/leaf-shadow-1.png" />
-      <Image class="img" src={leaf_shadow2} alt="" />
+      <Image class="leaf-shadow" src={layer1} alt="" />
+      <Image class="img" src={layer2} alt="" />
       <div class="title">
         <div class="overlap-group">
           <div class="div">
@@ -37,8 +40,8 @@ import meetup9 from "~/assets/contents/meetup9.png";
           </div>
           <div class="member-only">
             <div class="text-wrapper-2">メンバー限定</div>
-            <img class="line" src="img/line-21.svg" />
-            <img class="line-2" src="img/line-22.svg" />
+            <Image class="line" src={Line1} alt="" />
+            <Image class="line-2" src={Line2} alt="" />
           </div>
         </div>
       </div>
@@ -60,7 +63,7 @@ import meetup9 from "~/assets/contents/meetup9.png";
         <div class="overlap-3">
           <div class="frame">
             <div class="text-wrapper-5">今すぐ入会</div>
-            <img class="arrow-forward-ios" src="img/arrow-forward-ios.svg" />
+            <Image class="arrow-forward-ios" src={button} alt="" />
           </div>
           <img class="intersect" src="img/intersect.svg" />
         </div>

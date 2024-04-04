@@ -1,17 +1,27 @@
 ---
 import { Image } from "astro:assets";
 
+import layer from "~/assets/layer/layer_mystory.png";
+import layer2 from "~/assets/layer/layer_mystory2.png";
+
+import arrow from "~/assets/mystory/arrow.svg";
 import beforeimage from "~/assets/mystory/beforeiamge.png";
 import afterimage from "~/assets/mystory/afterimage.png";
 import mystoryimage from "~/assets/mystory/mystoryimage.png";
 import beforeafter from "~/assets/mystory/beforeafter.svg";
+
+import singleunderline from "~/assets/mystory/single_underline.png";
+import underline1 from "~/assets/mystory/underline6.png";
+import underline2 from "~/assets/mystory/underline7.png";
+import underline3 from "~/assets/mystory/underline8.png";
+import underline4 from "~/assets/mystory/underline9.png";
 ---
 
 <div class="box">
   <div class="mystory">
     <div class="overlap">
-      <img class="bg" src="img/bg-2.png" />
-      <img class="img" src="img/bg.png" />
+      <Image class="bg" src={layer2} alt="" />
+      <Image class="img" src={layer} alt="" />
       <p class="element">
         <span class="text-wrapper">ここで</span>
         <span class="span">私の過去</span>
@@ -72,14 +82,14 @@ import beforeafter from "~/assets/mystory/beforeafter.svg";
           <div class="SNS-UP">
             当時は、何をやっても上手くいきませんでした。<br /><br />しかし、SNSを始めて<br />自分磨きや美容を頑張るようになりました。<br /><br />環境と意識を変えたことで<br />出会う人やチャンスも変化しました。<br /><br />理想の王子様との出会い、収入UP、海外移住も実現しました!
           </div>
-          <img class="single-underline" src="img/single-underline-1.png" />
-          <img class="underline" src="img/underline-6.png" />
-          <img class="underline-2" src="img/underline-7.png" />
-          <img class="underline-3" src="img/underline-8.png" />
-          <img class="underline-4" src="img/underline-9.png" />
+          <Image class="single-underline" src={singleunderline} alt="" />
+          <Image class="underline" src={underline1} alt="" />
+          <Image class="underline-2" src={underline2} alt="" />
+          <Image class="underline-3" src={underline3} alt="" />
+          <Image class="underline-4" src={underline4} alt="" />
         </div>
       </div>
-      <img class="arrow" src="img/arrow-1.png" />
+      <Image class="arrow" src={arrow} alt="" />
     </div>
   </div>
 </div>
