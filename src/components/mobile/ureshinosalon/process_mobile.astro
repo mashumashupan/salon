@@ -1,9 +1,7 @@
 ---
 import { Image } from "astro:assets";
 
-import ureshino1 from "~/assets/hero_top1.png";
-import logo from "~/assets/logomark.png";
-import description from "~/assets/upgrade_your_life.png";
+import layer from "~/assets/layer/layer_process.png";
 ---
 
 <div class="box">
@@ -13,7 +11,7 @@ import description from "~/assets/upgrade_your_life.png";
         <div class="overlap-group">
           <div class="div"></div>
           <div class="bg-2"></div>
-          <img class="img" src="img/bg.png" />
+          <Image class="img" src={layer} alt="" />
         </div>
       </div>
       <div class="title">
