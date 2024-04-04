@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
 
-import ureshino1 from "~/assets/hero_top1.png";
-import logo from "~/assets/logomark.png";
-import description from "~/assets/upgrade_your_life.png";
+import process3image from "~/assets/process3image.png";
+import icon_line from "~/assets/icon_line.svg";
+import qr_line from "~/assets/qr_line.svg";
 ---
 
 <div class="box">
@@ -12,14 +12,14 @@ import description from "~/assets/upgrade_your_life.png";
       <div class="bg">
         <div class="overlap-group">
           <div class="rectangle"></div>
-          <img class="img" src="img/rectangle-108.png" />
+          <Image class="img" src={process3image} alt="" />
         </div>
       </div>
       <div class="line">
         <div class="text-wrapper">お問い合わせ</div>
-        <img class="line-2" src="img/line-1.svg" />
+        <Image class="line-2" src={icon_line} alt="" />
       </div>
-      <img class="qr" src="img/qr-1.svg" />
+      <Image class="qr" src={qr_line} alt="" />
       <div class="div">Ureshino Salon</div>
       <div class="rectangle-2"></div>
       <div class="text-wrapper-2">サロンで<br />お会いできることを<br />楽しみにしています！</div>
