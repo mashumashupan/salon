@@ -1,9 +1,10 @@
 ---
 import { Image } from "astro:assets";
 
-import ureshino1 from "~/assets/hero_top1.png";
-import logo from "~/assets/logomark.png";
-import description from "~/assets/upgrade_your_life.png";
+import priceimage from "~/assets/priceimage.png";
+import diamond from "~/assets/diamond_purple.svg";
+import watercolor1_1 from "~/assets/watercolor1_1.png";
+import button from "~/assets/button.svg";
 ---
 
 <div class="box">
@@ -66,7 +67,7 @@ import description from "~/assets/upgrade_your_life.png";
         <button class="button">
           <button class="state-layer-wrapper">
             <div class="state-layer">
-              <img class="img" src="img/icon.svg" />
+              <Image class="img" src={diamond} alt="" />
               <div class="label-text">購入</div>
             </div>
           </button>
@@ -100,14 +101,14 @@ import description from "~/assets/upgrade_your_life.png";
               <button class="button">
                 <button class="state-layer-wrapper">
                   <div class="state-layer">
-                    <img class="img" src="img/icon-2.svg" />
+                    <Image class="img" src={diamond} alt="" />
                     <div class="label-text">購入</div>
                   </div>
                 </button>
               </button>
             </div>
           </div>
-          <img class="group-2" src="img/group-45.png" />
+          <Image class="group-2" src={priceimage} alt="" />
         </div>
       </div>
       <div class="overlap-4">
@@ -115,7 +116,7 @@ import description from "~/assets/upgrade_your_life.png";
           <div class="overlap-5">
             <div class="frame-5">
               <div class="text-wrapper-9">今すぐ入会</div>
-              <img class="img" src="img/arrow-forward-ios.svg" />
+              <Image class="img" src={button} alt="" />
             </div>
             <img class="intersect" src="img/intersect.svg" />
           </div>
@@ -123,7 +124,7 @@ import description from "~/assets/upgrade_your_life.png";
         <div class="label">
           <div class="overlap-6">
             <div class="overlap-group-wrapper">
-              <div class="watercolor-wrapper"><img class="watercolor" src="img/watercolor1-2.png" /></div>
+              <div class="watercolor-wrapper"><Image class="watercolor" src={watercolor1_1} alt="" /></div>
             </div>
             <div class="text-wrapper-10">期間限定！</div>
           </div>
