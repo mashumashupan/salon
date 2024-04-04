@@ -1,9 +1,12 @@
 ---
 import { Image } from "astro:assets";
 
-import ureshino1 from "~/assets/hero_top1.png";
-import logo from "~/assets/logomark.png";
-import description from "~/assets/upgrade_your_life.png";
+import arrow from "~/assets/voice/arrow.png";
+import layer from "~/assets/voice/layer.png";
+import voice2image from "~/assets/voice/voice2image.png";
+import voice_reina from "~/assets/voice/voice_reina.png";
+import voice_haru from "~/assets/voice/voice_haru.png";
+import voice_karen from "~/assets/voice/voice_karen.png";
 ---
 
 <div class="box">
@@ -46,7 +49,7 @@ import description from "~/assets/upgrade_your_life.png";
                 <div class="overlap-group-3">
                   <div class="rectangle-2"></div>
                   <div class="rectangle-3"></div>
-                  <img class="img" src="img/rectangle-54.png" />
+                  <Image class="img" src={voice2image} alt="" />
                 </div>
               </div>
               <div class="ellipse"></div>
@@ -84,7 +87,7 @@ import description from "~/assets/upgrade_your_life.png";
           </div>
         </div>
       </div>
-      <img class="bg-2" src="img/bg.png" />
+      <Image class="bg-2" src={layer} alt="" />
       <div class="bubbles">
         <div class="member">
           <div class="overlap-3">
@@ -103,13 +106,33 @@ import description from "~/assets/upgrade_your_life.png";
                 </div>
               </div>
             </div>
-            <img class="rectangle-4" src="img/rectangle-3-2.png" />
+            <Image class="rectangle-4" src={voice_reina} alt="" />
           </div>
         </div>
         <div class="overlap-wrapper">
           <div class="overlap-4">
             <div class="bubble-2">
               <div class="overlap-group-4">
+                <div class="frame-3">
+                  <p class="p">
+                    <span class="text-wrapper-7">自分ももっと頑張ろうと思える<br /></span>
+                    <span class="text-wrapper-8">かけがえのない存在</span>
+                    <span class="text-wrapper-7">です!</span>
+                  </p>
+                  <div class="group-6">
+                    <div class="text-wrapper-9">haru&nbsp;&nbsp;さん</div>
+                    <div class="text-wrapper-10">メンバー</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <Image class="rectangle-5" src={voice_haru} alt="" />
+          </div>
+        </div>
+        <div class="member">
+          <div class="overlap-3">
+            <div class="bubble">
+              <div class="overlap-group-5">
                 <div class="frame-3">
                   <p class="p">
                     <span class="text-wrapper-7">アドバイスや応援が心強い。メンバーとの出会いで</span>
@@ -123,31 +146,11 @@ import description from "~/assets/upgrade_your_life.png";
                 </div>
               </div>
             </div>
-            <img class="rectangle-5" src="img/rectangle-3.png" />
-          </div>
-        </div>
-        <div class="member">
-          <div class="overlap-3">
-            <div class="bubble">
-              <div class="overlap-group-5">
-                <div class="frame-3">
-                  <p class="p">
-                    <span class="text-wrapper-7">自分ももっと頑張ろうと思える<br /></span>
-                    <span class="text-wrapper-8">かけがえのない存在</span>
-                    <span class="text-wrapper-7">です!</span>
-                  </p>
-                  <div class="group-6">
-                    <div class="text-wrapper-9">れいな&nbsp;&nbsp;さん</div>
-                    <div class="text-wrapper-10">メンバー</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <img class="rectangle-4" src="img/image.png" />
+            <Image class="rectangle-5" src={voice_karen} alt="" />
           </div>
         </div>
       </div>
-      <img class="arrow" src="img/arrow-2.png" />
+      <Image class="arrow" src={arrow} alt="" />
     </div>
   </div>
 </div>
