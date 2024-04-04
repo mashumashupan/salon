@@ -1,9 +1,10 @@
 ---
 import { Image } from "astro:assets";
 
-import ureshino1 from "~/assets/hero_top1.png";
-import logo from "~/assets/logomark.png";
-import description from "~/assets/upgrade_your_life.png";
+import beforeimage from "~/assets/mystory/beforeiamge.png";
+import afterimage from "~/assets/mystory/afterimage.png";
+import mystoryimage from "~/assets/mystory/mystoryimage.png";
+import beforeafter from "~/assets/mystory/beforeafter.svg";
 ---
 
 <div class="box">
@@ -37,12 +38,12 @@ import description from "~/assets/upgrade_your_life.png";
       </div>
       <div class="before-after">
         <div class="overlap-2">
-          <img class="play-arrow" src="img/play-arrow.svg" />
+          <Image class="play-arrow" src={beforeafter} alt="" />
           <div class="frame-2">
             <div class="card">
               <div class="overlap-group-2">
                 <div class="frame-3">
-                  <img class="rectangle" src="img/image.png" />
+                  <Image class="rectangle" src={beforeimage} alt="" />
                   <div class="text-wrapper-4">SNSや美容を始める前の私</div>
                 </div>
                 <div class="div-wrapper"><div class="text-wrapper-5">Before</div></div>
@@ -51,7 +52,7 @@ import description from "~/assets/upgrade_your_life.png";
             <div class="overlap-wrapper">
               <div class="overlap-group-2">
                 <div class="frame-3">
-                  <img class="rectangle" src="img/rectangle-6.png" />
+                  <Image class="rectangle" src={afterimage} alt="" />
                   <div class="text-wrapper-4">現在の私</div>
                 </div>
                 <div class="frame-4"><div class="text-wrapper-5">After</div></div>
@@ -60,7 +61,7 @@ import description from "~/assets/upgrade_your_life.png";
           </div>
         </div>
       </div>
-      <img class="mrn" src="img/mrn.png" />
+      <Image class="mrn" src={mystoryimage} alt="" />
       <div class="text-wrapper-6">My Story</div>
       <div class="text">
         <div class="overlap-3">
