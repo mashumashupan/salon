@@ -1,28 +1,29 @@
 ---
 import { Image } from "astro:assets";
 
-import ureshino1 from "~/assets/hero_top1.png";
-import logo from "~/assets/logomark.png";
-import description from "~/assets/upgrade_your_life.png";
+import layer from "~/assets/layer/layer_profile.png";
+import profileimage from "~/assets/profileimage.png";
+import star from "~/assets/star2.svg";
+
 ---
 
 <div class="box">
   <div class="profile">
     <div class="overlap">
       <div class="bg"></div>
-      <img class="img" src="img/bg.png" />
+      <Image class="img" src={layer} alt="" />
       <div class="div">
         <div class="header-mark"></div>
         <div class="text-wrapper">プロフィール</div>
       </div>
       <div class="text-wrapper-2">Yumi Ureshino</div>
-      <img class="pic" src="img/pic-1.png" />
+      <Image class="pic" src={profileimage} alt="" />
       <div class="frame">
         <div class="overlap-group">
           <div class="rectangle"></div>
           <div class="rectangle-2"></div>
-          <img class="star" src="img/star-7.svg" />
-          <img class="star-2" src="img/star-8.svg" />
+          <Image class="star" src={star} alt="" />
+          <Image class="star-2" src={star} alt="" />
         </div>
       </div>
       <div class="name">
