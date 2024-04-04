@@ -1,9 +1,10 @@
 ---
 import { Image } from "astro:assets";
 
-import ureshino1 from "~/assets/hero_top1.png";
-import logo from "~/assets/logomark.png";
-import description from "~/assets/upgrade_your_life.png";
+import communityimage from "~/assets/communityimage.png";
+import star2 from "~/assets/star2.svg";
+import watercolor1_1 from "~/assets/watercolor1_1.png";
+import button from "~/assets/button.svg";
 ---
 
 <div class="box">
@@ -17,7 +18,8 @@ import description from "~/assets/upgrade_your_life.png";
     </div>
     <div class="overlap-group">
       <div class="two">
-        <div class="rectangle-wrapper"><div class="rectangle"></div></div>
+        <div class="rectangle-wrapper"><div class="rectangle">
+          <Image class="communityimage" src={communityimage} alt="" /></div></div>
       </div>
       <div class="overlap-wrapper">
         <div class="overlap-2">
@@ -27,8 +29,8 @@ import description from "~/assets/upgrade_your_life.png";
               <div class="rectangle-3"></div>
             </div>
           </div>
-          <img class="star" src="img/star.png" />
-          <img class="img" src="img/image.png" />
+          <Image class="star" src={star2} alt="" />
+          <Image class="img" src={star2} alt="" />
         </div>
       </div>
       <div class="flexcontainer">
@@ -51,7 +53,7 @@ import description from "~/assets/upgrade_your_life.png";
         <div class="overlap-3">
           <div class="frame">
             <div class="text-wrapper-5">今すぐ入会</div>
-            <img class="arrow-forward-ios" src="img/arrow-forward-ios.svg" />
+            <Image class="arrow-forward-ios" src={button} alt="" />
           </div>
           <img class="intersect" src="img/intersect.svg" />
         </div>
@@ -65,7 +67,7 @@ import description from "~/assets/upgrade_your_life.png";
       <div class="label">
         <div class="overlap-5">
           <div class="div-wrapper">
-            <div class="watercolor-wrapper"><img class="watercolor" src="img/watercolor1-2.png" /></div>
+            <div class="watercolor-wrapper"><Image class="watercolor" src={watercolor1_1} alt="" /></div>
           </div>
           <p class="element">
             <span class="text-wrapper-7">先着</span>
