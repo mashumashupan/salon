@@ -1,17 +1,22 @@
 ---
 import { Image } from "astro:assets";
 
-import ureshino1 from "~/assets/hero_top1.png";
-import logo from "~/assets/logomark.png";
-import description from "~/assets/upgrade_your_life.png";
+import light_shadow1 from "~/assets/startyour/light_shadow1.png";
+import startyourimage from "~/assets/startyour/startyourimage.png";
+
 ---
 
 <div class="box">
   <div class="your-journey">
     <div class="overlap">
       <div class="pic"><div class="gradient"></div></div>
-      <img class="title" src="img/title.png" />
-      <img class="light-shadow" src="img/light-shadow-1.png" />
+      <!-- <img class="title" src="img/title.png" /> -->
+      <div class="title">
+        <div class="header-mark"></div>
+        <div class="text-wrapper">My Journey</div>
+      </div>
+      <Image class="light-shadow" src={light_shadow1} alt="" />
+      <Image class="startyourimage" src={startyourimage} alt="" />
       <div class="rectangle"></div>
       <div class="div"></div>
       <div class="text">
