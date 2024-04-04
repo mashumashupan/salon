@@ -4,13 +4,31 @@ import { Image } from "astro:assets";
 import ureshino1 from "~/assets/hero_top1.png";
 import logo from "~/assets/logomark.png";
 import description from "~/assets/upgrade_your_life.png";
+import contents1_live from "~/assets/contents/contents1_live.png";
+import contents2_meetup from "~/assets/contents/contents2_meetup.png";
+import contents3_korea from "~/assets/contents/contents3_korea.png";
+import contents4_column from "~/assets/contents/contents4_column.png";
+import contents5_slack from "~/assets/contents/contents5_slack.png";
+import contents6_bukatu from "~/assets/contents/contents6_bukatu.png";
+import subtract from "~/assets/contents/Subtract.svg";
+import leaf_shadow2 from "~/assets/contents/leaf_shadow2.png";
+
+import meetup1 from "~/assets/contents/meetup1.png";
+import meetup2 from "~/assets/aboutimage.png";
+import meetup3 from "~/assets/contents/meetup3.png";
+import meetup4 from "~/assets/contents/meetup4.png";
+import meetup5 from "~/assets/benefit/benefit2.png";
+import meetup6 from "~/assets/contents/meetup6.png";
+import meetup7 from "~/assets/communityimage.png";
+import meetup8 from "~/assets/contents/meetup8.png";
+import meetup9 from "~/assets/contents/meetup9.png";
 ---
 
 <div class="box">
   <div class="contents">
     <div class="overlap">
       <img class="leaf-shadow" src="img/leaf-shadow-1.png" />
-      <img class="img" src="img/leaf-shadow-2.png" />
+      <Image class="img" src={leaf_shadow2} alt="" />
       <div class="title">
         <div class="overlap-group">
           <div class="div">
@@ -51,35 +69,44 @@ import description from "~/assets/upgrade_your_life.png";
         <div class="overlap-4">
           <div class="pic">
             <div class="frame-2">
-              <div class="frame-wrapper">
+              <div class="group-1">
+                <Image class="meetup" src={meetup1} alt="" />
                 <div class="div-wrapper"><div class="text-wrapper-6">Korea 2020</div></div>
               </div>
               <div class="group-2">
+                <Image class="meetup" src={meetup2} alt="" />
                 <div class="div-wrapper"><div class="text-wrapper-6">Korea 2020</div></div>
               </div>
               <div class="group-3">
+                <Image class="meetup" src={meetup3} alt="" />
                 <div class="div-wrapper"><div class="text-wrapper-6">Korea 2020</div></div>
               </div>
             </div>
             <div class="frame-2">
               <div class="group-4">
+                <Image class="meetup" src={meetup4} alt="" />
                 <div class="div-wrapper"><div class="text-wrapper-6">Malaysia 2020</div></div>
               </div>
               <div class="group-5">
+                <Image class="meetup" src={meetup5} alt="" />
                 <div class="div-wrapper"><div class="text-wrapper-6">Malaysia 2020</div></div>
               </div>
               <div class="group-6">
+                <Image class="meetup" src={meetup6} alt="" />
                 <div class="div-wrapper"><div class="text-wrapper-6">Korea 2020</div></div>
               </div>
             </div>
             <div class="frame-2">
               <div class="group-7">
+                <Image class="meetup" src={meetup7} alt="" />
                 <div class="div-wrapper"><div class="text-wrapper-6">Korea 2020</div></div>
               </div>
               <div class="group-8">
+                <Image class="meetup" src={meetup8} alt="" />
                 <div class="div-wrapper"><div class="text-wrapper-6">Korea 2020</div></div>
               </div>
               <div class="group-9">
+                <Image class="meetup" src={meetup9} alt="" />
                 <div class="div-wrapper"><div class="text-wrapper-6">Tokyo 2020</div></div>
               </div>
             </div>
@@ -176,7 +203,7 @@ import description from "~/assets/upgrade_your_life.png";
         <div class="overlap-group-wrapper">
           <div class="overlap-group-3">
             <div class="card">
-              <div class="rectangle-wrapper"><img class="rectangle-2" src="img/rectangle-60-4.png" /></div>
+              <div class="rectangle-wrapper"><Image class="rectangle-2" src={contents1_live} alt="" /></div>
               <img class="line-3" src="img/line-23-4.svg" />
               <div class="flexcontainer-wrapper">
                 <div class="flexcontainer">
@@ -189,7 +216,7 @@ import description from "~/assets/upgrade_your_life.png";
               </div>
             </div>
             <div class="label-2">
-              <img class="subtract" src="img/subtract.svg" />
+              <Image class="subtract" src={subtract} alt="" />
               <div class="frame-6">
                 <div class="frame-7"><div class="text-wrapper-16">月に2回のインスタライブ</div></div>
               </div>
@@ -199,7 +226,7 @@ import description from "~/assets/upgrade_your_life.png";
         <div class="overlap-group-wrapper">
           <div class="overlap-group-3">
             <div class="card">
-              <div class="rectangle-wrapper"><img class="rectangle-2" src="img/rectangle-60.png" /></div>
+              <div class="rectangle-wrapper"><Image class="rectangle-2" src={contents2_meetup} alt="" /></div>
               <img class="line-3" src="img/line-23-3.svg" />
               <div class="group-wrapper">
                 <div class="group-10">
@@ -213,7 +240,7 @@ import description from "~/assets/upgrade_your_life.png";
               </div>
             </div>
             <div class="label-3">
-              <img class="subtract" src="img/subtract-3.svg" />
+              <Image class="subtract" src={subtract} alt="" />
               <div class="frame-8">
                 <div class="frame-7"><div class="text-wrapper-16">国内外でオフ会開催！</div></div>
               </div>
@@ -223,7 +250,7 @@ import description from "~/assets/upgrade_your_life.png";
         <div class="overlap-group-wrapper">
           <div class="overlap-group-3">
             <div class="card">
-              <div class="rectangle-wrapper"><img class="rectangle-2" src="img/rectangle-60-5.png" /></div>
+              <div class="rectangle-wrapper"><Image class="rectangle-2" src={contents3_korea} alt="" /></div>
               <img class="line-3" src="img/line-23.svg" />
               <div class="flexcontainer-wrapper">
                 <div class="flexcontainer">
@@ -236,7 +263,7 @@ import description from "~/assets/upgrade_your_life.png";
               </div>
             </div>
             <div class="label-4">
-              <img class="subtract" src="img/subtract-2.svg" />
+              <Image class="subtract" src={subtract} alt="" />
               <div class="frame-6">
                 <div class="frame-7"><div class="text-wrapper-16">韓国美容クリニック特典</div></div>
               </div>
@@ -246,7 +273,7 @@ import description from "~/assets/upgrade_your_life.png";
         <div class="column">
           <div class="overlap-7">
             <div class="card">
-              <div class="rectangle-wrapper"><img class="rectangle-2" src="img/rectangle-60-3.png" /></div>
+              <div class="rectangle-wrapper"><Image class="rectangle-2" src={contents4_column} alt="" /></div>
               <img class="line-3" src="img/image.svg" />
               <div class="group-wrapper">
                 <div class="group-11">
@@ -260,7 +287,7 @@ import description from "~/assets/upgrade_your_life.png";
               </div>
             </div>
             <div class="label-4">
-              <img class="subtract" src="img/subtract-4.svg" />
+              <Image class="subtract" src={subtract} alt="" />
               <div class="frame-8">
                 <div class="frame-7"><div class="text-wrapper-16">会員限定うれしのコラム</div></div>
               </div>
@@ -270,7 +297,7 @@ import description from "~/assets/upgrade_your_life.png";
         <div class="overlap-group-wrapper">
           <div class="overlap-group-3">
             <div class="card">
-              <div class="rectangle-wrapper"><img class="rectangle-2" src="img/rectangle-60-2.png" /></div>
+              <div class="rectangle-wrapper"><Image class="rectangle-2" src={contents5_slack} alt="" /></div>
               <img class="line-3" src="img/line-23-2.svg" />
               <div class="group-12">
                 <div class="flexcontainer-4">
@@ -283,7 +310,7 @@ import description from "~/assets/upgrade_your_life.png";
               </div>
             </div>
             <div class="label-5">
-              <img class="subtract" src="img/subtract-5.svg" />
+              <Image class="subtract" src={subtract} alt="" />
               <div class="frame-6">
                 <div class="frame-7"><div class="text-wrapper-16">Slack質問箱 &amp; 雑談ルーム</div></div>
               </div>
@@ -293,7 +320,7 @@ import description from "~/assets/upgrade_your_life.png";
         <div class="overlap-group-wrapper">
           <div class="overlap-group-3">
             <div class="card">
-              <div class="rectangle-wrapper"><img class="rectangle-2" src="img/rectangle-60-6.png" /></div>
+              <div class="rectangle-wrapper"><Image class="rectangle-2" src={contents6_bukatu} alt="" /></div>
               <img class="line-3" src="img/line-23-5.svg" />
               <div class="group-wrapper">
                 <div class="group-13">
@@ -308,7 +335,7 @@ import description from "~/assets/upgrade_your_life.png";
               </div>
             </div>
             <div class="label-6">
-              <img class="subtract" src="img/subtract-6.svg" />
+              <Image class="subtract" src={subtract} alt="" />
               <div class="frame-8">
                 <div class="frame-7"><div class="text-wrapper-16">うれしのサロン 部活動</div></div>
               </div>
@@ -740,7 +767,7 @@ import description from "~/assets/upgrade_your_life.png";
   flex: 0 0 auto;
 }
 
-.box .frame-wrapper {
+.box .group-1 {
   position: relative;
   width: 100px;
   height: 100px;
@@ -1054,9 +1081,9 @@ import description from "~/assets/upgrade_your_life.png";
 
 .box .scroll-contents {
   display: flex;
-  width: 360px;
+  width: 400px;
   align-items: flex-start;
-  gap: 24px;
+  gap: 340px;
   position: absolute;
   top: 159px;
   left: 10px;
