@@ -5,9 +5,9 @@ import { Image } from 'astro:assets';
 const { text, url } = Astro.props;
 ---
 
-<div class="h-max w-max">
-    <a href={url}>
-        <Image src={button_bg} alt="Join" />
-        <span class="relative left-4 top-2">{text}</span>
+<div class="flex overflow-hidden">
+    <a href={url} class="flex flex-col">
+        <Image src={button_bg} alt="Join" width="260" height={84} />
+        <span class="relative top-[-60px] self-center text-lg">{text}</span>
     </a>
 </div>

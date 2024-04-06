@@ -13,79 +13,74 @@ import JoinButton from '~/components/common/joinButton.astro';
 ---
 
 <div class="box w-full">
-  <div class="hero flex w-full justify-center pt-[68px] md:pt-[96px]">
-    <Image class="absolute -z-10 w-full" src={bg} alt="background image" />
-    <div class="overlap pt-[52px]">
-      <div>
-        <Image class="hero-top" src={hero_top} alt="" />
-        <Image
-          class="shadow-overlay absolute top-[160px] w-full mix-blend-lighten md:top-[280px]"
-          src={shadowover}
-          alt=""
-        />
-      </div>
-      <div class="rectangle"></div>
-      <div class="h">
-        <div class="overlap-group">
-          <div class="text-wrapper">うれしのサロン</div>
-          <div class="div">うれしのサロン</div>
-          <div class="text-wrapper-2">うれしのサロン</div>
-        </div>
-      </div>
-      <div class="subtitle">
-        <div class="overlap-2">
-          <p class="p">
-            <span class="span">かわいく賢く</span>
-            <span class="text-wrapper-3">生きる</span>
-            <span class="span">女性</span>
-            <span class="text-wrapper-4">のコミュニティ</span>
-          </p>
-          <p class="div-2">
-            <span class="text-wrapper-5">かわいく賢く</span>
-            <span class="text-wrapper-6">生きる</span>
-            <span class="text-wrapper-5">女性</span>
-            <span class="text-wrapper-7">のコミュニティ</span>
-          </p>
-          <div class="group">
-            <div class="quotation">
-              <div class="overlap-group-2">
-                <img class="line" src="img/line-11.svg" />
-                <img class="line-2" src="img/line-12.svg" />
+  <div
+    class="flex w-full flex-col items-center justify-center pt-[68px] md:pt-[96px]"
+  >
+    <Image
+      class="absolute top-[68px] -z-10 w-full md:top-[96px]"
+      src={bg}
+      alt="background image"
+    />
+    <div class="flex flex-col pt-[52px]">
+      <!-- TODO: テキストを調整 -->
+      <div class="title-area text-center">
+        <div class="title-text back">うれしのサロン</div>
+        <div class="title-text mid">うれしのサロン</div>
+        <div class="title-text front">うれしのサロン</div>
+        <div class="subtitle">
+          <div class="overlap-2">
+            <p class="p">
+              <span class="span">かわいく賢く</span>
+              <span class="text-wrapper-3">生きる</span>
+              <span class="span">女性</span>
+              <span class="text-wrapper-4">のコミュニティ</span>
+            </p>
+            <p class="div-2">
+              <span class="text-wrapper-5">かわいく賢く</span>
+              <span class="text-wrapper-6">生きる</span>
+              <span class="text-wrapper-5">女性</span>
+              <span class="text-wrapper-7">のコミュニティ</span>
+            </p>
+            <div class="group">
+              <div class="quotation">
+                <div class="overlap-group-2">
+                  <img class="line" src="img/line-11.svg" />
+                  <img class="line-2" src="img/line-12.svg" />
+                </div>
               </div>
-            </div>
-            <div class="overlap-wrapper">
-              <div class="overlap-group-2">
-                <img class="line-3" src="img/image.svg" />
-                <img class="line-4" src="img/line-12-2.svg" />
+              <div class="overlap-wrapper">
+                <div class="overlap-group-2">
+                  <img class="line-3" src="img/image.svg" />
+                  <img class="line-4" src="img/line-12-2.svg" />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- <div class="default-button">
-      <div class="overlap-3">
-        <div class="frame-2">
-          <div class="text-wrapper-8">今すぐ入会</div>
-          <Image class="arrow-forward-ios" src={button} alt="" />
-        </div>
-        <img class="intersect" src="img/intersect.svg" />
+      <div>
+        <Image class="hero-top" src={hero_top} alt="" />
+        <Image
+          class="absolute top-[160px] w-full mix-blend-lighten md:top-[280px]"
+          src={shadowover}
+          alt=""
+        />
       </div>
-    </div> -->
-    <JoinButton text="今すぐ入会　　>" />
-
-    <p class="div-3">
-      <span class="text-wrapper-9">*決済完了を以って</span>
-      <a
-        href="https://empression-co.com/lp/salon-terms/"
-        target="_blank"
-        rel="noopener noreferrer"
-        ><span class="text-wrapper-9">利用規約</span></a
-      >
-      <span class="text-wrapper-9"
-        >に同意したものとみなし、入会手続きが完了します。</span
-      >
-    </p>
+    </div>
+    <div class="pt-5">
+      <JoinButton text="　　今すぐ入会　　>" />
+    </div>
+    <div class="w-72">
+      <p class="font-thin text-[#71717A] text-xs">
+        <span>*決済完了を以って</span>
+        <a
+          href="https://empression-co.com/lp/salon-terms/"
+          target="_blank"
+          rel="noopener noreferrer"><span>利用規約</span></a
+        >
+        <span>に同意したものとみなし、入会手続きが完了します。</span>
+      </p>
+    </div>
   </div>
 </div>
 
@@ -175,97 +170,49 @@ import JoinButton from '~/components/common/joinButton.astro';
     --variable-collection-purple: rgba(158, 135, 190, 1);
   }
 
-  /* .box {
+  .title-area {
     position: relative;
-    width: 636px;
-    height: 710px;
-  } */
+    top: 10rem;
+    .title-text {
+      position: relative;
 
-  /* .box .hero {
-    width: 638px;
-    height: 710px;
-    top: 0;
-    left: 0;
-  } */
-  /* 
-  .box .overlap {
-    position: absolute;
-    width: 360px;
-    height: 455px;
-    top: 75px;
-    left: 93px;
-  }
+      /* mobile_H1 */
+      font-family: 'Hina Mincho';
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
 
-  .box .top-nav {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 305px;
-    position: absolute;
-    top: 2px;
-    left: 72px;
-  }
+      &.back {
+        top: -1rem;
+        color: #fff;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        -webkit-text-stroke-width: 1;
+        -webkit-text-stroke-color: rgba(255, 255, 255, 0.2);
+        opacity: 0.65;
+      }
 
-  .box .frame {
-    display: inline-flex;
-    align-items: center;
-    gap: 40px;
-    position: relative;
-    flex: 0 0 auto;
-  }
+      &.mid {
+        top: -1.382rem;
+        opacity: 0.81;
+        color: #c697a5;
+      }
 
-  .box .img {
-    position: relative;
-    width: 24px;
-    height: 24px;
-  }
-
-  .box .twitter-x {
-    position: relative;
-    width: 24px;
-    height: 17.45px;
-  } */
-
-  /* .box .hero-top {
-    position: absolute;
-    width: 354px;
-    height: 442px;
-    top: 13px;
-    left: 0;
-    object-fit: cover;
-  } */
-
-  /* .box .shadow-overlay {
-    position: absolute;
-    width: 360px;
-    height: 424px;
-    top: 0;
-    left: 0;
-    mix-blend-mode: lighten;
-    object-fit: cover;
-  } */
-
-  .box .rectangle {
-    position: absolute;
-    width: 324px;
-    height: 145px;
-    top: 310px;
-    left: 25px;
-    filter: blur(30px);
-    background: linear-gradient(
-      180deg,
-      rgb(255, 255, 255) 0%,
-      rgb(255, 255, 255) 100%
-    );
-    opacity: 0.39;
-  }
-
-  .box .h {
-    position: absolute;
-    width: 287px;
-    height: 59px;
-    top: 310px;
-    left: 42px;
+      &.front {
+        left: -0.08rem;
+        top: -1.762rem;
+        background: linear-gradient(
+          90deg,
+          #c697a5 0%,
+          #dbafbc 51.5%,
+          #e1b0bf 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        mix-blend-mode: color-burn;
+      }
+    }
   }
 
   .box .overlap-group {
@@ -545,7 +492,7 @@ import JoinButton from '~/components/common/joinButton.astro';
     mix-blend-mode: lighten;
   }
 
-  .box .div-3 {
+  /* .box .div-3 {
     position: absolute;
     width: 266px;
     height: 56px;
@@ -558,7 +505,7 @@ import JoinButton from '~/components/common/joinButton.astro';
     letter-spacing: var(--small-text-j-letter-spacing);
     line-height: var(--small-text-j-line-height);
     font-style: var(--small-text-j-font-style);
-  }
+  } */
 
   .box .text-wrapper-9 {
     letter-spacing: var(--small-text-j-letter-spacing);
