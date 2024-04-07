@@ -1,0 +1,30 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<div class="frame-2">
+    <div class="shadow-md p-[12px_10px]">
+        <Icon name="check" class="text-xs shrink-0" />
+    </div>
+    <p class="p">
+        <slot />
+    </p>
+</div>
+
+<style>
+.frame-2 {
+    display: flex;
+    width: 300px;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    flex: 0 0 auto;
+    background-color: var(--variable-collection-white);
+    border-radius: 20px 20px 20px 0px;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: var(--variable-collection-pink);
+}
+</style>
