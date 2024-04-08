@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import {ImageMetadata} from "astro";
 
 // コンポーネントの引数を定義
 interface Props {
@@ -28,6 +29,6 @@ const { title, name, icon} = Astro.props;
           </div>
         </div>
       </div>
-      <!-- <Image src={icon} alt="" /> -->
+       <Image src={icon} alt="" />
     </div>
   </div>

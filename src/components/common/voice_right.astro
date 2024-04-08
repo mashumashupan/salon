@@ -1,6 +1,13 @@
 ---
 import { Image } from 'astro:assets';
+import {ImageMetadata} from "astro";
 
+// コンポーネントの引数を定義
+interface Props {
+  title: string;
+  name: string;
+  icon: ImageMetadata;    // Imageが要求する型と同じ型を指定
+}
 
 const { title, name, icon} = Astro.props;
 ---
