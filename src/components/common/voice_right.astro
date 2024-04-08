@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+
+
+const { title, name, icon} = Astro.props;
+---
+
+<!-- 人が右側 -->
+
+<div class="member">
+    <div class="overlap-2">
+      <div class="bubble">
+        <div class="overlap-group-3">
+          <div class="frame">
+            <p class="div-3">
+                <slot />
+            </p>
+            <div class="group-3">
+              <div class="text-wrapper-7">{name} さん</div>
+              <div class="text-wrapper-8">{title}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Image src={icon} alt="" />
+    </div>
+  </div>
