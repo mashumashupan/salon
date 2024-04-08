@@ -11,6 +11,9 @@ import voice2image from "~/assets/voice/voice2image.png";
 import voice_reina from "~/assets/voice/voice_reina.png";
 import voice_haru from "~/assets/voice/voice_haru.png";
 import voice_karen from "~/assets/voice/voice_karen.png";
+
+import Voice_right from "~/components/common/voice_right.astro";
+import Voice_left from "~/components/common/voice_left.astro";
 ---
 
 <div class="box">
@@ -93,77 +96,32 @@ import voice_karen from "~/assets/voice/voice_karen.png";
       </div>
       <Image class="bg-2" src={layer2} alt="" />
       <div class="bubbles">
-        <div class="member">
-          <div class="overlap-3">
-            <div class="bubble">
-              <div class="frame-wrapper">
-                <div class="frame-3">
-                  <p class="p">
-                    <span class="text-wrapper-7">SNSでの日々交流はもちろん、</span>
-                    <span class="text-wrapper-7">オフ会に行った後はみなさんの</span>
-                    <span class="text-wrapper-7">仕事や美容への姿勢、生き方が</span>
-                    <span class="text-wrapper-7">刺激となり活力が湧くので、</span>
-                    <span class="text-wrapper-7">自分ももっと頑張ろうと思える<br /></span>
-                    <span class="text-wrapper-8">かけがえのない存在</span>
-                    <span class="text-wrapper-7">です!</span>
-                  </p>
-                  <div class="group-6">
-                    <div class="text-wrapper-9">れいな&nbsp;&nbsp;さん</div>
-                    <div class="text-wrapper-10">メンバー</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <Image class="rectangle-4" src={voice_reina} alt="" />
-          </div>
-        </div>
-        <div class="overlap-wrapper">
-          <div class="overlap-4">
-            <div class="bubble-2">
-              <div class="overlap-group-4">
-                <div class="frame-3">
-                  <p class="p">
-                    <span class="text-wrapper-7">サロンメンバーには本当に</span>
-                    <span class="text-wrapper-7">頑張り屋さんが多いです。</span>
-                    <span class="text-wrapper-7">更に高みを目指す皆を見ていると、</span>
-                    <span class="text-wrapper-7">頑張ることが楽しくなります。</span>
-                    <span class="text-wrapper-7">次に会った時にレベルアップしていたいという<br /></span>
-                    <span class="text-wrapper-8">モチベーション</span>
-                    <span class="text-wrapper-7">になっています。</span>
-                  </p>
-                  <div class="group-6">
-                    <div class="text-wrapper-9">haru&nbsp;&nbsp;さん</div>
-                    <div class="text-wrapper-10">メンバー</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <Image class="rectangle-5" src={voice_haru} alt="" />
-          </div>
-        </div>
-        <div class="member">
-          <div class="overlap-3">
-            <div class="bubble">
-              <div class="overlap-group-5">
-                <div class="frame-3">
-                  <p class="p">
-                    <span class="text-wrapper-7">かわいく賢く向上心がある人たちで、常に</span>
-                    <span class="text-wrapper-8">刺激を与えてくれる存在</span>
-                    <span class="text-wrapper-7">です！♡</span>
-                    <span class="text-wrapper-7">世界のどこに行ってもサロンメンバーがいて、色んなところで頑張っている仲間がいると思うと自然に自分の</span>
-                    <span class="text-wrapper-8">行動力</span>
-                    <span class="text-wrapper-7">にもつながります。</span>
-                  </p>
-                  <div class="group-6">
-                    <div class="text-wrapper-9">かれん&nbsp;&nbsp;さん</div>
-                    <div class="text-wrapper-10">メンバー</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <Image class="rectangle-5" src={voice_karen} alt="" />
-          </div>
-        </div>
+        <Voice_right name="れいなさん" title="メンバー" icon={voice_reina}/>
+          <span class="text-wrapper-7">SNSでの日々交流はもちろん、</span>
+          <span class="text-wrapper-7">オフ会に行った後はみなさんの</span>
+          <span class="text-wrapper-7">仕事や美容への姿勢、生き方が</span>
+          <span class="text-wrapper-7">刺激となり活力が湧くので、</span>
+          <span class="text-wrapper-7">自分ももっと頑張ろうと思える<br /></span>
+          <span class="text-wrapper-8">かけがえのない存在</span>
+          <span class="text-wrapper-7">です!</span>
+        </Voice_right>
+        <Voice_left name="haruさん" title="メンバー" icon={voice_haru}/>
+          <span class="text-wrapper-7">サロンメンバーには本当に</span>
+          <span class="text-wrapper-7">頑張り屋さんが多いです。</span>
+          <span class="text-wrapper-7">更に高みを目指す皆を見ていると、</span>
+          <span class="text-wrapper-7">頑張ることが楽しくなります。</span>
+          <span class="text-wrapper-7">次に会った時にレベルアップしていたいという<br /></span>
+          <span class="text-wrapper-8">モチベーション</span>
+          <span class="text-wrapper-7">になっています。</span>
+        </Voice_left>
+        <Voice_right name="かれんさん" title="メンバー" icon={voice_karen}/>
+          <span class="text-wrapper-7">かわいく賢く向上心がある人たちで、常に</span>
+          <span class="text-wrapper-8">刺激を与えてくれる存在</span>
+          <span class="text-wrapper-7">です！♡</span>
+          <span class="text-wrapper-7">世界のどこに行ってもサロンメンバーがいて、色んなところで頑張っている仲間がいると思うと自然に自分の</span>
+          <span class="text-wrapper-8">行動力</span>
+          <span class="text-wrapper-7">にもつながります。</span>
+        </Voice_right>
       </div>
       <Image class="arrow" src={arrow} alt="" />
     </div>
@@ -269,20 +227,17 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .overlap {
-  position: relative;
   height: 1400px;
 }
 
 .box .bg {
   height: 656px;
   top: 0;
-  position: absolute;
   width: 360px;
   left: 29px;
 }
 
 .box .title {
-  position: absolute;
   width: 355px;
   height: 179px;
   top: 41px;
@@ -290,12 +245,10 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .overlap-group {
-  position: relative;
   height: 179px;
 }
 
 .box .group {
-  position: absolute;
   width: 355px;
   height: 179px;
   top: 0;
@@ -303,7 +256,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .rectangle {
-  position: absolute;
   width: 345px;
   height: 164px;
   top: 15px;
@@ -313,7 +265,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .div {
-  position: absolute;
   width: 347px;
   height: 164px;
   top: 0;
@@ -326,13 +277,11 @@ import voice_karen from "~/assets/voice/voice_karen.png";
   display: inline-flex;
   align-items: center;
   gap: 11px;
-  position: absolute;
   top: 65px;
   left: 40px;
 }
 
 .box .header-mark {
-  position: relative;
   width: 66px;
   height: 8px;
   margin-left: -29px;
@@ -341,20 +290,17 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .overlap-group-wrapper {
-  position: relative;
   width: 286px;
   height: 79px;
   margin-right: -4px;
 }
 
 .box .overlap-group-2 {
-  position: relative;
   width: 282px;
   height: 79px;
 }
 
 .box .text-wrapper {
-  position: absolute;
   top: 0;
   left: 0;
   font-family: var(--mobile-h2-font-family);
@@ -368,7 +314,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .text-wrapper-2 {
-  position: absolute;
   top: 21px;
   left: 2px;
   font-family: var(--mobile-h1-font-family);
@@ -381,7 +326,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .group-2 {
-  position: absolute;
   width: 266px;
   height: 43px;
   top: 15px;
@@ -389,7 +333,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .UP {
-  position: absolute;
   top: 0;
   left: 5px;
   font-family: "Ryo Gothic PlusN-Regular", Helvetica;
@@ -417,7 +360,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .underline {
-  position: absolute;
   width: 264px;
   height: 15px;
   top: 28px;
@@ -426,7 +368,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .concerns {
-  position: absolute;
   width: 401px;
   height: 493px;
   top: 113px;
@@ -434,12 +375,10 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .overlap-2 {
-  position: relative;
   height: 493px;
 }
 
 .box .concern {
-  position: absolute;
   width: 401px;
   height: 493px;
   top: 0;
@@ -447,7 +386,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .woman {
-  position: absolute;
   width: 401px;
   height: 359px;
   top: 134px;
@@ -455,14 +393,12 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .overlap-group-3 {
-  position: relative;
   width: 403px;
   height: 361px;
   left: -2px;
 }
 
 .box .rectangle-2 {
-  position: absolute;
   width: 399px;
   height: 352px;
   top: 9px;
@@ -473,7 +409,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .rectangle-3 {
-  position: absolute;
   width: 395px;
   height: 348px;
   top: 0;
@@ -484,7 +419,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .img {
-  position: absolute;
   width: 360px;
   height: 348px;
   top: 0;
@@ -492,7 +426,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .ellipse {
-  position: absolute;
   width: 200px;
   height: 200px;
   top: 0;
@@ -503,7 +436,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .subtitle {
-  position: absolute;
   width: 249px;
   height: 35px;
   top: 175px;
@@ -513,7 +445,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .subtitle-2 {
-  position: relative;
   width: 227px;
   height: 22px;
   top: 1px;
@@ -522,7 +453,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 
 .box .line {
   left: 0;
-  position: absolute;
   width: 12px;
   height: 12px;
   top: 6px;
@@ -531,7 +461,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 
 .box .line-2 {
   left: 213px;
-  position: absolute;
   width: 12px;
   height: 12px;
   top: 6px;
@@ -539,7 +468,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .text-wrapper-4 {
-  position: absolute;
   top: 0;
   left: 14px;
   font-family: var(--mobile-body-font-family);
@@ -553,7 +481,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .concern-2 {
-  position: absolute;
   width: 187px;
   height: 85px;
   top: 352px;
@@ -564,7 +491,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
   align-items: center;
   gap: 10px;
   padding: 8px;
-  position: absolute;
   top: 41px;
   left: 0;
   background-color: var(--variable-collection-white);
@@ -576,7 +502,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .text-wrapper-5 {
-  position: relative;
   width: fit-content;
   margin-top: -1px;
   font-family: var(--small-text-j-font-family);
@@ -589,7 +514,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .group-3 {
-  position: absolute;
   width: 32px;
   height: 32px;
   top: 4px;
@@ -598,7 +522,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .ellipse-2 {
-  position: absolute;
   width: 17px;
   height: 17px;
   top: 0;
@@ -610,7 +533,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .ellipse-3 {
-  position: absolute;
   width: 10px;
   height: 10px;
   top: 22px;
@@ -622,7 +544,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .concern-3 {
-  position: absolute;
   width: 144px;
   height: 109px;
   top: 273px;
@@ -633,7 +554,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
   align-items: center;
   gap: 10px;
   padding: 8px;
-  position: absolute;
   top: 0;
   left: 32px;
   background-color: var(--variable-collection-white);
@@ -645,7 +565,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .text-wrapper-6 {
-  position: relative;
   width: fit-content;
   margin-top: -1px;
   font-family: var(--small-text-j-font-family);
@@ -658,7 +577,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .group-4 {
-  position: absolute;
   width: 32px;
   height: 32px;
   top: 77px;
@@ -669,7 +587,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 .box .ellipse-4 {
   top: 14px;
   transform: rotate(-272.95deg);
-  position: absolute;
   width: 17px;
   height: 17px;
   left: 0;
@@ -681,7 +598,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 .box .ellipse-5 {
   top: 0;
   transform: rotate(-272.95deg);
-  position: absolute;
   width: 10px;
   height: 10px;
   left: 21px;
@@ -691,7 +607,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .concern-4 {
-  position: absolute;
   width: 241px;
   height: 86px;
   top: 214px;
@@ -702,7 +617,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
   align-items: center;
   gap: 10px;
   padding: 8px;
-  position: absolute;
   top: 0;
   left: 0;
   background-color: var(--variable-collection-white);
@@ -714,7 +628,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .group-5 {
-  position: absolute;
   width: 32px;
   height: 32px;
   top: 52px;
@@ -725,7 +638,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 .box .ellipse-6 {
   top: 0;
   transform: rotate(-87.05deg);
-  position: absolute;
   width: 17px;
   height: 17px;
   left: 0;
@@ -737,7 +649,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 .box .ellipse-7 {
   top: 22px;
   transform: rotate(-87.05deg);
-  position: absolute;
   width: 10px;
   height: 10px;
   left: 21px;
@@ -750,7 +661,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
   height: 774px;
   top: 626px;
   object-fit: cover;
-  position: absolute;
   width: 360px;
   left: 29px;
 }
@@ -760,33 +670,28 @@ import voice_karen from "~/assets/voice/voice_karen.png";
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
-  position: absolute;
   top: 674px;
   left: 56px;
 }
 
 .box .member {
-  position: relative;
   width: 305px;
   height: 195px;
 }
 
 .box .overlap-3 {
-  position: relative;
   width: 314px;
   height: 205px;
 }
 
 .box .bubble {
   left: 0;
-  position: absolute;
   width: 252px;
   height: 156px;
   top: 0;
 }
 
 .box .frame-wrapper {
-  position: relative;
   width: 264px;
   height: 167px;
   top: -2px;
@@ -799,7 +704,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  position: relative;
   top: 26px;
   left: 27px;
   display: inline-flex;
@@ -807,7 +711,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .p {
-  position: relative;
   width: 210px;
   margin-top: -1px;
   font-family: var(--mobile-body-font-family);
@@ -840,13 +743,11 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .group-6 {
-  position: relative;
   width: 131px;
   height: 24px;
 }
 
 .box .text-wrapper-9 {
-  position: absolute;
   top: 0;
   left: 63px;
   font-family: "Ryo Gothic PlusN-R", Helvetica;
@@ -858,7 +759,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .text-wrapper-10 {
-  position: absolute;
   top: 2px;
   left: 0;
   font-family: "Ryo Gothic PlusN-R", Helvetica;
@@ -870,7 +770,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .rectangle-4 {
-  position: absolute;
   width: 74px;
   height: 74px;
   top: 131px;
@@ -879,13 +778,11 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .overlap-wrapper {
-  position: relative;
   width: 296.12px;
   height: 195px;
 }
 
 .box .overlap-4 {
-  position: relative;
   width: 299px;
   height: 205px;
   left: -3px;
@@ -893,14 +790,12 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 
 .box .bubble-2 {
   left: 47px;
-  position: absolute;
   width: 252px;
   height: 156px;
   top: 0;
 }
 
 .box .overlap-group-4 {
-  position: relative;
   width: 264px;
   height: 167px;
   top: -2px;
@@ -910,7 +805,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .rectangle-5 {
-  position: absolute;
   width: 74px;
   height: 74px;
   top: 131px;
@@ -919,7 +813,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .overlap-group-5 {
-  position: relative;
   width: 264px;
   height: 167px;
   top: -2px;
@@ -929,7 +822,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .arrow {
-  position: absolute;
   width: 63px;
   height: 87px;
   top: 595px;

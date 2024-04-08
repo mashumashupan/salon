@@ -6,6 +6,9 @@ import voice_ayu from "~/assets/voice/voice_ayu.png";
 import voice_yukko from "~/assets/voice/voice_yukko.png";
 import voice_chihiro from "~/assets/voice/voice_chihiro.png";
 import voice_karen from "~/assets/voice/voice_karen.png";
+
+import Voice_right from "~/components/common/voice_right.astro";
+import Voice_left from "~/components/common/voice_left.astro";
 ---
 
 <div class="box">
@@ -39,98 +42,38 @@ import voice_karen from "~/assets/voice/voice_karen.png";
         </div>
       </div>
       <div class="bubbles">
-        <div class="member">
-          <div class="overlap-2">
-            <div class="bubble">
-              <div class="frame-wrapper">
-                <div class="frame">
-                  <p class="div-2">
-                    <span class="text-wrapper-5">わたしは1人経営なので</span>
-                    <span class="text-wrapper-5">モチベーションが下がりやすいですが、</span>
-                    <span class="text-wrapper-5">うれしのサロンの掲示板やコラムを読むと</span>
-                    <span class="text-wrapper-5">気合いが入り背中を押されます♡</span>
-                    <span class="text-wrapper-5">嬉野さんの有益で力強い発信はもちろん、</span>
-                    <span class="text-wrapper-5">メンバーも自分のビジネスで</span>
-                    <span class="text-wrapper-5">挑戦や努力を続けている方ばかりなので、</span>
-                    <span class="text-wrapper-5">いつも押し上げていただいている気分です。</span>
-                  </p>
-                  <div class="group">
-                    <div class="text-wrapper-7">タフ子ちゃん</div>
-                    <div class="text-wrapper-8">美容モデル</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <Image class="img" src={voice_ayu} alt="" />
-          </div>
-        </div>
-        <div class="member">
-          <div class="overlap-2">
-            <div class="bubble">
-              <div class="overlap-group-3">
-                <div class="frame">
-                  <p class="div-3">
-                    <span class="text-wrapper-5">上司の愚痴や旦那の愚痴などが多くなってきた周りの人と価値観や話が合わなくなってきて、悩んでいた時に、ふと見つけたのがきっかけで入会したサロン。
-                      憧れだった方に実際にお会いできたり、高め会える仲間ができて大げさでなく人生ががらりと変わりました。
-                      メンバーの方の1人と意気投合して、日本初のAIフォトスタジオの事業をすることにもなりました！
-                      うれしのさんをはじめ経営者のメンバーの方も応援してくださり本当に心強いです。
-                    </span>
-                  </p>
-                  <div class="group-3">
-                    <div class="text-wrapper-7">karen さん</div>
-                    <div class="text-wrapper-8">メンバー</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <Image class="img" src={voice_karen} alt="" />
-          </div>
-        </div>
-        <div class="overlap-wrapper">
-          <div class="overlap-3">
-            <div class="overlap-group-wrapper">
-              <div class="div-wrapper">
-                <div class="frame">
-                  <p class="div-2">
-                    <span class="text-wrapper-5">今年やってよかったことの1つに</span>
-                    <span class="text-wrapper-5">「うれしのサロンに入ったこと」があります。</span>
-                    <span class="text-wrapper-5">このサロンのおかげで、</span>
-                    <span class="text-wrapper-5">確実に行動力が上がっています✨</span>
-                    <span class="text-wrapper-5">事業の話も、美容の話もできる</span>
-                    <span class="text-wrapper-5">強くて美しい女性がたくさん🤍</span>
-                    <span class="text-wrapper-5">オフ会からの繋がりでサロンメンバーで</span>
-                    <span class="text-wrapper-5">忘年会もしました✨</span>
-                  </p>
-                  <div class="group-2">
-                    <div class="text-wrapper-7">ゆっこさん</div>
-                    <div class="text-wrapper-8">メンバー</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <Image class="rectangle-2" src={voice_yukko} alt="" />
-          </div>
-        </div>
-        <div class="member">
-          <div class="overlap-2">
-            <div class="bubble">
-              <div class="overlap-group-3">
-                <div class="frame">
-                  <p class="div-3">
-                    <span class="text-wrapper-5">地方在住ですが都会に住んでいなくても、切磋琢磨できる同年代の女性と出会えたことに感謝しています。
-                      海外・首都圏でのオフ会や、韓国医療美容サロンでの特典があることも魅力の一つです✨うれしのサロンのおかげでこれまで経験したことがないことにチャレンジできました！
-                    </span>
-                  </p>
-                  <div class="group-3">
-                    <div class="text-wrapper-7">chihiro さん</div>
-                    <div class="text-wrapper-8">メンバー</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <Image class="img" src={voice_chihiro} alt="" />
-          </div>
-        </div>
+        <Voice_right name="タフ子ちゃん" title="美容モデル" icon={voice_ayu}>
+          <span class="text-wrapper-5">わたしは1人経営なので</span>
+          <span class="text-wrapper-5">モチベーションが下がりやすいですが、</span>
+          <span class="text-wrapper-5">うれしのサロンの掲示板やコラムを読むと</span>
+          <span class="text-wrapper-5">気合いが入り背中を押されます♡</span>
+          <span class="text-wrapper-5">嬉野さんの有益で力強い発信はもちろん、</span>
+          <span class="text-wrapper-5">メンバーも自分のビジネスで</span>
+          <span class="text-wrapper-5">挑戦や努力を続けている方ばかりなので、</span>
+          <span class="text-wrapper-5">いつも押し上げていただいている気分です。</span>
+        </Voice_right>
+        <Voice_left name="karen さん" title="メンバー" icon={voice_karen}>
+          <span class="text-wrapper-5">上司の愚痴や旦那の愚痴などが多くなってきた周りの人と価値観や話が合わなくなってきて、悩んでいた時に、ふと見つけたのがきっかけで入会したサロン。
+            憧れだった方に実際にお会いできたり、高め会える仲間ができて大げさでなく人生ががらりと変わりました。
+            メンバーの方の1人と意気投合して、日本初のAIフォトスタジオの事業をすることにもなりました！
+            うれしのさんをはじめ経営者のメンバーの方も応援してくださり本当に心強いです。
+          </span>
+        </Voice_left>
+        <Voice_right name="ゆっこさん" title="メンバー" icon={voice_yukko}>
+          <span class="text-wrapper-5">今年やってよかったことの1つに</span>
+          <span class="text-wrapper-5">「うれしのサロンに入ったこと」があります。</span>
+          <span class="text-wrapper-5">このサロンのおかげで、</span>
+          <span class="text-wrapper-5">確実に行動力が上がっています✨</span>
+          <span class="text-wrapper-5">事業の話も、美容の話もできる</span>
+          <span class="text-wrapper-5">強くて美しい女性がたくさん🤍</span>
+          <span class="text-wrapper-5">オフ会からの繋がりでサロンメンバーで</span>
+          <span class="text-wrapper-5">忘年会もしました✨</span>
+        </Voice_right>
+        <Voice_left name="chihiro さん" title="美容モデル" icon={voice_chihiro}>
+          <span class="text-wrapper-5">地方在住ですが都会に住んでいなくても、切磋琢磨できる同年代の女性と出会えたことに感謝しています。
+            海外・首都圏でのオフ会や、韓国医療美容サロンでの特典があることも魅力の一つです✨うれしのサロンのおかげでこれまで経験したことがないことにチャレンジできました！
+          </span>
+        </Voice_left>
       </div>
     </div>
   </div>
@@ -235,7 +178,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .overlap {
-  position: relative;
   width: 360px;
   height: 1034px;
   background-image: url(./img/bg.png);
@@ -244,7 +186,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .overlap-group {
-  position: absolute;
   width: 335px;
   height: 195px;
   top: 34px;
@@ -252,7 +193,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .div {
-  position: absolute;
   width: 325px;
   height: 195px;
   top: 0;
@@ -263,13 +203,11 @@ import voice_karen from "~/assets/voice/voice_karen.png";
   display: inline-flex;
   align-items: center;
   gap: 11px;
-  position: absolute;
   top: 0;
   left: 0;
 }
 
 .box .rectangle {
-  position: relative;
   width: 39px;
   height: 8px;
   margin-left: -15.5px;
@@ -278,7 +216,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .text-wrapper {
-  position: relative;
   width: fit-content;
   margin-top: -2.5px;
   text-shadow: 0px 2px 8.7px #b1a4aa6e;
@@ -300,7 +237,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .text-wrapper-2 {
-  position: absolute;
   height: 99px;
   top: 32px;
   left: 2px;
@@ -315,7 +251,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .p {
-  position: absolute;
   top: 141px;
   left: 0;
   font-family: "Ryo Gothic PlusN-Regular", Helvetica;
@@ -339,7 +274,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .text {
-  position: absolute;
   width: 305px;
   height: 88px;
   top: 233px;
@@ -347,13 +281,11 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .overlap-group-2 {
-  position: relative;
   width: 303px;
   height: 88px;
 }
 
 .box .underline {
-  position: absolute;
   width: 124px;
   height: 11px;
   top: 61px;
@@ -364,7 +296,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .text-wrapper-4 {
-  position: absolute;
   width: 303px;
   top: 0;
   left: 0;
@@ -383,33 +314,28 @@ import voice_karen from "~/assets/voice/voice_karen.png";
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
-  position: absolute;
   top: 361px;
   left: 27px;
 }
 
 .box .member {
-  position: relative;
   width: 305px;
   height: 195px;
 }
 
 .box .overlap-2 {
-  position: relative;
   width: 314px;
   height: 205px;
 }
 
 .box .bubble {
   left: 0;
-  position: absolute;
   width: 252px;
   height: 156px;
   top: 0;
 }
 
 .box .frame-wrapper {
-  position: relative;
   width: 264px;
   height: 167px;
   top: -2px;
@@ -424,13 +350,11 @@ import voice_karen from "~/assets/voice/voice_karen.png";
   align-items: flex-start;
   justify-content: center;
   gap: 8px;
-  position: relative;
   top: 26px;
   left: 27px;
 }
 
 .box .div-2 {
-  position: relative;
   width: 210px;
   margin-top: -1px;
   font-family: "Ryo Gothic PlusN-Regular", Helvetica;
@@ -458,13 +382,11 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .group {
-  position: relative;
   width: 138px;
   height: 24px;
 }
 
 .box .text-wrapper-7 {
-  position: absolute;
   top: 0;
   left: 63px;
   font-family: "Ryo Gothic PlusN-R", Helvetica;
@@ -476,7 +398,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .text-wrapper-8 {
-  position: absolute;
   top: 2px;
   left: 0;
   font-family: "Ryo Gothic PlusN-R", Helvetica;
@@ -488,7 +409,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .img {
-  position: absolute;
   width: 74px;
   height: 74px;
   top: 131px;
@@ -497,13 +417,11 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .overlap-wrapper {
-  position: relative;
   width: 303.12px;
   height: 195px;
 }
 
 .box .overlap-3 {
-  position: relative;
   width: 306px;
   height: 205px;
   left: -3px;
@@ -511,14 +429,12 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 
 .box .overlap-group-wrapper {
   left: 54px;
-  position: absolute;
   width: 252px;
   height: 156px;
   top: 0;
 }
 
 .box .div-wrapper {
-  position: relative;
   width: 264px;
   height: 167px;
   top: -2px;
@@ -529,12 +445,10 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 
 .box .group-2 {
   width: 126px;
-  position: relative;
   height: 24px;
 }
 
 .box .rectangle-2 {
-  position: absolute;
   width: 74px;
   height: 74px;
   top: 131px;
@@ -543,7 +457,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .overlap-group-3 {
-  position: relative;
   width: 264px;
   height: 167px;
   top: -2px;
@@ -553,7 +466,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 }
 
 .box .div-3 {
-  position: relative;
   width: 210px;
   margin-top: -1px;
   font-family: "Ryo Gothic PlusN-Regular", Helvetica;
@@ -571,7 +483,6 @@ import voice_karen from "~/assets/voice/voice_karen.png";
 
 .box .group-3 {
   width: 128px;
-  position: relative;
   height: 24px;
 }
 </style>
