@@ -13,6 +13,7 @@ import Checklist from "~/components/common/checklist.astro";
 
 <div class="box">
   <div class="check flex w-full flex-col items-center justify-center">
+    <Image class="absolute w-full" src={layer} alt="" />
     <div class="overlap">
       <div class="bg">
         <div class="overlap-group">
@@ -83,10 +84,10 @@ import Checklist from "~/components/common/checklist.astro";
         </Checklist>
       </div>
     </div>
-    <div class="check-image absolute top-[-620px] flex">
+    <div class="check-image absolute max-w-md mt-[34rem]">
       <Image src={checkimage} alt="" />
     </div>
-    <div class="go-on-reading">
+    <div class="go-on-reading absolute mt-[52rem]">
       <p class="element-2">
         <span class="span">この続きは</span>
         <span class="text-wrapper-5">3</span>
@@ -420,8 +421,6 @@ import Checklist from "~/components/common/checklist.astro";
     justify-content: center;
     gap: 10px;
     padding: 10px;
-    top: 858px;
-    left: 12px;
     background-color: #ffffffb2;
     border-radius: 4px;
     backdrop-filter: blur(9.5px) brightness(100%);
