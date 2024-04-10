@@ -10,19 +10,19 @@ import underline5 from '~/assets/underline5.png';
 ---
 
 <div class="box">
-  <div class="about">
-    <div class="overlap">
-      <div class="title">
-        <div class="flex">
-          <div class="title-2">
+  <div class="about flex flex-col justify-center">
+    <div class="overlap text-center">
+      <div class="title w-full">
+        <div class="flex flex-col">
+          <div class="self-center">
             <div class="rectangle"></div>
             <div class="text-wrapper-2">うれしのサロン</div>
           </div>
-          <div class="text-wrapper">とは？</div>
+          <div class="text-wrapper mr-8 text-end">とは？</div>
         </div>
       </div>
-      <div class="subtitle">
-        <div class="h">
+      <div class="subtitle relative top-10 z-30">
+        <div class="h ml-12 text-start">
           <div class="text-wrapper-3">互いに高め合う</div>
           <p class="p">
             <span class="span">女性限定</span>
@@ -177,18 +177,11 @@ import underline5 from '~/assets/underline5.png';
     left: 0;
   }
 
-  .box .title {
-    top: 38px;
-    left: 28px;
-  }
-
   .box .overlap-group {
     position: relative;
   }
 
   .box .text-wrapper {
-    top: 49px;
-    left: 230px;
     text-shadow: 0px 2px 4px #b1a4aacc;
     font-family: 'Hina Mincho-Regular', Helvetica;
     font-weight: 400;
@@ -196,7 +189,6 @@ import underline5 from '~/assets/underline5.png';
     font-size: 24px;
     letter-spacing: 1.68px;
     line-height: normal;
-    box-shadow: var(--drop);
   }
 
   .box .title-2 {
@@ -215,8 +207,6 @@ import underline5 from '~/assets/underline5.png';
   }
 
   .box .text-wrapper-2 {
-    position: relative;
-    width: fit-content;
     margin-top: -1px;
     text-shadow: 0px 2px 4px #b1a4aacc;
     font-family: var(--mobile-h1-font-family);
@@ -226,11 +216,10 @@ import underline5 from '~/assets/underline5.png';
     letter-spacing: var(--mobile-h1-letter-spacing);
     line-height: var(--mobile-h1-line-height);
     font-style: var(--mobile-h1-font-style);
-    box-shadow: var(--drop);
   }
 
   .box .pic {
-    top: 154px;
+    top: 110px;
     left: 0;
   }
 
@@ -256,8 +245,6 @@ import underline5 from '~/assets/underline5.png';
   }
 
   .box .subtitle {
-    top: 171px;
-    left: 0;
     background-color: #ffffffab;
     backdrop-filter: blur(6.3px) brightness(100%);
     -webkit-backdrop-filter: blur(6.3px) brightness(100%);
