@@ -11,7 +11,11 @@ import layer from "~/assets/layer/layer_process.png";
         <div class="overlap-group">
           <div class="div"></div>
           <div class="bg-2"></div>
-          <Image class="img" src={layer} alt="" />
+          <Image 
+            class="absolute w-full mix-blend-lighten md:top-[280px]"
+            src={layer}
+            alt=""
+          />
         </div>
       </div>
       <div class="title">
@@ -25,10 +29,12 @@ import layer from "~/assets/layer/layer_process.png";
         <div class="element">
           <div class="overlap-group-2">
             <div class="frame-2">
-              <div class="div-wrapper"><div class="text-wrapper-3">会費のお支払い</div></div>
+              <div class="div-wrapper"><div class="text-wrapper-3">お支払い</div></div>
               <div class="frame-3">
                 <div class="text-wrapper-4">
-                  当ページの「今すぐ入会する」ボタンをクリックし、必要情報をご入力の上、会費の決済をお願いいたします。入会後は、毎月、入会手続き（会費の決済）が完了した日（起点日のない月は、その月の末日）に、ご登録のクレジットカード/デビットカードにて自動決済されます。<br />《例》<br />入会決済日1月10日→次回決済日<br />2月10日→以後も毎月10日に決済
+                  「今すぐ入会」ボタンより必要情報をご登録の上、決済をお願いいたします。
+                  <br />*入会以降はご登録のクレジットカードにて、月会費の場合は毎月同日、年会費の場合は毎年同日に決済されます。
+                  <br />《例》入会決済日4月15日・月会費の場合次月以降は15日に自動決済
                 </div>
               </div>
             </div>
@@ -38,24 +44,18 @@ import layer from "~/assets/layer/layer_process.png";
         <div class="overlap-wrapper">
           <div class="overlap">
             <div class="frame-4">
-              <div class="div-wrapper"><div class="text-wrapper-3">Slack へのご招待</div></div>
+              <div class="div-wrapper"><div class="text-wrapper-3">Slackご招待</div></div>
               <div class="frame-3">
                 <p class="LINE-slack-slack-PC">
-                  <span class="text-wrapper-6">決済完了後、そのまま</span>
+                  <span class="text-wrapper-6">決済後、うれしのサロン</span>
                   <a href="https://lin.ee/GfMc8mc" target="_blank" rel="noopener noreferrer"
                     ><span class="text-wrapper-6">公式LINE</span></a
                   >
                   <span class="text-wrapper-6"
-                    >の画面に遷移し、Slackへの招待リンクが付いた自動返信メッセージが届きます。Slackのアカウントをお持ちでない方は、アカウントをご登録の上、ご招待リンクよりチャットグループにご参加ください。
-                    *PCから決済をされた場合は、LINEのQRコードが表示されますので、スマートフォンのLINEアプリにてスキャンをしてください。
-                    *万が一、決済後の遷移画面を閉じてしまった場合には、自動メッセージが届かないため、お手数ですが</span
-                  >
-                  <a href="https://lin.ee/GfMc8mc" target="_blank" rel="noopener noreferrer"
-                    ><span class="text-wrapper-6">公式LINE</span></a
-                  >
-                  <span class="text-wrapper-6"
-                    >に「ご登録のお名前とメールアドレス」と「Slackの招待メッセージを再送してください」とご連絡ください。</span
-                  >
+                    >の画面に遷移し、Slackへの招待リンクが記載されたメッセージが届きます。Slackのアカウントをご用意の上、ご参加ください。
+                    <br>*PCでの決済の場合、表示されたQRコードをスマートフォンのLINEアプリにてスキャンしてください。
+                    <br>*決済後の遷移画面を閉じてしまった場合は、うれしのサロン公式LINEにてお名前とメールアドレスを明記の上「Slackの招待メッセージを再送してください」とご連絡ください。
+                  </span>
                 </p>
               </div>
             </div>
@@ -65,10 +65,10 @@ import layer from "~/assets/layer/layer_process.png";
         <div class="overlap-group-wrapper">
           <div class="overlap-2">
             <div class="frame-2">
-              <div class="div-wrapper"><div class="text-wrapper-3">Slackのガイダンス確認</div></div>
+              <div class="div-wrapper"><div class="text-wrapper-3">ガイダンス・自己紹介</div></div>
               <div class="frame-3">
                 <div class="text-wrapper-4">
-                  ご招待したSlackに入りましたら、チャンネルメニューの中の「01_まず初めに-ガイダンス」をご覧ください。うれしのサロンの活用方法と今後の活動の流れがわかります。
+                  Slackチャンネル「01_まず初めに-ガイダンス」をお読みいただき、自己紹介ルームで自己紹介をお願いいたします。
                 </div>
               </div>
             </div>
@@ -78,10 +78,10 @@ import layer from "~/assets/layer/layer_process.png";
         <div class="overlap-group-wrapper">
           <div class="overlap-2">
             <div class="frame-2">
-              <div class="div-wrapper"><div class="text-wrapper-3">自己紹介</div></div>
+              <div class="div-wrapper"><div class="text-wrapper-3">Instagramご招待</div></div>
               <div class="frame-3">
                 <div class="text-wrapper-4">
-                  Slackの「自己紹介ルーム」で、必ず自己紹介をお願いします。自己紹介が完了した方のみ、Instagramのコンテンツを閲覧できるようになります。
+                  Slackで自己紹介が完了したら、送付されたサロンメンバー限定のInstagramアカウントへフォローリクエストをお願いいたします。
                 </div>
               </div>
             </div>
@@ -91,27 +91,14 @@ import layer from "~/assets/layer/layer_process.png";
         <div class="element-2">
           <div class="overlap-3">
             <div class="frame-2">
-              <div class="div-wrapper"><div class="text-wrapper-3">Instagramへご招待</div></div>
+              <div class="div-wrapper"><div class="text-wrapper-3">活動開始！</div></div>
               <div class="frame-3">
                 <div class="text-wrapper-4">
-                  決済完了後の自動返信メッセージに、サロンメンバー限定のInstagramアカウントのリンクを記載しておりますのでフォローをお願いします。自己紹介が完了した方へ、随時フォローの承認を致します。承認後にInstagram内のコラムコンテンツの閲覧やインスタライブ配信を視聴できるようになります。
+                  Instagramアカウントのフォロー承認後は、うれしのコラムやライブ配信(アーカイブあり)をお楽しみいただけます。Slackでの交流や、部活動・オフ会などのイベントにもぜひご参加ください。
                 </div>
               </div>
             </div>
             <p class="step"><span class="span">Step </span> <span class="text-wrapper-5">05</span></p>
-          </div>
-        </div>
-        <div class="element-3">
-          <div class="overlap-4">
-            <div class="frame-2">
-              <div class="div-wrapper"><div class="text-wrapper-3">活動開始！</div></div>
-              <div class="frame-3">
-                <div class="text-wrapper-4">
-                  サロンメンバー限定のSlackとInstagramにて、配信コンテンツの視聴やメンバー同士の交流をお楽しみください。興味のある部活動やオフ会、美容ツアーにもぜひご参加ください。
-                </div>
-              </div>
-            </div>
-            <p class="step"><span class="span">Step </span> <span class="text-wrapper-5">0６</span></p>
           </div>
         </div>
       </div>
@@ -207,40 +194,37 @@ import layer from "~/assets/layer/layer_process.png";
 
 .box {
   width: 360px;
-  height: 2089px;
+  /* height: 2089px; */
 }
 
 .box .process {
   width: 360px;
-  height: 2089px;
+  /* height: 2089px; */
   top: 0;
   left: 0;
 }
 
 .box .overlap-group {
-  position: relative;
-  height: 2089px;
+  /* height: 2089px; */
 }
 
 .box .bg {
-  height: 2089px;
-  position: absolute;
+  /* height: 2089px; */
   width: 360px;
   top: 0;
   left: 0;
 }
 
 .box .div {
-  height: 1940px;
+  /* height: 1940px; */
   background-color: var(--variable-collection-pale-pink);
-  position: absolute;
   width: 360px;
   top: 0;
   left: 0;
 }
 
 .box .bg-2 {
-  height: 1940px;
+  /* height: 1940px; */
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 0%,
@@ -248,16 +232,14 @@ import layer from "~/assets/layer/layer_process.png";
     rgba(221.48, 179.58, 193.4, 0.73) 100%
   );
   opacity: 0.3;
-  position: absolute;
   width: 360px;
   top: 0;
   left: 0;
 }
 
 .box .img {
-  height: 2089px;
+  /* height: 2089px; */
   mix-blend-mode: luminosity;
-  position: absolute;
   width: 360px;
   top: 0;
   left: 0;
@@ -268,7 +250,6 @@ import layer from "~/assets/layer/layer_process.png";
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  position: absolute;
   top: 40px;
   left: 48px;
 }
@@ -277,14 +258,12 @@ import layer from "~/assets/layer/layer_process.png";
   display: inline-flex;
   align-items: center;
   gap: 16px;
-  position: relative;
   flex: 0 0 auto;
 }
 
 .box .header-mark {
-  position: relative;
   width: 54px;
-  height: 8px;
+  /* height: 8px; */
   margin-left: -23px;
   background-color: var(--variable-collection-salmon);
   transform: rotate(90deg);
@@ -298,7 +277,6 @@ import layer from "~/assets/layer/layer_process.png";
   font-size: var(--mobile-h1-font-size);
   letter-spacing: var(--mobile-h1-letter-spacing);
   line-height: var(--mobile-h1-line-height);
-  position: relative;
   font-weight: var(--mobile-h1-font-weight);
   font-style: var(--mobile-h1-font-style);
 }
@@ -310,7 +288,6 @@ import layer from "~/assets/layer/layer_process.png";
   font-size: var(--small-title-j-font-size);
   letter-spacing: var(--small-title-j-letter-spacing);
   line-height: var(--small-title-j-line-height);
-  position: relative;
   font-weight: var(--small-title-j-font-weight);
   font-style: var(--small-title-j-font-style);
 }
@@ -320,21 +297,18 @@ import layer from "~/assets/layer/layer_process.png";
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
-  position: absolute;
   top: 188px;
   left: 14px;
 }
 
 .box .element {
-  position: relative;
   width: 334px;
-  height: 338px;
+  /* height: 338px; */
   margin-right: -2px;
 }
 
 .box .overlap-group-2 {
-  height: 343px;
-  position: relative;
+  /* height: 343px; */
   width: 332px;
   top: -5px;
 }
@@ -343,7 +317,6 @@ import layer from "~/assets/layer/layer_process.png";
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  position: absolute;
   top: 15px;
   left: 0;
 }
@@ -355,7 +328,6 @@ import layer from "~/assets/layer/layer_process.png";
   justify-content: center;
   gap: 7px;
   padding: 10px;
-  position: relative;
   flex: 0 0 auto;
   background-color: var(--variable-collection-salmon);
   border-radius: 10px 10px 0px 0px;
@@ -369,7 +341,6 @@ import layer from "~/assets/layer/layer_process.png";
   font-size: 24px;
   letter-spacing: 2.4px;
   line-height: normal;
-  position: relative;
   font-weight: 400;
 }
 
@@ -379,7 +350,6 @@ import layer from "~/assets/layer/layer_process.png";
   justify-content: center;
   gap: 10px;
   padding: 8px 16px 10px;
-  position: relative;
   flex: 0 0 auto;
   background-color: var(--variable-collection-white);
   border-radius: 0px 0px 10px 10px;
@@ -393,13 +363,11 @@ import layer from "~/assets/layer/layer_process.png";
   font-size: var(--mobile-body-font-size);
   letter-spacing: var(--mobile-body-letter-spacing);
   line-height: var(--mobile-body-line-height);
-  position: relative;
   font-weight: var(--mobile-body-font-weight);
   font-style: var(--mobile-body-font-style);
 }
 
 .box .step {
-  position: absolute;
   top: 0;
   left: 9px;
   -webkit-text-stroke: 5px #d6a99f;
@@ -428,31 +396,27 @@ import layer from "~/assets/layer/layer_process.png";
 }
 
 .box .overlap-wrapper {
-  position: relative;
   width: 334px;
-  height: 492px;
+  /* height: 492px; */
   margin-right: -2px;
 }
 
 .box .overlap {
-  position: relative;
   width: 332px;
-  height: 497px;
+  /* height: 497px; */
   top: -5px;
 }
 
 .box .frame-4 {
   display: inline-flex;
   flex-direction: column;
-  height: 482px;
+  /* height: 482px; */
   align-items: flex-start;
-  position: absolute;
   top: 15px;
   left: 0;
 }
 
 .box .LINE-slack-slack-PC {
-  position: relative;
   width: 300px;
   margin-top: -1px;
   font-family: var(--mobile-body-font-family);
@@ -474,44 +438,38 @@ import layer from "~/assets/layer/layer_process.png";
 }
 
 .box .overlap-group-wrapper {
-  position: relative;
   width: 334px;
-  height: 206px;
+  /* height: 206px; */
   margin-right: -2px;
 }
 
 .box .overlap-2 {
-  height: 211px;
-  position: relative;
+  /* height: 211px; */
   width: 332px;
   top: -5px;
 }
 
 .box .element-2 {
-  position: relative;
   width: 334px;
-  height: 294px;
+  /* height: 294px; */
   margin-right: -2px;
 }
 
 .box .overlap-3 {
-  position: relative;
   width: 332px;
-  height: 299px;
+  /* height: 299px; */
   top: -5px;
 }
 
 .box .element-3 {
-  position: relative;
   width: 334px;
-  height: 228px;
+  /* height: 228px; */
   margin-right: -2px;
 }
 
 .box .overlap-4 {
-  position: relative;
   width: 332px;
-  height: 233px;
+  /* height: 233px; */
   top: -5px;
 }
 </style>

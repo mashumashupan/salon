@@ -20,8 +20,11 @@ import underline4 from "~/assets/mystory/underline9.png";
 <div class="box">
   <div class="mystory">
     <div class="overlap">
-      <Image class="bg" src={layer2} alt="" />
-      <Image class="img" src={layer} alt="" />
+      <Image 
+        class="absolute w-full mix-blend-lighten md:top-[280px]"
+        src={layer}
+        alt=""
+      />
       <p class="element">
         <span class="text-wrapper">ここで</span>
         <span class="span">私の過去</span>
@@ -71,6 +74,11 @@ import underline4 from "~/assets/mystory/underline9.png";
           </div>
         </div>
       </div>
+      <Image 
+        class="absolute w-full mix-blend-lighten md:top-[280px]"
+        src={layer2}
+        alt=""
+      />
       <Image class="mrn" src={mystoryimage} alt="" />
       <div class="text-wrapper-6">My Story</div>
       <div class="text">
@@ -182,42 +190,38 @@ import underline4 from "~/assets/mystory/underline9.png";
 
 .box {
   width: 361px;
-  height: 1471px;
+  /* height: 1471px; */
 }
 
 .box .mystory {
   width: 365px;
-  height: 1471px;
+  /* height: 1471px; */
   top: 0;
   left: 0;
 }
 
 .box .overlap {
-  position: relative;
   width: 360px;
-  height: 1471px;
+  /* height: 1471px; */
 }
 
 .box .bg {
   width: 360px;
-  height: 727px;
+  /* height: 727px; */
   top: 744px;
   left: 0;
-  position: absolute;
   object-fit: cover;
 }
 
 .box .img {
   width: 359px;
-  height: 744px;
+  /* height: 744px; */
   top: 0;
   left: 1px;
-  position: absolute;
   object-fit: cover;
 }
 
 .box .element {
-  position: absolute;
   top: 139px;
   left: 48px;
   font-family: "Ryo Gothic PlusN-Regular", Helvetica;
@@ -246,21 +250,18 @@ import underline4 from "~/assets/mystory/underline9.png";
 }
 
 .box .title {
-  position: absolute;
   width: 293px;
-  height: 81px;
+  /* height: 81px; */
   top: 35px;
   left: 34px;
 }
 
 .box .overlap-group {
-  position: relative;
-  height: 81px;
+  /* height: 81px; */
 }
 
 .box .frame {
   gap: 5px;
-  position: absolute;
   top: 0;
   left: 0;
   display: inline-flex;
@@ -270,16 +271,14 @@ import underline4 from "~/assets/mystory/underline9.png";
 .box .header-mark-wrapper {
   justify-content: center;
   gap: 24px;
-  position: relative;
   flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
 }
 
 .box .header-mark {
-  position: relative;
   width: 66px;
-  height: 8px;
+  /* height: 8px; */
   margin-left: -29px;
   margin-right: -29px;
   background-color: var(--variable-collection-salmon);
@@ -287,20 +286,17 @@ import underline4 from "~/assets/mystory/underline9.png";
 }
 
 .box .group {
-  position: relative;
   width: 284px;
-  height: 81px;
+  /* height: 81px; */
   margin-right: -4px;
 }
 
 .box .div {
-  position: relative;
   width: 280px;
-  height: 81px;
+  /* height: 81px; */
 }
 
 .box .text-wrapper-2 {
-  position: absolute;
   top: 0;
   left: 8px;
   font-family: "Hina Mincho-Regular", Helvetica;
@@ -312,7 +308,6 @@ import underline4 from "~/assets/mystory/underline9.png";
 }
 
 .box .text-wrapper-3 {
-  position: absolute;
   top: 23px;
   left: 0;
   font-family: var(--mobile-h1-font-family);
@@ -325,18 +320,16 @@ import underline4 from "~/assets/mystory/underline9.png";
 }
 
 .box .group-2 {
-  position: absolute;
   width: 53px;
-  height: 14px;
+  /* height: 14px; */
   top: 15px;
   left: 226px;
 }
 
 .box .ellipse {
   left: 0;
-  position: absolute;
   width: 14px;
-  height: 14px;
+  /* height: 14px; */
   top: 0;
   border-radius: 7px;
   filter: blur(4px);
@@ -350,9 +343,8 @@ import underline4 from "~/assets/mystory/underline9.png";
 
 .box .ellipse-2 {
   left: 39px;
-  position: absolute;
   width: 14px;
-  height: 14px;
+  /* height: 14px; */
   top: 0;
   border-radius: 7px;
   filter: blur(4px);
@@ -365,22 +357,19 @@ import underline4 from "~/assets/mystory/underline9.png";
 }
 
 .box .before-after {
-  position: absolute;
   width: 258px;
-  height: 580px;
+  /* height: 580px; */
   top: 242px;
   left: 43px;
 }
 
 .box .overlap-2 {
-  position: relative;
-  height: 580px;
+  /* height: 580px; */
 }
 
 .box .play-arrow {
-  position: absolute;
   width: 56px;
-  height: 56px;
+  /* height: 56px; */
   top: 263px;
   left: 109px;
 }
@@ -388,7 +377,6 @@ import underline4 from "~/assets/mystory/underline9.png";
 .box .frame-2 {
   flex-direction: column;
   gap: 64px;
-  position: absolute;
   top: 0;
   left: 0;
   display: inline-flex;
@@ -397,20 +385,17 @@ import underline4 from "~/assets/mystory/underline9.png";
 
 .box .card {
   width: 258px;
-  position: relative;
-  height: 258px;
+  /* height: 258px; */
 }
 
 .box .overlap-group-2 {
-  position: relative;
-  height: 258px;
+  /* height: 258px; */
 }
 
 .box .frame-3 {
   flex-direction: column;
   gap: 16px;
   padding: 10px;
-  position: absolute;
   top: 0;
   left: 24px;
   background-color: var(--variable-collection-white);
@@ -421,14 +406,12 @@ import underline4 from "~/assets/mystory/underline9.png";
 }
 
 .box .rectangle {
-  position: relative;
   width: 200px;
-  height: 200px;
+  /* height: 200px; */
   object-fit: cover;
 }
 
 .box .text-wrapper-4 {
-  position: relative;
   width: fit-content;
   font-family: var(--mobile-body-font-family);
   font-weight: var(--mobile-body-font-weight);
@@ -444,7 +427,6 @@ import underline4 from "~/assets/mystory/underline9.png";
   justify-content: center;
   gap: 10px;
   padding: 10px 16px;
-  position: absolute;
   top: 14px;
   left: 0;
   background-color: #e5d5cbf7;
@@ -455,7 +437,6 @@ import underline4 from "~/assets/mystory/underline9.png";
 }
 
 .box .text-wrapper-5 {
-  position: relative;
   width: fit-content;
   margin-top: -1px;
   font-family: "Montserrat-Bold", Helvetica;
@@ -469,8 +450,7 @@ import underline4 from "~/assets/mystory/underline9.png";
 
 .box .overlap-wrapper {
   width: 244px;
-  position: relative;
-  height: 258px;
+  /* height: 258px; */
 }
 
 .box .frame-4 {
@@ -479,7 +459,6 @@ import underline4 from "~/assets/mystory/underline9.png";
   justify-content: center;
   gap: 10px;
   padding: 10px 16px;
-  position: absolute;
   top: 14px;
   left: 0;
   background-color: var(--variable-collection-pink);
@@ -489,16 +468,14 @@ import underline4 from "~/assets/mystory/underline9.png";
 }
 
 .box .mrn {
-  position: absolute;
   width: 360px;
-  height: 440px;
+  /* height: 440px; */
   top: 790px;
   left: 0;
 }
 
 .box .text-wrapper-6 {
-  position: absolute;
-  height: 149px;
+  /* height: 149px; */
   top: 923px;
   left: 27px;
   transform: rotate(-12.46deg);
@@ -511,24 +488,21 @@ import underline4 from "~/assets/mystory/underline9.png";
 }
 
 .box .text {
-  position: absolute;
   width: 340px;
-  height: 369px;
+  /* height: 369px; */
   top: 1082px;
   left: 12px;
 }
 
 .box .overlap-3 {
-  position: relative;
   width: 336px;
-  height: 369px;
+  /* height: 369px; */
   border-radius: 8px;
 }
 
 .box .rectangle-2 {
-  position: absolute;
   width: 336px;
-  height: 369px;
+  /* height: 369px; */
   top: 0;
   left: 0;
   background-color: var(--variable-collection-white);
@@ -538,7 +512,6 @@ import underline4 from "~/assets/mystory/underline9.png";
 }
 
 .box .p {
-  position: absolute;
   top: 10px;
   left: 31px;
   font-family: "Hina Mincho-Regular", Helvetica;
@@ -564,7 +537,6 @@ import underline4 from "~/assets/mystory/underline9.png";
 }
 
 .box .SNS-UP {
-  position: absolute;
   width: 305px;
   top: 83px;
   left: 16px;
@@ -578,9 +550,8 @@ import underline4 from "~/assets/mystory/underline9.png";
 }
 
 .box .single-underline {
-  position: absolute;
   width: 185px;
-  height: 71px;
+  /* height: 71px; */
   top: 39px;
   left: 20px;
   object-fit: cover;
@@ -590,8 +561,7 @@ import underline4 from "~/assets/mystory/underline9.png";
   width: 127px;
   top: 186px;
   left: 16px;
-  position: absolute;
-  height: 12px;
+  /* height: 12px; */
   object-fit: cover;
 }
 
@@ -599,8 +569,7 @@ import underline4 from "~/assets/mystory/underline9.png";
   width: 178px;
   top: 276px;
   left: 15px;
-  position: absolute;
-  height: 12px;
+  /* height: 12px; */
   object-fit: cover;
 }
 
@@ -608,8 +577,7 @@ import underline4 from "~/assets/mystory/underline9.png";
   width: 113px;
   top: 320px;
   left: 16px;
-  position: absolute;
-  height: 12px;
+  /* height: 12px; */
   object-fit: cover;
 }
 
@@ -617,15 +585,13 @@ import underline4 from "~/assets/mystory/underline9.png";
   width: 74px;
   top: 320px;
   left: 231px;
-  position: absolute;
-  height: 12px;
+  /* height: 12px; */
   object-fit: cover;
 }
 
 .box .arrow {
-  position: absolute;
   width: 59px;
-  height: 69px;
+  /* height: 69px; */
   top: 173px;
   left: 77px;
   mix-blend-mode: multiply;
