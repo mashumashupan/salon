@@ -29,6 +29,15 @@ const { title, name, icon} = Astro.props;
           </div>
         </div>
       </div>
-       <Image src={icon} alt="" />
+       <Image class="icon" src={icon} alt="" />
     </div>
   </div>
+
+<style>
+  .icon {
+    width: 86px;
+    /* height: 86px; */
+    top: 168px;
+    left: 0;
+  }
+</style>
