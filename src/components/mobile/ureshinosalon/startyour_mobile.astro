@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 
-import light_shadow1 from "~/assets/startyour/light_shadow1.png";
+import layer from "~/assets/layer/layer_startyour.png";
 import startyourimage from "~/assets/startyour/startyourimage.png";
 
 ---
@@ -9,13 +9,17 @@ import startyourimage from "~/assets/startyour/startyourimage.png";
 <div class="box">
   <div class="your-journey">
     <div class="overlap">
+      <Image 
+        class="absolute w-full mix-blend-lighten md:top-[280px]"
+        src={layer}
+        alt=""
+      />
       <div class="pic"><div class="gradient"></div></div>
       <!-- <img class="title" src="img/title.png" /> -->
       <div class="title">
         <div class="header-mark"></div>
         <div class="text-wrapper">My Journey</div>
       </div>
-      <Image class="light-shadow" src={light_shadow1} alt="" />
       <Image class="startyourimage" src={startyourimage} alt="" />
       <div class="rectangle"></div>
       <div class="div"></div>
@@ -132,25 +136,23 @@ import startyourimage from "~/assets/startyour/startyourimage.png";
 
 .box {
   width: 360px;
-  height: 669px;
+  /* height: 669px; */
 }
 
 .box .your-journey {
   width: 360px;
-  height: 669px;
+  /* height: 669px; */
   top: 0;
   left: 0;
 }
 
 .box .overlap {
-  position: relative;
-  height: 669px;
+  /* height: 669px; */
 }
 
 .box .pic {
-  position: absolute;
   width: 360px;
-  height: 401px;
+  /* height: 401px; */
   top: 0;
   left: 0;
   background-image: url(./img/rectangle-11.png);
@@ -159,7 +161,7 @@ import startyourimage from "~/assets/startyour/startyourimage.png";
 }
 
 .box .gradient {
-  height: 401px;
+  /* height: 401px; */
   border-radius: 0px 0px 40px 0px;
   background: linear-gradient(
     180deg,
@@ -170,17 +172,15 @@ import startyourimage from "~/assets/startyour/startyourimage.png";
 }
 
 .box .title {
-  position: absolute;
   width: 360px;
-  height: 93px;
+  /* height: 93px; */
   top: 24px;
   left: 0;
 }
 
 .box .light-shadow {
-  position: absolute;
   width: 360px;
-  height: 595px;
+  /* height: 595px; */
   top: 0;
   left: 0;
   mix-blend-mode: hard-light;
@@ -192,9 +192,8 @@ import startyourimage from "~/assets/startyour/startyourimage.png";
   left: 29px;
   background-color: var(--variable-collection-pink);
   opacity: 0.6;
-  position: absolute;
   width: 317px;
-  height: 330px;
+  /* height: 330px; */
   border-radius: 8px;
 }
 
@@ -202,30 +201,26 @@ import startyourimage from "~/assets/startyour/startyourimage.png";
   top: 322px;
   left: 43px;
   background-color: var(--variable-collection-white);
-  position: absolute;
   width: 317px;
-  height: 330px;
+  /* height: 330px; */
   border-radius: 8px;
 }
 
 .box .text {
-  position: absolute;
   width: 275px;
-  height: 305px;
+  /* height: 305px; */
   top: 339px;
   left: 63px;
 }
 
 .box .group {
   width: 256px;
-  height: 70px;
+  /* height: 70px; */
   top: 0;
-  position: absolute;
   left: 0;
 }
 
 .box .text-wrapper {
-  position: absolute;
   top: 0;
   left: 0;
   background: linear-gradient(180deg, rgb(158, 135, 190) 0%, rgb(198, 151, 165) 100%);
@@ -244,7 +239,6 @@ import startyourimage from "~/assets/startyour/startyourimage.png";
 }
 
 .box .text-wrapper-2 {
-  position: absolute;
   top: 35px;
   left: 66px;
   background: linear-gradient(180deg, rgb(158, 135, 190) 0%, rgb(198, 151, 165) 100%);
@@ -264,24 +258,21 @@ import startyourimage from "~/assets/startyour/startyourimage.png";
 
 .box .overlap-group-wrapper {
   width: 277px;
-  height: 220px;
+  /* height: 220px; */
   top: 85px;
-  position: absolute;
   left: 0;
 }
 
 .box .overlap-group {
-  position: relative;
   width: 275px;
-  height: 220px;
+  /* height: 220px; */
 }
 
 .box .underline {
   width: 144px;
   top: 126px;
   left: 0;
-  position: absolute;
-  height: 11px;
+  /* height: 11px; */
   background-image: url(./img/image.png);
   background-size: cover;
   background-position: 50% 50%;
@@ -291,17 +282,15 @@ import startyourimage from "~/assets/startyour/startyourimage.png";
   width: 103px;
   top: 170px;
   left: 4px;
-  position: absolute;
-  height: 11px;
+  /* height: 11px; */
   background-image: url(./img/underline-1.png);
   background-size: cover;
   background-position: 50% 50%;
 }
 
 .box .p {
-  position: absolute;
   width: 275px;
-  height: 220px;
+  /* height: 220px; */
   top: 0;
   left: 0;
   font-family: var(--mobile-body-font-family);
