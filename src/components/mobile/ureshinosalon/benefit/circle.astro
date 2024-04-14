@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets';
+import circle from '~/assets/benefit/circle.svg';
+import breakLine from '~/util/breakLine.ts';
+
+interface Props {
+    text: string;
+}
+
+const text = breakLine(Astro.props.text);
+---
+
+<div class="">
+    <div class="">
+        <div class="">
+            <Image class="circle" src={circle} alt="" />
+            <div
+                class="text absolute -mt-[5rem] ml-[1.4rem] h-12 w-[5.5rem] content-center text-center"
+            >
+                <Fragment set:html={text} />
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .text {
+        color: #71717a;
+        text-align: center;
+
+        /* body_j */
+        font-family: 'Ryo Gothic PlusN';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px; /* 150% */
+        letter-spacing: 2.56px;
+    }
+</style>
