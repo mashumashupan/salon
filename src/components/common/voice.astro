@@ -15,7 +15,7 @@ interface Props {
 const { title, name, icon, side, useStar } = Astro.props;
 ---
 
-<div class="grid w-[26rem] grid-cols-3 grid-rows-2">
+<div class=`box grid w-[26rem] grid-cols-3 grid-rows-2 ${side}`>
   <div class=`bubble-container col-span-2 row-span-2 row-start-1 ${side}`>
     <Bubble position={side}>
       <div>
@@ -48,6 +48,7 @@ const { title, name, icon, side, useStar } = Astro.props;
 </div>
 
 <style>
+  
   .icon {
     width: 86px;
   }
@@ -80,10 +81,16 @@ const { title, name, icon, side, useStar } = Astro.props;
     grid-column-start: 1;
   }
 
+  .box.left{
+    margin-left: -60px;
+  }
+
   .bubble-container.left {
     grid-column-start: 2;
   }
-
+  .box.right{
+    margin-right: -60px;
+  }
   .icon.right {
     margin-top: 20px;
     margin-left: -60px;
