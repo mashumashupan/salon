@@ -1,35 +1,46 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 
-import layer1 from "~/assets/layer/layer_contents1.png";
-import layer2 from "~/assets/layer/layer_contents2.png";
+import layer1 from '~/assets/layer/layer_contents1.png';
+import layer2 from '~/assets/layer/layer_contents2.png';
 
-import contents1_live from "~/assets/contents/contents1_live.png";
-import contents2_meetup from "~/assets/contents/contents2_meetup.png";
-import contents3_korea from "~/assets/contents/contents3_korea.png";
-import contents4_column from "~/assets/contents/contents4_column.png";
-import contents5_slack from "~/assets/contents/contents5_slack.png";
-import contents6_bukatu from "~/assets/contents/contents6_bukatu.png";
-import subtract from "~/assets/contents/Subtract.svg";
-import Line1 from "~/assets/contents/Line1.svg";
-import Line2 from "~/assets/contents/Line2.svg";
-import watercolor from "~/assets/watercolor1_1.png";
+import contents1_live from '~/assets/contents/contents1_live.png';
+import contents2_meetup from '~/assets/contents/contents2_meetup.png';
+import contents3_korea from '~/assets/contents/contents3_korea.png';
+import contents4_column from '~/assets/contents/contents4_column.png';
+import contents5_slack from '~/assets/contents/contents5_slack.png';
+import contents6_bukatu from '~/assets/contents/contents6_bukatu.png';
+import subtract from '~/assets/contents/Subtract.svg';
+import Line1 from '~/assets/contents/Line1.svg';
+import Line2 from '~/assets/contents/Line2.svg';
+import watercolor from '~/assets/watercolor1_1.png';
 
-import meetup1 from "~/assets/contents/meetup1.png";
-import meetup2 from "~/assets/aboutimage.png";
-import meetup3 from "~/assets/contents/meetup3.png";
-import meetup4 from "~/assets/contents/meetup4.png";
-import meetup5 from "~/assets/benefit/benefit2.png";
-import meetup6 from "~/assets/contents/meetup6.png";
-import meetup7 from "~/assets/communityimage.png";
-import meetup8 from "~/assets/contents/meetup8.png";
-import meetup9 from "~/assets/contents/meetup9.png";
+import meetup1 from '~/assets/contents/meetup1.png';
+import meetup2 from '~/assets/aboutimage.png';
+import meetup3 from '~/assets/contents/meetup3.png';
+import meetup4 from '~/assets/contents/meetup4.png';
+import meetup5 from '~/assets/benefit/benefit2.png';
+import meetup6 from '~/assets/contents/meetup6.png';
+import meetup7 from '~/assets/communityimage.png';
+import meetup8 from '~/assets/contents/meetup8.png';
+import meetup9 from '~/assets/contents/meetup9.png';
 
-import button from "~/assets/button.svg";
+import button from '~/assets/button.svg';
+import bg from '~/assets/contents/contents_fake.png';
+import JoinButton from '~/components/common/joinButton.astro';
 ---
 
-<div class="box">
-  <div class="contents">
+<div
+  id="contents"
+  class="mt-6 flex min-h-[1256px] flex-col items-center justify-center overflow-hidden"
+>
+  <Image class="bg w-full" src={bg} alt="" />
+  <div class="default-button -mt-16">
+    <div class="overlap-9">
+      <JoinButton text="　　今すぐ入会　　>" />
+    </div>
+  </div>
+  <!-- <div class="contents">
     <div class="overlap">
       <Image class="leaf-shadow" src={layer1} alt="" />
       <Image class="img" src={layer2} alt="" />
@@ -54,7 +65,9 @@ import button from "~/assets/button.svg";
       <div class="label">
         <div class="overlap-2">
           <div class="group">
-            <div class="watercolor-wrapper"><Image class="watercolor" src={watercolor} alt="" /></div>
+            <div class="watercolor-wrapper">
+              <Image class="watercolor" src={watercolor} alt="" />
+            </div>
           </div>
           <div class="text-wrapper-3">今が入会の</div>
           <div class="text-wrapper-4">チャンス！</div>
@@ -75,43 +88,61 @@ import button from "~/assets/button.svg";
             <div class="frame-2">
               <div class="group-1">
                 <Image class="meetup" src={meetup1} alt="" />
-                <div class="div-wrapper"><div class="text-wrapper-6">Korea 2020</div></div>
+                <div class="div-wrapper">
+                  <div class="text-wrapper-6">Korea 2020</div>
+                </div>
               </div>
               <div class="group-2">
                 <Image class="meetup" src={meetup2} alt="" />
-                <div class="div-wrapper"><div class="text-wrapper-6">Korea 2020</div></div>
+                <div class="div-wrapper">
+                  <div class="text-wrapper-6">Korea 2020</div>
+                </div>
               </div>
               <div class="group-3">
                 <Image class="meetup" src={meetup3} alt="" />
-                <div class="div-wrapper"><div class="text-wrapper-6">Korea 2020</div></div>
+                <div class="div-wrapper">
+                  <div class="text-wrapper-6">Korea 2020</div>
+                </div>
               </div>
             </div>
             <div class="frame-2">
               <div class="group-4">
                 <Image class="meetup" src={meetup4} alt="" />
-                <div class="div-wrapper"><div class="text-wrapper-6">Malaysia 2020</div></div>
+                <div class="div-wrapper">
+                  <div class="text-wrapper-6">Malaysia 2020</div>
+                </div>
               </div>
               <div class="group-5">
                 <Image class="meetup" src={meetup5} alt="" />
-                <div class="div-wrapper"><div class="text-wrapper-6">Malaysia 2020</div></div>
+                <div class="div-wrapper">
+                  <div class="text-wrapper-6">Malaysia 2020</div>
+                </div>
               </div>
               <div class="group-6">
                 <Image class="meetup" src={meetup6} alt="" />
-                <div class="div-wrapper"><div class="text-wrapper-6">Korea 2020</div></div>
+                <div class="div-wrapper">
+                  <div class="text-wrapper-6">Korea 2020</div>
+                </div>
               </div>
             </div>
             <div class="frame-2">
               <div class="group-7">
                 <Image class="meetup" src={meetup7} alt="" />
-                <div class="div-wrapper"><div class="text-wrapper-6">Korea 2020</div></div>
+                <div class="div-wrapper">
+                  <div class="text-wrapper-6">Korea 2020</div>
+                </div>
               </div>
               <div class="group-8">
                 <Image class="meetup" src={meetup8} alt="" />
-                <div class="div-wrapper"><div class="text-wrapper-6">Korea 2020</div></div>
+                <div class="div-wrapper">
+                  <div class="text-wrapper-6">Korea 2020</div>
+                </div>
               </div>
               <div class="group-9">
                 <Image class="meetup" src={meetup9} alt="" />
-                <div class="div-wrapper"><div class="text-wrapper-6">Tokyo 2020</div></div>
+                <div class="div-wrapper">
+                  <div class="text-wrapper-6">Tokyo 2020</div>
+                </div>
               </div>
             </div>
           </div>
@@ -193,13 +224,14 @@ import button from "~/assets/button.svg";
               <span class="text-wrapper-11">4</span>
               <span class="span">/</span>
               <span class="text-wrapper-11">17</span>
-              <span class="span">(水) </span>
+              <span class="span">(水)</span>
               <span class="text-wrapper-11">21:00</span>
               <span class="span">〜</span>
             </p>
           </div>
           <p class="p">
-            <span class="text-wrapper-12">2024年オフ会 </span> <span class="text-wrapper-13">スケジュール</span>
+            <span class="text-wrapper-12">2024年オフ会</span>
+            <span class="text-wrapper-13">スケジュール</span>
           </p>
         </div>
       </div>
@@ -207,7 +239,9 @@ import button from "~/assets/button.svg";
         <div class="overlap-group-wrapper">
           <div class="overlap-group-3">
             <div class="card">
-              <div class="rectangle-wrapper"><Image class="rectangle-2" src={contents1_live} alt="" /></div>
+              <div class="rectangle-wrapper">
+                <Image class="rectangle-2" src={contents1_live} alt="" />
+              </div>
               <img class="line-3" src="img/line-23-4.svg" />
               <div class="flexcontainer-wrapper">
                 <div class="flexcontainer">
@@ -215,14 +249,19 @@ import button from "~/assets/button.svg";
                     <span class="text-wrapper-14">大人気</span>
                     <span class="text-wrapper-15">コンテンツ！<br /></span>
                   </p>
-                  <p class="text"><span class="text-wrapper-15">ぶっちゃけ話や有益情報も！</span></p>
+                  <p class="text">
+                    <span class="text-wrapper-15"
+                      >ぶっちゃけ話や有益情報も！</span>
+                  </p>
                 </div>
               </div>
             </div>
             <div class="label-2">
               <Image class="subtract" src={subtract} alt="" />
               <div class="frame-6">
-                <div class="frame-7"><div class="text-wrapper-16">月に2回のインスタライブ</div></div>
+                <div class="frame-7">
+                  <div class="text-wrapper-16">月に2回のインスタライブ</div>
+                </div>
               </div>
             </div>
           </div>
@@ -230,15 +269,20 @@ import button from "~/assets/button.svg";
         <div class="overlap-group-wrapper">
           <div class="overlap-group-3">
             <div class="card">
-              <div class="rectangle-wrapper"><Image class="rectangle-2" src={contents2_meetup} alt="" /></div>
+              <div class="rectangle-wrapper">
+                <Image class="rectangle-2" src={contents2_meetup} alt="" />
+              </div>
               <img class="line-3" src="img/line-23-3.svg" />
               <div class="group-wrapper">
                 <div class="group-10">
                   <div class="flexcontainer-2">
                     <p class="text">
-                      <span class="text-wrapper-14">マレーシアオフ会<br /></span>
+                      <span class="text-wrapper-14">マレーシアオフ会<br /></span
+                      >
                     </p>
-                    <p class="text"><span class="text-wrapper-15">の様子はこちら</span></p>
+                    <p class="text">
+                      <span class="text-wrapper-15">の様子はこちら</span>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -246,7 +290,9 @@ import button from "~/assets/button.svg";
             <div class="label-3">
               <Image class="subtract" src={subtract} alt="" />
               <div class="frame-8">
-                <div class="frame-7"><div class="text-wrapper-16">国内外でオフ会開催！</div></div>
+                <div class="frame-7">
+                  <div class="text-wrapper-16">国内外でオフ会開催！</div>
+                </div>
               </div>
             </div>
           </div>
@@ -254,7 +300,9 @@ import button from "~/assets/button.svg";
         <div class="overlap-group-wrapper">
           <div class="overlap-group-3">
             <div class="card">
-              <div class="rectangle-wrapper"><Image class="rectangle-2" src={contents3_korea} alt="" /></div>
+              <div class="rectangle-wrapper">
+                <Image class="rectangle-2" src={contents3_korea} alt="" />
+              </div>
               <img class="line-3" src="img/line-23.svg" />
               <div class="flexcontainer-wrapper">
                 <div class="flexcontainer">
@@ -262,14 +310,18 @@ import button from "~/assets/button.svg";
                     <span class="text-wrapper-14">韓国美容</span>
                     <span class="text-wrapper-15">好きメンバーと<br /></span>
                   </p>
-                  <p class="text"><span class="text-wrapper-15">つながろう！</span></p>
+                  <p class="text">
+                    <span class="text-wrapper-15">つながろう！</span>
+                  </p>
                 </div>
               </div>
             </div>
             <div class="label-4">
               <Image class="subtract" src={subtract} alt="" />
               <div class="frame-6">
-                <div class="frame-7"><div class="text-wrapper-16">韓国美容クリニック特典</div></div>
+                <div class="frame-7">
+                  <div class="text-wrapper-16">韓国美容クリニック特典</div>
+                </div>
               </div>
             </div>
           </div>
@@ -277,15 +329,21 @@ import button from "~/assets/button.svg";
         <div class="column">
           <div class="overlap-7">
             <div class="card">
-              <div class="rectangle-wrapper"><Image class="rectangle-2" src={contents4_column} alt="" /></div>
+              <div class="rectangle-wrapper">
+                <Image class="rectangle-2" src={contents4_column} alt="" />
+              </div>
               <img class="line-3" src="img/image.svg" />
               <div class="group-wrapper">
                 <div class="group-11">
                   <div class="flexcontainer-3">
                     <p class="span-wrapper">
-                      <span class="text-wrapper-15">メンバーだけが読める<br /></span>
+                      <span class="text-wrapper-15"
+                        >メンバーだけが読める<br /></span
+                      >
                     </p>
-                    <p class="span-wrapper"><span class="text-wrapper-17">うれしの哲学</span></p>
+                    <p class="span-wrapper">
+                      <span class="text-wrapper-17">うれしの哲学</span>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -293,7 +351,9 @@ import button from "~/assets/button.svg";
             <div class="label-4">
               <Image class="subtract" src={subtract} alt="" />
               <div class="frame-8">
-                <div class="frame-7"><div class="text-wrapper-16">会員限定うれしのコラム</div></div>
+                <div class="frame-7">
+                  <div class="text-wrapper-16">会員限定うれしのコラム</div>
+                </div>
               </div>
             </div>
           </div>
@@ -301,22 +361,30 @@ import button from "~/assets/button.svg";
         <div class="overlap-group-wrapper">
           <div class="overlap-group-3">
             <div class="card">
-              <div class="rectangle-wrapper"><Image class="rectangle-2" src={contents5_slack} alt="" /></div>
+              <div class="rectangle-wrapper">
+                <Image class="rectangle-2" src={contents5_slack} alt="" />
+              </div>
               <img class="line-3" src="img/line-23-2.svg" />
               <div class="group-12">
                 <div class="flexcontainer-4">
                   <p class="text">
-                    <span class="text-wrapper-14">仕事・美容・恋愛 </span>
+                    <span class="text-wrapper-14">仕事・美容・恋愛</span>
                     <span class="text-wrapper-15">について<br /></span>
                   </p>
-                  <p class="text"><span class="text-wrapper-15">うれしのに直接聞ける！</span></p>
+                  <p class="text">
+                    <span class="text-wrapper-15">うれしのに直接聞ける！</span>
+                  </p>
                 </div>
               </div>
             </div>
             <div class="label-5">
               <Image class="subtract" src={subtract} alt="" />
               <div class="frame-6">
-                <div class="frame-7"><div class="text-wrapper-16">Slack質問箱 &amp; 雑談ルーム</div></div>
+                <div class="frame-7">
+                  <div class="text-wrapper-16">
+                    Slack質問箱 &amp; 雑談ルーム
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -324,7 +392,9 @@ import button from "~/assets/button.svg";
         <div class="overlap-group-wrapper">
           <div class="overlap-group-3">
             <div class="card">
-              <div class="rectangle-wrapper"><Image class="rectangle-2" src={contents6_bukatu} alt="" /></div>
+              <div class="rectangle-wrapper">
+                <Image class="rectangle-2" src={contents6_bukatu} alt="" />
+              </div>
               <img class="line-3" src="img/line-23-5.svg" />
               <div class="group-wrapper">
                 <div class="group-13">
@@ -333,7 +403,9 @@ import button from "~/assets/button.svg";
                       <span class="text-wrapper-14">自己成長</span>
                       <span class="text-wrapper-15">を実感できる<br /></span>
                     </p>
-                    <p class="text"><span class="text-wrapper-15">メンバー限定部活動！</span></p>
+                    <p class="text">
+                      <span class="text-wrapper-15">メンバー限定部活動！</span>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -341,1059 +413,1087 @@ import button from "~/assets/button.svg";
             <div class="label-6">
               <Image class="subtract" src={subtract} alt="" />
               <div class="frame-8">
-                <div class="frame-7"><div class="text-wrapper-16">うれしのサロン 部活動</div></div>
+                <div class="frame-7">
+                  <div class="text-wrapper-16">うれしのサロン 部活動</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>
 
 <style>
   :root {
-  --pale-pink: rgba(245, 236, 239, 1);
-  --neutral: rgba(250, 250, 249, 1);
-  --lightest-grey: rgba(228, 228, 231, 1);
-  --light-grey: rgba(161, 161, 170, 1);
-  --grey: rgba(113, 113, 122, 1);
-  --dark-grey: rgba(82, 82, 91, 1);
-  --black: rgba(39, 39, 42, 1);
-  --mobile-h1-font-family: "Hina Mincho", Helvetica;
-  --mobile-h1-font-weight: 400;
-  --mobile-h1-font-size: 40px;
-  --mobile-h1-letter-spacing: 0px;
-  --mobile-h1-line-height: normal;
-  --mobile-h1-font-style: normal;
-  --mobile-h2-font-family: "Hina Mincho", Helvetica;
-  --mobile-h2-font-weight: 400;
-  --mobile-h2-font-size: 24px;
-  --mobile-h2-letter-spacing: 2.88px;
-  --mobile-h2-line-height: 144.9303150177002%;
-  --mobile-h2-font-style: normal;
-  --mobile-body-font-family: "Ryo Gothic PlusN", Helvetica;
-  --mobile-body-font-weight: 400;
-  --mobile-body-font-size: 16px;
-  --mobile-body-letter-spacing: 2.08px;
-  --mobile-body-line-height: 22px;
-  --mobile-body-font-style: normal;
-  --small-title-j-font-family: "Ryo Gothic PlusN", Helvetica;
-  --small-title-j-font-weight: 400;
-  --small-title-j-font-size: 20px;
-  --small-title-j-letter-spacing: 0px;
-  --small-title-j-line-height: normal;
-  --small-title-j-font-style: normal;
-  --small-text-j-font-family: "Ryo Gothic PlusN", Helvetica;
-  --small-text-j-font-weight: 400;
-  --small-text-j-font-size: 14px;
-  --small-text-j-letter-spacing: -0.42px;
-  --small-text-j-line-height: normal;
-  --small-text-j-font-style: normal;
-  --script-font-family: "Charlotte", Helvetica;
-  --script-font-weight: 400;
-  --script-font-size: 20px;
-  --script-letter-spacing: 0px;
-  --script-line-height: normal;
-  --script-font-style: normal;
-  --h1-e-font-family: "Cinzel Decorative", Helvetica;
-  --h1-e-font-weight: 400;
-  --h1-e-font-size: 64px;
-  --h1-e-letter-spacing: 1.92px;
-  --h1-e-line-height: normal;
-  --h1-e-font-style: normal;
-  --h2-j-font-family: "Hina Mincho", Helvetica;
-  --h2-j-font-weight: 400;
-  --h2-j-font-size: 30px;
-  --h2-j-letter-spacing: 3.6px;
-  --h2-j-line-height: 144.9303150177002%;
-  --h2-j-font-style: normal;
-  --body-j-font-family: "Ryo Gothic PlusN", Helvetica;
-  --body-j-font-weight: 400;
-  --body-j-font-size: 16px;
-  --body-j-letter-spacing: 2.56px;
-  --body-j-line-height: 24px;
-  --body-j-font-style: normal;
-  --montserrat-font-family: "Montserrat", Helvetica;
-  --montserrat-font-weight: 500;
-  --montserrat-font-size: 14px;
-  --montserrat-letter-spacing: 0.10000000149011612px;
-  --montserrat-line-height: 20px;
-  --montserrat-font-style: normal;
-  --h1-j-font-family: "Hina Mincho", Helvetica;
-  --h1-j-font-weight: 400;
-  --h1-j-font-size: 64px;
-  --h1-j-letter-spacing: 4.48px;
-  --h1-j-line-height: normal;
-  --h1-j-font-style: normal;
-  --pink-shadow: 3px 4px 5.800000190734863px 0px rgba(193, 157, 169, 1);
-  --drop: 0px 2px 4px 0px rgba(177, 165, 171, 0.8);
-  --variable-collection-beige: rgba(229, 213, 203, 1);
-  --variable-collection-pink: rgba(198, 151, 165, 1);
-  --variable-collection-white: rgba(255, 255, 255, 1);
-  --variable-collection-pale-pink: rgba(245, 236, 239, 1);
-  --variable-collection-salmon: rgba(215, 169, 159, 1);
-  --variable-collection-beige-gradient: rgba(255, 255, 255, 0);
-  --variable-collection-purple: rgba(158, 135, 190, 1);
-}
-
-.box {
-  width: 796px;
-  height: 1258px;
-}
-
-.box .contents {
-  width: 796px;
-  height: 1258px;
-  top: 0;
-  left: 0;
-}
-
-.box .overlap {
-  position: relative;
-  width: 370px;
-  height: 1258px;
-  left: 211px;
-}
-
-.box .leaf-shadow {
-  top: 0;
-  position: absolute;
-  width: 360px;
-  height: 387px;
-  left: 4px;
-  object-fit: cover;
-}
-
-.box .img {
-  top: 474px;
-  position: absolute;
-  width: 360px;
-  height: 387px;
-  left: 4px;
-  object-fit: cover;
-}
-
-.box .title {
-  position: absolute;
-  width: 304px;
-  height: 86px;
-  top: 36px;
-  left: 32px;
-}
-
-.box .overlap-group {
-  position: relative;
-  height: 86px;
-}
-
-.box .div {
-  display: inline-flex;
-  align-items: center;
-  gap: 16px;
-  position: absolute;
-  top: 28px;
-  left: 0;
-}
-
-.box .header-mark {
-  position: relative;
-  width: 54px;
-  height: 8px;
-  margin-left: -23px;
-  background-color: var(--variable-collection-salmon);
-  transform: rotate(90deg);
-}
-
-.box .text-wrapper {
-  position: relative;
-  width: fit-content;
-  margin-top: -4px;
-  text-shadow: 3px 4px 5.8px #c19da88f;
-  -webkit-text-stroke: 3px transparent;
-  background-image: linear-gradient(180deg, rgba(255, 252.32, 254.57, 0) 0%, rgba(198, 152, 165, 0.32) 100%);
-  -webkit-background-clip: text;
-  font-family: var(--mobile-h1-font-family);
-  font-weight: var(--mobile-h1-font-weight);
-  color: var(--variable-collection-white);
-  font-size: var(--mobile-h1-font-size);
-  letter-spacing: var(--mobile-h1-letter-spacing);
-  line-height: var(--mobile-h1-line-height);
-  font-style: var(--mobile-h1-font-style);
-}
-
-.box .member-only {
-  position: absolute;
-  width: 159px;
-  height: 40px;
-  top: 0;
-  left: 67px;
-}
-
-.box .text-wrapper-2 {
-  position: absolute;
-  top: 0;
-  left: 18px;
-  font-family: var(--small-title-j-font-family);
-  font-weight: var(--small-title-j-font-weight);
-  color: var(--variable-collection-pink);
-  font-size: var(--small-title-j-font-size);
-  letter-spacing: var(--small-title-j-letter-spacing);
-  line-height: var(--small-title-j-line-height);
-  font-style: var(--small-title-j-font-style);
-}
-
-.box .line {
-  position: absolute;
-  width: 12px;
-  height: 23px;
-  top: 8px;
-  left: -2px;
-}
-
-.box .line-2 {
-  position: absolute;
-  width: 12px;
-  height: 23px;
-  top: 8px;
-  left: 146px;
-}
-
-.box .dots {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 16px;
-  position: absolute;
-  top: 578px;
-  left: 150px;
-}
-
-.box .ellipse {
-  background-color: var(--grey);
-  position: relative;
-  width: 12px;
-  height: 12px;
-  border-radius: 6px;
-}
-
-.box .ellipse-2 {
-  background-color: var(--light-grey);
-  position: relative;
-  width: 12px;
-  height: 12px;
-  border-radius: 6px;
-}
-
-.box .ellipse-3 {
-  background-color: var(--lightest-grey);
-  position: relative;
-  width: 12px;
-  height: 12px;
-  border-radius: 6px;
-}
-
-.box .label {
-  position: absolute;
-  width: 192px;
-  height: 142px;
-  top: 1055px;
-  left: 19px;
-  transform: rotate(20.76deg);
-}
-
-.box .overlap-2 {
-  position: relative;
-  width: 209px;
-  height: 146px;
-  top: -5px;
-}
-
-.box .group {
-  position: absolute;
-  width: 209px;
-  height: 146px;
-  top: 0;
-  left: 0;
-  opacity: 0.94;
-}
-
-.box .watercolor-wrapper {
-  position: relative;
-  width: 204px;
-  height: 86px;
-  top: 30px;
-  left: 2px;
-  background-image: url(./img/watercolor1-1.png);
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-.box .watercolor {
-  position: absolute;
-  width: 204px;
-  height: 86px;
-  top: 0;
-  left: 0;
-  mix-blend-mode: darken;
-  object-fit: cover;
-}
-
-.box .text-wrapper-3 {
-  position: absolute;
-  top: 52px;
-  left: 52px;
-  transform: rotate(-24.97deg);
-  background: linear-gradient(180deg, rgb(158, 135, 190) 0%, rgb(198, 151, 165) 100%);
-  -webkit-background-clip: text !important;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-  font-family: "Ryo Gothic PlusN-M", Helvetica;
-  font-weight: 400;
-  color: transparent;
-  font-size: 16px;
-  text-align: center;
-  letter-spacing: 0.64px;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.box .text-wrapper-4 {
-  position: absolute;
-  top: 69px;
-  left: 37px;
-  transform: rotate(-24.97deg);
-  background: linear-gradient(180deg, rgb(158, 135, 190) 0%, rgb(198, 151, 165) 100%);
-  -webkit-background-clip: text !important;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-  font-family: "Ryo Gothic PlusN-B", Helvetica;
-  font-weight: 400;
-  color: transparent;
-  font-size: 32px;
-  text-align: center;
-  letter-spacing: -2.56px;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.box .default-button {
-  position: absolute;
-  width: 260px;
-  height: 84px;
-  top: 1174px;
-  left: 54px;
-  box-shadow: 1px 1px 2.1px #7e76d4, 0px 4px 4px #00000040;
-}
-
-.box .overlap-3 {
-  position: relative;
-  width: 280px;
-  height: 84px;
-  left: -10px;
-  border-radius: 100px;
-}
-
-.box .frame {
-  display: inline-flex;
-  align-items: flex-end;
-  gap: 56px;
-  padding: 32px 30px 32px 70px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #a37dd21a;
-  border-radius: 100px;
-  box-shadow: 1px 1px 2.1px #7e76d4;
-}
-
-.box .text-wrapper-5 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Ryo Gothic PlusN-B", Helvetica;
-  font-weight: 400;
-  color: var(--variable-collection-white);
-  font-size: 18px;
-  letter-spacing: 4px;
-  line-height: 20px;
-  white-space: nowrap;
-}
-
-.box .arrow-forward-ios {
-  position: relative;
-  width: 18px;
-  height: 18px;
-}
-
-.box .intersect {
-  position: absolute;
-  width: 263px;
-  height: 35px;
-  top: 0;
-  left: 8px;
-  mix-blend-mode: lighten;
-}
-
-.box .gallery {
-  position: absolute;
-  width: 332px;
-  height: 354px;
-  top: 716px;
-  left: 18px;
-}
-
-.box .overlap-4 {
-  position: relative;
-  height: 354px;
-}
-
-.box .pic {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  padding: 8px;
-  position: absolute;
-  top: 22px;
-  left: 0;
-  background-color: var(--variable-collection-white);
-  border-radius: 8px;
-  box-shadow: 0px 4px 4px #00000040;
-}
-
-.box .frame-2 {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 8px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.box .group-1 {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  background-image: url(./img/rectangle-20-2.png);
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-.box .div-wrapper {
-  display: flex;
-  width: 100px;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 0px 10px;
-  position: relative;
-  top: 80px;
-  background-color: #ffffff;
-  opacity: 0.74;
-}
-
-.box .text-wrapper-6 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Montserrat-Medium", Helvetica;
-  font-weight: 500;
-  color: var(--grey);
-  font-size: 10px;
-  letter-spacing: 0.1px;
-  line-height: 20px;
-  white-space: nowrap;
-}
-
-.box .group-2 {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  background-image: url(./img/rectangle-20-5.png);
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-.box .group-3 {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  background-image: url(./img/rectangle-20-7.png);
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-.box .group-4 {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  background-image: url(./img/image.png);
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-.box .group-5 {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  background-image: url(./img/rectangle-20.png);
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-.box .group-6 {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  background-image: url(./img/rectangle-20-3.png);
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-.box .group-7 {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  background-image: url(./img/rectangle-20-4.png);
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-.box .group-8 {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  background-image: url(./img/rectangle-20-6.png);
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-.box .group-9 {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  background-image: url(./img/rectangle-20-8.png);
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-.box .overlap-wrapper {
-  position: absolute;
-  width: 277px;
-  height: 325px;
-  top: 0;
-  left: 29px;
-}
-
-.box .overlap-5 {
-  position: relative;
-  width: 275px;
-  height: 325px;
-}
-
-.box .schedule {
-  position: absolute;
-  width: 275px;
-  height: 275px;
-  top: 50px;
-  left: 0;
-}
-
-.box .overlap-group-2 {
-  position: relative;
-  height: 275px;
-  border-radius: 8px;
-}
-
-.box .rectangle {
-  position: absolute;
-  width: 275px;
-  height: 275px;
-  top: 0;
-  left: 0;
-  background-color: var(--variable-collection-white);
-  border-radius: 8px;
-  opacity: 0.84;
-}
-
-.box .frame-3 {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  position: absolute;
-  top: 30px;
-  left: 8px;
-}
-
-.box .frame-4 {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.box .frame-5 {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 4px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.box .text-wrapper-7 {
-  position: relative;
-  width: 94px;
-  margin-top: -1px;
-  font-family: var(--montserrat-font-family);
-  font-weight: var(--montserrat-font-weight);
-  color: var(--dark-grey);
-  font-size: var(--montserrat-font-size);
-  letter-spacing: var(--montserrat-letter-spacing);
-  line-height: var(--montserrat-line-height);
-  font-style: var(--montserrat-font-style);
-}
-
-.box .text-wrapper-8 {
-  position: relative;
-  width: 91px;
-  margin-top: -1px;
-  font-family: var(--montserrat-font-family);
-  font-weight: var(--montserrat-font-weight);
-  color: var(--dark-grey);
-  font-size: var(--montserrat-font-size);
-  letter-spacing: var(--montserrat-letter-spacing);
-  line-height: var(--montserrat-line-height);
-  font-style: var(--montserrat-font-style);
-}
-
-.box .text-wrapper-9 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Montserrat-Medium", Helvetica;
-  font-weight: 500;
-  color: var(--dark-grey);
-  font-size: 20px;
-  letter-spacing: 0.1px;
-  line-height: 20px;
-  white-space: nowrap;
-}
-
-.box .text-wrapper-10 {
-  position: absolute;
-  height: 74px;
-  top: 14px;
-  left: 16px;
-  transform: rotate(-15deg);
-  font-family: "Charlotte-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--variable-collection-salmon);
-  font-size: 48px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.box .meetup-title {
-  position: absolute;
-  width: 362px;
-  height: 64px;
-  top: 632px;
-  left: 4px;
-}
-
-.box .overlap-6 {
-  position: relative;
-  width: 360px;
-  height: 66px;
-  top: -2px;
-}
-
-.box .element-wrapper {
-  display: flex;
-  width: 360px;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 16px 10px;
-  position: absolute;
-  top: 10px;
-  left: 0;
-  box-shadow: var(--pink-shadow);
-  background: linear-gradient(180deg, rgb(158, 135, 190) 0%, rgb(198, 151, 165) 100%);
-}
-
-.box .element {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Ryo Gothic PlusN-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--variable-collection-white);
-  font-size: 16px;
-  letter-spacing: 2.56px;
-  line-height: 24px;
-  white-space: nowrap;
-}
-
-.box .span {
-  letter-spacing: var(--body-j-letter-spacing);
-  font-family: var(--body-j-font-family);
-  font-style: var(--body-j-font-style);
-  font-weight: var(--body-j-font-weight);
-  line-height: var(--body-j-line-height);
-  font-size: var(--body-j-font-size);
-}
-
-.box .text-wrapper-11 {
-  font-size: 24px;
-  letter-spacing: 0.92px;
-}
-
-.box .p {
-  position: absolute;
-  height: 22px;
-  top: 0;
-  left: 16px;
-  -webkit-text-stroke: 2px transparent;
-  background-image: linear-gradient(180deg, rgb(158, 135, 190) 0%, rgb(198, 151, 165) 100%);
-  -webkit-background-clip: text;
-  font-family: "Ryo Gothic PlusN-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--variable-collection-white);
-  font-size: 24px;
-  letter-spacing: 3.12px;
-  line-height: 22px;
-  white-space: nowrap;
-}
-
-.box .text-wrapper-12 {
-  letter-spacing: 0.75px;
-}
-
-.box .text-wrapper-13 {
-  font-size: var(--mobile-body-font-size);
-  letter-spacing: var(--mobile-body-letter-spacing);
-  font-family: var(--mobile-body-font-family);
-  font-style: var(--mobile-body-font-style);
-  font-weight: var(--mobile-body-font-weight);
-  line-height: var(--mobile-body-line-height);
-}
-
-.box .scroll-contents {
-  display: flex;
-  width: 400px;
-  align-items: flex-start;
-  gap: 340px;
-  position: absolute;
-  top: 159px;
-  left: 10px;
-  overflow-x: scroll;
-}
-
-.box .overlap-group-wrapper {
-  position: relative;
-  width: 343px;
-  height: 387px;
-}
-
-.box .overlap-group-3 {
-  position: relative;
-  height: 387px;
-}
-
-.box .card {
-  display: flex;
-  flex-direction: column;
-  width: 321px;
-  align-items: center;
-  gap: 16px;
-  padding: 24px;
-  position: absolute;
-  top: 0;
-  left: 22px;
-  background-color: var(--variable-collection-white);
-  border-radius: 4px;
-  box-shadow: 0px 2px 4px #b1a4aacc;
-}
-
-.box .rectangle-wrapper {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.box .rectangle-2 {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-}
-
-.box .line-3 {
-  position: relative;
-  width: 250px;
-  height: 1px;
-  object-fit: cover;
-}
-
-.box .flexcontainer-wrapper {
-  position: relative;
-  width: 241px;
-  height: 57px;
-}
-
-.box .flexcontainer {
-  width: 239px;
-  height: 57px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-  position: relative;
-}
-
-.box .text {
-  position: relative;
-  align-self: stretch;
-  font-family: "Ryo Gothic PlusN-Regular", Helvetica;
-  font-weight: 400;
-  color: transparent;
-  font-size: 24px;
-  text-align: center;
-  letter-spacing: 3.84px;
-  line-height: 24px;
-}
-
-.box .text-wrapper-14 {
-  color: #c697a5;
-  letter-spacing: 0.92px;
-}
-
-.box .text-wrapper-15 {
-  color: #52525b;
-  font-size: var(--body-j-font-size);
-  letter-spacing: var(--body-j-letter-spacing);
-  font-family: var(--body-j-font-family);
-  font-style: var(--body-j-font-style);
-  font-weight: var(--body-j-font-weight);
-  line-height: var(--body-j-line-height);
-}
-
-.box .label-2 {
-  position: absolute;
-  width: 291px;
-  height: 81px;
-  top: 8px;
-  left: 0;
-}
-
-.box .subtract {
-  position: absolute;
-  width: 22px;
-  height: 24px;
-  top: 57px;
-  left: 0;
-}
-
-.box .frame-6 {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 8px 30px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 10px 4px 4px 0px;
-  box-shadow: 0px 4px 4px #00000040, 0px 4px 4px #00000040;
-  background: linear-gradient(
-    180deg,
-    rgb(195.43, 149.35, 163.07) 0.6%,
-    rgb(233.56, 189.12, 202.36) 49.1%,
-    rgb(198, 151, 165) 100%
-  );
-}
-
-.box .frame-7 {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 10px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.box .text-wrapper-16 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1px;
-  font-family: var(--small-title-j-font-family);
-  font-weight: var(--small-title-j-font-weight);
-  color: var(--variable-collection-white);
-  font-size: var(--small-title-j-font-size);
-  letter-spacing: var(--small-title-j-letter-spacing);
-  line-height: var(--small-title-j-line-height);
-  font-style: var(--small-title-j-font-style);
-}
-
-.box .group-wrapper {
-  display: inline-flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 16px;
-  position: relative;
-  flex: 0 0 auto;
-}
-
-.box .group-10 {
-  position: relative;
-  width: 221px;
-  height: 57px;
-  margin-right: -2px;
-}
-
-.box .flexcontainer-2 {
-  width: 219px;
-  height: 57px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-  position: relative;
-}
-
-.box .label-3 {
-  position: absolute;
-  width: 260px;
-  height: 81px;
-  top: 8px;
-  left: 0;
-}
-
-.box .frame-8 {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 8px 30px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 10px 4px 4px 0px;
-  box-shadow: 0px 4px 4px #00000040, 0px 4px 4px #00000040;
-  background: linear-gradient(
-    180deg,
-    rgb(158, 135, 190) 0%,
-    rgb(211.63, 195.92, 233.95) 51.45%,
-    rgb(158, 135, 190) 100%
-  );
-}
-
-.box .label-4 {
-  position: absolute;
-  width: 280px;
-  height: 81px;
-  top: 8px;
-  left: 0;
-}
-
-.box .column {
-  position: relative;
-  width: 343px;
-  height: 380px;
-}
-
-.box .overlap-7 {
-  position: relative;
-  height: 380px;
-}
-
-.box .group-11 {
-  position: relative;
-  width: 186px;
-  height: 50px;
-  margin-right: -2px;
-}
-
-.box .flexcontainer-3 {
-  width: 184px;
-  height: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-  position: relative;
-}
-
-.box .span-wrapper {
-  position: relative;
-  align-self: stretch;
-  font-family: "Ryo Gothic PlusN-Regular", Helvetica;
-  font-weight: 400;
-  color: transparent;
-  font-size: 16px;
-  text-align: center;
-  letter-spacing: 2.56px;
-  line-height: 24px;
-}
-
-.box .text-wrapper-17 {
-  color: #c697a5;
-  font-size: 24px;
-  letter-spacing: 0.92px;
-}
-
-.box .group-12 {
-  position: relative;
-  width: 306px;
-  height: 57px;
-  margin-left: -15.5px;
-  margin-right: -17.5px;
-}
-
-.box .flexcontainer-4 {
-  width: 304px;
-  height: 57px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-  position: relative;
-}
-
-.box .label-5 {
-  position: absolute;
-  width: 290px;
-  height: 81px;
-  top: 8px;
-  left: 0;
-}
-
-.box .group-13 {
-  position: relative;
-  width: 223px;
-  height: 57px;
-  margin-right: -2px;
-}
-
-.box .flexcontainer-5 {
-  width: 221px;
-  height: 57px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-  position: relative;
-}
-
-.box .label-6 {
-  position: absolute;
-  width: 265px;
-  height: 81px;
-  top: 8px;
-  left: 0;
-}
+    --pale-pink: rgba(245, 236, 239, 1);
+    --neutral: rgba(250, 250, 249, 1);
+    --lightest-grey: rgba(228, 228, 231, 1);
+    --light-grey: rgba(161, 161, 170, 1);
+    --grey: rgba(113, 113, 122, 1);
+    --dark-grey: rgba(82, 82, 91, 1);
+    --black: rgba(39, 39, 42, 1);
+    --mobile-h1-font-family: 'Hina Mincho', Helvetica;
+    --mobile-h1-font-weight: 400;
+    --mobile-h1-font-size: 40px;
+    --mobile-h1-letter-spacing: 0px;
+    --mobile-h1-line-height: normal;
+    --mobile-h1-font-style: normal;
+    --mobile-h2-font-family: 'Hina Mincho', Helvetica;
+    --mobile-h2-font-weight: 400;
+    --mobile-h2-font-size: 24px;
+    --mobile-h2-letter-spacing: 2.88px;
+    --mobile-h2-line-height: 144.9303150177002%;
+    --mobile-h2-font-style: normal;
+    --mobile-body-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --mobile-body-font-weight: 400;
+    --mobile-body-font-size: 16px;
+    --mobile-body-letter-spacing: 2.08px;
+    --mobile-body-line-height: 22px;
+    --mobile-body-font-style: normal;
+    --small-title-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --small-title-j-font-weight: 400;
+    --small-title-j-font-size: 20px;
+    --small-title-j-letter-spacing: 0px;
+    --small-title-j-line-height: normal;
+    --small-title-j-font-style: normal;
+    --small-text-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --small-text-j-font-weight: 400;
+    --small-text-j-font-size: 14px;
+    --small-text-j-letter-spacing: -0.42px;
+    --small-text-j-line-height: normal;
+    --small-text-j-font-style: normal;
+    --script-font-family: 'Charlotte', Helvetica;
+    --script-font-weight: 400;
+    --script-font-size: 20px;
+    --script-letter-spacing: 0px;
+    --script-line-height: normal;
+    --script-font-style: normal;
+    --h1-e-font-family: 'Cinzel Decorative', Helvetica;
+    --h1-e-font-weight: 400;
+    --h1-e-font-size: 64px;
+    --h1-e-letter-spacing: 1.92px;
+    --h1-e-line-height: normal;
+    --h1-e-font-style: normal;
+    --h2-j-font-family: 'Hina Mincho', Helvetica;
+    --h2-j-font-weight: 400;
+    --h2-j-font-size: 30px;
+    --h2-j-letter-spacing: 3.6px;
+    --h2-j-line-height: 144.9303150177002%;
+    --h2-j-font-style: normal;
+    --body-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --body-j-font-weight: 400;
+    --body-j-font-size: 16px;
+    --body-j-letter-spacing: 2.56px;
+    --body-j-line-height: 24px;
+    --body-j-font-style: normal;
+    --montserrat-font-family: 'Montserrat', Helvetica;
+    --montserrat-font-weight: 500;
+    --montserrat-font-size: 14px;
+    --montserrat-letter-spacing: 0.10000000149011612px;
+    --montserrat-line-height: 20px;
+    --montserrat-font-style: normal;
+    --h1-j-font-family: 'Hina Mincho', Helvetica;
+    --h1-j-font-weight: 400;
+    --h1-j-font-size: 64px;
+    --h1-j-letter-spacing: 4.48px;
+    --h1-j-line-height: normal;
+    --h1-j-font-style: normal;
+    --pink-shadow: 3px 4px 5.800000190734863px 0px rgba(193, 157, 169, 1);
+    --drop: 0px 2px 4px 0px rgba(177, 165, 171, 0.8);
+    --variable-collection-beige: rgba(229, 213, 203, 1);
+    --variable-collection-pink: rgba(198, 151, 165, 1);
+    --variable-collection-white: rgba(255, 255, 255, 1);
+    --variable-collection-pale-pink: rgba(245, 236, 239, 1);
+    --variable-collection-salmon: rgba(215, 169, 159, 1);
+    --variable-collection-beige-gradient: rgba(255, 255, 255, 0);
+    --variable-collection-purple: rgba(158, 135, 190, 1);
+  }
+
+  .box {
+    width: 796px;
+    height: 1258px;
+  }
+
+  .box .contents {
+    width: 796px;
+    height: 1258px;
+    top: 0;
+    left: 0;
+  }
+
+  .box .overlap {
+    position: relative;
+    width: 370px;
+    height: 1258px;
+    left: 211px;
+  }
+
+  .box .leaf-shadow {
+    top: 0;
+    position: absolute;
+    width: 360px;
+    height: 387px;
+    left: 4px;
+    object-fit: cover;
+  }
+
+  .box .img {
+    top: 474px;
+    position: absolute;
+    width: 360px;
+    height: 387px;
+    left: 4px;
+    object-fit: cover;
+  }
+
+  .box .title {
+    position: absolute;
+    width: 304px;
+    height: 86px;
+    top: 36px;
+    left: 32px;
+  }
+
+  .box .overlap-group {
+    position: relative;
+    height: 86px;
+  }
+
+  .box .div {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    position: absolute;
+    top: 28px;
+    left: 0;
+  }
+
+  .box .header-mark {
+    position: relative;
+    width: 54px;
+    height: 8px;
+    margin-left: -23px;
+    background-color: var(--variable-collection-salmon);
+    transform: rotate(90deg);
+  }
+
+  .box .text-wrapper {
+    position: relative;
+    width: fit-content;
+    margin-top: -4px;
+    text-shadow: 3px 4px 5.8px #c19da88f;
+    -webkit-text-stroke: 3px transparent;
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 252.32, 254.57, 0) 0%,
+      rgba(198, 152, 165, 0.32) 100%
+    );
+    -webkit-background-clip: text;
+    font-family: var(--mobile-h1-font-family);
+    font-weight: var(--mobile-h1-font-weight);
+    color: var(--variable-collection-white);
+    font-size: var(--mobile-h1-font-size);
+    letter-spacing: var(--mobile-h1-letter-spacing);
+    line-height: var(--mobile-h1-line-height);
+    font-style: var(--mobile-h1-font-style);
+  }
+
+  .box .member-only {
+    position: absolute;
+    width: 159px;
+    height: 40px;
+    top: 0;
+    left: 67px;
+  }
+
+  .box .text-wrapper-2 {
+    position: absolute;
+    top: 0;
+    left: 18px;
+    font-family: var(--small-title-j-font-family);
+    font-weight: var(--small-title-j-font-weight);
+    color: var(--variable-collection-pink);
+    font-size: var(--small-title-j-font-size);
+    letter-spacing: var(--small-title-j-letter-spacing);
+    line-height: var(--small-title-j-line-height);
+    font-style: var(--small-title-j-font-style);
+  }
+
+  .box .line {
+    position: absolute;
+    width: 12px;
+    height: 23px;
+    top: 8px;
+    left: -2px;
+  }
+
+  .box .line-2 {
+    position: absolute;
+    width: 12px;
+    height: 23px;
+    top: 8px;
+    left: 146px;
+  }
+
+  .box .dots {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 16px;
+    position: absolute;
+    top: 578px;
+    left: 150px;
+  }
+
+  .box .ellipse {
+    background-color: var(--grey);
+    position: relative;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+  }
+
+  .box .ellipse-2 {
+    background-color: var(--light-grey);
+    position: relative;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+  }
+
+  .box .ellipse-3 {
+    background-color: var(--lightest-grey);
+    position: relative;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+  }
+
+  .box .label {
+    position: absolute;
+    width: 192px;
+    height: 142px;
+    top: 1055px;
+    left: 19px;
+    transform: rotate(20.76deg);
+  }
+
+  .box .overlap-2 {
+    position: relative;
+    width: 209px;
+    height: 146px;
+    top: -5px;
+  }
+
+  .box .group {
+    position: absolute;
+    width: 209px;
+    height: 146px;
+    top: 0;
+    left: 0;
+    opacity: 0.94;
+  }
+
+  .box .watercolor-wrapper {
+    position: relative;
+    width: 204px;
+    height: 86px;
+    top: 30px;
+    left: 2px;
+    background-image: url(./img/watercolor1-1.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  .box .watercolor {
+    position: absolute;
+    width: 204px;
+    height: 86px;
+    top: 0;
+    left: 0;
+    mix-blend-mode: darken;
+    object-fit: cover;
+  }
+
+  .box .text-wrapper-3 {
+    position: absolute;
+    top: 52px;
+    left: 52px;
+    transform: rotate(-24.97deg);
+    background: linear-gradient(
+      180deg,
+      rgb(158, 135, 190) 0%,
+      rgb(198, 151, 165) 100%
+    );
+    -webkit-background-clip: text !important;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    font-family: 'Ryo Gothic PlusN-M', Helvetica;
+    font-weight: 400;
+    color: transparent;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.64px;
+    line-height: 24px;
+    white-space: nowrap;
+  }
+
+  .box .text-wrapper-4 {
+    position: absolute;
+    top: 69px;
+    left: 37px;
+    transform: rotate(-24.97deg);
+    background: linear-gradient(
+      180deg,
+      rgb(158, 135, 190) 0%,
+      rgb(198, 151, 165) 100%
+    );
+    -webkit-background-clip: text !important;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    font-family: 'Ryo Gothic PlusN-B', Helvetica;
+    font-weight: 400;
+    color: transparent;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: -2.56px;
+    line-height: 24px;
+    white-space: nowrap;
+  }
+
+  .box .default-button {
+    position: absolute;
+    width: 260px;
+    height: 84px;
+    top: 1174px;
+    left: 54px;
+    box-shadow:
+      1px 1px 2.1px #7e76d4,
+      0px 4px 4px #00000040;
+  }
+
+  .box .overlap-3 {
+    position: relative;
+    width: 280px;
+    height: 84px;
+    left: -10px;
+    border-radius: 100px;
+  }
+
+  .box .frame {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 56px;
+    padding: 32px 30px 32px 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #a37dd21a;
+    border-radius: 100px;
+    box-shadow: 1px 1px 2.1px #7e76d4;
+  }
+
+  .box .text-wrapper-5 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: 'Ryo Gothic PlusN-B', Helvetica;
+    font-weight: 400;
+    color: var(--variable-collection-white);
+    font-size: 18px;
+    letter-spacing: 4px;
+    line-height: 20px;
+    white-space: nowrap;
+  }
+
+  .box .arrow-forward-ios {
+    position: relative;
+    width: 18px;
+    height: 18px;
+  }
+
+  .box .intersect {
+    position: absolute;
+    width: 263px;
+    height: 35px;
+    top: 0;
+    left: 8px;
+    mix-blend-mode: lighten;
+  }
+
+  .box .gallery {
+    position: absolute;
+    width: 332px;
+    height: 354px;
+    top: 716px;
+    left: 18px;
+  }
+
+  .box .overlap-4 {
+    position: relative;
+    height: 354px;
+  }
+
+  .box .pic {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 8px;
+    position: absolute;
+    top: 22px;
+    left: 0;
+    background-color: var(--variable-collection-white);
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px #00000040;
+  }
+
+  .box .frame-2 {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 8px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .box .group-1 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-image: url(./img/rectangle-20-2.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  .box .div-wrapper {
+    display: flex;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px 10px;
+    position: relative;
+    top: 80px;
+    background-color: #ffffff;
+    opacity: 0.74;
+  }
+
+  .box .text-wrapper-6 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: 'Montserrat-Medium', Helvetica;
+    font-weight: 500;
+    color: var(--grey);
+    font-size: 10px;
+    letter-spacing: 0.1px;
+    line-height: 20px;
+    white-space: nowrap;
+  }
+
+  .box .group-2 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-image: url(./img/rectangle-20-5.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  .box .group-3 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-image: url(./img/rectangle-20-7.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  .box .group-4 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-image: url(./img/image.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  .box .group-5 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-image: url(./img/rectangle-20.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  .box .group-6 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-image: url(./img/rectangle-20-3.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  .box .group-7 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-image: url(./img/rectangle-20-4.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  .box .group-8 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-image: url(./img/rectangle-20-6.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  .box .group-9 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-image: url(./img/rectangle-20-8.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  .box .overlap-wrapper {
+    position: absolute;
+    width: 277px;
+    height: 325px;
+    top: 0;
+    left: 29px;
+  }
+
+  .box .overlap-5 {
+    position: relative;
+    width: 275px;
+    height: 325px;
+  }
+
+  .box .schedule {
+    position: absolute;
+    width: 275px;
+    height: 275px;
+    top: 50px;
+    left: 0;
+  }
+
+  .box .overlap-group-2 {
+    position: relative;
+    height: 275px;
+    border-radius: 8px;
+  }
+
+  .box .rectangle {
+    position: absolute;
+    width: 275px;
+    height: 275px;
+    top: 0;
+    left: 0;
+    background-color: var(--variable-collection-white);
+    border-radius: 8px;
+    opacity: 0.84;
+  }
+
+  .box .frame-3 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    position: absolute;
+    top: 30px;
+    left: 8px;
+  }
+
+  .box .frame-4 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .box .frame-5 {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 4px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .box .text-wrapper-7 {
+    position: relative;
+    width: 94px;
+    margin-top: -1px;
+    font-family: var(--montserrat-font-family);
+    font-weight: var(--montserrat-font-weight);
+    color: var(--dark-grey);
+    font-size: var(--montserrat-font-size);
+    letter-spacing: var(--montserrat-letter-spacing);
+    line-height: var(--montserrat-line-height);
+    font-style: var(--montserrat-font-style);
+  }
+
+  .box .text-wrapper-8 {
+    position: relative;
+    width: 91px;
+    margin-top: -1px;
+    font-family: var(--montserrat-font-family);
+    font-weight: var(--montserrat-font-weight);
+    color: var(--dark-grey);
+    font-size: var(--montserrat-font-size);
+    letter-spacing: var(--montserrat-letter-spacing);
+    line-height: var(--montserrat-line-height);
+    font-style: var(--montserrat-font-style);
+  }
+
+  .box .text-wrapper-9 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: 'Montserrat-Medium', Helvetica;
+    font-weight: 500;
+    color: var(--dark-grey);
+    font-size: 20px;
+    letter-spacing: 0.1px;
+    line-height: 20px;
+    white-space: nowrap;
+  }
+
+  .box .text-wrapper-10 {
+    position: absolute;
+    height: 74px;
+    top: 14px;
+    left: 16px;
+    transform: rotate(-15deg);
+    font-family: 'Charlotte-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--variable-collection-salmon);
+    font-size: 48px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .box .meetup-title {
+    position: absolute;
+    width: 362px;
+    height: 64px;
+    top: 632px;
+    left: 4px;
+  }
+
+  .box .overlap-6 {
+    position: relative;
+    width: 360px;
+    height: 66px;
+    top: -2px;
+  }
+
+  .box .element-wrapper {
+    display: flex;
+    width: 360px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 10px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    box-shadow: var(--pink-shadow);
+    background: linear-gradient(
+      180deg,
+      rgb(158, 135, 190) 0%,
+      rgb(198, 151, 165) 100%
+    );
+  }
+
+  .box .element {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: 'Ryo Gothic PlusN-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--variable-collection-white);
+    font-size: 16px;
+    letter-spacing: 2.56px;
+    line-height: 24px;
+    white-space: nowrap;
+  }
+
+  .box .span {
+    letter-spacing: var(--body-j-letter-spacing);
+    font-family: var(--body-j-font-family);
+    font-style: var(--body-j-font-style);
+    font-weight: var(--body-j-font-weight);
+    line-height: var(--body-j-line-height);
+    font-size: var(--body-j-font-size);
+  }
+
+  .box .text-wrapper-11 {
+    font-size: 24px;
+    letter-spacing: 0.92px;
+  }
+
+  .box .p {
+    position: absolute;
+    height: 22px;
+    top: 0;
+    left: 16px;
+    -webkit-text-stroke: 2px transparent;
+    background-image: linear-gradient(
+      180deg,
+      rgb(158, 135, 190) 0%,
+      rgb(198, 151, 165) 100%
+    );
+    -webkit-background-clip: text;
+    font-family: 'Ryo Gothic PlusN-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--variable-collection-white);
+    font-size: 24px;
+    letter-spacing: 3.12px;
+    line-height: 22px;
+    white-space: nowrap;
+  }
+
+  .box .text-wrapper-12 {
+    letter-spacing: 0.75px;
+  }
+
+  .box .text-wrapper-13 {
+    font-size: var(--mobile-body-font-size);
+    letter-spacing: var(--mobile-body-letter-spacing);
+    font-family: var(--mobile-body-font-family);
+    font-style: var(--mobile-body-font-style);
+    font-weight: var(--mobile-body-font-weight);
+    line-height: var(--mobile-body-line-height);
+  }
+
+  .box .scroll-contents {
+    display: flex;
+    width: 400px;
+    align-items: flex-start;
+    gap: 340px;
+    position: absolute;
+    top: 159px;
+    left: 10px;
+    overflow-x: scroll;
+  }
+
+  .box .overlap-group-wrapper {
+    position: relative;
+    width: 343px;
+    height: 387px;
+  }
+
+  .box .overlap-group-3 {
+    position: relative;
+    height: 387px;
+  }
+
+  .box .card {
+    display: flex;
+    flex-direction: column;
+    width: 321px;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+    position: absolute;
+    top: 0;
+    left: 22px;
+    background-color: var(--variable-collection-white);
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px #b1a4aacc;
+  }
+
+  .box .rectangle-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .box .rectangle-2 {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .box .line-3 {
+    position: relative;
+    width: 250px;
+    height: 1px;
+    object-fit: cover;
+  }
+
+  .box .flexcontainer-wrapper {
+    position: relative;
+    width: 241px;
+    height: 57px;
+  }
+
+  .box .flexcontainer {
+    width: 239px;
+    height: 57px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    position: relative;
+  }
+
+  .box .text {
+    position: relative;
+    align-self: stretch;
+    font-family: 'Ryo Gothic PlusN-Regular', Helvetica;
+    font-weight: 400;
+    color: transparent;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 3.84px;
+    line-height: 24px;
+  }
+
+  .box .text-wrapper-14 {
+    color: #c697a5;
+    letter-spacing: 0.92px;
+  }
+
+  .box .text-wrapper-15 {
+    color: #52525b;
+    font-size: var(--body-j-font-size);
+    letter-spacing: var(--body-j-letter-spacing);
+    font-family: var(--body-j-font-family);
+    font-style: var(--body-j-font-style);
+    font-weight: var(--body-j-font-weight);
+    line-height: var(--body-j-line-height);
+  }
+
+  .box .label-2 {
+    position: absolute;
+    width: 291px;
+    height: 81px;
+    top: 8px;
+    left: 0;
+  }
+
+  .box .subtract {
+    position: absolute;
+    width: 22px;
+    height: 24px;
+    top: 57px;
+    left: 0;
+  }
+
+  .box .frame-6 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px 4px 4px 0px;
+    box-shadow:
+      0px 4px 4px #00000040,
+      0px 4px 4px #00000040;
+    background: linear-gradient(
+      180deg,
+      rgb(195.43, 149.35, 163.07) 0.6%,
+      rgb(233.56, 189.12, 202.36) 49.1%,
+      rgb(198, 151, 165) 100%
+    );
+  }
+
+  .box .frame-7 {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .box .text-wrapper-16 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: var(--small-title-j-font-family);
+    font-weight: var(--small-title-j-font-weight);
+    color: var(--variable-collection-white);
+    font-size: var(--small-title-j-font-size);
+    letter-spacing: var(--small-title-j-letter-spacing);
+    line-height: var(--small-title-j-line-height);
+    font-style: var(--small-title-j-font-style);
+  }
+
+  .box .group-wrapper {
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .box .group-10 {
+    position: relative;
+    width: 221px;
+    height: 57px;
+    margin-right: -2px;
+  }
+
+  .box .flexcontainer-2 {
+    width: 219px;
+    height: 57px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    position: relative;
+  }
+
+  .box .label-3 {
+    position: absolute;
+    width: 260px;
+    height: 81px;
+    top: 8px;
+    left: 0;
+  }
+
+  .box .frame-8 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px 4px 4px 0px;
+    box-shadow:
+      0px 4px 4px #00000040,
+      0px 4px 4px #00000040;
+    background: linear-gradient(
+      180deg,
+      rgb(158, 135, 190) 0%,
+      rgb(211.63, 195.92, 233.95) 51.45%,
+      rgb(158, 135, 190) 100%
+    );
+  }
+
+  .box .label-4 {
+    position: absolute;
+    width: 280px;
+    height: 81px;
+    top: 8px;
+    left: 0;
+  }
+
+  .box .column {
+    position: relative;
+    width: 343px;
+    height: 380px;
+  }
+
+  .box .overlap-7 {
+    position: relative;
+    height: 380px;
+  }
+
+  .box .group-11 {
+    position: relative;
+    width: 186px;
+    height: 50px;
+    margin-right: -2px;
+  }
+
+  .box .flexcontainer-3 {
+    width: 184px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    position: relative;
+  }
+
+  .box .span-wrapper {
+    position: relative;
+    align-self: stretch;
+    font-family: 'Ryo Gothic PlusN-Regular', Helvetica;
+    font-weight: 400;
+    color: transparent;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 2.56px;
+    line-height: 24px;
+  }
+
+  .box .text-wrapper-17 {
+    color: #c697a5;
+    font-size: 24px;
+    letter-spacing: 0.92px;
+  }
+
+  .box .group-12 {
+    position: relative;
+    width: 306px;
+    height: 57px;
+    margin-left: -15.5px;
+    margin-right: -17.5px;
+  }
+
+  .box .flexcontainer-4 {
+    width: 304px;
+    height: 57px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    position: relative;
+  }
+
+  .box .label-5 {
+    position: absolute;
+    width: 290px;
+    height: 81px;
+    top: 8px;
+    left: 0;
+  }
+
+  .box .group-13 {
+    position: relative;
+    width: 223px;
+    height: 57px;
+    margin-right: -2px;
+  }
+
+  .box .flexcontainer-5 {
+    width: 221px;
+    height: 57px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    position: relative;
+  }
+
+  .box .label-6 {
+    position: absolute;
+    width: 265px;
+    height: 81px;
+    top: 8px;
+    left: 0;
+  }
 </style>

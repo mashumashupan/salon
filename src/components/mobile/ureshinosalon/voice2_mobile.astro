@@ -12,8 +12,7 @@ import voice_reina from '~/assets/voice/voice_reina.png';
 import voice_haru from '~/assets/voice/voice_haru.png';
 import voice_karen from '~/assets/voice/voice_karen.png';
 
-import Voice_right from '~/components/common/voice.astro';
-import Voice_left from '~/components/common/voice_left.astro';
+import Voice from '~/components/common/voice.astro';
 ---
 
 <div class="box">
@@ -108,7 +107,12 @@ import Voice_left from '~/components/common/voice_left.astro';
         alt=""
       />
       <div class="bubbles">
-        <Voice_right name="れいなさん" title="メンバー" icon={voice_reina} />
+        <Voice
+          side="right"
+          name="れいなさん"
+          title="メンバー"
+          icon={voice_reina}
+        />
         <span class="text-wrapper-7">SNSでの日々交流はもちろん、</span>
         <span class="text-wrapper-7">オフ会に行った後はみなさんの</span>
         <span class="text-wrapper-7">仕事や美容への姿勢、生き方が</span>
@@ -117,7 +121,7 @@ import Voice_left from '~/components/common/voice_left.astro';
         <span class="text-wrapper-8">かけがえのない存在</span>
         <span class="text-wrapper-7">です!</span>
       </div>
-      <Voice_left name="haruさん" title="メンバー" icon={voice_haru} />
+      <Voice side="left" name="haruさん" title="メンバー" icon={voice_haru} />
       <span class="text-wrapper-7">サロンメンバーには本当に</span>
       <span class="text-wrapper-7">頑張り屋さんが多いです。</span>
       <span class="text-wrapper-7">更に高みを目指す皆を見ていると、</span>
@@ -128,7 +132,7 @@ import Voice_left from '~/components/common/voice_left.astro';
       <span class="text-wrapper-8">モチベーション</span>
       <span class="text-wrapper-7">になっています。</span>
     </div>
-    <Voice_right name="かれんさん" title="メンバー" icon={voice_karen} />
+    <Voice side="right" name="かれんさん" title="メンバー" icon={voice_karen} />
     <span class="text-wrapper-7">かわいく賢く向上心がある人たちで、常に</span>
     <span class="text-wrapper-8">刺激を与えてくれる存在</span>
     <span class="text-wrapper-7">です！♡</span>

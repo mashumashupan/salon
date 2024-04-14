@@ -1,0 +1,239 @@
+---
+import { Image } from 'astro:assets';
+
+import process3image from '~/assets/process3image.png';
+import icon_line from '~/assets/icon_line.svg';
+// import qr_line from "~/assets/qr_line.svg";
+import bg from '~/assets/contact/contact_fake.png';
+---
+
+<div
+  id="contact"
+  class="flex min-h-[424px] flex-col items-center justify-center overflow-hidden"
+>
+  <Image class="bg w-full" src={bg} alt="" />
+</div>
+<!-- 
+<div class="box">
+  <div class="contact">
+    <div class="overlap">
+      <div class="bg">
+        <div class="overlap-group">
+          <div class="rectangle"></div>
+          <Image class="img" src={process3image} alt="" />
+        </div>
+      </div>
+      <div class="line">
+        <div class="text-wrapper">お問い合わせ</div>
+        <Image class="line-2" src={icon_line} alt="" />
+      </div>
+      <div class="div">Ureshino Salon</div>
+      <div class="rectangle-2"></div>
+      <div class="text-wrapper-2">サロンで<br />お会いできることを<br />楽しみにしています！</div>
+    </div>
+  </div>
+</div> -->
+<style>
+  :root {
+    --pale-pink: rgba(245, 236, 239, 1);
+    --neutral: rgba(250, 250, 249, 1);
+    --lightest-grey: rgba(228, 228, 231, 1);
+    --light-grey: rgba(161, 161, 170, 1);
+    --grey: rgba(113, 113, 122, 1);
+    --dark-grey: rgba(82, 82, 91, 1);
+    --black: rgba(39, 39, 42, 1);
+    --mobile-h1-font-family: 'Hina Mincho', Helvetica;
+    --mobile-h1-font-weight: 400;
+    --mobile-h1-font-size: 40px;
+    --mobile-h1-letter-spacing: 0px;
+    --mobile-h1-line-height: normal;
+    --mobile-h1-font-style: normal;
+    --mobile-h2-font-family: 'Hina Mincho', Helvetica;
+    --mobile-h2-font-weight: 400;
+    --mobile-h2-font-size: 24px;
+    --mobile-h2-letter-spacing: 2.88px;
+    --mobile-h2-line-height: 144.9303150177002%;
+    --mobile-h2-font-style: normal;
+    --mobile-body-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --mobile-body-font-weight: 400;
+    --mobile-body-font-size: 16px;
+    --mobile-body-letter-spacing: 2.08px;
+    --mobile-body-line-height: 22px;
+    --mobile-body-font-style: normal;
+    --small-title-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --small-title-j-font-weight: 400;
+    --small-title-j-font-size: 20px;
+    --small-title-j-letter-spacing: 0px;
+    --small-title-j-line-height: normal;
+    --small-title-j-font-style: normal;
+    --small-text-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --small-text-j-font-weight: 400;
+    --small-text-j-font-size: 14px;
+    --small-text-j-letter-spacing: -0.42px;
+    --small-text-j-line-height: normal;
+    --small-text-j-font-style: normal;
+    --script-font-family: 'Charlotte', Helvetica;
+    --script-font-weight: 400;
+    --script-font-size: 20px;
+    --script-letter-spacing: 0px;
+    --script-line-height: normal;
+    --script-font-style: normal;
+    --h1-e-font-family: 'Cinzel Decorative', Helvetica;
+    --h1-e-font-weight: 400;
+    --h1-e-font-size: 64px;
+    --h1-e-letter-spacing: 1.92px;
+    --h1-e-line-height: normal;
+    --h1-e-font-style: normal;
+    --h2-j-font-family: 'Hina Mincho', Helvetica;
+    --h2-j-font-weight: 400;
+    --h2-j-font-size: 30px;
+    --h2-j-letter-spacing: 3.6px;
+    --h2-j-line-height: 144.9303150177002%;
+    --h2-j-font-style: normal;
+    --body-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --body-j-font-weight: 400;
+    --body-j-font-size: 16px;
+    --body-j-letter-spacing: 2.56px;
+    --body-j-line-height: 24px;
+    --body-j-font-style: normal;
+    --montserrat-font-family: 'Montserrat', Helvetica;
+    --montserrat-font-weight: 500;
+    --montserrat-font-size: 14px;
+    --montserrat-letter-spacing: 0.10000000149011612px;
+    --montserrat-line-height: 20px;
+    --montserrat-font-style: normal;
+    --h1-j-font-family: 'Hina Mincho', Helvetica;
+    --h1-j-font-weight: 400;
+    --h1-j-font-size: 64px;
+    --h1-j-letter-spacing: 4.48px;
+    --h1-j-line-height: normal;
+    --h1-j-font-style: normal;
+    --pink-shadow: 3px 4px 5.800000190734863px 0px rgba(193, 157, 169, 1);
+    --drop: 0px 2px 4px 0px rgba(177, 165, 171, 0.8);
+    --variable-collection-beige: rgba(229, 213, 203, 1);
+    --variable-collection-pink: rgba(198, 151, 165, 1);
+    --variable-collection-white: rgba(255, 255, 255, 1);
+    --variable-collection-pale-pink: rgba(245, 236, 239, 1);
+    --variable-collection-salmon: rgba(215, 169, 159, 1);
+    --variable-collection-beige-gradient: rgba(255, 255, 255, 0);
+    --variable-collection-purple: rgba(158, 135, 190, 1);
+  }
+
+  .box {
+    width: 337px;
+    /* height: 406px; */
+  }
+
+  .box .contact {
+    width: 341px;
+    /* height: 406px; */
+    top: 0;
+    left: 0;
+  }
+
+  .box .overlap {
+    width: 337px;
+    /* height: 406px; */
+  }
+
+  .box .bg {
+    width: 332px;
+    /* height: 369px; */
+    top: 37px;
+    left: 0;
+  }
+
+  .box .overlap-group {
+    /* height: 369px; */
+  }
+
+  .box .rectangle {
+    width: 332px;
+    /* height: 369px; */
+    top: 0;
+    left: 0;
+    background-color: var(--variable-collection-white);
+    border-radius: 8px;
+    opacity: 0.61;
+  }
+
+  .box .img {
+    width: 332px;
+    /* height: 369px; */
+    top: 0;
+    left: 0;
+  }
+
+  .box .line {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 10px 24px;
+    top: 209px;
+    left: 58px;
+    background-color: var(--variable-collection-salmon);
+    border-radius: 100px;
+  }
+
+  .box .text-wrapper {
+    width: fit-content;
+    color: var(--variable-collection-white);
+    font-size: var(--body-j-font-size);
+    letter-spacing: var(--body-j-letter-spacing);
+    line-height: var(--body-j-line-height);
+    white-space: nowrap;
+    font-family: var(--body-j-font-family);
+    font-weight: var(--body-j-font-weight);
+    text-align: center;
+    font-style: var(--body-j-font-style);
+  }
+
+  .box .line-2 {
+    width: 40px;
+    /* height: 40px; */
+  }
+
+  .box .qr {
+    width: 80px;
+    /* height: 80px; */
+    top: 288px;
+    left: 128px;
+  }
+
+  .box .div {
+    top: 15px;
+    left: 140px;
+    transform: rotate(-9.44deg);
+    opacity: 0.46;
+    font-family: 'Charlotte-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--variable-collection-salmon);
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .box .rectangle-2 {
+    width: 275px;
+    /* height: 116px; */
+    top: 77px;
+    left: 31px;
+    background-color: var(--variable-collection-white);
+    filter: blur(60px);
+    opacity: 0.74;
+  }
+
+  .box .text-wrapper-2 {
+    top: 77px;
+    left: 59px;
+    color: var(--variable-collection-pink);
+    font-size: var(--small-title-j-font-size);
+    letter-spacing: var(--small-title-j-letter-spacing);
+    line-height: var(--small-title-j-line-height);
+    font-family: var(--small-title-j-font-family);
+    font-weight: var(--small-title-j-font-weight);
+    text-align: center;
+    font-style: var(--small-title-j-font-style);
+  }
+</style>

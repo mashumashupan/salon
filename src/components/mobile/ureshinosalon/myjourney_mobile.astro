@@ -1,20 +1,27 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 
-import myjourneyimage1 from "~/assets/myjourney/myjourneyimage1.png";
-import myjourneyimage2 from "~/assets/myjourney/myjourneyimage2.png";
-import myjourneyimage3 from "~/assets/myjourney/myjourneyimage3.png";
-import myjourneyimage4 from "~/assets/myjourney/myjourneyimage4.png";
-import myjourneyimage5 from "~/assets/myjourney/myjourneyimage5.png";
-import myjourneyimage6 from "~/assets/myjourney/myjourneyimage6.png";
+import myjourneyimage1 from '~/assets/myjourney/myjourneyimage1.png';
+import myjourneyimage2 from '~/assets/myjourney/myjourneyimage2.png';
+import myjourneyimage3 from '~/assets/myjourney/myjourneyimage3.png';
+import myjourneyimage4 from '~/assets/myjourney/myjourneyimage4.png';
+import myjourneyimage5 from '~/assets/myjourney/myjourneyimage5.png';
+import myjourneyimage6 from '~/assets/myjourney/myjourneyimage6.png';
 
-import arrow_down from "~/assets/myjourney/arrow_down.svg";
-import pearl1 from "~/assets/pearl1.png";
-import pearl2 from "~/assets/pearl2.png";
-import flowers from "~/assets/myjourney/flowers.svg";
+import arrow_down from '~/assets/myjourney/arrow_down.svg';
+import pearl1 from '~/assets/pearl1.png';
+import pearl2 from '~/assets/pearl2.png';
+import flowers from '~/assets/myjourney/flowers.svg';
+import bg from '~/assets/myjourney/myjourney_fake.png';
 ---
 
-<div class="box">
+<div
+  id="myjourney"
+  class="flex min-h-[977px] flex-col items-center justify-center overflow-hidden"
+>
+  <Image class="bg w-full" src={bg} alt="" />
+</div>
+<!-- <div class="box">
   <div class="my-journey">
     <div class="overlap-group">
       <div class="title">
@@ -88,339 +95,339 @@ import flowers from "~/assets/myjourney/flowers.svg";
     </div>
     <Image class="pearl-2" src={pearl1} alt="" />
   </div>
-</div>
+</div> -->
 
 <style>
   :root {
-  --pale-pink: rgba(245, 236, 239, 1);
-  --neutral: rgba(250, 250, 249, 1);
-  --lightest-grey: rgba(228, 228, 231, 1);
-  --light-grey: rgba(161, 161, 170, 1);
-  --grey: rgba(113, 113, 122, 1);
-  --dark-grey: rgba(82, 82, 91, 1);
-  --black: rgba(39, 39, 42, 1);
-  --mobile-h1-font-family: "Hina Mincho", Helvetica;
-  --mobile-h1-font-weight: 400;
-  --mobile-h1-font-size: 40px;
-  --mobile-h1-letter-spacing: 0px;
-  --mobile-h1-line-height: normal;
-  --mobile-h1-font-style: normal;
-  --mobile-h2-font-family: "Hina Mincho", Helvetica;
-  --mobile-h2-font-weight: 400;
-  --mobile-h2-font-size: 24px;
-  --mobile-h2-letter-spacing: 2.88px;
-  --mobile-h2-line-height: 144.9303150177002%;
-  --mobile-h2-font-style: normal;
-  --mobile-body-font-family: "Ryo Gothic PlusN", Helvetica;
-  --mobile-body-font-weight: 400;
-  --mobile-body-font-size: 16px;
-  --mobile-body-letter-spacing: 2.08px;
-  --mobile-body-line-height: 22px;
-  --mobile-body-font-style: normal;
-  --small-title-j-font-family: "Ryo Gothic PlusN", Helvetica;
-  --small-title-j-font-weight: 400;
-  --small-title-j-font-size: 20px;
-  --small-title-j-letter-spacing: 0px;
-  --small-title-j-line-height: normal;
-  --small-title-j-font-style: normal;
-  --small-text-j-font-family: "Ryo Gothic PlusN", Helvetica;
-  --small-text-j-font-weight: 400;
-  --small-text-j-font-size: 14px;
-  --small-text-j-letter-spacing: -0.42px;
-  --small-text-j-line-height: normal;
-  --small-text-j-font-style: normal;
-  --script-font-family: "Charlotte", Helvetica;
-  --script-font-weight: 400;
-  --script-font-size: 20px;
-  --script-letter-spacing: 0px;
-  --script-line-height: normal;
-  --script-font-style: normal;
-  --h1-e-font-family: "Cinzel Decorative", Helvetica;
-  --h1-e-font-weight: 400;
-  --h1-e-font-size: 64px;
-  --h1-e-letter-spacing: 1.92px;
-  --h1-e-line-height: normal;
-  --h1-e-font-style: normal;
-  --h2-j-font-family: "Hina Mincho", Helvetica;
-  --h2-j-font-weight: 400;
-  --h2-j-font-size: 30px;
-  --h2-j-letter-spacing: 3.6px;
-  --h2-j-line-height: 144.9303150177002%;
-  --h2-j-font-style: normal;
-  --body-j-font-family: "Ryo Gothic PlusN", Helvetica;
-  --body-j-font-weight: 400;
-  --body-j-font-size: 16px;
-  --body-j-letter-spacing: 2.56px;
-  --body-j-line-height: 24px;
-  --body-j-font-style: normal;
-  --montserrat-font-family: "Montserrat", Helvetica;
-  --montserrat-font-weight: 500;
-  --montserrat-font-size: 14px;
-  --montserrat-letter-spacing: 0.10000000149011612px;
-  --montserrat-line-height: 20px;
-  --montserrat-font-style: normal;
-  --h1-j-font-family: "Hina Mincho", Helvetica;
-  --h1-j-font-weight: 400;
-  --h1-j-font-size: 64px;
-  --h1-j-letter-spacing: 4.48px;
-  --h1-j-line-height: normal;
-  --h1-j-font-style: normal;
-  --pink-shadow: 3px 4px 5.800000190734863px 0px rgba(193, 157, 169, 1);
-  --drop: 0px 2px 4px 0px rgba(177, 165, 171, 0.8);
-  --variable-collection-beige: rgba(229, 213, 203, 1);
-  --variable-collection-pink: rgba(198, 151, 165, 1);
-  --variable-collection-white: rgba(255, 255, 255, 1);
-  --variable-collection-pale-pink: rgba(245, 236, 239, 1);
-  --variable-collection-salmon: rgba(215, 169, 159, 1);
-  --variable-collection-beige-gradient: rgba(255, 255, 255, 0);
-  --variable-collection-purple: rgba(158, 135, 190, 1);
-}
+    --pale-pink: rgba(245, 236, 239, 1);
+    --neutral: rgba(250, 250, 249, 1);
+    --lightest-grey: rgba(228, 228, 231, 1);
+    --light-grey: rgba(161, 161, 170, 1);
+    --grey: rgba(113, 113, 122, 1);
+    --dark-grey: rgba(82, 82, 91, 1);
+    --black: rgba(39, 39, 42, 1);
+    --mobile-h1-font-family: 'Hina Mincho', Helvetica;
+    --mobile-h1-font-weight: 400;
+    --mobile-h1-font-size: 40px;
+    --mobile-h1-letter-spacing: 0px;
+    --mobile-h1-line-height: normal;
+    --mobile-h1-font-style: normal;
+    --mobile-h2-font-family: 'Hina Mincho', Helvetica;
+    --mobile-h2-font-weight: 400;
+    --mobile-h2-font-size: 24px;
+    --mobile-h2-letter-spacing: 2.88px;
+    --mobile-h2-line-height: 144.9303150177002%;
+    --mobile-h2-font-style: normal;
+    --mobile-body-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --mobile-body-font-weight: 400;
+    --mobile-body-font-size: 16px;
+    --mobile-body-letter-spacing: 2.08px;
+    --mobile-body-line-height: 22px;
+    --mobile-body-font-style: normal;
+    --small-title-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --small-title-j-font-weight: 400;
+    --small-title-j-font-size: 20px;
+    --small-title-j-letter-spacing: 0px;
+    --small-title-j-line-height: normal;
+    --small-title-j-font-style: normal;
+    --small-text-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --small-text-j-font-weight: 400;
+    --small-text-j-font-size: 14px;
+    --small-text-j-letter-spacing: -0.42px;
+    --small-text-j-line-height: normal;
+    --small-text-j-font-style: normal;
+    --script-font-family: 'Charlotte', Helvetica;
+    --script-font-weight: 400;
+    --script-font-size: 20px;
+    --script-letter-spacing: 0px;
+    --script-line-height: normal;
+    --script-font-style: normal;
+    --h1-e-font-family: 'Cinzel Decorative', Helvetica;
+    --h1-e-font-weight: 400;
+    --h1-e-font-size: 64px;
+    --h1-e-letter-spacing: 1.92px;
+    --h1-e-line-height: normal;
+    --h1-e-font-style: normal;
+    --h2-j-font-family: 'Hina Mincho', Helvetica;
+    --h2-j-font-weight: 400;
+    --h2-j-font-size: 30px;
+    --h2-j-letter-spacing: 3.6px;
+    --h2-j-line-height: 144.9303150177002%;
+    --h2-j-font-style: normal;
+    --body-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --body-j-font-weight: 400;
+    --body-j-font-size: 16px;
+    --body-j-letter-spacing: 2.56px;
+    --body-j-line-height: 24px;
+    --body-j-font-style: normal;
+    --montserrat-font-family: 'Montserrat', Helvetica;
+    --montserrat-font-weight: 500;
+    --montserrat-font-size: 14px;
+    --montserrat-letter-spacing: 0.10000000149011612px;
+    --montserrat-line-height: 20px;
+    --montserrat-font-style: normal;
+    --h1-j-font-family: 'Hina Mincho', Helvetica;
+    --h1-j-font-weight: 400;
+    --h1-j-font-size: 64px;
+    --h1-j-letter-spacing: 4.48px;
+    --h1-j-line-height: normal;
+    --h1-j-font-style: normal;
+    --pink-shadow: 3px 4px 5.800000190734863px 0px rgba(193, 157, 169, 1);
+    --drop: 0px 2px 4px 0px rgba(177, 165, 171, 0.8);
+    --variable-collection-beige: rgba(229, 213, 203, 1);
+    --variable-collection-pink: rgba(198, 151, 165, 1);
+    --variable-collection-white: rgba(255, 255, 255, 1);
+    --variable-collection-pale-pink: rgba(245, 236, 239, 1);
+    --variable-collection-salmon: rgba(215, 169, 159, 1);
+    --variable-collection-beige-gradient: rgba(255, 255, 255, 0);
+    --variable-collection-purple: rgba(158, 135, 190, 1);
+  }
 
-.box {
-  position: relative;
-  width: 468px;
-  height: 977px;
-}
+  .box {
+    position: relative;
+    width: 468px;
+    height: 977px;
+  }
 
-.box .my-journey {
-  width: 468px;
-  height: 977px;
-  top: 0;
-  left: 0;
-}
+  .box .my-journey {
+    width: 468px;
+    height: 977px;
+    top: 0;
+    left: 0;
+  }
 
-.box .overlap-group {
-  position: absolute;
-  width: 314px;
-  height: 93px;
-  top: 35px;
-  left: 126px;
-}
+  .box .overlap-group {
+    position: absolute;
+    width: 314px;
+    height: 93px;
+    top: 35px;
+    left: 126px;
+  }
 
-.box .title {
-  display: inline-flex;
-  align-items: center;
-  gap: 24px;
-  position: absolute;
-  top: 0;
-  left: 11px;
-}
+  .box .title {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    position: absolute;
+    top: 0;
+    left: 11px;
+  }
 
-.box .header-mark {
-  position: relative;
-  width: 66px;
-  height: 8px;
-  margin-left: -29px;
-  background-color: var(--variable-collection-salmon);
-  transform: rotate(90deg);
-}
+  .box .header-mark {
+    position: relative;
+    width: 66px;
+    height: 8px;
+    margin-left: -29px;
+    background-color: var(--variable-collection-salmon);
+    transform: rotate(90deg);
+  }
 
-.box .text-wrapper {
-  position: relative;
-  width: fit-content;
-  text-shadow: 0px 2px 8.7px #b1a4aa6e;
-  -webkit-text-stroke: 1.5px transparent;
-  background-image: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(245, 236, 239, 0.48) 50.5%,
-    rgba(221.48, 179.58, 193.4, 0.48) 100%
-  );
-  -webkit-background-clip: text;
-  font-family: "Cinzel Decorative-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--variable-collection-white);
-  font-size: 40px;
-  letter-spacing: 1.2px;
-  line-height: normal;
-}
+  .box .text-wrapper {
+    position: relative;
+    width: fit-content;
+    text-shadow: 0px 2px 8.7px #b1a4aa6e;
+    -webkit-text-stroke: 1.5px transparent;
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(245, 236, 239, 0.48) 50.5%,
+      rgba(221.48, 179.58, 193.4, 0.48) 100%
+    );
+    -webkit-background-clip: text;
+    font-family: 'Cinzel Decorative-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--variable-collection-white);
+    font-size: 40px;
+    letter-spacing: 1.2px;
+    line-height: normal;
+  }
 
-.box .pearl {
-  position: absolute;
-  width: 29px;
-  height: 31px;
-  top: 62px;
-  left: 0;
-  object-fit: cover;
-}
+  .box .pearl {
+    position: absolute;
+    width: 29px;
+    height: 31px;
+    top: 62px;
+    left: 0;
+    object-fit: cover;
+  }
 
-.box .overlap {
-  position: absolute;
-  width: 360px;
-  height: 848px;
-  top: 129px;
-  left: 108px;
-}
+  .box .overlap {
+    position: absolute;
+    width: 360px;
+    height: 848px;
+    top: 129px;
+    left: 108px;
+  }
 
-.box .div {
-  position: absolute;
-  width: 360px;
-  height: 848px;
-  top: 0;
-  left: 0;
-}
+  .box .div {
+    position: absolute;
+    width: 360px;
+    height: 848px;
+    top: 0;
+    left: 0;
+  }
 
-.box .flowers {
-  position: absolute;
-  width: 161px;
-  height: 388px;
-  top: 460px;
-  left: 0;
-}
+  .box .flowers {
+    position: absolute;
+    width: 161px;
+    height: 388px;
+    top: 460px;
+    left: 0;
+  }
 
-.box .scroll {
-  position: absolute;
-  width: 333px;
-  height: 484px;
-  top: 0;
-  left: 27px;
-  border-radius: 8px;
-  overflow: hidden;
-  overflow-x: scroll;
-}
+  .box .scroll {
+    position: absolute;
+    width: 333px;
+    height: 484px;
+    top: 0;
+    left: 27px;
+    border-radius: 8px;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
 
-.box .scroll-2 {
-  display: inline-flex;
-  align-items: flex-end;
-  gap: 10px;
-  padding: 24px 0px 10px 8px;
-  position: relative;
-  background-color: #ffffffbd;
-}
+  .box .scroll-2 {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 10px;
+    padding: 24px 0px 10px 8px;
+    position: relative;
+    background-color: #ffffffbd;
+  }
 
-.box .card {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  position: relative;
-  flex: 0 0 auto;
-}
+  .box .card {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    flex: 0 0 auto;
+  }
 
-.box .frame {
-  justify-content: center;
-  gap: 10px;
-  padding: 10px 10px 10px 14px;
-  border-radius: 2px;
-  border-style: solid;
-  border-top-style: solid;
-  border-right-style: solid;
-  border-bottom-style: solid;
-  border-left-style: solid;
-  border-color: var(--grey);
-  display: inline-flex;
-  align-items: center;
-  position: relative;
-  flex: 0 0 auto;
-}
+  .box .frame {
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 10px 10px 14px;
+    border-radius: 2px;
+    border-style: solid;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-color: var(--grey);
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    flex: 0 0 auto;
+  }
 
-.box .text-wrapper-2 {
-  margin-top: -8px;
-  font-family: var(--body-j-font-family);
-  color: var(--grey);
-  letter-spacing: var(--body-j-letter-spacing);
-  line-height: var(--body-j-line-height);
-  position: relative;
-  width: fit-content;
-  font-weight: var(--body-j-font-weight);
-  font-size: var(--body-j-font-size);
-  white-space: nowrap;
-  font-style: var(--body-j-font-style);
-}
+  .box .text-wrapper-2 {
+    margin-top: -8px;
+    font-family: var(--body-j-font-family);
+    color: var(--grey);
+    letter-spacing: var(--body-j-letter-spacing);
+    line-height: var(--body-j-line-height);
+    position: relative;
+    width: fit-content;
+    font-weight: var(--body-j-font-weight);
+    font-size: var(--body-j-font-size);
+    white-space: nowrap;
+    font-style: var(--body-j-font-style);
+  }
 
-.box .keyboard-double {
-  position: relative;
-  width: 24px;
-  height: 24px;
-}
+  .box .keyboard-double {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
 
-.box .frame-2 {
-  flex-direction: column;
-  gap: 16px;
-  padding: 0px 0px 16px;
-  background-color: var(--variable-collection-white);
-  border-radius: 8px;
-  box-shadow: 0px 2px 4px #b1a4aacc;
-  display: inline-flex;
-  align-items: center;
-  position: relative;
-  flex: 0 0 auto;
-}
+  .box .frame-2 {
+    flex-direction: column;
+    gap: 16px;
+    padding: 0px 0px 16px;
+    background-color: var(--variable-collection-white);
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px #b1a4aacc;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    flex: 0 0 auto;
+  }
 
-.box .rectangle {
-  position: relative;
-  width: 304px;
-  height: 304px;
-  object-fit: cover;
-}
+  .box .rectangle {
+    position: relative;
+    width: 304px;
+    height: 304px;
+    object-fit: cover;
+  }
 
-.box .text-wrapper-3 {
-  font-family: "Ryo Gothic PlusN-L", Helvetica;
-  color: var(--black);
-  letter-spacing: -1.44px;
-  line-height: 30px;
-  position: relative;
-  width: fit-content;
-  font-weight: 400;
-  font-size: 16px;
-  white-space: nowrap;
-}
+  .box .text-wrapper-3 {
+    font-family: 'Ryo Gothic PlusN-L', Helvetica;
+    color: var(--black);
+    letter-spacing: -1.44px;
+    line-height: 30px;
+    position: relative;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 16px;
+    white-space: nowrap;
+  }
 
-.box .img {
-  position: relative;
-  width: 304px;
-  height: 304px;
-}
+  .box .img {
+    position: relative;
+    width: 304px;
+    height: 304px;
+  }
 
-.box .dots {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 16px;
-  position: absolute;
-  top: 516px;
-  left: 146px;
-}
+  .box .dots {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 16px;
+    position: absolute;
+    top: 516px;
+    left: 146px;
+  }
 
-.box .ellipse {
-  background-color: var(--grey);
-  position: relative;
-  width: 12px;
-  height: 12px;
-  border-radius: 6px;
-}
+  .box .ellipse {
+    background-color: var(--grey);
+    position: relative;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+  }
 
-.box .ellipse-2 {
-  background-color: var(--light-grey);
-  position: relative;
-  width: 12px;
-  height: 12px;
-  border-radius: 6px;
-}
+  .box .ellipse-2 {
+    background-color: var(--light-grey);
+    position: relative;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+  }
 
-.box .ellipse-3 {
-  background-color: var(--lightest-grey);
-  position: relative;
-  width: 12px;
-  height: 12px;
-  border-radius: 6px;
-}
+  .box .ellipse-3 {
+    background-color: var(--lightest-grey);
+    position: relative;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+  }
 
-.box .pearl-2 {
-  width: 30px;
-  height: 32px;
-  top: 496px;
-  left: 265px;
-  position: absolute;
-  object-fit: cover;
-}
+  .box .pearl-2 {
+    width: 30px;
+    height: 32px;
+    top: 496px;
+    left: 265px;
+    position: absolute;
+    object-fit: cover;
+  }
 
-.box .pearl-3 {
-  width: 28px;
-  height: 30px;
-  top: 0;
-  left: 419px;
-  position: absolute;
-  object-fit: cover;
-}
+  .box .pearl-3 {
+    width: 28px;
+    height: 30px;
+    top: 0;
+    left: 419px;
+    position: absolute;
+    object-fit: cover;
+  }
 </style>
