@@ -1,57 +1,61 @@
 ---
-import logo from '~/assets/logomark.png';
+import logo from '~/assets/logo.svg';
 import insta from '~/assets/footer/icon_insta.svg';
 import twitter from '~/assets/footer/icon_x.svg';
 import note from '~/assets/footer/icon_note.svg';
 import menu from '~/assets/icon_line.svg';
 import { Image } from 'astro:assets';
-import bg from '~/assets/footer/footer_fake.png';
 ---
 
-<div
+<!-- <div
   id="footer"
   class="flex min-h-[336px] flex-col items-center justify-end overflow-hidden bg-[#C697A5]"
 >
   <Image class="bg" src={bg} alt="" />
-</div>
-
-<!-- <div class="box">
-  <footer class="footer">
-    <p class="element-all-rights">© 2024 Ureshino Salon.&nbsp;&nbsp;All Rights Reserved</p>
-    <div class="logo">
-      <img class="img" src={"img/logo.png"} />
-      <div class="salon">
-        <div class="text-wrapper">うれしのサロン</div>
-        <div class="div">運営会社：Empression Co., Ltd.</div>
-      </div>
-    </div>
-    <div class="privacy">
-      <div class="text-wrapper-2">Privacy Policy</div>
-      <div class="text-wrapper-2">特定商取引法に基づく表記</div>
-    </div>
-    <div class="social">
-      <a
-        href="10代で起業した美女・嬉野ゆみ、恋人に“伸び代”求める理由とは?:https://mdpr.jp/news/detail/3568425"
-        target="_blank"
-        rel="noopener noreferrer"
-        ><img class="twitter-x" src="img/twitter-x-1.svg"
-      /></a>
-      <a
-        href="10代で起業した美女・嬉野ゆみ、恋人に“伸び代”求める理由とは?:https://mdpr.jp/news/detail/3568425"
-        target="_blank"
-        rel="noopener noreferrer"
-        ><img class="instagram" src="img/icons8-instagram-1.svg"
-      /></a>
-      <a
-        href="10代で起業した美女・嬉野ゆみ、恋人に“伸び代”求める理由とは?:https://mdpr.jp/news/detail/3568425"
-        target="_blank"
-        rel="noopener noreferrer"
-        ><img class="note-long" src="img/note-long.svg"
-      /></a>
-      <img class="linepink" src="img/linepink-1.svg" />
-    </div>
-  </footer>
 </div> -->
+
+<div class="box">
+  <footer class="footer bg-[#C697A5] flex flex-col items-center">
+      <div class="logo">
+        <Image class="img" src={logo} alt="" />
+        <div class="salon">
+          <div class="text-wrapper">うれしのサロン</div>
+          <div class="div">運営会社：Empression Co., Ltd.</div>
+        </div>
+      </div>
+      <div class="social">
+        <a
+          href="https://twitter.com/ureshino_chan"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><Image class="twitter-x" src={twitter} alt=""
+        /></a>
+        <a
+          href="https://instagram.com/ureshino_chan"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><Image class="instagram" src={insta} alt=""
+        /></a>
+        <a
+          href="https://note.com/ureshino_chan"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><Image class="note-long" src={note} alt=""
+        /></a>
+        <a
+          href="https://line.me/R/ti/p/@548wmfbi#~"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><Image class="linepink" src={menu} alt=""
+        /></a>
+      </div>
+      <div class="privacy">
+        <div class="text-wrapper-2">Privacy Policy</div>
+        <div class="text-wrapper-2">特定商取引法に基づく表記</div>
+      </div>
+      <p class="element-all-rights">© 2024 Ureshino Salon.&nbsp;&nbsp;All Rights Reserved</p>
+  </footer>
+</div>
 
 <style>
   :root {
@@ -141,20 +145,16 @@ import bg from '~/assets/footer/footer_fake.png';
 
   .box {
     position: relative;
-    width: 321px;
     height: 316px;
   }
 
   .box .footer {
-    width: 323px;
     height: 316px;
     top: 0;
     left: 0;
-    background-color: transparent;
   }
 
   .box .element-all-rights {
-    position: absolute;
     top: 296px;
     left: 7px;
     font-family: var(--montserrat-font-family);
@@ -171,7 +171,6 @@ import bg from '~/assets/footer/footer_fake.png';
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
     top: 0;
     left: 66px;
   }
@@ -222,7 +221,6 @@ import bg from '~/assets/footer/footer_fake.png';
     display: inline-flex;
     align-items: flex-start;
     gap: 20px;
-    position: absolute;
     top: 248px;
     left: 38px;
   }
@@ -245,7 +243,6 @@ import bg from '~/assets/footer/footer_fake.png';
     align-items: center;
     justify-content: center;
     gap: 24px;
-    position: absolute;
     top: 170px;
     left: 0;
   }
