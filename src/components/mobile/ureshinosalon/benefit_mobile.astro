@@ -17,16 +17,22 @@ import JoinButton from '~/components/common/joinButton.astro';
 import Title from './benefit/title.astro';
 import Circle from './benefit/circle.astro';
 import Benefit from './benefit/benefit.astro';
+import bg2 from '~/assets/benefit/benefits_fake.png';
 ---
 
 <div
   id="benefit"
-  class="-mt-2 flex min-h-[2314px] flex-col justify-center overflow-hidden"
+  class="-mt-8 flex min-h-[2540px] flex-col items-center justify-center overflow-hidden"
 >
   <div class="absolute w-full">
-    <Image class="z-20 w-full mix-blend-normal" src={bg} alt="" />
+    <Image class="z-20 w-full mix-blend-normal" src={bg2} alt="" />
+    <div class="default-button">
+      <div class="overlap-9 -mt-[4.4rem]">
+        <JoinButton text="　　今すぐ入会　　>" />
+      </div>
+    </div>
   </div>
-  <div class="benefits absolute z-30 -mt-[103rem] flex w-full flex-col">
+  <!-- <div class="benefits absolute z-30 -mt-[103rem] flex w-full flex-col">
     <div class="title">
       <div class="header-mark"></div>
       <div class="text-wrapper">うれしのサロンで得られること</div>
@@ -60,7 +66,6 @@ import Benefit from './benefit/benefit.astro';
             <span class="text-wrapper-4">コラム</span>
           </p>
         </div>
-        <!-- 素材がそのままでは使えない -->
         <div class="absolute mt-3 flex w-full justify-center">
           <Image class="brightness-200" src={highlight} alt="" />
         </div>
@@ -83,7 +88,7 @@ import Benefit from './benefit/benefit.astro';
       ]}
     >
       <div class="mb-4 mt-12 flex flex-col">
-        <!-- 素材がそのままでは使えない -->
+      
         <div class="absolute mt-3 flex w-full justify-center">
           <Image class="brightness-200" src={highlight} alt="" />
         </div>
@@ -108,15 +113,15 @@ import Benefit from './benefit/benefit.astro';
       ]}
     >
       <div class="mb-4 mt-12 flex flex-col">
-        <!-- 素材がそのままでは使えない -->
+        
         <div class="absolute mt-3 flex w-full justify-center">
           <Image class="brightness-200" src={highlight} alt="" />
         </div>
       </div>
-    </Benefit>
-    
-    <!-- 入会メリット3 -->
-    <!-- <div class="benefit-3">
+    </Benefit> -->
+
+  <!-- 入会メリット3 -->
+  <!-- <div class="benefit-3">
       <div class="div-2">
         <div class="rectangle-wrapper"><div class="rectangle-3"></div></div>
         <div class="rectangle-4"></div>
@@ -198,7 +203,6 @@ import Benefit from './benefit/benefit.astro';
         </div>
       </div>
     </div> -->
-  </div>
 </div>
 
 <style>
