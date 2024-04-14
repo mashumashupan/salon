@@ -13,7 +13,7 @@ export default defineConfig({
   vite: {
     ssr: {
       // 例: 必要な場合、壊れたパッケージがSSRの処理を行うのをスキップさせます
-      external: ['broken-npm-package'],
+      external: ['astro-icon'],
     }
   }
 });
