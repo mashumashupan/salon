@@ -2,11 +2,11 @@
 import button_bg from '~/assets/join_button.svg';
 import { Image } from 'astro:assets';
 
-const { text, url } = Astro.props;
+const { text } = Astro.props;
 ---
 
 <div class="mb-[10px] flex justify-center overflow-hidden">
-    <a href={url} class="flex flex-col">
+    <a href="https://buy.stripe.com/6oE7uS6lq4mP3oQdR2" class="flex flex-col">
         <Image src={button_bg} alt="Join" width="260" height={84} />
         <span class="relative top-[-60px] self-center text-lg">{text}</span>
     </a>

@@ -10,7 +10,6 @@ import contents3_korea from '~/assets/contents/contents3_korea.png';
 import contents4_column from '~/assets/contents/contents4_column.png';
 import contents5_slack from '~/assets/contents/contents5_slack.png';
 import contents6_bukatu from '~/assets/contents/contents6_bukatu.png';
-import subtract from '~/assets/contents/Subtract.svg';
 import Line1 from '~/assets/contents/Line1.svg';
 import Line2 from '~/assets/contents/Line2.svg';
 import watercolor from '~/assets/watercolor1_1.png';
@@ -31,7 +30,7 @@ import JoinButton from '~/components/common/joinButton.astro';
 import Content from '~/components/common/content.astro';
 ---
 
-<div
+<!-- <div
   id="contents"
   class="z-20 -mt-40 flex min-h-[1256px] flex-col items-center justify-center overflow-hidden"
 >
@@ -41,7 +40,7 @@ import Content from '~/components/common/content.astro';
       <JoinButton text="　　今すぐ入会　　>" />
     </div>
   </div>
-  <!-- <div class="contents">
+  <div class="contents">
     <div class="overlap">
       <Image class="leaf-shadow" src={layer1} alt="" />
       <Image class="img" src={layer2} alt="" />
@@ -235,49 +234,19 @@ import Content from '~/components/common/content.astro';
             <span class="text-wrapper-13">スケジュール</span>
           </p>
         </div>
-      </div>
+      </div> -->
       <div class="scroll-contents">
         <Content subtitle="人生をアップグレード！", title_small="月2回の", title="インスタライブ", image={contents1_live}, tag1="サロン限定配信", tag2="スペシャルゲスト", tag3="リアルタイムQ＆A", description1="最新情報やぶっちゃけ話が聞ける", color_description="大人気コンテンツ", description2="豪華ゲストとの対談も！"></Content>
-        <!-- <div class="overlap-group-wrapper">
-          <div class="overlap-group-3">
-            <div class="card">
-              <div class="rectangle-wrapper">
-                <Image class="rectangle-2" src={contents1_live} alt="" />
-              </div>
-              <img class="line-3" src="img/line-23-4.svg" />
-              <div class="flexcontainer-wrapper">
-                <div class="flexcontainer">
-                  <p class="text">
-                    <span class="text-wrapper-14">大人気</span>
-                    <span class="text-wrapper-15">コンテンツ！<br /></span>
-                  </p>
-                  <p class="text">
-                    <span class="text-wrapper-15"
-                      >ぶっちゃけ話や有益情報も！</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="label-2">
-              <Image class="subtract" src={subtract} alt="" />
-              <div class="frame-6">
-                <div class="frame-7">
-                  <div class="text-wrapper-16">月に2回のインスタライブ</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <Content subtitle="東京・大阪・韓国・マレーシア", title_small="国内外で", title="オフ会開催！", image={contents2_meetup}, tag1="直接会える！", tag2="大人気イベント", tag3="不定期開催", description1="うれしのちゃんやサロンメンバーと", color_description="直接交流できる！", description2="マレーシアオフ会の様子はこちら">
-      </Content>
-      <Content subtitle="うれしの大絶賛！", title_small="人気の", title="韓国美容クリニック特典", image={contents3_korea}, tag1="お得な施術", tag2="プレゼント", tag3="渡韓美容ツアー", description1="うれしのちゃんがオススメする韓国美容クリニックを", color_description="サロン特別価格", description2="でご案内！"></Content>
-      <Content subtitle="令和女子必見！", title_small="会員限定", title="うれしのコラム", image={contents4_column}, tag1="仕事", tag2="美容", tag3="恋愛", description1="メンバーだけが読めるうれしの哲学を週2回更新。", color_description="かわいく賢く生きるための知識", description2="が満載！"></Content>
-      <Content subtitle="うれしのに直接聞ける！", title_small="Slack", title="質問箱＆雑談ルーム", image={contents5_slack}, tag1="気軽に質問", tag2="情報交換・交流", tag3="嬉野ゆみも参加", description1="仕事・美容・恋愛について", color_description="うれしのちゃんに直接質問", description2="できる！メンバー同士で交流できる雑談ルームも。"></Content>
-      <Content subtitle="新コンテンツ！", title_small="自己成長できる", title="部活動", image={contents6_bukatu}, tag1="ワイン", tag2="美食", tag3="読書", description1="自分磨きをしたいけど何をすればいいかわからない方必見！メンバー限定部活動で一緒に", color_description="自己成長♪", description2=""></Content>
+        </Content>
+        <Content subtitle="うれしの大絶賛！", title_small="人気の", title="韓国美容クリニック特典", image={contents3_korea}, tag1="お得な施術", tag2="プレゼント", tag3="渡韓美容ツアー", description1="うれしのちゃんがオススメする韓国美容クリニックを", color_description="サロン特別価格", description2="でご案内！"></Content>
+        <Content subtitle="令和女子必見！", title_small="会員限定", title="うれしのコラム", image={contents4_column}, tag1="仕事", tag2="美容", tag3="恋愛", description1="メンバーだけが読めるうれしの哲学を週2回更新。", color_description="かわいく賢く生きるための知識", description2="が満載！"></Content>
+        <Content subtitle="うれしのに直接聞ける！", title_small="Slack", title="質問箱＆雑談ルーム", image={contents5_slack}, tag1="気軽に質問", tag2="情報交換・交流", tag3="嬉野ゆみも参加", description1="仕事・美容・恋愛について", color_description="うれしのちゃんに直接質問", description2="できる！メンバー同士で交流できる雑談ルームも。"></Content>
+        <Content subtitle="新コンテンツ！", title_small="自己成長できる", title="部活動", image={contents6_bukatu}, tag1="ワイン", tag2="美食", tag3="読書", description1="自分磨きをしたいけど何をすればいいかわからない方必見！メンバー限定部活動で一緒に", color_description="自己成長♪", description2=""></Content>
       </div>
-    </div>
+    <!-- </div>
   </div>
-</div>
+</div> -->
 
 <style>
   :root {
@@ -1351,5 +1320,5 @@ import Content from '~/components/common/content.astro';
     left: 0;
   }
 </style>
--->
+
 </div>
