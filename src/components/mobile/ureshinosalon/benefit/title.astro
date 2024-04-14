@@ -1,0 +1,67 @@
+---
+interface Props {
+    title: string;
+    number: string;
+}
+
+const { title, number } = Astro.props;
+---
+
+<div class="title ml-2">
+    <div class="text-wrapper">{title}</div>
+    <div class="frame"><div class="text-wrapper-2">{number}</div></div>
+</div>
+
+<style>
+    .title {
+        display: inline-flex;
+        align-items: flex-start;
+        left: 12px;
+    }
+
+    .text-wrapper {
+        margin-top: -1px;
+        text-shadow: 3px 4px 5.8px #c19da8;
+        font-family: var(--mobile-h1-font-family);
+        font-weight: var(--mobile-h1-font-weight);
+        color: var(--variable-collection-white);
+        font-size: var(--mobile-h1-font-size);
+        letter-spacing: var(--mobile-h1-letter-spacing);
+        line-height: var(--mobile-h1-line-height);
+        font-style: var(--mobile-h1-font-style);
+    }
+
+    .frame {
+        display: flex;
+        flex-direction: column;
+        width: 59px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 6px 12px;
+
+        border-radius: 2px 100px 100px 100px;
+        border: 3px solid;
+        border-color: transparent;
+        backdrop-filter: blur(19px) brightness(100%);
+        -webkit-backdrop-filter: blur(19px) brightness(100%);
+        border-color: rgb(221 180 193 / 40%);
+        background: linear-gradient(
+            180deg,
+            rgb(255, 255, 255) 0%,
+            rgba(255, 255, 255, 0.4) 100%
+        );
+    }
+
+    .text-wrapper-2 {
+        margin-left: -4px;
+        margin-right: -4px;
+        margin-top: -5px;
+        font-family: 'Cinzel Decorative-Regular', Helvetica;
+        font-weight: 400;
+        color: rgb(221 180 193);
+        font-size: 40px;
+        letter-spacing: 2px;
+        line-height: normal;
+    }
+</style>

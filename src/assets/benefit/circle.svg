@@ -1,13 +1,17 @@
 <svg width="129" height="129" viewBox="0 0 129 129" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Ellipse 13">
 <circle cx="64.5" cy="64.5" r="61.5" fill="white" fill-opacity="0.6"/>
-<circle cx="64.5" cy="64.5" r="63" stroke="url(#paint0_linear_4001_517)" stroke-opacity="0.48" stroke-width="3"/>
+<circle cx="64.5" cy="64.5" r="63" stroke="url(#paint0_linear_4001_494)" stroke-opacity="0.48" stroke-width="3"/>
+<g clip-path="url(#clip0_4001_494)">
+<path d="M54.985 38.01C59.455 38.01 63.995 33.47 63.995 29C63.995 33.47 68.535 38.01 73.005 38.01C68.535 38.01 63.995 42.55 63.995 47.02C63.995 42.55 59.455 38.01 54.985 38.01Z" fill="#C697A5"/>
 </g>
 <defs>
-<linearGradient id="paint0_linear_4001_517" x1="64.5" y1="3" x2="64.5" y2="126" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_4001_494" x1="64.5" y1="3" x2="64.5" y2="126" gradientUnits="userSpaceOnUse">
 <stop stop-color="white" stop-opacity="0"/>
 <stop offset="0.505034" stop-color="#F5ECEF"/>
 <stop offset="1" stop-color="#DDB4C1"/>
 </linearGradient>
+<clipPath id="clip0_4001_494">
+<rect width="18.03" height="18.03" fill="white" transform="translate(54.985 29)"/>
+</clipPath>
 </defs>
 </svg>
