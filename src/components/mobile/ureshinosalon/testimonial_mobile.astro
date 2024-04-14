@@ -1,151 +1,171 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 
-import layer from "~/assets/layer/layer_testimonial.png";
-import layer2 from "~/assets/layer/layer_testimonial2.png";
+import bg from '~/assets/testimonial/bg.png';
 
-import ureshino1 from "~/assets/hero_top1.png";
-import logo from "~/assets/logomark.png";
-import description from "~/assets/upgrade_your_life.png";
-import star from "~/assets/testimonial/testimonial_star.png";
-import star2 from "~/assets/star2.svg";
-import testimonial_muto from "~/assets/testimonial/testimonial_muto.png";
-import testimonial_nanao from "~/assets/testimonial/testimonial_nanao.png";
-
-import button from "~/assets/button.svg";
+import rect from '~/assets/testimonial/rect.png';
+import testimonial_muto from '~/assets/testimonial/testimonial_muto.png';
+import testimonial_nanao from '~/assets/testimonial/testimonial_nanao.png';
+import JoinButton from '~/components/common/joinButton.astro';
+import Voice from '~/components/common/voice.astro';
+import logo from '~/assets/testimonial/logo.png';
+import deadline from '~/assets/testimonial/deadline.png';
 ---
 
-<div class="box">
-  <div class="testimonials">
-    <div class="overlap">
-      <Image 
-        class="absolute w-full mix-blend-lighten md:top-[280px]"
-        src={layer}
-        alt=""
-      />
-      <Image 
-        class="absolute w-full mix-blend-lighten md:top-[280px]"
-        src={layer2}
-        alt=""
-      />
-      <div class="title">
-        <div class="rectangle"></div>
-        <div class="text-wrapper">推薦者コメント</div>
-      </div>
-      <div class="ureshino-salon"><div class="div">Ureshino Salon</div></div>
-      <div class="subtitle">
-        <div class="overlap-group">
-          <p class="p">
-            <span class="span">うれしのサロン</span> <span class="text-wrapper-2"> を<br />おすすめします！</span>
-          </p>
-          <div class="group">
-            <div class="overlap-group-2">
-              <div class="rectangle-2"></div>
-              <Image class="star" src={star2} alt="" />
-              <Image class="star" src={star2} alt="" />
-              <Image class="star" src={star2} alt="" />
-            </div>
-          </div>
+<div
+  id="testimonials"
+  class="-mt-2 flex min-h-[1256px] flex-col justify-center overflow-hidden"
+>
+  <div class="absolute w-full">
+    <Image class="w-full mix-blend-normal" src={bg} alt="" />
+  </div>
+  <div class="z-10 -mt-32 flex flex-col items-center gap-14">
+    <div class="ureshino-salon -mb-20 w-80">
+      <Image class="logo" src={logo} alt="" />
+    </div>
+    <div class="">
+      <div class="text-wrapper">推薦者コメント</div>
+    </div>
+    <div class="">
+      <div
+        class="overlap-group relative flex flex-col items-center justify-center"
+      >
+        <p class="p">
+          <span class="span">うれしのサロン</span>
+          <span class="text-wrapper-2"> を<br />おすすめします！</span>
+        </p>
+        <div class="rectangle absolute ml-4 w-80">
+          <Image class="rect" src={rect} alt="" />
         </div>
       </div>
-      <div class="bubble">
-        <div class="overlap-2">
-          <div class="overlap-group-wrapper">
-            <div class="frame-wrapper">
-              <div class="frame">
-                <p class="div-2">
-                  <span class="text-wrapper-4">うれしのちゃんはかわいく賢く生き抜いてるSNS部門の</span>
-                  <span class="text-wrapper-4">私の師匠💎<br />
-                    世代が違う私は自分と違う考えや、最新作の思考聞けるのが嬉しくてうれしのちゃんから学ぶ時間がとっても好き♡SNSで困ったらいつも相談窓口の師匠になってくれる👑かわいくて賢い女子がたくさんのサロン💓</span>
-                  <span class="text-wrapper-3">みんなで高め会える</span>
-                  <span class="text-wrapper-4">のが素敵♡</span>
-                </p>
-                <div class="frame-2">
-                  <div class="frame-3">
-                    <div class="text-wrapper-5">Rady ブランドデザイナー</div>
-                    <div class="text-wrapper-6">武藤静香さん</div>
-                  </div>
-                  <div class="stars">
-                    <Image class="star-3" src={star} alt=""/>
-                  </div>
+    </div>
+    <div class="bubble flex flex-col gap-10">
+      <Voice
+        side="right"
+        name="武藤静香"
+        title="Rady ブランドデザイナー"
+        icon={testimonial_muto}
+        useStar={true}
+      >
+        <div class="mb-4 flex w-[15rem] flex-col">
+          <span class="text-wrapper-3">高め合える仲間を</span>
+          <span class="text-wrapper-4">見つけられたことに</span>
+          <span class="text-wrapper-4">感謝しています！</span>
+        </div>
+      </Voice>
+      <Voice
+        side="left"
+        name="七尾エレナさん"
+        title="株）プリンシパル代表取締役"
+        icon={testimonial_nanao}
+        useStar={true}
+      >
+        <div class="mb-4 flex w-[15rem] flex-col">
+          <span class="text-wrapper-3">高め合える仲間を</span>
+          <span class="text-wrapper-4">見つけられたことに</span>
+          <span class="text-wrapper-4">感謝しています！</span>
+        </div>
+      </Voice>
+      <!-- <div class="overlap-2">
+        <div class="overlap-group-wrapper">
+          <div class="frame-wrapper">
+            <div class="frame">
+              <p class="div-2">
+                <span class="text-wrapper-4"
+                  >うれしのちゃんはかわいく賢く生き抜いてるSNS部門の</span
+                >
+                <span class="text-wrapper-4"
+                  >私の師匠💎<br />
+                  世代が違う私は自分と違う考えや、最新作の思考聞けるのが嬉しくてうれしのちゃんから学ぶ時間がとっても好き♡SNSで困ったらいつも相談窓口の師匠になってくれる👑かわいくて賢い女子がたくさんのサロン💓</span
+                >
+                <span class="text-wrapper-3">みんなで高め会える</span>
+                <span class="text-wrapper-4">のが素敵♡</span>
+              </p>
+              <div class="frame-2">
+                <div class="frame-3">
+                  <div class="text-wrapper-5">Rady ブランドデザイナー</div>
+                  <div class="text-wrapper-6">武藤静香さん</div>
+                </div>
+                <div class="stars">
+                  <Image class="star-3" src={star} alt="" />
                 </div>
               </div>
             </div>
           </div>
-          <Image class="ellipse" src={testimonial_muto} alt="" />
         </div>
-      </div>
-      <div class="overlap-wrapper">
-        <div class="overlap-3">
-          <div class="div-wrapper">
-            <div class="overlap-group-3">
-              <div class="frame">
-                <p class="div-2">
-                  <span class="text-wrapper-3">可愛く賢く生きる</span>
-                  <span class="text-wrapper-4">という、今までありそうでなかったコンセプトのオンラインサロン💓<br />
-                    そのコンセプトを体現して生きているカリスマのうれしのちゃんに引き寄せられ集まった素晴らしい女性たちの集団👠<br />
-                    うれしのちゃんという</span>
-                  <span class="text-wrapper-3">圧倒的なロールモデル</span>
-                  <span class="text-wrapper-4">がいるからこそ、軸がブレずにみんなで一緒に頑張れるし、高め合える最高な
-                    オンラインサロンだと思います！入会して本当に良かった✨😆</span>
-                </p>
-                <div class="frame-2">
-                  <div class="frame-3">
-                    <div class="text-wrapper-5">株）プリンシパル代表取締役</div>
-                    <div class="text-wrapper-6">七尾エレナさん</div>
-                  </div>
-                  <div class="stars">
-                    <Image class="star-3" src={star} alt="" />
-                    <!-- <img class="star-4" src="img/image.svg" />
+        <Image class="ellipse" src={testimonial_muto} alt="" />
+      </div> -->
+    </div>
+    <!-- <div class="bubble">
+      <div class="overlap-3">
+        <div class="div-wrapper">
+          <div class="overlap-group-3">
+            <div class="frame">
+              <p class="div-2">
+                <span class="text-wrapper-3">可愛く賢く生きる</span>
+                <span class="text-wrapper-4"
+                  >という、今までありそうでなかったコンセプトのオンラインサロン💓<br
+                  />
+                  そのコンセプトを体現して生きているカリスマのうれしのちゃんに引き寄せられ集まった素晴らしい女性たちの集団👠<br
+                  />
+                  うれしのちゃんという</span
+                >
+                <span class="text-wrapper-3">圧倒的なロールモデル</span>
+                <span class="text-wrapper-4"
+                  >がいるからこそ、軸がブレずにみんなで一緒に頑張れるし、高め合える最高な
+                  オンラインサロンだと思います！入会して本当に良かった✨😆</span
+                >
+              </p>
+              <div class="frame-2">
+                <div class="frame-3">
+                  <div class="text-wrapper-5">株）プリンシパル代表取締役</div>
+                  <div class="text-wrapper-6">七尾エレナさん</div>
+                </div>
+                <div class="stars">
+                  <Image class="star-3" src={star} alt="" />
+                  <img class="star-4" src="img/image.svg" />
                     <img class="star-5" src="img/star-3.svg" />
                     <img class="star-6" src="img/star-4.svg" />
-                    <img class="star-7" src="img/star-5-2.svg" /> -->
-                  </div>
+                    <img class="star-7" src="img/star-5-2.svg" />
                 </div>
               </div>
             </div>
           </div>
-          <Image class="ellipse-2" src={testimonial_nanao } alt="" />
         </div>
+        <Image class="ellipse-2" src={testimonial_nanao} alt="" />
       </div>
-      <div class="deadline">
-        <div class="overlap-4">
-          <div class="deadline-2">
-            <div class="overlap-group-4">
-              <div class="rectangle-3"></div>
-              <img class="mask-group" src="img/mask-group.png" />
-            </div>
-          </div>
-          <p class="element">
-            <span class="text-wrapper-7">2024</span>
-            <span class="text-wrapper-8">年</span>
-            <span class="text-wrapper-7">4</span>
-            <span class="text-wrapper-8">月</span>
-            <span class="text-wrapper-7">21</span>
-            <span class="text-wrapper-8">日(日) まで</span>
-          </p>
+    </div> -->
+    <div class="w-full">
+      <div class="flex flex-col justify-center">
+        <div class="absolute w-full">
+          <Image class="" src={deadline} alt="" />
         </div>
+        <p class="element z-10">
+          <span class="text-wrapper-7">2024</span>
+          <span class="text-wrapper-8">年</span>
+          <span class="text-wrapper-7">4</span>
+          <span class="text-wrapper-8">月</span>
+          <span class="text-wrapper-7">21</span>
+          <span class="text-wrapper-8">日(日) まで</span>
+        </p>
       </div>
-      <div class="label">
-        <div class="overlap-5">
-          <div class="group-2">
-            <div class="overlap-group-5">
-              <img class="watercolor" src="img/watercolor1-1.png" />
-              <img class="watercolor" src="img/watercolor1-2.png" />
-            </div>
+    </div>
+    <!-- 後回し -->
+    <!-- <div class="label">
+      <div class="overlap-5">
+        <div class="group-2">
+          <div class="overlap-group-5">
+            <img class="watercolor" src="img/watercolor1-1.png" />
+            <img class="watercolor" src="img/watercolor1-2.png" />
           </div>
-          <div class="text-wrapper-9">第２期メンバー</div>
-          <div class="text-wrapper-10">募集中！</div>
         </div>
+        <div class="text-wrapper-9">第２期メンバー</div>
+        <div class="text-wrapper-10">募集中！</div>
       </div>
-      <div class="default-button">
-        <div class="overlap-6">
-          <div class="frame-4">
-            <div class="text-wrapper-11">今すぐ入会</div>
-            <Image class="arrow-forward-ios" src={button} alt="" />
-          </div>
-          <img class="intersect" src="img/intersect.svg" />
-        </div>
+    </div> -->
+    <div class="default-button">
+      <div class="overlap-9">
+        <JoinButton text="　　今すぐ入会　　>" />
       </div>
     </div>
   </div>
@@ -153,525 +173,418 @@ import button from "~/assets/button.svg";
 
 <style>
   :root {
-  --pale-pink: rgba(245, 236, 239, 1);
-  --neutral: rgba(250, 250, 249, 1);
-  --lightest-grey: rgba(228, 228, 231, 1);
-  --light-grey: rgba(161, 161, 170, 1);
-  --grey: rgba(113, 113, 122, 1);
-  --dark-grey: rgba(82, 82, 91, 1);
-  --black: rgba(39, 39, 42, 1);
-  --mobile-h1-font-family: "Hina Mincho", Helvetica;
-  --mobile-h1-font-weight: 400;
-  --mobile-h1-font-size: 40px;
-  --mobile-h1-letter-spacing: 0px;
-  --mobile-h1-line-height: normal;
-  --mobile-h1-font-style: normal;
-  --mobile-h2-font-family: "Hina Mincho", Helvetica;
-  --mobile-h2-font-weight: 400;
-  --mobile-h2-font-size: 24px;
-  --mobile-h2-letter-spacing: 2.88px;
-  --mobile-h2-line-height: 144.9303150177002%;
-  --mobile-h2-font-style: normal;
-  --mobile-body-font-family: "Ryo Gothic PlusN", Helvetica;
-  --mobile-body-font-weight: 400;
-  --mobile-body-font-size: 16px;
-  --mobile-body-letter-spacing: 2.08px;
-  --mobile-body-line-height: 22px;
-  --mobile-body-font-style: normal;
-  --small-title-j-font-family: "Ryo Gothic PlusN", Helvetica;
-  --small-title-j-font-weight: 400;
-  --small-title-j-font-size: 20px;
-  --small-title-j-letter-spacing: 0px;
-  --small-title-j-line-height: normal;
-  --small-title-j-font-style: normal;
-  --small-text-j-font-family: "Ryo Gothic PlusN", Helvetica;
-  --small-text-j-font-weight: 400;
-  --small-text-j-font-size: 14px;
-  --small-text-j-letter-spacing: -0.42px;
-  --small-text-j-line-height: normal;
-  --small-text-j-font-style: normal;
-  --script-font-family: "Charlotte", Helvetica;
-  --script-font-weight: 400;
-  --script-font-size: 20px;
-  --script-letter-spacing: 0px;
-  --script-line-height: normal;
-  --script-font-style: normal;
-  --h1-e-font-family: "Cinzel Decorative", Helvetica;
-  --h1-e-font-weight: 400;
-  --h1-e-font-size: 64px;
-  --h1-e-letter-spacing: 1.92px;
-  --h1-e-line-height: normal;
-  --h1-e-font-style: normal;
-  --h2-j-font-family: "Hina Mincho", Helvetica;
-  --h2-j-font-weight: 400;
-  --h2-j-font-size: 30px;
-  --h2-j-letter-spacing: 3.6px;
-  --h2-j-line-height: 144.9303150177002%;
-  --h2-j-font-style: normal;
-  --body-j-font-family: "Ryo Gothic PlusN", Helvetica;
-  --body-j-font-weight: 400;
-  --body-j-font-size: 16px;
-  --body-j-letter-spacing: 2.56px;
-  --body-j-line-height: 24px;
-  --body-j-font-style: normal;
-  --montserrat-font-family: "Montserrat", Helvetica;
-  --montserrat-font-weight: 500;
-  --montserrat-font-size: 14px;
-  --montserrat-letter-spacing: 0.10000000149011612px;
-  --montserrat-line-height: 20px;
-  --montserrat-font-style: normal;
-  --h1-j-font-family: "Hina Mincho", Helvetica;
-  --h1-j-font-weight: 400;
-  --h1-j-font-size: 64px;
-  --h1-j-letter-spacing: 4.48px;
-  --h1-j-line-height: normal;
-  --h1-j-font-style: normal;
-  --pink-shadow: 3px 4px 5.800000190734863px 0px rgba(193, 157, 169, 1);
-  --drop: 0px 2px 4px 0px rgba(177, 165, 171, 0.8);
-  --variable-collection-beige: rgba(229, 213, 203, 1);
-  --variable-collection-pink: rgba(198, 151, 165, 1);
-  --variable-collection-white: rgba(255, 255, 255, 1);
-  --variable-collection-pale-pink: rgba(245, 236, 239, 1);
-  --variable-collection-salmon: rgba(215, 169, 159, 1);
-  --variable-collection-beige-gradient: rgba(255, 255, 255, 0);
-  --variable-collection-purple: rgba(158, 135, 190, 1);
-}
+    --pale-pink: rgba(245, 236, 239, 1);
+    --neutral: rgba(250, 250, 249, 1);
+    --lightest-grey: rgba(228, 228, 231, 1);
+    --light-grey: rgba(161, 161, 170, 1);
+    --grey: rgba(113, 113, 122, 1);
+    --dark-grey: rgba(82, 82, 91, 1);
+    --black: rgba(39, 39, 42, 1);
+    --mobile-h1-font-family: 'Hina Mincho', Helvetica;
+    --mobile-h1-font-weight: 400;
+    --mobile-h1-font-size: 40px;
+    --mobile-h1-letter-spacing: 0px;
+    --mobile-h1-line-height: normal;
+    --mobile-h1-font-style: normal;
+    --mobile-h2-font-family: 'Hina Mincho', Helvetica;
+    --mobile-h2-font-weight: 400;
+    --mobile-h2-font-size: 24px;
+    --mobile-h2-letter-spacing: 2.88px;
+    --mobile-h2-line-height: 144.9303150177002%;
+    --mobile-h2-font-style: normal;
+    --mobile-body-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --mobile-body-font-weight: 400;
+    --mobile-body-font-size: 16px;
+    --mobile-body-letter-spacing: 2.08px;
+    --mobile-body-line-height: 22px;
+    --mobile-body-font-style: normal;
+    --small-title-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --small-title-j-font-weight: 400;
+    --small-title-j-font-size: 20px;
+    --small-title-j-letter-spacing: 0px;
+    --small-title-j-line-height: normal;
+    --small-title-j-font-style: normal;
+    --small-text-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --small-text-j-font-weight: 400;
+    --small-text-j-font-size: 14px;
+    --small-text-j-letter-spacing: -0.42px;
+    --small-text-j-line-height: normal;
+    --small-text-j-font-style: normal;
+    --script-font-family: 'Charlotte', Helvetica;
+    --script-font-weight: 400;
+    --script-font-size: 20px;
+    --script-letter-spacing: 0px;
+    --script-line-height: normal;
+    --script-font-style: normal;
+    --h1-e-font-family: 'Cinzel Decorative', Helvetica;
+    --h1-e-font-weight: 400;
+    --h1-e-font-size: 64px;
+    --h1-e-letter-spacing: 1.92px;
+    --h1-e-line-height: normal;
+    --h1-e-font-style: normal;
+    --h2-j-font-family: 'Hina Mincho', Helvetica;
+    --h2-j-font-weight: 400;
+    --h2-j-font-size: 30px;
+    --h2-j-letter-spacing: 3.6px;
+    --h2-j-line-height: 144.9303150177002%;
+    --h2-j-font-style: normal;
+    --body-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --body-j-font-weight: 400;
+    --body-j-font-size: 16px;
+    --body-j-letter-spacing: 2.56px;
+    --body-j-line-height: 24px;
+    --body-j-font-style: normal;
+    --montserrat-font-family: 'Montserrat', Helvetica;
+    --montserrat-font-weight: 500;
+    --montserrat-font-size: 14px;
+    --montserrat-letter-spacing: 0.10000000149011612px;
+    --montserrat-line-height: 20px;
+    --montserrat-font-style: normal;
+    --h1-j-font-family: 'Hina Mincho', Helvetica;
+    --h1-j-font-weight: 400;
+    --h1-j-font-size: 64px;
+    --h1-j-letter-spacing: 4.48px;
+    --h1-j-line-height: normal;
+    --h1-j-font-style: normal;
+    --pink-shadow: 3px 4px 5.800000190734863px 0px rgba(193, 157, 169, 1);
+    --drop: 0px 2px 4px 0px rgba(177, 165, 171, 0.8);
+    --variable-collection-beige: rgba(229, 213, 203, 1);
+    --variable-collection-pink: rgba(198, 151, 165, 1);
+    --variable-collection-white: rgba(255, 255, 255, 1);
+    --variable-collection-pale-pink: rgba(245, 236, 239, 1);
+    --variable-collection-salmon: rgba(215, 169, 159, 1);
+    --variable-collection-beige-gradient: rgba(255, 255, 255, 0);
+    --variable-collection-purple: rgba(158, 135, 190, 1);
+  }
 
-.box {
-}
+  .bg {
+    top: 0;
+    left: 5px;
+    background-image: url(./img/flowers-bg.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
 
-.box .testimonials {
-  top: 0;
-  left: 0;
-}
+  .light-bg {
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
 
-.box .overlap {
-}
+  .title {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    top: 136px;
+    left: 38px;
+  }
 
-.box .bg {
-  top: 0;
-  left: 5px;
-  background-image: url(./img/flowers-bg.png);
-  background-size: cover;
-  background-position: 50% 50%;
-}
+  .text-wrapper {
+    width: fit-content;
+    margin-top: -1px;
+    text-shadow: 0px 2px 4px #b1a4aacc;
+    font-family: var(--mobile-h1-font-family);
+    font-weight: var(--mobile-h1-font-weight);
+    color: var(--grey);
+    font-size: var(--mobile-h1-font-size);
+    letter-spacing: var(--mobile-h1-letter-spacing);
+    line-height: var(--mobile-h1-line-height);
+    font-style: var(--mobile-h1-font-style);
+  }
 
-.box .light-bg {
-  top: 0;
-  left: 0;
-  object-fit: cover;
-}
+  .div {
+    top: 31px;
+    left: 7px;
+    transform: rotate(-12.46deg);
+    opacity: 0.6;
+    font-family: 'Charlotte-Regular', Helvetica;
+    font-weight: 400;
+    color: #c697a57a;
+    font-size: 64px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
 
-.box .title {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  top: 136px;
-  left: 38px;
-}
+  .subtitle {
+    top: 214px;
+    left: 29px;
+  }
 
-.box .rectangle {
-  margin-left: -19px;
-  background-color: var(--variable-collection-salmon);
-  transform: rotate(90deg);
-}
+  .overlap-group {
+  }
 
-.box .text-wrapper {
-  width: fit-content;
-  margin-top: -1px;
-  text-shadow: 0px 2px 4px #b1a4aacc;
-  font-family: var(--mobile-h1-font-family);
-  font-weight: var(--mobile-h1-font-weight);
-  color: var(--grey);
-  font-size: var(--mobile-h1-font-size);
-  letter-spacing: var(--mobile-h1-letter-spacing);
-  line-height: var(--mobile-h1-line-height);
-  font-style: var(--mobile-h1-font-style);
-  box-shadow: var(--drop);
-}
+  .p {
+    top: 40px;
+    left: 29px;
+    font-family: 'Ryo Gothic PlusN-Regular', Helvetica;
+    font-weight: 400;
+    color: transparent;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
 
-.box .ureshino-salon {
-  top: 31px;
-  left: 19px;
-}
+  .span {
+    color: #c697a5;
+  }
 
-.box .div {
-  top: 31px;
-  left: 7px;
-  transform: rotate(-12.46deg);
-  opacity: 0.6;
-  font-family: "Charlotte-Regular", Helvetica;
-  font-weight: 400;
-  color: #c697a57a;
-  font-size: 64px;
-  letter-spacing: 0;
-  line-height: normal;
-}
+  .text-wrapper-2 {
+    color: #71717a;
+    font-size: var(--small-title-j-font-size);
+    font-family: var(--small-title-j-font-family);
+    font-style: var(--small-title-j-font-style);
+    font-weight: var(--small-title-j-font-weight);
+    letter-spacing: var(--small-title-j-letter-spacing);
+    line-height: var(--small-title-j-line-height);
+  }
 
-.box .subtitle {
-  top: 214px;
-  left: 29px;
-}
+  .overlap-group-2 {
+  }
 
-.box .overlap-group {
-}
+  .frame-wrapper {
+    top: -2px;
+    left: -4px;
+    background-image: url(./img/union-2.svg);
+    background-size: 100% 100%;
+  }
 
-.box .p {
-  top: 40px;
-  left: 29px;
-  font-family: "Ryo Gothic PlusN-Regular", Helvetica;
-  font-weight: 400;
-  color: transparent;
-  font-size: 32px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
+  .frame {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 16px 32px;
+    top: 19px;
+    left: 9px;
+    border-radius: 10px;
+  }
 
-.box .span {
-  color: #c697a5;
-}
+  .div-2 {
+    width: fit-content;
+    margin-top: -1px;
+    font-family: var(--mobile-body-font-family);
+    font-weight: var(--mobile-body-font-weight);
+    color: transparent;
+    font-size: var(--mobile-body-font-size);
+    letter-spacing: var(--mobile-body-letter-spacing);
+    line-height: var(--mobile-body-line-height);
+    font-style: var(--mobile-body-font-style);
+  }
 
-.box .text-wrapper-2 {
-  color: #71717a;
-  font-size: var(--small-title-j-font-size);
-  font-family: var(--small-title-j-font-family);
-  font-style: var(--small-title-j-font-style);
-  font-weight: var(--small-title-j-font-weight);
-  letter-spacing: var(--small-title-j-letter-spacing);
-  line-height: var(--small-title-j-line-height);
-}
+  .text-wrapper-3 {
+    color: #c697a5;
+    letter-spacing: var(--mobile-body-letter-spacing);
+    font-family: var(--mobile-body-font-family);
+    font-style: var(--mobile-body-font-style);
+    font-weight: var(--mobile-body-font-weight);
+    line-height: var(--mobile-body-line-height);
+    font-size: var(--mobile-body-font-size);
+  }
 
-.box .group {
-  top: 0;
-  left: 0;
-}
+  .text-wrapper-4 {
+    color: #52525b;
+    letter-spacing: var(--mobile-body-letter-spacing);
+    font-family: var(--mobile-body-font-family);
+    font-style: var(--mobile-body-font-style);
+    font-weight: var(--mobile-body-font-weight);
+    line-height: var(--mobile-body-line-height);
+    font-size: var(--mobile-body-font-size);
+  }
 
-.box .overlap-group-2 {
-}
+  .frame-2 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 8px;
+    flex: 0 0 auto;
+  }
 
-.box .rectangle-2 {
-  top: 16px;
-  left: 15px;
-  border: 4px solid;
-  border-color: var(--variable-collection-white);
-}
+  .frame-3 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 0 0 auto;
+  }
 
-.box .star {
-  top: 0;
-  left: 109px;
-}
+  .ellipse {
+    width: 86px;
+    /* height: 86px; */
+    top: 169px;
+    left: 210px;
+  }
 
-.box .img {
-  top: 98px;
-  left: 272px;
-}
+  .overlap-group-3 {
+    top: -2px;
+    left: -4px;
+    background-image: url(./img/union.svg);
+    background-size: 100% 100%;
+  }
 
-.box .star-2 {
-  top: 126px;
-  left: 0;
-}
+  .ellipse-2 {
+    width: 86px;
+    /* height: 86px; */
+    top: 168px;
+    left: 0;
+  }
 
-.box .bubble {
-  top: 408px;
-  left: 37px;
-}
+  .deadline {
+    top: 966px;
+    left: 2px;
+  }
 
-.box .overlap-2 {
-}
+  .overlap-4 {
+  }
 
-.box .overlap-group-wrapper {
-  left: 0;
-  top: 0;
-}
+  .deadline-2 {
+    top: 0;
+    left: 0;
+  }
 
-.box .frame-wrapper {
-  top: -2px;
-  left: -4px;
-  background-image: url(./img/union-2.svg);
-  background-size: 100% 100%;
-}
+  .overlap-group-4 {
+  }
 
-.box .frame {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-  padding: 16px 32px;
-  top: 19px;
-  left: 9px;
-  border-radius: 10px;
-}
+  .rectangle-3 {
+    top: 0;
+    left: 0;
+    border-radius: 0px 0px 100px 0px;
+    background: linear-gradient(
+      180deg,
+      rgb(158, 135, 190) 0%,
+      rgb(198, 151, 165) 100%
+    );
+  }
 
-.box .div-2 {
-  width: fit-content;
-  margin-top: -1px;
-  font-family: var(--mobile-body-font-family);
-  font-weight: var(--mobile-body-font-weight);
-  color: transparent;
-  font-size: var(--mobile-body-font-size);
-  letter-spacing: var(--mobile-body-letter-spacing);
-  line-height: var(--mobile-body-line-height);
-  font-style: var(--mobile-body-font-style);
-}
+  .mask-group {
+    top: 0;
+    left: 7px;
+  }
 
-.box .text-wrapper-3 {
-  color: #c697a5;
-  letter-spacing: var(--mobile-body-letter-spacing);
-  font-family: var(--mobile-body-font-family);
-  font-style: var(--mobile-body-font-style);
-  font-weight: var(--mobile-body-font-weight);
-  line-height: var(--mobile-body-line-height);
-  font-size: var(--mobile-body-font-size);
-}
+  .element {
+    top: 18px;
+    left: 62px;
+    font-family: 'Ryo Gothic PlusN-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--variable-collection-white);
+    font-size: 24px;
+    letter-spacing: 3.12px;
+    line-height: 22px;
+    white-space: nowrap;
+  }
 
-.box .text-wrapper-4 {
-  color: #52525b;
-  letter-spacing: var(--mobile-body-letter-spacing);
-  font-family: var(--mobile-body-font-family);
-  font-style: var(--mobile-body-font-style);
-  font-weight: var(--mobile-body-font-weight);
-  line-height: var(--mobile-body-line-height);
-  font-size: var(--mobile-body-font-size);
-}
+  .text-wrapper-7 {
+    letter-spacing: 0.75px;
+  }
 
-.box .frame-2 {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  gap: 8px;
-  flex: 0 0 auto;
-}
+  .text-wrapper-8 {
+    font-size: var(--mobile-body-font-size);
+    letter-spacing: var(--mobile-body-letter-spacing);
+    font-family: var(--mobile-body-font-family);
+    font-style: var(--mobile-body-font-style);
+    font-weight: var(--mobile-body-font-weight);
+    line-height: var(--mobile-body-line-height);
+  }
 
-.box .frame-3 {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex: 0 0 auto;
-}
+  .label {
+    top: 975px;
+    left: 19px;
+    transform: rotate(22.13deg);
+  }
 
-.box .text-wrapper-5 {
-  width: fit-content;
-  margin-top: -1px;
-  font-family: var(--small-text-j-font-family);
-  font-weight: var(--small-text-j-font-weight);
-  color: var(--grey);
-  font-size: var(--small-text-j-font-size);
-  letter-spacing: var(--small-text-j-letter-spacing);
-  line-height: var(--small-text-j-line-height);
-  font-style: var(--small-text-j-font-style);
-}
+  .overlap-5 {
+  }
 
-.box .text-wrapper-6 {
-  width: fit-content;
-  font-family: var(--body-j-font-family);
-  font-weight: var(--body-j-font-weight);
-  color: var(--grey);
-  font-size: var(--body-j-font-size);
-  letter-spacing: var(--body-j-letter-spacing);
-  line-height: var(--body-j-line-height);
-  white-space: nowrap;
-  font-style: var(--body-j-font-style);
-}
+  .group-2 {
+    opacity: 0.94;
+    top: 0;
+    left: 0;
+  }
 
-.box .stars {
-}
+  .overlap-group-5 {
+    top: -2px;
+    left: -6px;
+  }
 
-.box .star-3 {
-  left: 0;
-  top: 0;
-}
+  .watercolor {
+    top: 32px;
+    left: 8px;
+    transform: rotate(-22.13deg);
+    object-fit: cover;
+  }
 
-.box .ellipse {
-  width: 86px;
-  /* height: 86px; */
-  top: 169px;
-  left: 210px;
-}
+  .text-wrapper-9 {
+    top: 45px;
+    left: 37px;
+    transform: rotate(-24.87deg);
+    mix-blend-mode: multiply;
+    font-family: 'Ryo Gothic PlusN-B', Helvetica;
+    font-weight: 400;
+    color: var(--variable-collection-purple);
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: -0.42px;
+    line-height: normal;
+  }
 
-.box .overlap-wrapper {
-  top: 679px;
-  left: 37px;
-}
+  .text-wrapper-10 {
+    top: 52px;
+    left: 42px;
+    transform: rotate(-26.24deg);
+    mix-blend-mode: multiply;
+    background: linear-gradient(
+      180deg,
+      rgb(158, 135, 190) 0%,
+      rgb(198, 151, 165) 100%
+    );
+    -webkit-background-clip: text !important;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    font-family: 'Hina Mincho-Regular', Helvetica;
+    font-weight: 400;
+    color: transparent;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: -0.96px;
+    line-height: normal;
+  }
 
-.box .overlap-3 {
-  /* height: 254px; */
-}
+  .overlap-6 {
+    left: -10px;
+    border-radius: 100px;
+  }
 
-.box .div-wrapper {
-  left: 52px;
-  top: 0;
-}
+  .frame-4 {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 56px;
+    padding: 32px 30px 32px 70px;
+    top: 0;
+    left: 0;
+    background-color: #a37dd21a;
+    border-radius: 100px;
+    box-shadow: 1px 1px 2.1px #7e76d4;
+  }
 
-.box .overlap-group-3 {
-  top: -2px;
-  left: -4px;
-  background-image: url(./img/union.svg);
-  background-size: 100% 100%;
-}
+  .text-wrapper-11 {
+    width: fit-content;
+    margin-top: -1px;
+    font-family: 'Ryo Gothic PlusN-B', Helvetica;
+    font-weight: 400;
+    color: var(--variable-collection-white);
+    font-size: 18px;
+    letter-spacing: 4px;
+    line-height: 20px;
+    white-space: nowrap;
+  }
 
-.box .ellipse-2 {
-  width: 86px;
-  /* height: 86px; */
-  top: 168px;
-  left: 0;
-}
+  .arrow-forward-ios {
+  }
 
-.box .deadline {
-  top: 966px;
-  left: 2px;
-}
-
-.box .overlap-4 {
-}
-
-.box .deadline-2 {
-  top: 0;
-  left: 0;
-}
-
-.box .overlap-group-4 {
-}
-
-.box .rectangle-3 {
-  top: 0;
-  left: 0;
-  border-radius: 0px 0px 100px 0px;
-  background: linear-gradient(180deg, rgb(158, 135, 190) 0%, rgb(198, 151, 165) 100%);
-}
-
-.box .mask-group {
-  top: 0;
-  left: 7px;
-}
-
-.box .element {
-  top: 18px;
-  left: 62px;
-  font-family: "Ryo Gothic PlusN-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--variable-collection-white);
-  font-size: 24px;
-  letter-spacing: 3.12px;
-  line-height: 22px;
-  white-space: nowrap;
-}
-
-.box .text-wrapper-7 {
-  letter-spacing: 0.75px;
-}
-
-.box .text-wrapper-8 {
-  font-size: var(--mobile-body-font-size);
-  letter-spacing: var(--mobile-body-letter-spacing);
-  font-family: var(--mobile-body-font-family);
-  font-style: var(--mobile-body-font-style);
-  font-weight: var(--mobile-body-font-weight);
-  line-height: var(--mobile-body-line-height);
-}
-
-.box .label {
-  top: 975px;
-  left: 19px;
-  transform: rotate(22.13deg);
-}
-
-.box .overlap-5 {
-}
-
-.box .group-2 {
-  opacity: 0.94;
-  top: 0;
-  left: 0;
-}
-
-.box .overlap-group-5 {
-  top: -2px;
-  left: -6px;
-}
-
-.box .watercolor {
-  top: 32px;
-  left: 8px;
-  transform: rotate(-22.13deg);
-  object-fit: cover;
-}
-
-.box .text-wrapper-9 {
-  top: 45px;
-  left: 37px;
-  transform: rotate(-24.87deg);
-  mix-blend-mode: multiply;
-  font-family: "Ryo Gothic PlusN-B", Helvetica;
-  font-weight: 400;
-  color: var(--variable-collection-purple);
-  font-size: 14px;
-  text-align: center;
-  letter-spacing: -0.42px;
-  line-height: normal;
-}
-
-.box .text-wrapper-10 {
-  top: 52px;
-  left: 42px;
-  transform: rotate(-26.24deg);
-  mix-blend-mode: multiply;
-  background: linear-gradient(180deg, rgb(158, 135, 190) 0%, rgb(198, 151, 165) 100%);
-  -webkit-background-clip: text !important;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-  font-family: "Hina Mincho-Regular", Helvetica;
-  font-weight: 400;
-  color: transparent;
-  font-size: 32px;
-  text-align: center;
-  letter-spacing: -0.96px;
-  line-height: normal;
-}
-
-.box .default-button {
-  top: 1116px;
-  left: 55px;
-  box-shadow: 1px 1px 2.1px #7e76d4, 0px 4px 4px #00000040;
-}
-
-.box .overlap-6 {
-  left: -10px;
-  border-radius: 100px;
-}
-
-.box .frame-4 {
-  display: inline-flex;
-  align-items: flex-end;
-  gap: 56px;
-  padding: 32px 30px 32px 70px;
-  top: 0;
-  left: 0;
-  background-color: #a37dd21a;
-  border-radius: 100px;
-  box-shadow: 1px 1px 2.1px #7e76d4;
-}
-
-.box .text-wrapper-11 {
-  width: fit-content;
-  margin-top: -1px;
-  font-family: "Ryo Gothic PlusN-B", Helvetica;
-  font-weight: 400;
-  color: var(--variable-collection-white);
-  font-size: 18px;
-  letter-spacing: 4px;
-  line-height: 20px;
-  white-space: nowrap;
-}
-
-.box .arrow-forward-ios {
-}
-
-.box .intersect {
-  top: 0;
-  left: 8px;
-  mix-blend-mode: lighten;
-}
+  .intersect {
+    top: 0;
+    left: 8px;
+    mix-blend-mode: lighten;
+  }
 </style>

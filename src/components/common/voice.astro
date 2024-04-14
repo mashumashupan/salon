@@ -1,0 +1,98 @@
+---
+import { Image } from 'astro:assets';
+import Bubble from './bubble.astro';
+import star from '~/assets/testimonial/testimonial_star.png';
+
+// コンポーネントの引数を定義
+interface Props {
+  title: string;
+  name: string;
+  icon: ImageMetadata; // Imageが要求する型と同じ型を指定
+  side: 'left' | 'right';
+  useStar?: boolean;
+}
+
+const { title, name, icon, side, useStar } = Astro.props;
+---
+
+<div class="grid w-80 grid-cols-3 grid-rows-2">
+  <div class=`bubble-container col-span-2 row-span-2 row-start-1 ${side}`>
+    <Bubble position={side}>
+      <div>
+        <div class="overlap-group-3">
+          <div class="frame">
+            <p class="div-3">
+              <slot />
+            </p>
+            <div class="group-3">
+              <div class="text-wrapper-5">{title}</div>
+              <div class="text-wrapper-6">{name} さん</div>
+            </div>
+            {
+              useStar && (
+                <div class="stars h-4 w-16">
+                  <Image class="h-full object-contain" src={star} alt="" />
+                </div>
+              )
+            }
+          </div>
+        </div>
+      </div>
+    </Bubble>
+  </div>
+  <Image
+    class=`icon z-10 row-start-2 self-center justify-self-center ${side}`
+    src={icon}
+    alt=""
+  />
+</div>
+
+<style>
+  .icon {
+    width: 86px;
+  }
+
+  .text-wrapper-5 {
+    width: fit-content;
+    margin-top: -1px;
+    font-family: var(--small-text-j-font-family);
+    font-weight: var(--small-text-j-font-weight);
+    color: var(--grey);
+    font-size: var(--small-text-j-font-size);
+    letter-spacing: var(--small-text-j-letter-spacing);
+    line-height: var(--small-text-j-line-height);
+    font-style: var(--small-text-j-font-style);
+  }
+
+  .text-wrapper-6 {
+    width: fit-content;
+    font-family: var(--body-j-font-family);
+    font-weight: var(--body-j-font-weight);
+    color: var(--grey);
+    font-size: var(--body-j-font-size);
+    letter-spacing: var(--body-j-letter-spacing);
+    line-height: var(--body-j-line-height);
+    white-space: nowrap;
+    font-style: var(--body-j-font-style);
+  }
+
+  .bubble-container.right {
+    grid-column-start: 1;
+  }
+
+  .bubble-container.left {
+    grid-column-start: 2;
+  }
+
+  .icon.right {
+    margin-top: 20px;
+    margin-left: -60px;
+    grid-column-start: 3;
+  }
+
+  .icon.left {
+    margin-top: 20px;
+    margin-right: -60px;
+    grid-column-start: 1;
+  }
+</style>
