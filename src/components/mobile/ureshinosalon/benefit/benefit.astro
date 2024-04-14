@@ -7,11 +7,12 @@ import breakLine from '~/util/breakLine.ts';
 interface Props {
     bg: ImageMetadata;
     number: string;
+    title: string;
     description: string;
     texts: string[];
 }
 
-const { bg, number, texts, description } = Astro.props;
+const { bg, number, title, texts, description } = Astro.props;
 const descriptionHtml = breakLine(description);
 ---
 
@@ -20,7 +21,7 @@ const descriptionHtml = breakLine(description);
     <div class="flex flex-col justify-center">
         <Image class="w-full" src={bg} alt="" />
         <div class="absolute top-8 flex w-full flex-col gap-40">
-            <Title title="入会メリット" number={number} />
+            <Title number={number} title={title} />
             <div class="subtitle">
                 <div class="div-wrapper">
                     <div class="text-wrapper-3">

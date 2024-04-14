@@ -1,0 +1,258 @@
+---
+import { Image } from 'astro:assets';
+// import {ImageMetadata} from "astro";
+
+// コンポーネントの引数を定義
+interface Props {
+  subtitle: string;
+  title_small: string;
+  title: string;
+  image: ImageMetadata;    // Imageが要求する型と同じ型を指定
+  tag1: string;
+  tag2: string;
+  tag3: string;
+  description1: string;
+  color_description: string;
+  description2: string;
+}
+
+const { subtitle, title_small, title, image, tag1, tag2, tag3, description1, color_description, description2} = Astro.props;
+---
+
+<!-- <div class="overlap-group-wrapper">
+    <div class="overlap-group-3">
+      <div class="card">
+        <div class="rectangle-wrapper"><Image class="rectangle-2" src={contents1_live} alt="" /></div>
+        <img class="line-3" src="img/line-23-4.svg" />
+        <div class="flexcontainer-wrapper">
+          <div class="flexcontainer">
+            <p class="text">
+              <span class="text-wrapper-14">大人気</span>
+              <span class="text-wrapper-15">コンテンツ！<br /></span>
+            </p>
+            <p class="text"><span class="text-wrapper-15">ぶっちゃけ話や有益情報も！</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="label-2">
+        <Image class="subtract" src={subtract} alt="" />
+        <div class="frame-6">
+          <div class="frame-7"><div class="text-wrapper-16">月に2回のインスタライブ</div></div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+<div class="overlap-group-wrapper">
+    <div class="overlap-group-3">
+    <div class="card">
+        <div class="frame">
+            <div class="rectangle-wrapper"><Image class="rectangle-2" src={image} alt="" /></div>
+            <!-- <img class="rectangle" src="img/rectangle-60-6.png" /> -->
+            <img class="line-3" src="img/line-23-4.svg" />
+            <div class="frame-2">
+                <div class="div-wrapper"><div class="text-wrapper-14">{tag1}</div></div>
+                <div class="div-wrapper"><div class="text-wrapper-14">{tag2}</div></div>
+                <div class="div-wrapper"><div class="text-wrapper-14">{tag3}</div></div>
+            </div>
+            </div>
+            <!-- <img class="line-2" src="img/line-23-3.svg" /> -->
+            <img class="line-3" src="img/line-23-4.svg" />
+            <div class="group">
+            <p class="p">
+                <span class="text-wrapper-15">{description1}</span>
+                <span class="text-wrapper-17">{color_description}</span>
+                <span class="text-wrapper-15">{description2}</span>
+            </p>
+            </div>
+        </div>
+    </div>
+    <div class="label">
+        <img class="subtract" src="img/subtract-4.svg" />
+        <div class="frame-3">
+        <div class="small-text">
+            <div class="text-wrapper-12">{subtitle}</div>
+            <img class="line-3" src="img/line-20-6.svg" />
+        </div>
+        <div class="frame-4">
+            <p class="div-2">
+            <span class="text-wrapper-13">{title_small}</span>
+            <span class="text-wrapper-16">{title}</span>
+            </p>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<style>
+    .overlap-group-wrapper {
+        position: relative;
+        width: 343px;
+        height: 387px;
+    }
+
+    .overlap-group-3 {
+        position: relative;
+        height: 387px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 321px;
+        align-items: center;
+        gap: 16px;
+        padding: 24px;
+        position: absolute;
+        top: 0;
+        left: 22px;
+        background-color: var(--variable-collection-white);
+        border-radius: 4px;
+        box-shadow: 0px 2px 4px #b1a4aacc;
+    }
+
+    .rectangle-wrapper {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .rectangle-2 {
+        position: relative;
+        width: 300px;
+        /* height: 250px; */
+        object-fit: cover;
+    }
+
+    .line-3 {
+        position: relative;
+        width: 250px;
+        height: 1px;
+        object-fit: cover;
+    }
+
+    .flexcontainer-wrapper {
+        position: relative;
+        width: 241px;
+        height: 57px;
+    }
+
+    .flexcontainer {
+        width: 239px;
+        height: 57px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        position: relative;
+    }
+
+    .text {
+        position: relative;
+        align-self: stretch;
+        font-family: "Ryo Gothic PlusN-Regular", Helvetica;
+        font-weight: 400;
+        color: transparent;
+        font-size: 24px;
+        text-align: center;
+        letter-spacing: 3.84px;
+        line-height: 24px;
+    }
+
+    .text-wrapper-14 {
+        color: #c697a5;
+        font-size: var(--body-j-font-size);
+        letter-spacing: 0.92px;
+    }
+
+    .text-wrapper-15 {
+        color: #52525b;
+        font-size: var(--body-j-font-size);
+        letter-spacing: var(--body-j-letter-spacing);
+        font-family: var(--body-j-font-family);
+        font-style: var(--body-j-font-style);
+        font-weight: var(--body-j-font-weight);
+        line-height: var(--body-j-line-height);
+    }
+
+    .text-wrapper-17 {
+        color: #c697a5;
+        font-size: var(--body-j-font-size);
+        letter-spacing: var(--body-j-letter-spacing);
+        font-family: var(--body-j-font-family);
+        font-style: var(--body-j-font-style);
+        font-weight: var(--body-j-font-weight);
+        line-height: var(--body-j-line-height);
+    }
+
+    .label-2 {
+        position: absolute;
+        width: 291px;
+        height: 81px;
+        top: 8px;
+        left: 0;
+    }
+
+    .subtract {
+        position: absolute;
+        width: 22px;
+        height: 24px;
+        top: 57px;
+        left: 0;
+    }
+    
+    .frame-2 {
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 10px;
+        position: relative;
+        flex: 0 0 auto;
+        margin-top: -10px;
+        box-shadow: 0px 2px 4px #b1a4aacc;
+    }
+
+    .div-wrapper {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 20px;
+        position: relative;
+        flex: 0 0 auto;
+        background-color: #ffffff73;
+        border-radius: 20px;
+        border: 2px solid;
+        border-color: transparent;
+        backdrop-filter: blur(7.1px) brightness(100%);
+        -webkit-backdrop-filter: blur(7.1px) brightness(100%);
+        border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(229, 213, 203)) 1;
+    }
+
+    .text-wrapper-12 {
+        font-size: 12px;
+    }
+
+    .text-wrapper-13 {
+        position: relative;
+        width: fit-content;
+        margin-top: -1px;
+        font-family: var(--montserrat-font-family);
+        font-weight: var(--montserrat-font-weight);
+        color: var(--grey);
+        font-size: var(--montserrat-font-size);
+        letter-spacing: var(--montserrat-letter-spacing);
+        line-height: var(--montserrat-line-height);
+        white-space: nowrap;
+        font-style: var(--montserrat-font-style);
+    }
+
+    .text-wrapper-16 {
+        color: #52525b;
+        font-size: 24px;
+        letter-spacing: 0.69px;
+        line-height: 34.8px;
+    }
+</style>

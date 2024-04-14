@@ -13,6 +13,7 @@ import pearl1 from '~/assets/pearl1.png';
 import pearl2 from '~/assets/pearl2.png';
 import flowers from '~/assets/myjourney/flowers.svg';
 import bg from '~/assets/myjourney/myjourney_fake.png';
+import Myjourney from '~/components/common/myjourney.astro';
 ---
 
 <div
@@ -35,67 +36,32 @@ import bg from '~/assets/myjourney/myjourney_fake.png';
         <Image class="flowers" src={flowers} alt="" />
         <div class="scroll">
           <div class="scroll-2">
-            <div class="card">
-              <div class="frame"><div class="text-wrapper-2">電話占いに散財し恋愛に迷走</div></div>
-              <Image class="keyboard-double" src={arrow_down} alt="" />
-              <div class="frame-2">
-                <Image class="rectangle" src={myjourneyimage1} alt="" />
-                <div class="text-wrapper-3">理想の王子様が見つかる</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="frame"><div class="text-wrapper-2">異業種交流会に参加</div></div>
-              <Image class="keyboard-double" src={arrow_down} alt="" />
-              <div class="frame-2">
-                <Image class="rectangle" src={myjourneyimage2} alt="" />
-                <div class="text-wrapper-3">ヨーロッパ社交界に参加</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="frame"><div class="text-wrapper-2">美容に無頓着</div></div>
-              <Image class="keyboard-double" src={arrow_down} alt="" />
-              <div class="frame-2">
-                <Image class="rectangle" src={myjourneyimage3} alt="" />
-                <div class="text-wrapper-3">美容情報の発信者に</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="frame"><div class="text-wrapper-2">ぽっちゃり体型</div></div>
-              <Image class="keyboard-double" src={arrow_down} alt="" />
-              <div class="frame-2">
-                <Image class="rectangle" src={myjourneyimage4} alt="" />
-                <div class="text-wrapper-3">女性からも憧れの的</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="frame"><div class="text-wrapper-2">東京で会社経営</div></div>
-              <Image class="keyboard-double" src={arrow_down} alt="" />
-              <div class="frame-2">
-                <Image class="rectangle" src={myjourneyimage5} alt="" />
-                <div class="text-wrapper-3">マレーシアに移住し新規ビジネス展開</div>
-              </div>
-            </div>
-            <div class="card">
+            <Myjourney before="電話占いに散財し恋愛に迷走", image={myjourneyimage1}, after="理想の王子様が見つかる" /></Myjourney>
+            <Myjourney before="異業種交流会に参加", image={myjourneyimage2}, after="ヨーロッパ社交界に参加" /></Myjourney>
+            <Myjourney before="美容に無頓着", image={myjourneyimage3}, after="美容情報の発信者に" /></Myjourney>
+            <Myjourney before="ぽっちゃり体型", image={myjourneyimage4}, after="女性からも憧れの的" /></Myjourney>
+            <Myjourney before="東京で会社経営", image={myjourneyimage5}, after="マレーシアに移住し新規ビジネス展開" /></Myjourney>
+            <Myjourney before="SNS未活用", image={myjourneyimage6}, after="大手出版社から写真集出版" /></Myjourney>
+            <!-- <div class="card">
               <div class="frame"><div class="text-wrapper-2">SNS未活用</div></div>
               <Image class="keyboard-double" src={arrow_down} alt="" />
               <div class="frame-2">
                 <Image class="rectangle" src={myjourneyimage6} alt="" />
                 <div class="text-wrapper-3">大手出版社から写真集出版</div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="dots">
-          <div class="ellipse"></div>
-          <div class="ellipse-2"></div>
-          <div class="ellipse-3"></div>
-        </div>
-      </div>
-      <Image class="pearl-2" src={pearl2} alt="" />
-    </div>
-    <Image class="pearl-2" src={pearl1} alt="" />
-  </div>
-</div> -->
+            </div> -->
+
+<div class="dots">
+  <div class="ellipse"></div>
+  <div class="ellipse-2"></div>
+  <div class="ellipse-3"></div>
+</div>
+
+<Image class="pearl-2" src={pearl2} alt="" />
+
+<Image class="pearl-2" src={pearl1} alt="" />
+
+-->
 
 <style>
   :root {
@@ -295,84 +261,84 @@ import bg from '~/assets/myjourney/myjourney_fake.png';
     background-color: #ffffffbd;
   }
 
-  .box .card {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    position: relative;
-    flex: 0 0 auto;
-  }
+  /* .box .card {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  flex: 0 0 auto;
+} */
 
-  .box .frame {
-    justify-content: center;
-    gap: 10px;
-    padding: 10px 10px 10px 14px;
-    border-radius: 2px;
-    border-style: solid;
-    border-top-style: solid;
-    border-right-style: solid;
-    border-bottom-style: solid;
-    border-left-style: solid;
-    border-color: var(--grey);
-    display: inline-flex;
-    align-items: center;
-    position: relative;
-    flex: 0 0 auto;
-  }
+  /* .box .frame {
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 10px 10px 14px;
+  border-radius: 2px;
+  border-style: solid;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-color: var(--grey);
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  flex: 0 0 auto;
+} */
 
-  .box .text-wrapper-2 {
-    margin-top: -8px;
-    font-family: var(--body-j-font-family);
-    color: var(--grey);
-    letter-spacing: var(--body-j-letter-spacing);
-    line-height: var(--body-j-line-height);
-    position: relative;
-    width: fit-content;
-    font-weight: var(--body-j-font-weight);
-    font-size: var(--body-j-font-size);
-    white-space: nowrap;
-    font-style: var(--body-j-font-style);
-  }
+  /* .box .text-wrapper-2 {
+  margin-top: -8px;
+  font-family: var(--body-j-font-family);
+  color: var(--grey);
+  letter-spacing: var(--body-j-letter-spacing);
+  line-height: var(--body-j-line-height);
+  position: relative;
+  width: fit-content;
+  font-weight: var(--body-j-font-weight);
+  font-size: var(--body-j-font-size);
+  white-space: nowrap;
+  font-style: var(--body-j-font-style);
+} */
 
-  .box .keyboard-double {
-    position: relative;
-    width: 24px;
-    height: 24px;
-  }
+  /* .box .keyboard-double {
+  position: relative;
+  width: 24px;
+  height: 24px;
+} */
 
-  .box .frame-2 {
-    flex-direction: column;
-    gap: 16px;
-    padding: 0px 0px 16px;
-    background-color: var(--variable-collection-white);
-    border-radius: 8px;
-    box-shadow: 0px 2px 4px #b1a4aacc;
-    display: inline-flex;
-    align-items: center;
-    position: relative;
-    flex: 0 0 auto;
-  }
+  /* .box .frame-2 {
+  flex-direction: column;
+  gap: 16px;
+  padding: 0px 0px 16px;
+  background-color: var(--variable-collection-white);
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px #b1a4aacc;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  flex: 0 0 auto;
+} */
 
-  .box .rectangle {
-    position: relative;
-    width: 304px;
-    height: 304px;
-    object-fit: cover;
-  }
+  /* .box .rectangle {
+  position: relative;
+  width: 304px;
+  height: 304px;
+  object-fit: cover;
+} */
 
-  .box .text-wrapper-3 {
-    font-family: 'Ryo Gothic PlusN-L', Helvetica;
-    color: var(--black);
-    letter-spacing: -1.44px;
-    line-height: 30px;
-    position: relative;
-    width: fit-content;
-    font-weight: 400;
-    font-size: 16px;
-    white-space: nowrap;
-  }
+  /* .box .text-wrapper-3 {
+  font-family: "Ryo Gothic PlusN-L", Helvetica;
+  color: var(--black);
+  letter-spacing: -1.44px;
+  line-height: 30px;
+  position: relative;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 16px;
+  white-space: nowrap;
+} */
 
   .box .img {
     position: relative;

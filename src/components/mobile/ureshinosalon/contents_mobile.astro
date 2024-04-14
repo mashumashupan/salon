@@ -28,6 +28,7 @@ import meetup9 from '~/assets/contents/meetup9.png';
 import button from '~/assets/button.svg';
 import bg from '~/assets/contents/contents_fake.png';
 import JoinButton from '~/components/common/joinButton.astro';
+import Content from '~/components/common/content.astro';
 ---
 
 <div
@@ -236,7 +237,8 @@ import JoinButton from '~/components/common/joinButton.astro';
         </div>
       </div>
       <div class="scroll-contents">
-        <div class="overlap-group-wrapper">
+        <Content subtitle="人生をアップグレード！", title_small="月2回の", title="インスタライブ", image={contents1_live}, tag1="サロン限定配信", tag2="スペシャルゲスト", tag3="リアルタイムQ＆A", description1="最新情報やぶっちゃけ話が聞ける", color_description="大人気コンテンツ", description2="豪華ゲストとの対談も！"></Content>
+        <!-- <div class="overlap-group-wrapper">
           <div class="overlap-group-3">
             <div class="card">
               <div class="rectangle-wrapper">
@@ -266,163 +268,15 @@ import JoinButton from '~/components/common/joinButton.astro';
             </div>
           </div>
         </div>
-        <div class="overlap-group-wrapper">
-          <div class="overlap-group-3">
-            <div class="card">
-              <div class="rectangle-wrapper">
-                <Image class="rectangle-2" src={contents2_meetup} alt="" />
-              </div>
-              <img class="line-3" src="img/line-23-3.svg" />
-              <div class="group-wrapper">
-                <div class="group-10">
-                  <div class="flexcontainer-2">
-                    <p class="text">
-                      <span class="text-wrapper-14">マレーシアオフ会<br /></span
-                      >
-                    </p>
-                    <p class="text">
-                      <span class="text-wrapper-15">の様子はこちら</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="label-3">
-              <Image class="subtract" src={subtract} alt="" />
-              <div class="frame-8">
-                <div class="frame-7">
-                  <div class="text-wrapper-16">国内外でオフ会開催！</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="overlap-group-wrapper">
-          <div class="overlap-group-3">
-            <div class="card">
-              <div class="rectangle-wrapper">
-                <Image class="rectangle-2" src={contents3_korea} alt="" />
-              </div>
-              <img class="line-3" src="img/line-23.svg" />
-              <div class="flexcontainer-wrapper">
-                <div class="flexcontainer">
-                  <p class="text">
-                    <span class="text-wrapper-14">韓国美容</span>
-                    <span class="text-wrapper-15">好きメンバーと<br /></span>
-                  </p>
-                  <p class="text">
-                    <span class="text-wrapper-15">つながろう！</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="label-4">
-              <Image class="subtract" src={subtract} alt="" />
-              <div class="frame-6">
-                <div class="frame-7">
-                  <div class="text-wrapper-16">韓国美容クリニック特典</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="overlap-7">
-            <div class="card">
-              <div class="rectangle-wrapper">
-                <Image class="rectangle-2" src={contents4_column} alt="" />
-              </div>
-              <img class="line-3" src="img/image.svg" />
-              <div class="group-wrapper">
-                <div class="group-11">
-                  <div class="flexcontainer-3">
-                    <p class="span-wrapper">
-                      <span class="text-wrapper-15"
-                        >メンバーだけが読める<br /></span
-                      >
-                    </p>
-                    <p class="span-wrapper">
-                      <span class="text-wrapper-17">うれしの哲学</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="label-4">
-              <Image class="subtract" src={subtract} alt="" />
-              <div class="frame-8">
-                <div class="frame-7">
-                  <div class="text-wrapper-16">会員限定うれしのコラム</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="overlap-group-wrapper">
-          <div class="overlap-group-3">
-            <div class="card">
-              <div class="rectangle-wrapper">
-                <Image class="rectangle-2" src={contents5_slack} alt="" />
-              </div>
-              <img class="line-3" src="img/line-23-2.svg" />
-              <div class="group-12">
-                <div class="flexcontainer-4">
-                  <p class="text">
-                    <span class="text-wrapper-14">仕事・美容・恋愛</span>
-                    <span class="text-wrapper-15">について<br /></span>
-                  </p>
-                  <p class="text">
-                    <span class="text-wrapper-15">うれしのに直接聞ける！</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="label-5">
-              <Image class="subtract" src={subtract} alt="" />
-              <div class="frame-6">
-                <div class="frame-7">
-                  <div class="text-wrapper-16">
-                    Slack質問箱 &amp; 雑談ルーム
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="overlap-group-wrapper">
-          <div class="overlap-group-3">
-            <div class="card">
-              <div class="rectangle-wrapper">
-                <Image class="rectangle-2" src={contents6_bukatu} alt="" />
-              </div>
-              <img class="line-3" src="img/line-23-5.svg" />
-              <div class="group-wrapper">
-                <div class="group-13">
-                  <div class="flexcontainer-5">
-                    <p class="text">
-                      <span class="text-wrapper-14">自己成長</span>
-                      <span class="text-wrapper-15">を実感できる<br /></span>
-                    </p>
-                    <p class="text">
-                      <span class="text-wrapper-15">メンバー限定部活動！</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="label-6">
-              <Image class="subtract" src={subtract} alt="" />
-              <div class="frame-8">
-                <div class="frame-7">
-                  <div class="text-wrapper-16">うれしのサロン 部活動</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Content subtitle="東京・大阪・韓国・マレーシア", title_small="国内外で", title="オフ会開催！", image={contents2_meetup}, tag1="直接会える！", tag2="大人気イベント", tag3="不定期開催", description1="うれしのちゃんやサロンメンバーと", color_description="直接交流できる！", description2="マレーシアオフ会の様子はこちら">
+      </Content>
+      <Content subtitle="うれしの大絶賛！", title_small="人気の", title="韓国美容クリニック特典", image={contents3_korea}, tag1="お得な施術", tag2="プレゼント", tag3="渡韓美容ツアー", description1="うれしのちゃんがオススメする韓国美容クリニックを", color_description="サロン特別価格", description2="でご案内！"></Content>
+      <Content subtitle="令和女子必見！", title_small="会員限定", title="うれしのコラム", image={contents4_column}, tag1="仕事", tag2="美容", tag3="恋愛", description1="メンバーだけが読めるうれしの哲学を週2回更新。", color_description="かわいく賢く生きるための知識", description2="が満載！"></Content>
+      <Content subtitle="うれしのに直接聞ける！", title_small="Slack", title="質問箱＆雑談ルーム", image={contents5_slack}, tag1="気軽に質問", tag2="情報交換・交流", tag3="嬉野ゆみも参加", description1="仕事・美容・恋愛について", color_description="うれしのちゃんに直接質問", description2="できる！メンバー同士で交流できる雑談ルームも。"></Content>
+      <Content subtitle="新コンテンツ！", title_small="自己成長できる", title="部活動", image={contents6_bukatu}, tag1="ワイン", tag2="美食", tag3="読書", description1="自分磨きをしたいけど何をすればいいかわからない方必見！メンバー限定部活動で一緒に", color_description="自己成長♪", description2=""></Content>
       </div>
     </div>
-  </div> -->
+  </div>
 </div>
 
 <style>
@@ -1190,11 +1044,11 @@ import JoinButton from '~/components/common/joinButton.astro';
     overflow-x: scroll;
   }
 
-  .box .overlap-group-wrapper {
-    position: relative;
-    width: 343px;
-    height: 387px;
-  }
+/* .box .overlap-group-wrapper {
+  position: relative;
+  width: 343px;
+  height: 387px;
+}
 
   .box .overlap-group-3 {
     position: relative;
@@ -1289,13 +1143,13 @@ import JoinButton from '~/components/common/joinButton.astro';
     left: 0;
   }
 
-  .box .subtract {
-    position: absolute;
-    width: 22px;
-    height: 24px;
-    top: 57px;
-    left: 0;
-  }
+.box .subtract {
+  position: absolute;
+  width: 22px;
+  height: 24px;
+  top: 57px;
+  left: 0;
+} */
 
   .box .frame-6 {
     display: inline-flex;
@@ -1497,3 +1351,5 @@ import JoinButton from '~/components/common/joinButton.astro';
     left: 0;
   }
 </style>
+-->
+</div>
