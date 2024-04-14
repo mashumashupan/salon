@@ -27,20 +27,25 @@ import Benefit from './benefit/benefit.astro';
     <Image class="z-20 w-full mix-blend-normal" src={bg} alt="" />
   </div>
   <div class="benefits absolute z-30 -mt-[103rem] flex w-full flex-col">
+    <div class="title">
+      <div class="header-mark"></div>
+      <div class="text-wrapper">うれしのサロンで得られること</div>
+    </div>
     <Benefit
       bg={benefit1}
       number="01"
-      description=`かわいく賢く
-      生きるための
-      スキルアップ！`
+      title="かわいく賢く生きるためのスキル"
+      description=`うれしのちゃんのビジネスや
+      恋愛テク・美容情報をシェア♪`
       texts={[
         `ビジネス
         マインド`,
-        `美容
+        `韓国美容
+        整形情報`,
+        `ハイスペ恋愛
         モテテク`,
-        `収入 UP`,
-        `SNSの
-        伸ばし方`,
+        `SNS
+        ブランディング`,
       ]}
     >
       <div class="mb-4 mt-12 flex flex-col">
@@ -61,70 +66,55 @@ import Benefit from './benefit/benefit.astro';
         </div>
       </div>
     </Benefit>
-    <!-- 入会メリット2 -->
-    <!-- <div class="benefit-2">
-      <div class="div-2">
-        <div class="overlap-group-4">
-          <div class="pic"><div class="rectangle"></div></div>
-          <div class="rectangle-2"></div>
-          <Image class="div-2" src={benefit2} alt="" />
-          <div class="title-2">
-            <div class="text-wrapper">入会メリット</div>
-            <div class="frame"><div class="text-wrapper-8">02</div></div>
-          </div>
-          <div class="subtitle-wrapper">
-            <div class="div-wrapper">
-              <div class="text-wrapper-3">一緒に成長できる<br />仲間と環境</div>
-            </div>
-          </div>
+
+    <Benefit
+      bg={benefit2}
+      number="02"
+      title="一緒に成長できる仲間と環境"
+      description=`向上心のある女性たちが集まり
+      高め合っていける場所！`
+      texts={[
+        `仕事・美容・恋愛`,
+        `モチベ
+        UP`,
+        `グローバルな
+        メンバー`,
+        `リアルな交流`,
+      ]}
+    >
+      <div class="mb-4 mt-12 flex flex-col">
+        <!-- 素材がそのままでは使えない -->
+        <div class="absolute mt-3 flex w-full justify-center">
+          <Image class="brightness-200" src={highlight} alt="" />
         </div>
       </div>
-      <div class="frame-5">
-        <div class="frame-2">
-          <div class="group">
-            <div class="overlap-group-5">
-              <div class="frame-6">
-                <Image class="star" src={star} alt="" />
-                <Image class="circle" src={circle} alt="" />
-                <div class="text-wrapper-6">仕事・美容・<br />恋愛</div>
-              </div>
-            </div>
-          </div>
-          <div class="group">
-            <div class="overlap-4">
-              <div class="frame-7">
-                <Image class="star" src={star} alt="" />
-                <Image class="circle" src={circle} alt="" />
-                <div class="text-wrapper-6">
-                  モチベ<br />
-                  UP
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="frame-2">
-          <div class="group">
-            <div class="overlap-group-6">
-              <div class="frame-6">
-                <Image class="star" src={star} alt="" />
-                <Image class="circle" src={circle} alt="" />
-                <div class="text-wrapper-6">グローバルな<br />メンバー</div>
-              </div>
-            </div>
-          </div>
-          <div class="group">
-            <div class="overlap-5">
-              <div class="frame-8">
-                <Image class="star" src={star} alt="" />
-                <Image class="circle" src={circle} alt="" />
-                <div class="text-wrapper-7">リアルな交流</div>
-              </div>
-            </div>
-          </div>
+    </Benefit>
+
+    <Benefit
+      bg={benefit3}
+      number="03"
+      title="ビジネスチャンスの拡大化"
+      description=`様々な分野で活躍する女性がいるから
+      選択肢や可能性が広がる！`
+      texts={[
+        `ビジネス
+        パートナー`,
+        `成功チャンス
+        拡大`,
+        `売上・
+        影響力UP`,
+        `協力して
+        SNS強化`,
+      ]}
+    >
+      <div class="mb-4 mt-12 flex flex-col">
+        <!-- 素材がそのままでは使えない -->
+        <div class="absolute mt-3 flex w-full justify-center">
+          <Image class="brightness-200" src={highlight} alt="" />
         </div>
       </div>
-    </div> -->
+    </Benefit>
+    
     <!-- 入会メリット3 -->
     <!-- <div class="benefit-3">
       <div class="div-2">
