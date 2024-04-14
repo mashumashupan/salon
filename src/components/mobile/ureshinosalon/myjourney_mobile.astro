@@ -8,10 +8,11 @@ import myjourneyimage4 from "~/assets/myjourney/myjourneyimage4.png";
 import myjourneyimage5 from "~/assets/myjourney/myjourneyimage5.png";
 import myjourneyimage6 from "~/assets/myjourney/myjourneyimage6.png";
 
-import arrow_down from "~/assets/myjourney/arrow_down.svg";
 import pearl1 from "~/assets/pearl1.png";
 import pearl2 from "~/assets/pearl2.png";
 import flowers from "~/assets/myjourney/flowers.svg";
+
+import Myjourney from "~/components/common/myjourney.astro";
 ---
 
 <div class="box">
@@ -28,54 +29,20 @@ import flowers from "~/assets/myjourney/flowers.svg";
         <Image class="flowers" src={flowers} alt="" />
         <div class="scroll">
           <div class="scroll-2">
-            <div class="card">
-              <div class="frame"><div class="text-wrapper-2">電話占いに散財し恋愛に迷走</div></div>
-              <Image class="keyboard-double" src={arrow_down} alt="" />
-              <div class="frame-2">
-                <Image class="rectangle" src={myjourneyimage1} alt="" />
-                <div class="text-wrapper-3">理想の王子様が見つかる</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="frame"><div class="text-wrapper-2">異業種交流会に参加</div></div>
-              <Image class="keyboard-double" src={arrow_down} alt="" />
-              <div class="frame-2">
-                <Image class="rectangle" src={myjourneyimage2} alt="" />
-                <div class="text-wrapper-3">ヨーロッパ社交界に参加</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="frame"><div class="text-wrapper-2">美容に無頓着</div></div>
-              <Image class="keyboard-double" src={arrow_down} alt="" />
-              <div class="frame-2">
-                <Image class="rectangle" src={myjourneyimage3} alt="" />
-                <div class="text-wrapper-3">美容情報の発信者に</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="frame"><div class="text-wrapper-2">ぽっちゃり体型</div></div>
-              <Image class="keyboard-double" src={arrow_down} alt="" />
-              <div class="frame-2">
-                <Image class="rectangle" src={myjourneyimage4} alt="" />
-                <div class="text-wrapper-3">女性からも憧れの的</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="frame"><div class="text-wrapper-2">東京で会社経営</div></div>
-              <Image class="keyboard-double" src={arrow_down} alt="" />
-              <div class="frame-2">
-                <Image class="rectangle" src={myjourneyimage5} alt="" />
-                <div class="text-wrapper-3">マレーシアに移住し新規ビジネス展開</div>
-              </div>
-            </div>
-            <div class="card">
+            <Myjourney before="電話占いに散財し恋愛に迷走", image={myjourneyimage1}, after="理想の王子様が見つかる" /></Myjourney>
+            <Myjourney before="異業種交流会に参加", image={myjourneyimage2}, after="ヨーロッパ社交界に参加" /></Myjourney>
+            <Myjourney before="美容に無頓着", image={myjourneyimage3}, after="美容情報の発信者に" /></Myjourney>
+            <Myjourney before="ぽっちゃり体型", image={myjourneyimage4}, after="女性からも憧れの的" /></Myjourney>
+            <Myjourney before="東京で会社経営", image={myjourneyimage5}, after="マレーシアに移住し新規ビジネス展開" /></Myjourney>
+            <Myjourney before="SNS未活用", image={myjourneyimage6}, after="大手出版社から写真集出版" /></Myjourney>
+            <!-- <div class="card">
               <div class="frame"><div class="text-wrapper-2">SNS未活用</div></div>
               <Image class="keyboard-double" src={arrow_down} alt="" />
               <div class="frame-2">
                 <Image class="rectangle" src={myjourneyimage6} alt="" />
                 <div class="text-wrapper-3">大手出版社から写真集出版</div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="dots">
@@ -288,7 +255,7 @@ import flowers from "~/assets/myjourney/flowers.svg";
   background-color: #ffffffbd;
 }
 
-.box .card {
+/* .box .card {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -296,9 +263,9 @@ import flowers from "~/assets/myjourney/flowers.svg";
   gap: 8px;
   position: relative;
   flex: 0 0 auto;
-}
+} */
 
-.box .frame {
+/* .box .frame {
   justify-content: center;
   gap: 10px;
   padding: 10px 10px 10px 14px;
@@ -313,9 +280,9 @@ import flowers from "~/assets/myjourney/flowers.svg";
   align-items: center;
   position: relative;
   flex: 0 0 auto;
-}
+} */
 
-.box .text-wrapper-2 {
+/* .box .text-wrapper-2 {
   margin-top: -8px;
   font-family: var(--body-j-font-family);
   color: var(--grey);
@@ -327,15 +294,15 @@ import flowers from "~/assets/myjourney/flowers.svg";
   font-size: var(--body-j-font-size);
   white-space: nowrap;
   font-style: var(--body-j-font-style);
-}
+} */
 
-.box .keyboard-double {
+/* .box .keyboard-double {
   position: relative;
   width: 24px;
   height: 24px;
-}
+} */
 
-.box .frame-2 {
+/* .box .frame-2 {
   flex-direction: column;
   gap: 16px;
   padding: 0px 0px 16px;
@@ -346,16 +313,16 @@ import flowers from "~/assets/myjourney/flowers.svg";
   align-items: center;
   position: relative;
   flex: 0 0 auto;
-}
+} */
 
-.box .rectangle {
+/* .box .rectangle {
   position: relative;
   width: 304px;
   height: 304px;
   object-fit: cover;
-}
+} */
 
-.box .text-wrapper-3 {
+/* .box .text-wrapper-3 {
   font-family: "Ryo Gothic PlusN-L", Helvetica;
   color: var(--black);
   letter-spacing: -1.44px;
@@ -365,7 +332,7 @@ import flowers from "~/assets/myjourney/flowers.svg";
   font-weight: 400;
   font-size: 16px;
   white-space: nowrap;
-}
+} */
 
 .box .img {
   position: relative;

@@ -1,0 +1,105 @@
+---
+import { Image } from 'astro:assets';
+// import {ImageMetadata} from "astro";
+import arrow_down from "~/assets/myjourney/arrow_down.svg";
+
+// コンポーネントの引数を定義
+interface Props {
+  before: string;
+  image: ImageMetadata;    // Imageが要求する型と同じ型を指定
+  after: string;
+}
+
+const { before, image, after } = Astro.props;
+---
+
+<div class="card">
+    <div class="frame"><div class="text-wrapper-2">{before}</div></div>
+    <Image class="keyboard-double" src={arrow_down} alt="" />
+    <div class="frame-2">
+      <Image class="rectangle" src={image} alt="" />
+      <div class="text-wrapper-3">{after}</div>
+    </div>
+</div>
+
+<style>
+    .card {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .frame {
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 10px 10px 14px;
+        border-radius: 2px;
+        border-style: solid;
+        border-top-style: solid;
+        border-right-style: solid;
+        border-bottom-style: solid;
+        border-left-style: solid;
+        border-color: var(--grey);
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .text-wrapper-2 {
+        margin-top: -8px;
+        font-family: var(--body-j-font-family);
+        color: var(--grey);
+        letter-spacing: var(--body-j-letter-spacing);
+        line-height: var(--body-j-line-height);
+        position: relative;
+        width: fit-content;
+        font-weight: var(--body-j-font-weight);
+        font-size: var(--body-j-font-size);
+        white-space: nowrap;
+        font-style: var(--body-j-font-style);
+    }
+
+    .keyboard-double {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .frame-2 {
+        flex-direction: column;
+        gap: 16px;
+        padding: 0px 0px 16px;
+        background-color: var(--variable-collection-white);
+        border-radius: 8px;
+        box-shadow: 0px 2px 4px #b1a4aacc;
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .rectangle {
+        position: relative;
+        width: 304px;
+        height: 304px;
+        object-fit: cover;
+    }
+
+    .text-wrapper-3 {
+        font-family: "Ryo Gothic PlusN-L", Helvetica;
+        color: var(--black);
+        letter-spacing: -1.44px;
+        line-height: 30px;
+        position: relative;
+        width: fit-content;
+        font-weight: 400;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+</style>
