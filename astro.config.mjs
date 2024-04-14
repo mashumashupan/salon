@@ -9,5 +9,11 @@ import vercel from "@astrojs/vercel/serverless";
 export default defineConfig({
   integrations: [tailwind(), icon(), react()],
   output: "server",
-  adapter: vercel()
+  adapter: vercel(),
+  vite: {
+    ssr: {
+      // 例: 必要な場合、壊れたパッケージがSSRの処理を行うのをスキップさせます
+      external: ['broken-npm-package'],
+    }
+  }
 });
