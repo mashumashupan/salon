@@ -13,9 +13,67 @@ import voice_haru from '~/assets/voice/voice_haru.png';
 import voice_karen from '~/assets/voice/voice_karen.png';
 
 import Voice from '~/components/common/voice.astro';
+import bg from '~/assets/members/members_fake.png';
 ---
 
-<div class="box">
+<div
+  id="process"
+  class="-mt-[10px] flex h-[1700px] min-h-[1700px] flex-col items-center justify-center overflow-hidden pt-[100px]"
+>
+  <Image class="bg w-full" src={bg} alt="" />
+  <div class="bubbles absolute mt-48">
+    <Voice
+      side="right"
+      name="れいなさん"
+      title="メンバー"
+      icon={voice_reina}
+      useStar={false}
+    >
+      <div class="mb-4 flex w-[15rem] flex-col">
+        <span class="text-wrapper-7"
+          >SNSでの日々交流はもちろん、オフ会に行った後はみなさんの仕事や美容への姿勢、生き方が刺激となり活力が湧いてきます。自分ももっと頑張ろうと思える</span
+        >
+        <span class="text-wrapper-8">かけがえのない存在</span>
+        <span class="text-wrapper-7">です!</span>
+      </div>
+    </Voice>
+    <Voice
+      side="left"
+      name="haruさん"
+      title="メンバー"
+      icon={voice_haru}
+      useStar={false}
+    >
+      <div class="mb-4 flex w-[15rem] flex-col">
+        <span class="text-wrapper-7"
+          >サロンメンバーには本当に頑張り屋さんが多いです。更に高みを目指す皆を見ていると、頑張ることが楽しくなります。次に会った時にレベルアップしていたいという</span
+        >
+        <span class="text-wrapper-8">モチベーション</span>
+        <span class="text-wrapper-7">になっています。</span>
+      </div>
+    </Voice>
+    <Voice
+      side="right"
+      name="karenさん"
+      title="メンバー"
+      icon={voice_karen}
+      useStar={false}
+    >
+      <div class="mb-4 flex w-[15rem] flex-col">
+        <span class="text-wrapper-7"
+          >かわいくて賢く向上心がある人たちで、常に</span
+        >
+        <span class="text-wrapper-8">刺激を与えてくれる存在</span>
+        <span class="text-wrapper-7"
+          >です！♡世界のどこに行ってもサロンメンバーがいて、色んなところで頑張っている仲間がいると思うと自然に自分の</span
+        >
+        <span class="text-wrapper-8">行動力</span>
+        <span class="text-wrapper-7">にもつながります。</span>
+      </div>
+    </Voice>
+  </div>
+</div>
+<!-- <div class="box">
   <div class="support">
     <div class="overlap">
       <Image
@@ -160,7 +218,7 @@ import Voice from '~/components/common/voice.astro';
         </Voice>
   </div>
 </div>
-<Image class="arrow" src={arrow} alt="" />
+<Image class="arrow" src={arrow} alt="" /> -->
 
 <style>
   :root {
@@ -749,7 +807,7 @@ import Voice from '~/components/common/voice.astro';
     font-style: var(--mobile-body-font-style);
   }
 
-  .box .text-wrapper-7 {
+  .text-wrapper-7 {
     color: #71717a;
     letter-spacing: var(--mobile-body-letter-spacing);
     font-family: var(--mobile-body-font-family);
@@ -759,7 +817,7 @@ import Voice from '~/components/common/voice.astro';
     font-size: var(--mobile-body-font-size);
   }
 
-  .box .text-wrapper-8 {
+  .text-wrapper-8 {
     color: #d6a99f;
     letter-spacing: var(--mobile-body-letter-spacing);
     font-family: var(--mobile-body-font-family);
