@@ -5,9 +5,22 @@ import priceimage from '~/assets/priceimage.png';
 import diamond from '~/assets/diamond_purple.svg';
 import watercolor1_1 from '~/assets/watercolor1_1.png';
 import button from '~/assets/button.svg';
+import bg from '~/assets/price/price_fake.png';
+import JoinButton from '~/components/common/joinButton.astro';
 ---
 
-<div class="box">
+<div
+  id="price"
+  class="flex min-h-[1300px] flex-col items-center justify-center overflow-hidden"
+>
+  <Image class="bg h-full w-full" src={bg} alt="" />
+  <div class="default-button absolute mt-[38rem]">
+    <div class="overlap-9">
+      <JoinButton text="　　今すぐ入会　　>" />
+    </div>
+  </div>
+</div>
+<!-- <div class="box">
   <div class="price">
     <div class="border">
       <div class="overlap">
@@ -173,7 +186,7 @@ import button from '~/assets/button.svg';
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <style>
   :root {
