@@ -1,14 +1,21 @@
 import useEmblaCarousel from 'embla-carousel-react'
 import { DotButton, useDotButton } from './carouseldots'
+import type { EmblaOptionsType } from 'node_modules/embla-carousel/components/Options'
 
 export function Carousel(props: { children: React.ReactNode }) {
-    const [emblaRef, emblaApi] = useEmblaCarousel()
+    const options: Partial<EmblaOptionsType> = {
+        dragThreshold: 100,
+        duration: 20,
+        loop: true,
+    }
+    const [emblaRef, emblaApi] = useEmblaCarousel(options);
+
     const { selectedIndex, scrollSnaps, onDotButtonClick } =
         useDotButton(emblaApi)
 
     return (
-        <section>
-            <div className="embla" ref={emblaRef}>
+        <section className="embla">
+            <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container">
                     {props.children}
                 </div>
