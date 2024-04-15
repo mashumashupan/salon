@@ -1,12 +1,11 @@
+import React from "react";
 import useEmblaCarousel from 'embla-carousel-react'
 import { DotButton, useDotButton } from './carouseldots'
 import type { EmblaOptionsType } from 'node_modules/embla-carousel/components/Options'
 
-export function Carousel(props: { children: React.ReactNode }) {
+export function Carousel(props: { images: ImageMetadata[] }) {
     const options: Partial<EmblaOptionsType> = {
-        dragThreshold: 100,
-        duration: 20,
-        loop: true,
+        dragThreshold: 5,
     }
     const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
@@ -17,7 +16,11 @@ export function Carousel(props: { children: React.ReactNode }) {
         <section className="embla">
             <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container">
-                    {props.children}
+                    {props.images.map((i, index) => (
+                        <div className="embla__slide">
+                            <img {...i} />
+                        </div>
+                    ))}
                 </div>
             </div>
             <div className="embla__controls">

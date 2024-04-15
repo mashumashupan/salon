@@ -50,15 +50,7 @@ const slides = [live, meetup, korean, column, slack, club];
 >
   <Image class="bg w-full" src={bg} alt="" />
   <div class="absolute -mt-[40rem] block overflow-hidden">
-    <Carousel client:load>
-      {
-        slides.map((slide, index) => (
-          <div class="embla__slide">
-            <Image src={slide} alt="" />
-          </div>
-        ))
-      }
-    </Carousel>
+    <Carousel client:load images={slides} />
   </div>
   <div class="default-button z-30 -mt-16">
     <div class="overlap-9">
