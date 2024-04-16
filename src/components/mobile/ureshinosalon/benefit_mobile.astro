@@ -14,11 +14,17 @@ import watercolor from '~/assets/watercolor1_1.png';
 
 import button from '~/assets/button.svg';
 import JoinButton from '~/components/common/joinButton.astro';
-import Title from './benefit/title.astro';
+// import Title from './benefit/title.astro';
 import Circle from './benefit/circle.astro';
 import Benefit from './benefit/benefit.astro';
 import bg2 from '~/assets/benefit/benefits_fake.png';
+
+import Title from '~/components/common/title.astro';
 ---
+
+<!-- <div class="pt-5">
+  <Title title_small="" title1="うれしのサロンで" title2="　　得られること" />
+</div> -->
 
 <div
   id="benefit"
@@ -28,7 +34,7 @@ import bg2 from '~/assets/benefit/benefits_fake.png';
     <Image class="z-20 w-full mix-blend-normal" src={bg2} alt="" />
     <div class="default-button">
       <div class="overlap-9 -mt-[4.4rem]">
-        <JoinButton text="　　今すぐ入会　　>" />
+        <JoinButton microcopy1="先着200名限定" microcopy2="＼第2期メンバー募集中！／" text="　　今すぐ入会　　>" />
       </div>
     </div>
   </div>
