@@ -52,7 +52,7 @@ const slides = [live, meetup, korean, column, slack, club];
 >
   <Image class="bg w-full" src={bg2} alt="" />
   <div class="absolute -mt-[40rem] block overflow-hidden">
-    <!-- <Carousel client:load>
+    <Carousel client:load>
       {
         slides.map((slide, index) => (
           <div class="embla__slide">
@@ -60,8 +60,7 @@ const slides = [live, meetup, korean, column, slack, club];
           </div>
         ))
       }
-    </Carousel> -->
-    <Image class="mt-[4rem]" src={all} alt="" />
+    </Carousel>
   </div>
   <div class="default-button z-30 -mt-16">
     <div class="overlap-9">
