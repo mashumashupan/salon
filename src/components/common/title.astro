@@ -18,11 +18,12 @@ const { title_small, title1, title2 } = Astro.props;
 <div class="title">
     <div class="overlap-2">
       <div class="title-2">
-        <div class="rectangle"></div>
         <div class="text-wrapper-3">{title_small}</div>
         <div class="text-wrapper">{title1}</div>
       </div>
-      <div class="text-wrapper-2">{title2}</div>
+      {title2 &&
+        <div class="text-wrapper-2">{title2}</div>
+      }
     </div>
 </div>
 
