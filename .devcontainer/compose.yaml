@@ -3,9 +3,8 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-      volumes:
-        - ../../:/workspace:cached
-        - $HOME/.ssh:/home/vscode/.ssh:cached
-      ports:
-        - "3000:3000"
-      command: sleep infinity
+    volumes:
+      - ../../:/workspace:cached
+    ports:
+      - "3000:3000"
+    command: sleep infinity
