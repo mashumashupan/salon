@@ -1,25 +1,26 @@
 ---
 import { Image } from 'astro:assets';
 
-import layer from '~/assets/layer/layer_startyour.png';
-import startyourimage from '~/assets/startyour/startyourimage.png';
-import bg from '~/assets/startyour/yourjourney_fake.png';
+import layer from '~/assets/layer/layer_yourstory.png';
+import yourstoryimage from '~/assets/yourstory/yourstoryimage.png';
+// import bg from '~/assets/yourstory/yourstory_fake.png';
 import JoinButton from '~/components/common/joinButton.astro';
+import Title from '~/components/common/title.astro';
 ---
 
 <div
   id="yourjourney"
   class="-mt-96 flex min-h-[1700px] flex-col items-center justify-center overflow-hidden"
 >
-  <Image class="bg w-full" src={bg} alt="" />
+  <!-- <Image class="bg w-full" src={bg} alt="" /> -->
   <div class="default-button -mt-16">
     <div class="overlap-9">
-      <JoinButton text="　　今すぐ入会　　>" />
+      <JoinButton microcopy1="2024年4月21日(日)まで" microcopy2="＼第2期メンバー募集中！／" text="　　今すぐ入会　　>" />
     </div>
   </div>
 </div>
-<!-- <div class="box">
-  <div class="your-journey">
+<div class="box">
+  <div class="yourstory">
     <div class="overlap">
       <Image 
         class="absolute w-full mix-blend-lighten md:top-[280px]"
@@ -29,9 +30,9 @@ import JoinButton from '~/components/common/joinButton.astro';
       <div class="pic"><div class="gradient"></div></div>
       <div class="title">
         <div class="header-mark"></div>
-        <div class="text-wrapper">My Journey</div>
+        <Title title_small="次はあなたのストーリーを" title1="" title2="描いてみませんか？" />
       </div>
-      <Image class="startyourimage" src={startyourimage} alt="" />
+      <Image class="yourstoryimage" src={yourstoryimage} alt="" />
       <div class="rectangle"></div>
       <div class="div"></div>
       <div class="text">
@@ -57,7 +58,7 @@ import JoinButton from '~/components/common/joinButton.astro';
       </div>
     </div>
   </div>
-</div> -->
+</div>
 
 <style>
   :root {
@@ -150,7 +151,7 @@ import JoinButton from '~/components/common/joinButton.astro';
     /* height: 669px; */
   }
 
-  .box .your-journey {
+  .box .yourstory {
     width: 360px;
     /* height: 669px; */
     top: 0;

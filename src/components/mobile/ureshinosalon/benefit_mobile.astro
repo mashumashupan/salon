@@ -6,71 +6,76 @@ import bg from '~/assets/benefit/bg.png';
 import benefit1 from '~/assets/benefit/benefit1.png';
 import benefit2 from '~/assets/benefit/benefit2.png';
 import benefit3 from '~/assets/benefit/benefit3.png';
-import star from '~/assets/benefit/benefit_star.png';
-import diamond from '~/assets/benefit/diamond.svg';
-import highlight from '~/assets/benefit/highlight.png';
 
-import watercolor from '~/assets/watercolor1_1.png';
+// import highlight from '~/assets/benefit/highlight.png';
 
-import button from '~/assets/button.svg';
 import JoinButton from '~/components/common/joinButton.astro';
-import Title from './benefit/title.astro';
+// import Title from './benefit/title.astro';
 import Circle from './benefit/circle.astro';
 import Benefit from './benefit/benefit.astro';
-import bg2 from '~/assets/benefit/benefits_fake.png';
+// import bg2 from '~/assets/benefit/benefits_fake.png';
+
+import Title from '~/components/common/title.astro';
 ---
+
+<div class="pt-5">
+  <Title title_small="" title1="うれしのサロンで" title2="　　得られること" />
+</div>
+
+<!-- Features -->
+
+<section class={`section-sm`}>
+  <div class="container">
+    <div class="row items-center justify-between">
+      <div
+        class={`mb:md-0 mb-6 md:col-5`}
+      >
+      <Benefit
+        bg={benefit1}
+        number="01"
+        title="かわいく賢く生きるためのスキル"
+        // description=`うれしのちゃんのビジネスや
+        // 恋愛テク・美容情報をシェア♪`
+      >
+      </div>
+      <div class={`md:col-7 lg:col-6`}>
+        <h2 class="mb-4" >うれしのちゃんのビジネスや
+        恋愛テク・美容情報をシェア♪</h2>
+        <p class="mb-8 text-lg" />
+        <div>
+          <span class="">
+            ・ビジネスマインド</br>
+            ・韓国美容/整形情報</br>
+            ・ハイスペ恋愛/モテテク</br>
+            ・SNS/ブランディング
+            </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- /Features -->
 
 <div
   id="benefit"
   class="mt-10 flex min-h-[2540px] flex-col items-center justify-center overflow-hidden"
 >
   <div class="absolute w-full">
-    <Image class="z-20 w-full mix-blend-normal" src={bg2} alt="" />
+
+
+
     <div class="default-button">
       <div class="overlap-9 -mt-[4.4rem]">
-        <JoinButton text="　　今すぐ入会　　>" />
+        <JoinButton microcopy1="先着200名限定" microcopy2="＼第2期メンバー募集中！／" text="　　今すぐ入会　　>" />
       </div>
     </div>
   </div>
-  <!-- <div class="benefits absolute z-30 -mt-[103rem] flex w-full flex-col">
+  <div class="benefits absolute z-30 -mt-[103rem] flex w-full flex-col">
     <div class="title">
       <div class="header-mark"></div>
-      <div class="text-wrapper">うれしのサロンで得られること</div>
     </div>
-    <Benefit
-      bg={benefit1}
-      number="01"
-      title="かわいく賢く生きるためのスキル"
-      description=`うれしのちゃんのビジネスや
-      恋愛テク・美容情報をシェア♪`
-      texts={[
-        `ビジネス
-        マインド`,
-        `韓国美容
-        整形情報`,
-        `ハイスペ恋愛
-        モテテク`,
-        `SNS
-        ブランディング`,
-      ]}
-    >
-      <div class="mb-4 mt-12 flex flex-col">
-        <div class="">
-          <div class="mr-40">
-            <div class="text-wrapper-5">\ うれしの発信 /</div>
-          </div>
-          <p class="p text-center">
-            <span class="span">サロン限定</span>
-            <span class="text-wrapper-4">ライブ配信</span>
-            <span class="span">・</span>
-            <span class="text-wrapper-4">コラム</span>
-          </p>
-        </div>
-        <div class="absolute mt-3 flex w-full justify-center">
-          <Image class="brightness-200" src={highlight} alt="" />
-        </div>
-      </div>
-    </Benefit>
+
 
     <Benefit
       bg={benefit2}
@@ -78,20 +83,14 @@ import bg2 from '~/assets/benefit/benefits_fake.png';
       title="一緒に成長できる仲間と環境"
       description=`向上心のある女性たちが集まり
       高め合っていける場所！`
-      texts={[
-        `仕事・美容・恋愛`,
-        `モチベ
-        UP`,
-        `グローバルな
-        メンバー`,
-        `リアルな交流`,
-      ]}
     >
-      <div class="mb-4 mt-12 flex flex-col">
-      
-        <div class="absolute mt-3 flex w-full justify-center">
-          <Image class="brightness-200" src={highlight} alt="" />
-        </div>
+      <div>
+        <span class="">
+          ・情報交換ができる</br>
+          ・モチベがUPする</br>
+          ・人生の視野が広がる</br>
+          ・会って刺激をもらえる
+          </span>
       </div>
     </Benefit>
 
@@ -101,108 +100,16 @@ import bg2 from '~/assets/benefit/benefits_fake.png';
       title="ビジネスチャンスの拡大化"
       description=`様々な分野で活躍する女性がいるから
       選択肢や可能性が広がる！`
-      texts={[
-        `ビジネス
-        パートナー`,
-        `成功チャンス
-        拡大`,
-        `売上・
-        影響力UP`,
-        `協力して
-        SNS強化`,
-      ]}
     >
-      <div class="mb-4 mt-12 flex flex-col">
-        
-        <div class="absolute mt-3 flex w-full justify-center">
-          <Image class="brightness-200" src={highlight} alt="" />
-        </div>
+      <div>
+        <span class="">
+          ・ビジネスパートナー探し</br>
+          ・クライアントの紹介</br>
+          ・コラボで売上＆影響力UP</br>
+          ・協力してSNSアカウント強化
+          </span>
       </div>
-    </Benefit> -->
-
-  <!-- 入会メリット3 -->
-  <!-- <div class="benefit-3">
-      <div class="div-2">
-        <div class="rectangle-wrapper"><div class="rectangle-3"></div></div>
-        <div class="rectangle-4"></div>
-        <div class="group-2">
-          <Image class="div-2" src={benefit3} alt="" />
-          <div class="title-3">
-            <div class="text-wrapper">入会メリット</div>
-            <div class="frame"><div class="text-wrapper-9">03</div></div>
-          </div>
-          <div class="subtitle-2">
-            <div class="div-wrapper">
-              <div class="text-wrapper-3">ビジネスチャンスが<br />広がる！</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="overlap-6">
-        <div class="frame-9">
-          <div class="frame-2">
-            <div class="group">
-              <div class="overlap-group-7">
-                <div class="frame-10">
-                  <Image class="star" src={star} alt="" />
-                  <Image class="circle" src={circle} alt="" />
-                  <div class="text-wrapper-6">ビジネス<br />パートナー</div>
-                </div>
-              </div>
-            </div>
-            <div class="group">
-              <div class="overlap-7">
-                <div class="frame-6">
-                  <Image class="star" src={star} alt="" />
-                  <Image class="circle" src={circle} alt="" />
-                  <div class="text-wrapper-6">成功チャンス<br />拡大</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="frame-2">
-            <div class="group">
-              <div class="overlap-group-8">
-                <div class="frame-11">
-                  <Image class="star" src={star} alt="" />
-                  <Image class="circle" src={circle} alt="" />
-                  <div class="text-wrapper-6">売上<br />影響力 UP</div>
-                </div>
-              </div>
-            </div>
-            <div class="group">
-              <div class="overlap-8">
-                <div class="frame-3">
-                  <Image class="star" src={star} alt="" />
-                  <Image class="circle" src={circle} alt="" />
-                  <div class="text-wrapper-6">協力して<br />SNS強化</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="rectangle-5"></div>
-        <div class="default-button">
-          <div class="overlap-9">
-            <JoinButton text="　　今すぐ入会　　>" />
-          </div>
-        </div>
-        <div class="label">
-          <div class="overlap-10">
-            <div class="overlap-group-wrapper">
-              <div class="watercolor-wrapper">
-                <Image class="watercolor" src={watercolor} alt="" />
-              </div>
-            </div>
-            <p class="element">
-              <span class="text-wrapper-11">先着</span>
-              <span class="text-wrapper-12">200</span>
-              <span class="text-wrapper-11">名限定</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div> -->
+    </Benefit>      
 </div>
 
 <style>

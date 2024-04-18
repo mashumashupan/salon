@@ -12,17 +12,30 @@ import arrow_down from '~/assets/myjourney/arrow_down.svg';
 import pearl1 from '~/assets/pearl1.png';
 import pearl2 from '~/assets/pearl2.png';
 import flowers from '~/assets/myjourney/flowers.svg';
-import bg from '~/assets/myjourney/myjourney_fake.png';
+// import bg from '~/assets/myjourney/myjourney_fake.png';
 import Myjourney from '~/components/common/myjourney.astro';
+
+// import Title from '~/components/common/title.astro';
+import { Carousel } from '~/components/common/carousel.tsx';
+
+const OPTIONS = { direction: 'rtl' };
+const SLIDE_COUNT = 5;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+
+const slides = [myjourneyimage1, myjourneyimage2, myjourneyimage3, myjourneyimage4, myjourneyimage5, myjourneyimage6];
 ---
 
 <div
   id="myjourney"
   class="mt-6 flex min-h-[977px] flex-col items-center justify-center overflow-hidden"
 >
-  <Image class="bg w-full" src={bg} alt="" />
+  <!-- <Image class="bg w-full" src={bg} alt="" /> -->
+  <div class="absolute -mt-[40rem] block overflow-hidden">
+    <Carousel client:load images={slides} />
+  </div>
 </div>
-<!-- <div class="box">
+</div>
+<div class="box">
   <div class="my-journey">
     <div class="overlap-group">
       <div class="title">
@@ -61,7 +74,7 @@ import Myjourney from '~/components/common/myjourney.astro';
 
 <Image class="pearl-2" src={pearl1} alt="" />
 
--->
+
 
 <style>
   :root {

@@ -2,12 +2,12 @@
 import { Image } from 'astro:assets';
 
 import layer from '~/assets/layer/layer_mystory.png';
-import layer2 from '~/assets/layer/layer_mystory2.png';
+// import layer2 from '~/assets/layer/layer_mystory2.png';
 
-import arrow from '~/assets/mystory/arrow.svg';
+// import arrow from '~/assets/mystory/arrow.svg';
 import beforeimage from '~/assets/mystory/beforeiamge.png';
 import afterimage from '~/assets/mystory/afterimage.png';
-import mystoryimage from '~/assets/mystory/mystoryimage.png';
+// import mystoryimage from '~/assets/mystory/mystoryimage.png';
 import beforeafter from '~/assets/mystory/beforeafter.svg';
 
 import singleunderline from '~/assets/mystory/single_underline.png';
@@ -15,99 +15,73 @@ import underline1 from '~/assets/mystory/underline6.png';
 import underline2 from '~/assets/mystory/underline7.png';
 import underline3 from '~/assets/mystory/underline8.png';
 import underline4 from '~/assets/mystory/underline9.png';
-import bg from '~/assets/mystory/mystory_fake.png';
----
+// import bg from '~/assets/mystory/mystory_fake.png';
 
+import Title from '~/components/common/title.astro';
+---
 <div
   id="mystory"
-  class="-mt-44 flex min-h-[1471px] flex-col items-center justify-center overflow-hidden"
+  class="-mt-44 w-full flex min-h-[1471px] flex-col items-center justify-center overflow-hidden"
 >
-  <Image class="bg w-full" src={bg} alt="" />
-</div>
-<!-- <div class="box">
-  <div class="mystory">
-    <div class="overlap">
-      <Image 
-        class="absolute w-full mix-blend-lighten md:top-[280px]"
-        src={layer}
-        alt=""
-      />
-      <p class="element">
-        <span class="text-wrapper">ここで</span>
-        <span class="span">私の過去</span>
-        <span class="text-wrapper">をご紹介します。<br />上の写真は、私の</span>
-        <span class="span">5年前</span>
-        <span class="text-wrapper">です。</span>
-      </p>
-      <div class="title">
-        <div class="overlap-group">
-          <div class="frame">
-            <div class="header-mark-wrapper"><div class="header-mark"></div></div>
-            <div class="group">
-              <div class="div">
-                <div class="text-wrapper-2">私の</div>
-                <div class="text-wrapper-3">これまでの変化</div>
+  <Title title_small="うれしのちゃんの" title1="" title2="垢抜けストーリー" />
+  <!-- <Image class="bg w-full" src={layer} alt="" /> -->
+  <div class="overlap">
+    <!-- <Image 
+      class="absolute w-full mix-blend-lighten md:top-[280px]"
+      src={layer}
+      alt=""
+    /> -->
+    <p class="element">
+      <span class="text-wrapper">SNSや美容をきっかけに、<br />私の人生は大きく変わりました。</span>
+    </p>
+    <div class="before-after">
+      <div class="overlap-2">
+        <div class="frame-2">
+          <div class="card">
+            <div class="overlap-group-2">
+              <div class="frame-3">
+                <Image class="rectangle" src={beforeimage} alt="" />
               </div>
+              <div class="div-wrapper"><div class="text-wrapper-5">5年前</div></div>
             </div>
           </div>
-          <div class="group-2">
-            <div class="ellipse"></div>
-            <div class="ellipse-2"></div>
-          </div>
-        </div>
-      </div>
-      <div class="before-after">
-        <div class="overlap-2">
-          <Image class="play-arrow" src={beforeafter} alt="" />
-          <div class="frame-2">
-            <div class="card">
-              <div class="overlap-group-2">
-                <div class="frame-3">
-                  <Image class="rectangle" src={beforeimage} alt="" />
-                  <div class="text-wrapper-4">SNSや美容を始める前の私</div>
-                </div>
-                <div class="div-wrapper"><div class="text-wrapper-5">Before</div></div>
+          <!-- <Image class="play-arrow" src={beforeafter} alt="" /> -->
+          <div class="overlap-wrapper">
+            <div class="overlap-group-2">
+              <div class="frame-3">
+                <Image class="rectangle" src={afterimage} alt="" />
               </div>
-            </div>
-            <div class="overlap-wrapper">
-              <div class="overlap-group-2">
-                <div class="frame-3">
-                  <Image class="rectangle" src={afterimage} alt="" />
-                  <div class="text-wrapper-4">現在の私</div>
-                </div>
-                <div class="frame-4"><div class="text-wrapper-5">After</div></div>
-              </div>
+              <div class="frame-4"><div class="text-wrapper-5">現在</div></div>
             </div>
           </div>
         </div>
       </div>
-      <Image 
-        class="absolute w-full mix-blend-lighten md:top-[280px]"
-        src={layer2}
-        alt=""
-      />
-      <Image class="mrn" src={mystoryimage} alt="" />
-      <div class="text-wrapper-6">My Story</div>
-      <div class="text">
-        <div class="overlap-3">
-          <div class="rectangle-2"></div>
-          <p class="p">
-            <span class="text-wrapper-7">まるで別人</span> <span class="text-wrapper-8">ですよね？</span>
-          </p>
-          <div class="SNS-UP">
-            当時は、何をやっても上手くいきませんでした。<br /><br />しかし、SNSを始めて<br />自分磨きや美容を頑張るようになりました。<br /><br />環境と意識を変えたことで<br />出会う人やチャンスも変化しました。<br /><br />理想の王子様との出会い、収入UP、海外移住も実現しました!
-          </div>
-          <Image class="single-underline" src={singleunderline} alt="" />
-          <Image class="underline" src={underline1} alt="" />
-          <Image class="underline-2" src={underline2} alt="" />
-          <Image class="underline-3" src={underline3} alt="" />
-          <Image class="underline-4" src={underline4} alt="" />
+    </div>
+    <!-- <Image 
+      class="absolute w-full mix-blend-lighten md:top-[280px]"
+      src={layer2}
+      alt=""
+    /> -->
+    <!-- <Image class="mrn" src={mystoryimage} alt="" /> -->
+    <!-- <div class="text-wrapper-6">My Story</div> -->
+    <div class="text">
+      <div class="overlap-3">
+        <div class="rectangle-2"></div>
+        <p class="p">
+          <span class="text-wrapper-7">まるで別人</span> <span class="text-wrapper-8">ですよね？</span>
+        </p>
+        <div class="SNS-UP">
+          当時は、何をやっても上手くいきませんでした。<br /><br />しかし、SNSを始めて<br />自分磨きや美容を頑張るようになりました。<br /><br />環境と意識を変えたことで<br />出会う人やチャンスも変化しました。<br /><br />理想の王子様との出会い、収入UP、海外移住も実現しました!
         </div>
+        <Image class="single-underline" src={singleunderline} alt="" />
+        <Image class="underline" src={underline1} alt="" />
+        <Image class="underline-2" src={underline2} alt="" />
+        <Image class="underline-3" src={underline3} alt="" />
+        <Image class="underline-4" src={underline4} alt="" />
       </div>
-      <Image class="arrow" src={arrow} alt="" />
     </div>
   </div>
-</div> -->
+</div>
 <style>
   :root {
     --pale-pink: rgba(245, 236, 239, 1);
@@ -194,24 +168,19 @@ import bg from '~/assets/mystory/mystory_fake.png';
     --variable-collection-purple: rgba(158, 135, 190, 1);
   }
 
-  .box {
-    width: 361px;
-    /* height: 1471px; */
-  }
-
-  .box .mystory {
-    width: 365px;
+   .mystory {
+    /* width: 361px; */
     /* height: 1471px; */
     top: 0;
     left: 0;
   }
 
-  .box .overlap {
+   .overlap {
     width: 360px;
     /* height: 1471px; */
   }
 
-  .box .bg {
+   .bg {
     width: 360px;
     /* height: 727px; */
     top: 744px;
@@ -219,7 +188,7 @@ import bg from '~/assets/mystory/mystory_fake.png';
     object-fit: cover;
   }
 
-  .box .img {
+   .img {
     width: 359px;
     /* height: 744px; */
     top: 0;
@@ -227,7 +196,7 @@ import bg from '~/assets/mystory/mystory_fake.png';
     object-fit: cover;
   }
 
-  .box .element {
+   .element {
     top: 139px;
     left: 48px;
     font-family: 'Ryo Gothic PlusN-Regular', Helvetica;
@@ -239,7 +208,7 @@ import bg from '~/assets/mystory/mystory_fake.png';
     line-height: 22px;
   }
 
-  .box .text-wrapper {
+   .text-wrapper {
     color: #a1a1aa;
     letter-spacing: var(--mobile-body-letter-spacing);
     font-family: var(--mobile-body-font-family);
@@ -249,24 +218,24 @@ import bg from '~/assets/mystory/mystory_fake.png';
     font-size: var(--mobile-body-font-size);
   }
 
-  .box .span {
+  /*  .span {
     color: #d6a99f;
     font-size: 20px;
     letter-spacing: 0.52px;
-  }
+  } */
 
-  .box .title {
+   .title {
     width: 293px;
     /* height: 81px; */
     top: 35px;
     left: 34px;
   }
 
-  .box .overlap-group {
+   .overlap-group {
     /* height: 81px; */
   }
 
-  .box .frame {
+   .frame {
     gap: 5px;
     top: 0;
     left: 0;
@@ -274,7 +243,7 @@ import bg from '~/assets/mystory/mystory_fake.png';
     align-items: center;
   }
 
-  .box .header-mark-wrapper {
+   .header-mark-wrapper {
     justify-content: center;
     gap: 24px;
     flex: 0 0 auto;
@@ -282,7 +251,7 @@ import bg from '~/assets/mystory/mystory_fake.png';
     align-items: center;
   }
 
-  .box .header-mark {
+   .header-mark {
     width: 66px;
     /* height: 8px; */
     margin-left: -29px;
@@ -291,18 +260,18 @@ import bg from '~/assets/mystory/mystory_fake.png';
     transform: rotate(90deg);
   }
 
-  .box .group {
+   .group {
     width: 284px;
     /* height: 81px; */
     margin-right: -4px;
   }
 
-  .box .div {
+   .div {
     width: 280px;
     /* height: 81px; */
   }
 
-  .box .text-wrapper-2 {
+   .text-wrapper-2 {
     top: 0;
     left: 8px;
     font-family: 'Hina Mincho-Regular', Helvetica;
@@ -313,7 +282,7 @@ import bg from '~/assets/mystory/mystory_fake.png';
     line-height: normal;
   }
 
-  .box .text-wrapper-3 {
+   .text-wrapper-3 {
     top: 23px;
     left: 0;
     font-family: var(--mobile-h1-font-family);
@@ -325,14 +294,14 @@ import bg from '~/assets/mystory/mystory_fake.png';
     font-style: var(--mobile-h1-font-style);
   }
 
-  .box .group-2 {
+   .group-2 {
     width: 53px;
     /* height: 14px; */
     top: 15px;
     left: 226px;
   }
 
-  .box .ellipse {
+   .ellipse {
     left: 0;
     width: 14px;
     /* height: 14px; */
@@ -347,7 +316,7 @@ import bg from '~/assets/mystory/mystory_fake.png';
     );
   }
 
-  .box .ellipse-2 {
+   .ellipse-2 {
     left: 39px;
     width: 14px;
     /* height: 14px; */
@@ -362,43 +331,43 @@ import bg from '~/assets/mystory/mystory_fake.png';
     );
   }
 
-  .box .before-after {
+   .before-after {
     width: 258px;
     /* height: 580px; */
     top: 242px;
     left: 43px;
   }
 
-  .box .overlap-2 {
+   .overlap-2 {
     /* height: 580px; */
   }
 
-  .box .play-arrow {
+   .play-arrow {
     width: 56px;
     /* height: 56px; */
     top: 263px;
     left: 109px;
   }
 
-  .box .frame-2 {
-    flex-direction: column;
-    gap: 64px;
+   .frame-2 {
+    flex-direction: row;
+    /* gap: 64px; */
     top: 0;
     left: 0;
     display: inline-flex;
     align-items: center;
   }
 
-  .box .card {
+   .card {
     width: 258px;
     /* height: 258px; */
   }
 
-  .box .overlap-group-2 {
+   .overlap-group-2 {
     /* height: 258px; */
   }
 
-  .box .frame-3 {
+   .frame-3 {
     flex-direction: column;
     gap: 16px;
     padding: 10px;
@@ -411,13 +380,13 @@ import bg from '~/assets/mystory/mystory_fake.png';
     align-items: center;
   }
 
-  .box .rectangle {
+   .rectangle {
     width: 200px;
     /* height: 200px; */
     object-fit: cover;
   }
 
-  .box .text-wrapper-4 {
+   .text-wrapper-4 {
     width: fit-content;
     font-family: var(--mobile-body-font-family);
     font-weight: var(--mobile-body-font-weight);
@@ -429,11 +398,12 @@ import bg from '~/assets/mystory/mystory_fake.png';
     font-style: var(--mobile-body-font-style);
   }
 
-  .box .div-wrapper {
+   .div-wrapper {
+    position: relative;
+    top: -20rem;
     justify-content: center;
     gap: 10px;
     padding: 10px 16px;
-    top: 14px;
     left: 0;
     background-color: #e5d5cbf7;
     border-radius: 2px;
@@ -442,7 +412,7 @@ import bg from '~/assets/mystory/mystory_fake.png';
     align-items: center;
   }
 
-  .box .text-wrapper-5 {
+   .text-wrapper-5 {
     width: fit-content;
     margin-top: -1px;
     font-family: 'Montserrat-Bold', Helvetica;
@@ -454,18 +424,19 @@ import bg from '~/assets/mystory/mystory_fake.png';
     white-space: nowrap;
   }
 
-  .box .overlap-wrapper {
+   .overlap-wrapper {
     width: 244px;
     /* height: 258px; */
   }
 
-  .box .frame-4 {
+   .frame-4 {
+    position: relative;
+    top: -20rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     padding: 10px 16px;
-    top: 14px;
     left: 0;
     background-color: var(--variable-collection-pink);
     border-radius: 2px;
@@ -473,14 +444,14 @@ import bg from '~/assets/mystory/mystory_fake.png';
     opacity: 0.85;
   }
 
-  .box .mrn {
+   .mrn {
     width: 360px;
     /* height: 440px; */
     top: 790px;
     left: 0;
   }
 
-  .box .text-wrapper-6 {
+   .text-wrapper-6 {
     /* height: 149px; */
     top: 923px;
     left: 27px;
@@ -493,20 +464,20 @@ import bg from '~/assets/mystory/mystory_fake.png';
     line-height: normal;
   }
 
-  .box .text {
+   .text {
     width: 340px;
     /* height: 369px; */
     top: 1082px;
     left: 12px;
   }
 
-  .box .overlap-3 {
+   .overlap-3 {
     width: 336px;
     /* height: 369px; */
     border-radius: 8px;
   }
 
-  .box .rectangle-2 {
+   .rectangle-2 {
     width: 336px;
     /* height: 369px; */
     top: 0;
@@ -517,7 +488,7 @@ import bg from '~/assets/mystory/mystory_fake.png';
     opacity: 0.73;
   }
 
-  .box .p {
+   .p {
     top: 10px;
     left: 31px;
     font-family: 'Hina Mincho-Regular', Helvetica;
@@ -528,7 +499,7 @@ import bg from '~/assets/mystory/mystory_fake.png';
     line-height: 30px;
   }
 
-  .box .text-wrapper-7 {
+   .text-wrapper-7 {
     letter-spacing: var(--h2-j-letter-spacing);
     line-height: var(--h2-j-line-height);
     font-family: var(--h2-j-font-family);
@@ -537,12 +508,12 @@ import bg from '~/assets/mystory/mystory_fake.png';
     font-size: var(--h2-j-font-size);
   }
 
-  .box .text-wrapper-8 {
+   .text-wrapper-8 {
     font-size: 20px;
     letter-spacing: 0.48px;
   }
 
-  .box .SNS-UP {
+   .SNS-UP {
     width: 305px;
     top: 83px;
     left: 16px;
@@ -555,7 +526,7 @@ import bg from '~/assets/mystory/mystory_fake.png';
     font-style: var(--mobile-body-font-style);
   }
 
-  .box .single-underline {
+   .single-underline {
     width: 185px;
     /* height: 71px; */
     top: 39px;
@@ -563,7 +534,7 @@ import bg from '~/assets/mystory/mystory_fake.png';
     object-fit: cover;
   }
 
-  .box .underline {
+   .underline {
     width: 127px;
     top: 186px;
     left: 16px;
@@ -571,7 +542,7 @@ import bg from '~/assets/mystory/mystory_fake.png';
     object-fit: cover;
   }
 
-  .box .underline-2 {
+   .underline-2 {
     width: 178px;
     top: 276px;
     left: 15px;
@@ -579,7 +550,7 @@ import bg from '~/assets/mystory/mystory_fake.png';
     object-fit: cover;
   }
 
-  .box .underline-3 {
+   .underline-3 {
     width: 113px;
     top: 320px;
     left: 16px;
@@ -587,7 +558,7 @@ import bg from '~/assets/mystory/mystory_fake.png';
     object-fit: cover;
   }
 
-  .box .underline-4 {
+   .underline-4 {
     width: 74px;
     top: 320px;
     left: 231px;
@@ -595,7 +566,7 @@ import bg from '~/assets/mystory/mystory_fake.png';
     object-fit: cover;
   }
 
-  .box .arrow {
+   .arrow {
     width: 59px;
     /* height: 69px; */
     top: 173px;

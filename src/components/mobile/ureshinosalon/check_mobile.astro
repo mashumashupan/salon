@@ -9,23 +9,26 @@ import checkline1 from '~/assets/check/checkline1.svg';
 import checkline2 from '~/assets/check/checkline2.svg';
 import dots from '~/assets/check/dots.svg';
 import Checklist from '~/components/common/checklist.astro';
+
+import Title from '~/components/common/title.astro';
 ---
 
 <div class="box" id="check">
   <div
     class="check mt-[100px] flex min-h-[690px] w-full flex-col items-center justify-center overflow-hidden"
   >
+    <Title title_small="" title1="こんな人に" title2="　おすすめ" />
     <Image class="absolute w-full" src={layer} alt="" />
     <div class="overlap z-10">
       <div class="bg">
         <div class="overlap-group">
-          <Image class="element" src={dots} alt="" />
+          <!-- <Image class="element" src={dots} alt="" /> -->
           <div class="div"></div>
         </div>
       </div>
       <div class="title">
         <div class="overlap-2">
-          <div class="title-2">
+          <!-- <div class="title-2">
             <div class="rectangle"></div>
             <div class="text-wrapper">こんな人に</div>
           </div>
@@ -35,7 +38,7 @@ import Checklist from '~/components/common/checklist.astro';
             <div class="ellipse-2"></div>
             <div class="ellipse-3"></div>
             <div class="ellipse-4"></div>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="subtitle">

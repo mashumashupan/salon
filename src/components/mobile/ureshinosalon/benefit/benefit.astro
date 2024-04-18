@@ -9,10 +9,9 @@ interface Props {
     number: string;
     title: string;
     description: string;
-    texts: string[];
 }
 
-const { bg, number, title, texts, description } = Astro.props;
+const { bg, number, title, description } = Astro.props;
 const descriptionHtml = breakLine(description);
 ---
 
@@ -32,9 +31,6 @@ const descriptionHtml = breakLine(description);
         </div>
     </div>
     <slot />
-    <div class="grid grid-cols-2 justify-items-center">
-        {texts.map((text) => <Circle text={text} />)}
-    </div>
 </div>
 
 <style>

@@ -5,20 +5,31 @@ import priceimage from '~/assets/priceimage.png';
 import diamond from '~/assets/diamond_purple.svg';
 import watercolor1_1 from '~/assets/watercolor1_1.png';
 import button from '~/assets/button.svg';
-import bg from '~/assets/price/price_fake.png';
+
 import JoinButton from '~/components/common/joinButton.astro';
+import Title from '~/components/common/title.astro';
 ---
 
 <div
   id="price"
   class="-mt-28 flex min-h-[1200px] flex-col items-center justify-center overflow-hidden"
 >
-  <Image class="bg h-full w-full" src={bg} alt="" />
+  <Title title_small="" title1="会費のご案内" title2="" />
+  <Title title_small="月会費" title1="3,480円" title2="" />
+  <p class="element">
+    <span class="text-wrapper-12">・月払い</br>・クレジットカード（Visa、Mastercardのみ）</br>・毎月同日に自動カード決済となります。</span>
+  </p>
   <div class="default-button absolute mt-[43rem]">
     <div class="overlap-9">
       <JoinButton text="　　今すぐ入会　　>" />
     </div>
   </div>
+  <p class="element">
+    <span class="text-wrapper-12">次回の募集時期は未定です。</span>
+  </p>
+  <p class="element">
+    <span class="text-wrapper-12">メンバー同士の交流を深め</br>質の高いサロンにしたいため</br>人数限定・期間限定の募集となります。</span>
+  </p>
 </div>
 <!-- <div class="box">
   <div class="price">
@@ -846,6 +857,16 @@ import JoinButton from '~/components/common/joinButton.astro';
     font-weight: var(--small-text-j-font-weight);
     line-height: var(--small-text-j-line-height);
     font-size: var(--small-text-j-font-size);
+  }
+
+  .text-wrapper-12 {
+    color: #a1a1aa;
+    letter-spacing: var(--mobile-body-letter-spacing);
+    font-family: var(--mobile-body-font-family);
+    font-style: var(--mobile-body-font-style);
+    font-weight: var(--mobile-body-font-weight);
+    line-height: var(--mobile-body-line-height);
+    font-size: var(--mobile-body-font-size);
   }
 
   .box .white-border {
