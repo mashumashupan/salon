@@ -7,7 +7,7 @@ interface Props {
 const { title, number } = Astro.props;
 ---
 
-<div class="title ml-2">
+<div class="title ml-2 gap-1">
     <div class="text-wrapper">{title}</div>
     <div class="frame"><div class="text-wrapper-2">{number}</div></div>
 </div>
@@ -25,7 +25,7 @@ const { title, number } = Astro.props;
         font-family: var(--mobile-h1-font-family);
         font-weight: var(--mobile-h1-font-weight);
         color: var(--variable-collection-white);
-        font-size: var(--mobile-h1-font-size);
+        font-size: 2.2rem;
         letter-spacing: var(--mobile-h1-letter-spacing);
         line-height: var(--mobile-h1-line-height);
         font-style: var(--mobile-h1-font-style);

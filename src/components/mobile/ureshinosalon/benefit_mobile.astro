@@ -18,234 +18,205 @@ import Benefit from './benefit/benefit.astro';
 import Title from '~/components/common/title.astro';
 ---
 
-<div class="pt-5">
-  <Title title_small="" title1="うれしのサロンで" title2="　　得られること" />
-</div>
-
-<!-- Features -->
-
-<section class={`section-sm`}>
-  <div class="container">
-    <div class="row items-center justify-between">
-      <div
-        class={`mb:md-0 mb-6 md:col-5`}
-      >
-      <Benefit
-        bg={benefit1}
-        number="01"
-        title="かわいく賢く生きるためのスキル"
-        // description=`うれしのちゃんのビジネスや
-        // 恋愛テク・美容情報をシェア♪`
-      >
-      </div>
+<div
+  id="benefit"
+  class="relative flex min-h-max flex-col items-center justify-center overflow-hidden"
+>
+  <div class="pt-5">
+    <Title title_small="" title1="うれしのサロンで" title2="　　得られること" />
+  </div>
+  <Benefit
+    bg={benefit1}
+    number="01"
+    title="かわいく賢く生きるためのスキル"
+    description=`うれしのちゃんのビジネスや
+    恋愛テク・美容情報をシェア♪`
+  >
+    <div class={`mb:md-0 mb-6 md:col-5`}>
       <div class={`md:col-7 lg:col-6`}>
-        <h2 class="mb-4" >うれしのちゃんのビジネスや
-        恋愛テク・美容情報をシェア♪</h2>
-        <p class="mb-8 text-lg" />
-        <div>
-          <span class="">
-            ・ビジネスマインド</br>
-            ・韓国美容/整形情報</br>
-            ・ハイスペ恋愛/モテテク</br>
-            ・SNS/ブランディング
-            </span>
+        <h2 class="mb-4">
+          うれしのちゃんのビジネスや 恋愛テク・美容情報をシェア♪
+        </h2>
+        <div class="flex flex-col">
+          <span>・ビジネスマインド</span>
+          <span>・韓国美容/整形情報</span>
+          <span>・ハイスペ恋愛/モテテク</span>
+          <span>・SNS/ブランディング</span>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- /Features -->
-
-<div
-  id="benefit"
-  class="mt-10 flex min-h-[2540px] flex-col items-center justify-center overflow-hidden"
->
-  <div class="absolute w-full">
-
-
-
-    <div class="default-button">
-      <div class="overlap-9 -mt-[4.4rem]">
-        <JoinButton microcopy1="先着200名限定" microcopy2="＼第2期メンバー募集中！／" text="　　今すぐ入会　　>" />
-      </div>
-    </div>
-  </div>
-  <div class="benefits absolute z-30 -mt-[103rem] flex w-full flex-col">
-    <div class="title">
-      <div class="header-mark"></div>
-    </div>
-
-
-    <Benefit
-      bg={benefit2}
-      number="02"
-      title="一緒に成長できる仲間と環境"
-      description=`向上心のある女性たちが集まり
+  </Benefit>
+  <Benefit
+    bg={benefit2}
+    number="02"
+    title="一緒に成長できる仲間と環境"
+    description=`向上心のある女性たちが集まり
       高め合っていける場所！`
-    >
-      <div>
-        <span class="">
-          ・情報交換ができる</br>
-          ・モチベがUPする</br>
-          ・人生の視野が広がる</br>
-          ・会って刺激をもらえる
-          </span>
-      </div>
-    </Benefit>
+  >
+    <div class="flex flex-col">
+      <span>・情報交換ができる</span>
+      <span>・モチベがUPする</span>
+      <span>・人生の視野が広がる</span>
+      <span>・会って刺激をもらえる</span>
+    </div>
+  </Benefit>
+  <Benefit
+    bg={benefit3}
+    number="03"
+    title="ビジネスチャンスの拡大化"
+    description=`様々な分野で活躍する女性がいるから
+        選択肢や可能性が広がる！`
+  >
+    <div class="flex flex-col">
+      <span>・ビジネスパートナー探し</span>
+      <span>・クライアントの紹介</span>
+      <span>・コラボで売上＆影響力UP</span>
+      <span>・協力してSNSアカウント強化</span>
+    </div>
+  </Benefit>
 
-    <Benefit
-      bg={benefit3}
-      number="03"
-      title="ビジネスチャンスの拡大化"
-      description=`様々な分野で活躍する女性がいるから
-      選択肢や可能性が広がる！`
-    >
-      <div>
-        <span class="">
-          ・ビジネスパートナー探し</br>
-          ・クライアントの紹介</br>
-          ・コラボで売上＆影響力UP</br>
-          ・協力してSNSアカウント強化
-          </span>
+  <div class="w-full">
+    <div class="default-button">
+      <div class="overlap-9">
+        <JoinButton
+          microcopy1="先着200名限定"
+          microcopy2="＼第2期メンバー募集中！／"
+          text="　　今すぐ入会　　>"
+        />
       </div>
-    </Benefit>      
+    </div>
+  </div>
+
+  <style>
+    :root {
+      --pale-pink: rgba(245, 236, 239, 1);
+      --neutral: rgba(250, 250, 249, 1);
+      --lightest-grey: rgba(228, 228, 231, 1);
+      --light-grey: rgba(161, 161, 170, 1);
+      --grey: rgba(113, 113, 122, 1);
+      --dark-grey: rgba(82, 82, 91, 1);
+      --black: rgba(39, 39, 42, 1);
+      --mobile-h1-font-family: 'Hina Mincho', Helvetica;
+      --mobile-h1-font-weight: 400;
+      --mobile-h1-font-size: 40px;
+      --mobile-h1-letter-spacing: 0px;
+      --mobile-h1-line-height: normal;
+      --mobile-h1-font-style: normal;
+      --mobile-h2-font-family: 'Hina Mincho', Helvetica;
+      --mobile-h2-font-weight: 400;
+      --mobile-h2-font-size: 24px;
+      --mobile-h2-letter-spacing: 2.88px;
+      --mobile-h2-line-height: 144.9303150177002%;
+      --mobile-h2-font-style: normal;
+      --mobile-body-font-family: 'Ryo Gothic PlusN', Helvetica;
+      --mobile-body-font-weight: 400;
+      --mobile-body-font-size: 16px;
+      --mobile-body-letter-spacing: 2.08px;
+      --mobile-body-line-height: 22px;
+      --mobile-body-font-style: normal;
+      --small-title-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+      --small-title-j-font-weight: 400;
+      --small-title-j-font-size: 20px;
+      --small-title-j-letter-spacing: 0px;
+      --small-title-j-line-height: normal;
+      --small-title-j-font-style: normal;
+      --small-text-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+      --small-text-j-font-weight: 400;
+      --small-text-j-font-size: 14px;
+      --small-text-j-letter-spacing: -0.42px;
+      --small-text-j-line-height: normal;
+      --small-text-j-font-style: normal;
+      --script-font-family: 'Charlotte', Helvetica;
+      --script-font-weight: 400;
+      --script-font-size: 20px;
+      --script-letter-spacing: 0px;
+      --script-line-height: normal;
+      --script-font-style: normal;
+      --h1-e-font-family: 'Cinzel Decorative', Helvetica;
+      --h1-e-font-weight: 400;
+      --h1-e-font-size: 64px;
+      --h1-e-letter-spacing: 1.92px;
+      --h1-e-line-height: normal;
+      --h1-e-font-style: normal;
+      --h2-j-font-family: 'Hina Mincho', Helvetica;
+      --h2-j-font-weight: 400;
+      --h2-j-font-size: 30px;
+      --h2-j-letter-spacing: 3.6px;
+      --h2-j-line-height: 144.9303150177002%;
+      --h2-j-font-style: normal;
+      --body-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+      --body-j-font-weight: 400;
+      --body-j-font-size: 16px;
+      --body-j-letter-spacing: 2.56px;
+      --body-j-line-height: 24px;
+      --body-j-font-style: normal;
+      --montserrat-font-family: 'Montserrat', Helvetica;
+      --montserrat-font-weight: 500;
+      --montserrat-font-size: 14px;
+      --montserrat-letter-spacing: 0.10000000149011612px;
+      --montserrat-line-height: 20px;
+      --montserrat-font-style: normal;
+      --h1-j-font-family: 'Hina Mincho', Helvetica;
+      --h1-j-font-weight: 400;
+      --h1-j-font-size: 64px;
+      --h1-j-letter-spacing: 4.48px;
+      --h1-j-line-height: normal;
+      --h1-j-font-style: normal;
+      --pink-shadow: 3px 4px 5.800000190734863px 0px rgba(193, 157, 169, 1);
+      --drop: 0px 2px 4px 0px rgba(177, 165, 171, 0.8);
+      --variable-collection-beige: rgba(229, 213, 203, 1);
+      --variable-collection-pink: rgba(198, 151, 165, 1);
+      --variable-collection-white: rgba(255, 255, 255, 1);
+      --variable-collection-pale-pink: rgba(245, 236, 239, 1);
+      --variable-collection-salmon: rgba(215, 169, 159, 1);
+      --variable-collection-beige-gradient: rgba(255, 255, 255, 0);
+      --variable-collection-purple: rgba(158, 135, 190, 1);
+    }
+
+    .p {
+      top: 99px;
+      left: 14px;
+      font-family: var(--small-title-j-font-family);
+      font-weight: var(--small-title-j-font-weight);
+      color: transparent;
+      font-size: var(--small-title-j-font-size);
+      letter-spacing: var(--small-title-j-letter-spacing);
+      line-height: var(--small-title-j-line-height);
+      font-style: var(--small-title-j-font-style);
+    }
+
+    .span {
+      color: #71717a;
+      font-family: var(--small-title-j-font-family);
+      font-style: var(--small-title-j-font-style);
+      font-weight: var(--small-title-j-font-weight);
+      letter-spacing: var(--small-title-j-letter-spacing);
+      line-height: var(--small-title-j-line-height);
+      font-size: var(--small-title-j-font-size);
+    }
+
+    .text-wrapper-4 {
+      color: #c697a5;
+      font-family: var(--small-title-j-font-family);
+      font-style: var(--small-title-j-font-style);
+      font-weight: var(--small-title-j-font-weight);
+      letter-spacing: var(--small-title-j-letter-spacing);
+      line-height: var(--small-title-j-line-height);
+      font-size: var(--small-title-j-font-size);
+    }
+
+    .text-wrapper-5 {
+      top: 41px;
+      left: 8px;
+      transform: rotate(-2.09deg);
+      font-family: 'Ryo Gothic PlusN-B', Helvetica;
+      font-weight: 400;
+      color: var(--variable-collection-white);
+      font-size: 20px;
+      text-align: center;
+      letter-spacing: 3.2px;
+      line-height: 24px;
+      white-space: nowrap;
+    }
+  </style>
 </div>
-
-<style>
-  :root {
-    --pale-pink: rgba(245, 236, 239, 1);
-    --neutral: rgba(250, 250, 249, 1);
-    --lightest-grey: rgba(228, 228, 231, 1);
-    --light-grey: rgba(161, 161, 170, 1);
-    --grey: rgba(113, 113, 122, 1);
-    --dark-grey: rgba(82, 82, 91, 1);
-    --black: rgba(39, 39, 42, 1);
-    --mobile-h1-font-family: 'Hina Mincho', Helvetica;
-    --mobile-h1-font-weight: 400;
-    --mobile-h1-font-size: 40px;
-    --mobile-h1-letter-spacing: 0px;
-    --mobile-h1-line-height: normal;
-    --mobile-h1-font-style: normal;
-    --mobile-h2-font-family: 'Hina Mincho', Helvetica;
-    --mobile-h2-font-weight: 400;
-    --mobile-h2-font-size: 24px;
-    --mobile-h2-letter-spacing: 2.88px;
-    --mobile-h2-line-height: 144.9303150177002%;
-    --mobile-h2-font-style: normal;
-    --mobile-body-font-family: 'Ryo Gothic PlusN', Helvetica;
-    --mobile-body-font-weight: 400;
-    --mobile-body-font-size: 16px;
-    --mobile-body-letter-spacing: 2.08px;
-    --mobile-body-line-height: 22px;
-    --mobile-body-font-style: normal;
-    --small-title-j-font-family: 'Ryo Gothic PlusN', Helvetica;
-    --small-title-j-font-weight: 400;
-    --small-title-j-font-size: 20px;
-    --small-title-j-letter-spacing: 0px;
-    --small-title-j-line-height: normal;
-    --small-title-j-font-style: normal;
-    --small-text-j-font-family: 'Ryo Gothic PlusN', Helvetica;
-    --small-text-j-font-weight: 400;
-    --small-text-j-font-size: 14px;
-    --small-text-j-letter-spacing: -0.42px;
-    --small-text-j-line-height: normal;
-    --small-text-j-font-style: normal;
-    --script-font-family: 'Charlotte', Helvetica;
-    --script-font-weight: 400;
-    --script-font-size: 20px;
-    --script-letter-spacing: 0px;
-    --script-line-height: normal;
-    --script-font-style: normal;
-    --h1-e-font-family: 'Cinzel Decorative', Helvetica;
-    --h1-e-font-weight: 400;
-    --h1-e-font-size: 64px;
-    --h1-e-letter-spacing: 1.92px;
-    --h1-e-line-height: normal;
-    --h1-e-font-style: normal;
-    --h2-j-font-family: 'Hina Mincho', Helvetica;
-    --h2-j-font-weight: 400;
-    --h2-j-font-size: 30px;
-    --h2-j-letter-spacing: 3.6px;
-    --h2-j-line-height: 144.9303150177002%;
-    --h2-j-font-style: normal;
-    --body-j-font-family: 'Ryo Gothic PlusN', Helvetica;
-    --body-j-font-weight: 400;
-    --body-j-font-size: 16px;
-    --body-j-letter-spacing: 2.56px;
-    --body-j-line-height: 24px;
-    --body-j-font-style: normal;
-    --montserrat-font-family: 'Montserrat', Helvetica;
-    --montserrat-font-weight: 500;
-    --montserrat-font-size: 14px;
-    --montserrat-letter-spacing: 0.10000000149011612px;
-    --montserrat-line-height: 20px;
-    --montserrat-font-style: normal;
-    --h1-j-font-family: 'Hina Mincho', Helvetica;
-    --h1-j-font-weight: 400;
-    --h1-j-font-size: 64px;
-    --h1-j-letter-spacing: 4.48px;
-    --h1-j-line-height: normal;
-    --h1-j-font-style: normal;
-    --pink-shadow: 3px 4px 5.800000190734863px 0px rgba(193, 157, 169, 1);
-    --drop: 0px 2px 4px 0px rgba(177, 165, 171, 0.8);
-    --variable-collection-beige: rgba(229, 213, 203, 1);
-    --variable-collection-pink: rgba(198, 151, 165, 1);
-    --variable-collection-white: rgba(255, 255, 255, 1);
-    --variable-collection-pale-pink: rgba(245, 236, 239, 1);
-    --variable-collection-salmon: rgba(215, 169, 159, 1);
-    --variable-collection-beige-gradient: rgba(255, 255, 255, 0);
-    --variable-collection-purple: rgba(158, 135, 190, 1);
-  }
-
-  .overlap-group-2 {
-    width: 298px;
-    /* height: 167px; */
-  }
-
-  .p {
-    top: 99px;
-    left: 14px;
-    font-family: var(--small-title-j-font-family);
-    font-weight: var(--small-title-j-font-weight);
-    color: transparent;
-    font-size: var(--small-title-j-font-size);
-    letter-spacing: var(--small-title-j-letter-spacing);
-    line-height: var(--small-title-j-line-height);
-    font-style: var(--small-title-j-font-style);
-  }
-
-  .span {
-    color: #71717a;
-    font-family: var(--small-title-j-font-family);
-    font-style: var(--small-title-j-font-style);
-    font-weight: var(--small-title-j-font-weight);
-    letter-spacing: var(--small-title-j-letter-spacing);
-    line-height: var(--small-title-j-line-height);
-    font-size: var(--small-title-j-font-size);
-  }
-
-  .text-wrapper-4 {
-    color: #c697a5;
-    font-family: var(--small-title-j-font-family);
-    font-style: var(--small-title-j-font-style);
-    font-weight: var(--small-title-j-font-weight);
-    letter-spacing: var(--small-title-j-letter-spacing);
-    line-height: var(--small-title-j-line-height);
-    font-size: var(--small-title-j-font-size);
-  }
-
-  .text-wrapper-5 {
-    top: 41px;
-    left: 8px;
-    transform: rotate(-2.09deg);
-    font-family: 'Ryo Gothic PlusN-B', Helvetica;
-    font-weight: 400;
-    color: var(--variable-collection-white);
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 3.2px;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-</style>

@@ -90,11 +90,7 @@ import Title from '~/components/common/title.astro';
       </div>
     </div>
     <div class="check-image absolute z-50 mt-[38.5rem] max-w-md">
-      <Image
-        src={checkimage}
-        alt=""
-        class="mt-40 h-[400px] object-cover object-bottom"
-      />
+      <Image src={checkimage} alt="" class="rela trim h-[400px] object-cover" />
     </div>
     <div class="go-on-reading absolute z-[60] mt-[53rem]">
       <p class="element-2">
@@ -201,7 +197,7 @@ import Title from '~/components/common/title.astro';
   }
 
   .box .overlap {
-    height: 1033px;
+    height: 900px;
   }
 
   .box .bg {
@@ -456,5 +452,9 @@ import Title from '~/components/common/title.astro';
     font-weight: var(--mobile-body-font-weight);
     line-height: var(--mobile-body-line-height);
     font-size: var(--mobile-body-font-size);
+  }
+
+  .trim {
+    object-position: 50% 60%;
   }
 </style>
