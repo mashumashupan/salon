@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 // import {ImageMetadata} from "astro";
 
 import subtract from '~/assets/contents/Subtract.svg';
+import logo from '~/assets/testimonial/logo.png';
 
 // コンポーネントの引数を定義
 interface Props {
@@ -16,6 +17,9 @@ const { title_small, title1, title2 } = Astro.props;
 ---
 
 <div class="title">
+  <div class="ureshino-salon -mb-20 w-80">
+    <Image class="logo" src={logo} alt="" />
+  </div>
     <div class="overlap-2">
       <div class="title-2">
         <div class="text-wrapper-3">{title_small}</div>

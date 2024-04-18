@@ -22,12 +22,49 @@ import Title from '~/components/common/title.astro';
   <Title title_small="" title1="うれしのサロンで" title2="　　得られること" />
 </div>
 
+<!-- Features -->
+
+<section class={`section-sm`}>
+  <div class="container">
+    <div class="row items-center justify-between">
+      <div
+        class={`mb:md-0 mb-6 md:col-5`}
+      >
+      <Benefit
+        bg={benefit1}
+        number="01"
+        title="かわいく賢く生きるためのスキル"
+        // description=`うれしのちゃんのビジネスや
+        // 恋愛テク・美容情報をシェア♪`
+      >
+      </div>
+      <div class={`md:col-7 lg:col-6`}>
+        <h2 class="mb-4" >うれしのちゃんのビジネスや
+        恋愛テク・美容情報をシェア♪</h2>
+        <p class="mb-8 text-lg" />
+        <div>
+          <span class="">
+            ・ビジネスマインド</br>
+            ・韓国美容/整形情報</br>
+            ・ハイスペ恋愛/モテテク</br>
+            ・SNS/ブランディング
+            </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- /Features -->
+
 <div
   id="benefit"
   class="mt-10 flex min-h-[2540px] flex-col items-center justify-center overflow-hidden"
 >
   <div class="absolute w-full">
-    <!-- <Image class="z-20 w-full mix-blend-normal" src={bg2} alt="" /> -->
+
+
+
     <div class="default-button">
       <div class="overlap-9 -mt-[4.4rem]">
         <JoinButton microcopy1="先着200名限定" microcopy2="＼第2期メンバー募集中！／" text="　　今すぐ入会　　>" />
@@ -38,34 +75,7 @@ import Title from '~/components/common/title.astro';
     <div class="title">
       <div class="header-mark"></div>
     </div>
-    <Benefit
-      bg={benefit1}
-      number="01"
-      title="かわいく賢く生きるためのスキル"
-      description=`うれしのちゃんのビジネスや
-      恋愛テク・美容情報をシェア♪`
-    >
-      <!-- <div class="mb-4 mt-12 flex flex-col">
-        <div class="">
-          <div class="mr-40">
-            <div class="text-wrapper-5">\ うれしの発信 /</div>
-          </div>
-          <p class="p text-center">
-            <span class="span">サロン限定</span>
-            <span class="text-wrapper-4">ライブ配信</span>
-            <span class="span">・</span>
-            <span class="text-wrapper-4">コラム</span>
-          </p>
-      </div> -->
-      <div>
-        <span class="">
-          ・ビジネスマインド</br>
-          ・韓国美容/整形情報</br>
-          ・ハイスペ恋愛/モテテク</br>
-          ・SNS/ブランディング
-          </span>
-      </div>
-    </Benefit>
+
 
     <Benefit
       bg={benefit2}
@@ -84,7 +94,7 @@ import Title from '~/components/common/title.astro';
       </div>
     </Benefit>
 
-    <!-- <Benefit
+    <Benefit
       bg={benefit3}
       number="03"
       title="ビジネスチャンスの拡大化"
@@ -99,7 +109,7 @@ import Title from '~/components/common/title.astro';
           ・協力してSNSアカウント強化
           </span>
       </div>
-    </Benefit>       -->
+    </Benefit>      
 </div>
 
 <style>

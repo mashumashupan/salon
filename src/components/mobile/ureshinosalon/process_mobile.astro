@@ -2,487 +2,496 @@
 import { Image } from 'astro:assets';
 
 // import layer from '~/assets/layer/layer_process.png';
-import bg from '~/assets/process/process_fake.png';
+// import bg from '~/assets/process/process_fake.png';
 import JoinButton from '~/components/common/joinButton.astro';
+import Title from '~/components/common/title.astro';
 ---
 
 <div
   id="process"
   class="flex min-h-[1400px] flex-col items-center justify-center overflow-hidden"
 >
-  <Image class="bg w-full" src={bg} alt="" />
-  <div class="default-button absolute mt-[96rem]">
-    <div class="overlap-9">
-      <JoinButton microcopy1="" microcopy2="＼入会できるのは今だけ／" text="　　今すぐ入会　　>" />
-    </div>
-  </div>
-</div>
-<!-- <div class="box">
-  <div class="process">
-    <div class="overlap-group">
-      <div class="bg">
-        <div class="overlap-group">
-          <div class="div"></div>
-          <div class="bg-2"></div>
-          <Image 
-            class="absolute w-full mix-blend-lighten md:top-[280px]"
-            src={layer}
-            alt=""
-          />
-        </div>
-      </div>
-      <div class="title">
+  <Title title_small="" title1="入会プロセス" title2="" />
+
+<div class="box">
+  <div 
+    id="process"
+    class="flex min-h-[1400px] flex-col items-center justify-center overflow-hidden"
+  >
+    <div class="overlap">
+      <div class="bg"></div>
+      <div class="ellipse"></div>
+      <div class="div"></div>
+      <div class="ellipse-2"></div>
+      <div class="process-2">
         <div class="frame">
           <div class="header-mark"></div>
-          <div class="text-wrapper">入会プロセス</div>
         </div>
         <div class="text-wrapper-2">ご入会と活動開始までの流れ</div>
       </div>
-      <div class="flow">
-        <div class="element">
-          <div class="overlap-group-2">
-            <div class="frame-2">
-              <div class="div-wrapper"><div class="text-wrapper-3">お支払い</div></div>
-              <div class="frame-3">
-                <div class="text-wrapper-4">
-                  「今すぐ入会」ボタンより必要情報をご登録の上、決済をお願いいたします。
-                  <br />*入会以降はご登録のクレジットカードにて、月会費の場合は毎月同日、年会費の場合は毎年同日に決済されます。
-                  <br />《例》入会決済日4月15日・月会費の場合次月以降は15日に自動決済
+      <div class="steps">
+        <div class="overlap-group">
+          <div class="frame-2">
+            <div class="group">
+              <div class="overlap-group-2">
+                <div class="frame-4">
+                  <div class="text-wrapper-4">Step</div>
+                  <div class="text-wrapper-5">01</div>
+                </div>
+                <div class="frame-3">
+                  <span class="span">会費のお支払い</span>
+                  <div class="div-2">
+                    ＜今すぐ入会＞ボタンより必要情報をご登録の上、決済をお願いいたします。</br>*次月以降はご登録のクレジットカードにて毎月同日に決済されます。
+                  </div>
                 </div>
               </div>
             </div>
-            <p class="step"><span class="span">Step </span> <span class="text-wrapper-5">01</span></p>
-          </div>
-        </div>
-        <div class="overlap-wrapper">
-          <div class="overlap">
-            <div class="frame-4">
-              <div class="div-wrapper"><div class="text-wrapper-3">Slackご招待</div></div>
-              <div class="frame-3">
-                <p class="LINE-slack-slack-PC">
-                  <span class="text-wrapper-6">決済後、うれしのサロン</span>
-                  <a href="https://lin.ee/GfMc8mc" target="_blank" rel="noopener noreferrer"
-                    ><span class="text-wrapper-6">公式LINE</span></a
-                  >
-                  <span class="text-wrapper-6"
-                    >の画面に遷移し、Slackへの招待リンクが記載されたメッセージが届きます。Slackのアカウントをご用意の上、ご参加ください。
-                    <br>*PCでの決済の場合、表示されたQRコードをスマートフォンのLINEアプリにてスキャンしてください。
-                    <br>*決済後の遷移画面を閉じてしまった場合は、うれしのサロン公式LINEにてお名前とメールアドレスを明記の上「Slackの招待メッセージを再送してください」とご連絡ください。
-                  </span>
-                </p>
-              </div>
-            </div>
-            <p class="step"><span class="span">Step </span> <span class="text-wrapper-5">02</span></p>
-          </div>
-        </div>
-        <div class="overlap-group-wrapper">
-          <div class="overlap-2">
-            <div class="frame-2">
-              <div class="div-wrapper"><div class="text-wrapper-3">ガイダンス・自己紹介</div></div>
-              <div class="frame-3">
-                <div class="text-wrapper-4">
-                  Slackチャンネル「01_まず初めに-ガイダンス」をお読みいただき、自己紹介ルームで自己紹介をお願いいたします。
+            <div class="overlap-wrapper">
+              <div class="overlap-2">
+                <div class="frame-4">
+                  <div class="text-wrapper-4">Step</div>
+                  <div class="text-wrapper-5">02</div>
+                </div>
+                <div class="frame-5">
+                  <span class="span">Slackご招待</span>
+                  <p class="div-2">
+                    <div class="div-2">
+                      決済後、うれしのサロン公式LINEの画面に遷移し、Slackへの招待リンクが記載されたメッセージが届きます。Slackのアカウントをご用意の上、ご参加ください。
+                    </div>
+                  </p>
                 </div>
               </div>
             </div>
-            <p class="step"><span class="span">Step </span> <span class="text-wrapper-5">03</span></p>
-          </div>
-        </div>
-        <div class="overlap-group-wrapper">
-          <div class="overlap-2">
-            <div class="frame-2">
-              <div class="div-wrapper"><div class="text-wrapper-3">Instagramご招待</div></div>
-              <div class="frame-3">
-                <div class="text-wrapper-4">
-                  Slackで自己紹介が完了したら、送付されたサロンメンバー限定のInstagramアカウントへフォローリクエストをお願いいたします。
+            <div class="overlap-group-wrapper">
+              <div class="overlap-3">
+                <div class="frame-4">
+                  <div class="text-wrapper-4">Step</div>
+                  <div class="text-wrapper-5">03</div>
+                </div>
+                <div class="frame-5">
+                  <p class="p">
+                    <span class="span">ガイダンス・自己紹介</span>
+                  </p>
+                  <div class="div-2">
+                    Slackチャンネル「01_まず初めに-ガイダンス」をお読みいただき、自己紹介ルームで自己紹介をお願いいたします。
+                  </div>
                 </div>
               </div>
             </div>
-            <p class="step"><span class="span">Step </span> <span class="text-wrapper-5">04</span></p>
-          </div>
-        </div>
-        <div class="element-2">
-          <div class="overlap-3">
-            <div class="frame-2">
-              <div class="div-wrapper"><div class="text-wrapper-3">活動開始！</div></div>
-              <div class="frame-3">
-                <div class="text-wrapper-4">
-                  Instagramアカウントのフォロー承認後は、うれしのコラムやライブ配信(アーカイブあり)をお楽しみいただけます。Slackでの交流や、部活動・オフ会などのイベントにもぜひご参加ください。
+            <div class="overlap-group-wrapper">
+              <div class="overlap-3">
+                <div class="frame-4">
+                  <div class="text-wrapper-4">Step</div>
+                  <div class="text-wrapper-5">04</div>
+                </div>
+                <div class="frame-5">
+                  <span class="span">Instagramご招待</span>
+                  <div class="div-2">
+                    Slackで自己紹介が完了したら、送付されたサロンメンバー限定のInstagramアカウントへフォローリクエストをお願いいたします。
+                  </div>
                 </div>
               </div>
             </div>
-            <p class="step"><span class="span">Step </span> <span class="text-wrapper-5">05</span></p>
+            <div class="div-wrapper">
+              <div class="overlap-4">
+                <div class="frame-4">
+                  <div class="text-wrapper-4">Step</div>
+                  <div class="text-wrapper-5">05</div>
+                </div>
+                <div class="frame-5">
+                  <p class="p">
+                    <span class="span">活動開始！</span>
+                  </p>
+                  <div class="div-2">
+                    Instagramアカウントのフォロー承認後は、うれしのコラムやライブ配信(アーカイブあり)をお楽しみいただけます。Slackでの交流や、部活動・オフ会などのイベントにもぜひご参加ください。
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div> -->
+</div>
 
 <style>
   :root {
-    --pale-pink: rgba(245, 236, 239, 1);
-    --neutral: rgba(250, 250, 249, 1);
-    --lightest-grey: rgba(228, 228, 231, 1);
-    --light-grey: rgba(161, 161, 170, 1);
-    --grey: rgba(113, 113, 122, 1);
-    --dark-grey: rgba(82, 82, 91, 1);
-    --black: rgba(39, 39, 42, 1);
-    --mobile-h1-font-family: 'Hina Mincho', Helvetica;
-    --mobile-h1-font-weight: 400;
-    --mobile-h1-font-size: 40px;
-    --mobile-h1-letter-spacing: 0px;
-    --mobile-h1-line-height: normal;
-    --mobile-h1-font-style: normal;
-    --mobile-h2-font-family: 'Hina Mincho', Helvetica;
-    --mobile-h2-font-weight: 400;
-    --mobile-h2-font-size: 24px;
-    --mobile-h2-letter-spacing: 2.88px;
-    --mobile-h2-line-height: 144.9303150177002%;
-    --mobile-h2-font-style: normal;
-    --mobile-body-font-family: 'Ryo Gothic PlusN', Helvetica;
-    --mobile-body-font-weight: 400;
-    --mobile-body-font-size: 16px;
-    --mobile-body-letter-spacing: 2.08px;
-    --mobile-body-line-height: 22px;
-    --mobile-body-font-style: normal;
-    --small-title-j-font-family: 'Ryo Gothic PlusN', Helvetica;
-    --small-title-j-font-weight: 400;
-    --small-title-j-font-size: 20px;
-    --small-title-j-letter-spacing: 0px;
-    --small-title-j-line-height: normal;
-    --small-title-j-font-style: normal;
-    --small-text-j-font-family: 'Ryo Gothic PlusN', Helvetica;
-    --small-text-j-font-weight: 400;
-    --small-text-j-font-size: 14px;
-    --small-text-j-letter-spacing: -0.42px;
-    --small-text-j-line-height: normal;
-    --small-text-j-font-style: normal;
-    --script-font-family: 'Charlotte', Helvetica;
-    --script-font-weight: 400;
-    --script-font-size: 20px;
-    --script-letter-spacing: 0px;
-    --script-line-height: normal;
-    --script-font-style: normal;
-    --h1-e-font-family: 'Cinzel Decorative', Helvetica;
-    --h1-e-font-weight: 400;
-    --h1-e-font-size: 64px;
-    --h1-e-letter-spacing: 1.92px;
-    --h1-e-line-height: normal;
-    --h1-e-font-style: normal;
-    --h2-j-font-family: 'Hina Mincho', Helvetica;
-    --h2-j-font-weight: 400;
-    --h2-j-font-size: 30px;
-    --h2-j-letter-spacing: 3.6px;
-    --h2-j-line-height: 144.9303150177002%;
-    --h2-j-font-style: normal;
-    --body-j-font-family: 'Ryo Gothic PlusN', Helvetica;
-    --body-j-font-weight: 400;
-    --body-j-font-size: 16px;
-    --body-j-letter-spacing: 2.56px;
-    --body-j-line-height: 24px;
-    --body-j-font-style: normal;
-    --montserrat-font-family: 'Montserrat', Helvetica;
-    --montserrat-font-weight: 500;
-    --montserrat-font-size: 14px;
-    --montserrat-letter-spacing: 0.10000000149011612px;
-    --montserrat-line-height: 20px;
-    --montserrat-font-style: normal;
-    --h1-j-font-family: 'Hina Mincho', Helvetica;
-    --h1-j-font-weight: 400;
-    --h1-j-font-size: 64px;
-    --h1-j-letter-spacing: 4.48px;
-    --h1-j-line-height: normal;
-    --h1-j-font-style: normal;
-    --pink-shadow: 3px 4px 5.800000190734863px 0px rgba(193, 157, 169, 1);
-    --drop: 0px 2px 4px 0px rgba(177, 165, 171, 0.8);
-    --variable-collection-beige: rgba(229, 213, 203, 1);
-    --variable-collection-pink: rgba(198, 151, 165, 1);
-    --variable-collection-white: rgba(255, 255, 255, 1);
-    --variable-collection-pale-pink: rgba(245, 236, 239, 1);
-    --variable-collection-salmon: rgba(215, 169, 159, 1);
-    --variable-collection-beige-gradient: rgba(255, 255, 255, 0);
-    --variable-collection-purple: rgba(158, 135, 190, 1);
-  }
+  --pale-pink: rgba(245, 236, 239, 1);
+  --neutral: rgba(250, 250, 249, 1);
+  --lightest-grey: rgba(228, 228, 231, 1);
+  --light-grey: rgba(161, 161, 170, 1);
+  --grey: rgba(113, 113, 122, 1);
+  --dark-grey: rgba(82, 82, 91, 1);
+  --black: rgba(39, 39, 42, 1);
+  --script-font-family: "Charlotte", Helvetica;
+  --script-font-weight: 400;
+  --script-font-size: 20px;
+  --script-letter-spacing: 0px;
+  --script-line-height: normal;
+  --script-font-style: normal;
+  --h1-e-font-family: "Cinzel Decorative", Helvetica;
+  --h1-e-font-weight: 400;
+  --h1-e-font-size: 64px;
+  --h1-e-letter-spacing: 0px;
+  --h1-e-line-height: normal;
+  --h1-e-font-style: normal;
+  --h2-j-font-family: "HannariMincho", Helvetica;
+  --h2-j-font-weight: 400;
+  --h2-j-font-size: 28px;
+  --h2-j-letter-spacing: 0px;
+  --h2-j-line-height: normal;
+  --h2-j-font-style: normal;
+  --body-j-font-family: "Sawarabi Gothic", Helvetica;
+  --body-j-font-weight: 400;
+  --body-j-font-size: 16px;
+  --body-j-letter-spacing: 1.12px;
+  --body-j-line-height: 24px;
+  --body-j-font-style: normal;
+  --button-j-font-family: "Sawarabi Gothic", Helvetica;
+  --button-j-font-weight: 400;
+  --button-j-font-size: 14px;
+  --button-j-letter-spacing: 0.10000000149011612px;
+  --button-j-line-height: 20px;
+  --button-j-font-style: normal;
+  --small-text-j-font-family: "Sawarabi Gothic", Helvetica;
+  --small-text-j-font-weight: 400;
+  --small-text-j-font-size: 14px;
+  --small-text-j-letter-spacing: -0.42px;
+  --small-text-j-line-height: normal;
+  --small-text-j-font-style: normal;
+  --small-title-j-font-family: "Sawarabi Gothic", Helvetica;
+  --small-title-j-font-weight: 400;
+  --small-title-j-font-size: 20px;
+  --small-title-j-letter-spacing: 0px;
+  --small-title-j-line-height: normal;
+  --small-title-j-font-style: normal;
+  --list-j-font-family: "Sawarabi Gothic", Helvetica;
+  --list-j-font-weight: 400;
+  --list-j-font-size: 16px;
+  --list-j-letter-spacing: -1.44px;
+  --list-j-line-height: 30px;
+  --list-j-font-style: normal;
+  --montserrat-font-family: "Montserrat", Helvetica;
+  --montserrat-font-weight: 500;
+  --montserrat-font-size: 14px;
+  --montserrat-letter-spacing: 0.10000000149011612px;
+  --montserrat-line-height: 20px;
+  --montserrat-font-style: normal;
+  --drop: 0px 2px 4px 0px rgba(177, 165, 171, 0.8);
+  --variable-collection-beige: rgba(229, 213, 203, 1);
+  --variable-collection-pink: rgba(198, 151, 165, 1);
+  --variable-collection-white: rgba(255, 255, 255, 1);
+  --variable-collection-pale-pink: rgba(245, 236, 239, 1);
+  --variable-collection-salmon: rgba(215, 169, 159, 1);
+  --variable-collection-beige-gradient: rgba(255, 255, 255, 0);
+  --variable-collection-purple: rgba(158, 135, 190, 1);
+}
 
-  .box {
-    width: 360px;
-    /* height: 2089px; */
-  }
+.box {
+  /* width: 1580px; */
+  height: 2240px;
+}
 
-  .box .process {
-    width: 360px;
-    /* height: 2089px; */
-    top: 0;
-    left: 0;
-  }
+.box .process {
+  position: fixed;
+  /* width: 1580px; */
+  height: 2240px;
+  top: 0;
+  left: 0;
+}
 
-  .box .overlap-group {
-    /* height: 2089px; */
-  }
+.box .overlap {
+  height: 2240px;
+}
 
-  .box .bg {
-    /* height: 2089px; */
-    width: 360px;
-    top: 0;
-    left: 0;
-  }
+.box .bg {
+  /* width: 1280px; */
+  /* height: 2172px; */
+  top: 0;
+  left: 219px;
+  background-color: var(--neutral);
+}
 
-  .box .div {
-    /* height: 1940px; */
-    background-color: var(--variable-collection-pale-pink);
-    width: 360px;
-    top: 0;
-    left: 0;
-  }
+.box .ellipse {
+  /* width: 616px; */
+  /* height: 616px; */
+  top: 132px;
+  left: 20px;
+  border-radius: 308px;
+  position: absolute;
+  filter: blur(200px);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(245, 236, 239, 0.48) 50.5%,
+    rgba(221.48, 179.58, 193.4, 0.48) 100%
+  );
+  opacity: 0.9;
+}
 
-  .box .bg-2 {
-    /* height: 1940px; */
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(245, 236, 239, 0.73) 50.5%,
-      rgba(221.48, 179.58, 193.4, 0.73) 100%
-    );
-    opacity: 0.3;
-    width: 360px;
-    top: 0;
-    left: 0;
-  }
+.box .div {
+  /* width: 473px; */
+  /* height: 473px; */
+  top: 806px;
+  left: 1107px;
+  border-radius: 236.5px;
+  position: absolute;
+  filter: blur(200px);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(245, 236, 239, 0.48) 50.5%,
+    rgba(221.48, 179.58, 193.4, 0.48) 100%
+  );
+  opacity: 0.9;
+}
 
-  .box .img {
-    /* height: 2089px; */
-    mix-blend-mode: luminosity;
-    width: 360px;
-    top: 0;
-    left: 0;
-  }
+.box .ellipse-2 {
+  /* width: 689px; */
+  /* height: 689px; */
+  top: 1551px;
+  left: 0;
+  border-radius: 344.5px;
+  filter: blur(200px);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(245, 236, 239, 0.48) 50.5%,
+    rgba(221.48, 179.58, 193.4, 0.48) 100%
+  );
+  opacity: 0.9;
+}
 
-  .box .title {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    top: 40px;
-    left: 48px;
-  }
+.box .process-2 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  top: 80px;
+  left: 677px;
+}
 
-  .box .frame {
-    display: inline-flex;
-    align-items: center;
-    gap: 16px;
-    flex: 0 0 auto;
-  }
+.box .frame {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  flex: 0 0 auto;
+}
 
-  .box .header-mark {
-    width: 54px;
-    /* height: 8px; */
-    margin-left: -23px;
-    background-color: var(--variable-collection-salmon);
-    transform: rotate(90deg);
-  }
+.box .header-mark {
+  /* width: 54px; */
+  /* height: 8px; */
+  background-color: var(--variable-collection-salmon);
+}
 
-  .box .text-wrapper {
-    width: fit-content;
-    margin-top: -1px;
-    font-family: var(--mobile-h1-font-family);
-    color: var(--grey);
-    font-size: var(--mobile-h1-font-size);
-    letter-spacing: var(--mobile-h1-letter-spacing);
-    line-height: var(--mobile-h1-line-height);
-    font-weight: var(--mobile-h1-font-weight);
-    font-style: var(--mobile-h1-font-style);
-  }
+.box .text-wrapper {
+  /* width: fit-content; */
+  margin-top: -1px;
+  font-family: var(--h1-e-font-family);
+  font-weight: var(--h1-e-font-weight);
+  color: var(--dark-grey);
+  font-size: var(--h1-e-font-size);
+  letter-spacing: var(--h1-e-letter-spacing);
+  line-height: var(--h1-e-line-height);
+  font-style: var(--h1-e-font-style);
+}
 
-  .box .text-wrapper-2 {
-    width: fit-content;
-    font-family: var(--small-title-j-font-family);
-    color: var(--variable-collection-pink);
-    font-size: var(--small-title-j-font-size);
-    letter-spacing: var(--small-title-j-letter-spacing);
-    line-height: var(--small-title-j-line-height);
-    font-weight: var(--small-title-j-font-weight);
-    font-style: var(--small-title-j-font-style);
-  }
+.box .text-wrapper-2 {
+  width: fit-content;
+  font-family: var(--h2-j-font-family);
+  color: var(--dark-grey);
+  font-size: var(--h2-j-font-size);
+  letter-spacing: var(--h2-j-letter-spacing);
+  line-height: var(--h2-j-line-height);
+  font-weight: var(--h2-j-font-weight);
+  font-style: var(--h2-j-font-style);
+}
 
-  .box .flow {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-    top: 188px;
-    left: 14px;
-  }
+.box .steps {
+  /* width: 612px; */
+  /* height: 1736px; */
+  top: 307px;
+  left: 553px;
+}
 
-  .box .element {
-    width: 334px;
-    /* height: 338px; */
-    margin-right: -2px;
-  }
+.box .overlap-group {
+  /* height: 1736px; */
+}
 
-  .box .overlap-group-2 {
-    /* height: 343px; */
-    width: 332px;
-    top: -5px;
-  }
+.box .line {
+  /* width: 1px; */
+  /* height: 1581px; */
+  top: 155px;
+  left: 306px;
+  object-fit: cover;
+}
 
-  .box .frame-2 {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    top: 15px;
-    left: 0;
-  }
+.box .frame-2 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  top: 0;
+  left: 0;
+}
 
-  .box .div-wrapper {
-    display: flex;
-    width: 332px;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    padding: 10px;
-    flex: 0 0 auto;
-    background-color: var(--variable-collection-salmon);
-    border-radius: 10px 10px 0px 0px;
-  }
+.box .group {
+  /* height: 275px; */
+  /* width: 612px; */
+}
 
-  .box .text-wrapper-3 {
-    width: fit-content;
-    margin-top: -1px;
-    font-family: 'Ryo Gothic PlusN-M', Helvetica;
-    color: var(--variable-collection-white);
-    font-size: 24px;
-    letter-spacing: 2.4px;
-    line-height: normal;
-    font-weight: 400;
-  }
+.box .overlap-group-2 {
+  /* height: 275px; */
+}
 
-  .box .frame-3 {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 8px 16px 10px;
-    flex: 0 0 auto;
-    background-color: var(--variable-collection-white);
-    border-radius: 0px 0px 10px 10px;
-  }
+.box .frame-3 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  padding: 20px 24px;
+  top: 68px;
+  left: 0;
+  background-color: var(--variable-collection-white);
+  border-radius: 2px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: var(--grey);
+}
 
-  .box .text-wrapper-4 {
-    width: 300px;
-    margin-top: -1px;
-    font-family: var(--mobile-body-font-family);
-    color: var(--grey);
-    font-size: var(--mobile-body-font-size);
-    letter-spacing: var(--mobile-body-letter-spacing);
-    line-height: var(--mobile-body-line-height);
-    font-weight: var(--mobile-body-font-weight);
-    font-style: var(--mobile-body-font-style);
-  }
+.box .div-2 {
+  /* width: 564px; */
+  font-family: var(--body-j-font-family);
+  color: var(--grey);
+  font-size: var(--body-j-font-size);
+  letter-spacing: var(--body-j-letter-spacing);
+  line-height: var(--body-j-line-height);
+  font-weight: var(--body-j-font-weight);
+  font-style: var(--body-j-font-style);
+}
 
-  .box .step {
-    top: 0;
-    left: 9px;
-    -webkit-text-stroke: 5px #d6a99f;
-    font-family: 'Montserrat-Medium', Helvetica;
-    font-weight: 500;
-    color: var(--variable-collection-white);
-    font-size: 14px;
-    letter-spacing: 0.1px;
-    line-height: 20px;
-    white-space: nowrap;
-    border-color: var(--variable-collection-salmon);
-  }
+.box .frame-4 {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 10px;
+  top: 0;
+  left: 15px;
+  background-color: var(--grey);
+  border-radius: 2px 10px 0px 0px;
+}
 
-  .box .span {
-    letter-spacing: var(--montserrat-letter-spacing);
-    font-family: var(--montserrat-font-family);
-    font-style: var(--montserrat-font-style);
-    font-weight: var(--montserrat-font-weight);
-    line-height: var(--montserrat-line-height);
-    font-size: var(--montserrat-font-size);
-  }
+.box .text-wrapper-4 {
+  width: fit-content;
+  font-family: "Cinzel Decorative-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--variable-collection-white);
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+}
 
-  .box .text-wrapper-5 {
-    font-size: 40px;
-    letter-spacing: 0.04px;
-  }
+.box .text-wrapper-5 {
+  width: fit-content;
+  margin-top: -1px;
+  font-family: var(--h1-e-font-family);
+  font-weight: var(--h1-e-font-weight);
+  color: var(--variable-collection-white);
+  font-size: var(--h1-e-font-size);
+  letter-spacing: var(--h1-e-letter-spacing);
+  line-height: var(--h1-e-line-height);
+  font-style: var(--h1-e-font-style);
+}
 
-  .box .overlap-wrapper {
-    width: 334px;
-    /* height: 492px; */
-    margin-right: -2px;
-  }
+.box .overlap-wrapper {
+  /* height: 393px; */
+  /* width: 612px; */
+}
 
-  .box .overlap {
-    width: 332px;
-    /* height: 497px; */
-    top: -5px;
-  }
+.box .overlap-2 {
+  /* height: 393px; */
+}
 
-  .box .frame-4 {
-    display: inline-flex;
-    flex-direction: column;
-    /* height: 482px; */
-    align-items: flex-start;
-    top: 15px;
-    left: 0;
-  }
+.box .frame-5 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  padding: 20px 24px;
+  top: 66px;
+  left: 0;
+  background-color: var(--variable-collection-white);
+  border-radius: 2px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: var(--grey);
+}
 
-  .box .LINE-slack-slack-PC {
-    width: 300px;
-    margin-top: -1px;
-    font-family: var(--mobile-body-font-family);
-    font-weight: var(--mobile-body-font-weight);
-    color: #71717a;
-    font-size: var(--mobile-body-font-size);
-    letter-spacing: var(--mobile-body-letter-spacing);
-    line-height: var(--mobile-body-line-height);
-    font-style: var(--mobile-body-font-style);
-  }
+.box .p {
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Philosopher-Regular", Helvetica;
+  color: var(--dark-grey);
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: normal;
+  font-weight: 400;
+}
 
-  .box .text-wrapper-6 {
-    letter-spacing: var(--mobile-body-letter-spacing);
-    font-family: var(--mobile-body-font-family);
-    font-style: var(--mobile-body-font-style);
-    font-weight: var(--mobile-body-font-weight);
-    line-height: var(--mobile-body-line-height);
-    font-size: var(--mobile-body-font-size);
-  }
+.box .span {
+  font-family: "Philosopher-Regular", Helvetica;
+  font-weight: 400;
+  color: #52525b;
+  font-size: 28px;
+  letter-spacing: 0;
+}
 
-  .box .overlap-group-wrapper {
-    width: 334px;
-    /* height: 206px; */
-    margin-right: -2px;
-  }
+.box .text-wrapper-6 {
+  font-family: var(--h2-j-font-family);
+  font-style: var(--h2-j-font-style);
+  font-weight: var(--h2-j-font-weight);
+  letter-spacing: var(--h2-j-letter-spacing);
+  line-height: var(--h2-j-line-height);
+  font-size: var(--h2-j-font-size);
+}
 
-  .box .overlap-2 {
-    /* height: 211px; */
-    width: 332px;
-    top: -5px;
-  }
+.box .text-wrapper-7 {
+  letter-spacing: var(--body-j-letter-spacing);
+  font-family: var(--body-j-font-family);
+  font-style: var(--body-j-font-style);
+  font-weight: var(--body-j-font-weight);
+  line-height: var(--body-j-line-height);
+  font-size: var(--body-j-font-size);
+}
 
-  .box .element-2 {
-    width: 334px;
-    /* height: 294px; */
-    margin-right: -2px;
-  }
+.box .text-wrapper-8 {
+  letter-spacing: var(--body-j-letter-spacing);
+  text-decoration: underline;
+  font-family: var(--body-j-font-family);
+  font-style: var(--body-j-font-style);
+  font-weight: var(--body-j-font-weight);
+  line-height: var(--body-j-line-height);
+  font-size: var(--body-j-font-size);
+}
 
-  .box .overlap-3 {
-    width: 332px;
-    /* height: 299px; */
-    top: -5px;
-  }
+.box .overlap-group-wrapper {
+  /* height: 225px; */
+  /* width: 612px; */
+}
 
-  .box .element-3 {
-    width: 334px;
-    /* height: 228px; */
-    margin-right: -2px;
-  }
+.box .overlap-3 {
+  /* height: 225px; */
+}
 
-  .box .overlap-4 {
-    width: 332px;
-    /* height: 233px; */
-    top: -5px;
-  }
+.box .div-wrapper {
+  /* height: 273px; */
+  /* width: 612px; */
+}
+
+.box .overlap-4 {
+  /* height: 273px; */
+}
+
 </style>
+
