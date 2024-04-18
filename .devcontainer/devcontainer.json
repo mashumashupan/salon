@@ -6,6 +6,9 @@
 	"dockerComposeFile": "compose.yaml",
 	"service": "dev",
 	"workspaceFolder": "/workspace/${localWorkspaceFolderBasename}",
+	"mounts": [
+		"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+	],
 	"customizations": {
 		"vscode": {
 			"extensions": [

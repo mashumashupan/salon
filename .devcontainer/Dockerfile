@@ -18,4 +18,8 @@ RUN echo 'eval "$(~/.local/bin/mise activate bash && mise install)"' >> ~/.bashr
 # install mise tools (.mise.teoml)
 # RUN ~/.local/bin/mise install
 
+RUN mkdir -p /home/vscode/.ssh
+
+RUN rsync -av --ignore-missing-args $HOME/.ssh/config /home/vscode/.ssh/config
+
 CMD [ "bash" ]
