@@ -13,68 +13,67 @@ interface Props {
 }
 
 const { title_small, title1, title2 } = Astro.props;
-
 ---
 
 <div class="title">
-  <div class="ureshino-salon -mb-20 w-80">
+  <div class="ureshino-salon absolute w-80">
     <Image class="logo" src={logo} alt="" />
   </div>
+  <div class="flex flex-row items-center gap-4">
+    <div class="h-[86px] w-[6px] bg-[#D7A99F]"></div>
     <div class="overlap-2">
       <div class="title-2">
         <div class="text-wrapper-3">{title_small}</div>
         <div class="text-wrapper">{title1}</div>
       </div>
-      {title2 &&
-        <div class="text-wrapper-2">{title2}</div>
-      }
+      {title2 && <div class="text-wrapper-2">{title2}</div>}
     </div>
+  </div>
 </div>
 
 <style>
-    .title {
-        top: 40px;
-        left: 34px;
-    }
+  .title {
+    top: 40px;
+    left: 34px;
+  }
 
-    .rectangle {
-        margin-left: -19px;
-        background-color: var(--variable-collection-salmon);
-        transform: rotate(90deg);
-    }
+  .rectangle {
+    margin-left: -19px;
+    background-color: var(--variable-collection-salmon);
+    transform: rotate(90deg);
+  }
 
-    .text-wrapper-3 {
-        margin-top: -1px;
-        font-family: var(--mobile-h1-font-family);
-        font-weight: var(--mobile-h1-font-weight);
-        color: var(--grey);
-        font-size: var(--mobile-h2-font-size);
-        letter-spacing: var(--mobile-h1-letter-spacing);
-        line-height: var(--mobile-h1-line-height);
-        font-style: var(--mobile-h1-font-style);
-    }
+  .text-wrapper-3 {
+    margin-top: -1px;
+    font-family: var(--mobile-h1-font-family);
+    font-weight: var(--mobile-h1-font-weight);
+    color: var(--grey);
+    font-size: var(--mobile-h2-font-size);
+    letter-spacing: var(--mobile-h1-letter-spacing);
+    line-height: var(--mobile-h1-line-height);
+    font-style: var(--mobile-h1-font-style);
+  }
 
-    .text-wrapper {
-        margin-top: -1px;
-        font-family: var(--mobile-h1-font-family);
-        font-weight: var(--mobile-h1-font-weight);
-        color: var(--grey);
-        font-size: var(--mobile-h1-font-size);
-        letter-spacing: var(--mobile-h1-letter-spacing);
-        line-height: var(--mobile-h1-line-height);
-        font-style: var(--mobile-h1-font-style);
-    }
+  .text-wrapper {
+    margin-top: -1px;
+    font-family: var(--mobile-h1-font-family);
+    font-weight: var(--mobile-h1-font-weight);
+    color: var(--grey);
+    font-size: var(--mobile-h1-font-size);
+    letter-spacing: var(--mobile-h1-letter-spacing);
+    line-height: var(--mobile-h1-line-height);
+    font-style: var(--mobile-h1-font-style);
+  }
 
-    .text-wrapper-2 {
-        top: 57px;
-        left: 134px;
-        font-family: var(--mobile-h1-font-family);
-        font-weight: var(--mobile-h1-font-weight);
-        color: var(--grey);
-        font-size: var(--mobile-h1-font-size);
-        letter-spacing: var(--mobile-h1-letter-spacing);
-        line-height: var(--mobile-h1-line-height);
-        font-style: var(--mobile-h1-font-style);
-    }
-
+  .text-wrapper-2 {
+    top: 57px;
+    left: 134px;
+    font-family: var(--mobile-h1-font-family);
+    font-weight: var(--mobile-h1-font-weight);
+    color: var(--grey);
+    font-size: var(--mobile-h1-font-size);
+    letter-spacing: var(--mobile-h1-letter-spacing);
+    line-height: var(--mobile-h1-line-height);
+    font-style: var(--mobile-h1-font-style);
+  }
 </style>
