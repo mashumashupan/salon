@@ -31,9 +31,9 @@ import Title from '~/components/common/title.astro';
             <p class="p">
               <span class="span"
                 >「自分に自信を持ちたい」「理想の自分に近づきたい」<br /><br
-                />このように感じていても行動できないのはあなたが本来いるべき場所にいないだけ。<br
+                />このように感じていても行動できないのは<br />あなたが本来いるべき場所にいないだけ。<br
                 /><br />かわいく賢く生きる女性たちと同じ環境に身を置くことで<br
-                />あなた自身の価値観や行動も変わり自信を持てるようになります。</span
+                />あなた自身の価値観や行動も変わり自信を持てるようになります。<br /><br /></span
               >
             </p>
           </div>
@@ -45,23 +45,19 @@ import Title from '~/components/common/title.astro';
         </div>
         <div class="overlap-group-wrapper">
           <div class="overlap-group">
-            <div class="underline"></div>
-            <div class="underline-2"></div>
             <p class="p">
               <span class="span"
-                >うれしのサロンには、<br /><br
-                />“かわいく賢く生きる”を体現しているうれしのちゃんをはじめ<br
+                >うれしのサロンには、かわいく賢く生きる”を<br
+                />“体現しているうれしのちゃんをはじめ<br
                 /><br
-                />仕事や恋愛、美容といった輝く女性にとって欠かせない要素を<br
-                />磨き続ける心強い仲間がいます。<br /><br
+                />仕事や恋愛、美容といった輝く女性にとって<br
+                />欠かせない要素を磨き続ける心強い仲間がいます。<br /><br
                 />自立した女性たちが切磋琢磨する質の高いコミュニティで<br
-                />一緒に人生をアップデートしませんか？</span
+                />一緒に人生をアップデートしませんか？<br /><br /></span
               >
             </p>
-          </div>
         </div>
       </div>
-    </div>
   </div>
 </div>
 
@@ -163,28 +159,29 @@ import Title from '~/components/common/title.astro';
     --variable-collection-purple: rgba(158, 135, 190, 1);
   }
 
-  .box .text-wrapper {
+  .text-wrapper {
     top: 0;
     left: 0;
-    background: linear-gradient(
-      180deg,
-      rgb(158, 135, 190) 0%,
-      rgb(198, 151, 165) 100%
-    );
-    -webkit-background-clip: text !important;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-    font-family: var(--mobile-h2-font-family);
-    font-weight: var(--mobile-h2-font-weight);
-    color: transparent;
-    font-size: var(--mobile-h2-font-size);
-    letter-spacing: var(--mobile-h2-letter-spacing);
-    line-height: var(--mobile-h2-line-height);
-    white-space: nowrap;
-    font-style: var(--mobile-h2-font-style);
+    font-family: var(--h2-j-font-family);
+    font-weight: var(--h2-j-font-weight);
+    color: var(--light-grey);
+    font-size: 1rem;
+    letter-spacing: var(--h2-j-letter-spacing);
+    line-height: var(--h2-j-line-height);
+    font-style: var(--h2-j-font-style);
   }
 
+  .span {
+    top: 0;
+    left: 0;
+    font-family: var(--body-j-font-family);
+    font-weight: var(--body-j-font-weight);
+    color: var(--grey);
+    font-size: 0.7rem;
+    letter-spacing: var(--body-j-letter-spacing);
+    line-height: var(--body-j-line-height);
+    font-style: var(--body-j-font-style);
+  }
   .box .text-wrapper-2 {
     top: 35px;
     left: 66px;
@@ -218,16 +215,6 @@ import Title from '~/components/common/title.astro';
     letter-spacing: var(--mobile-body-letter-spacing);
     line-height: var(--mobile-body-line-height);
     font-style: var(--mobile-body-font-style);
-  }
-
-  .box .span {
-    color: #71717a;
-    letter-spacing: var(--mobile-body-letter-spacing);
-    font-family: var(--mobile-body-font-family);
-    font-style: var(--mobile-body-font-style);
-    font-weight: var(--mobile-body-font-weight);
-    line-height: var(--mobile-body-line-height);
-    font-size: var(--mobile-body-font-size);
   }
 
   .box .text-wrapper-3 {
