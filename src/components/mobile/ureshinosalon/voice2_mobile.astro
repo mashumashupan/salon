@@ -15,224 +15,86 @@ import voice_karen from '~/assets/voice/voice_karen.png';
 import Voice from '~/components/common/voice.astro';
 
 import Title from '~/components/common/title.astro';
+import ZigzagContainer from '~/layouts/ZigzagRow.astro';
 ---
 
 <div
-  id="support"
-  class="-mt-[17rem] flex h-[1800px] min-h-[0px] flex-col items-center justify-center overflow-hidden pt-[0px]"
+  id="voice2"
+  class="flex flex-col items-center justify-center overflow-hidden"
 >
-  <Title title_small="協力しあえば成果もUP！" title1="頼れる" title2="サロンメンバー" />
-  <p class="element">
-    <span class="text-wrapper-7">＼こんなときは支え合って／</span>
-  </p>
-  <p class="element">
-    <span class="text-wrapper-7">問題や悩みがあって先に進めない…。</br>次のキャリアが見えない…。</br>挑戦したいけど1人では不安…。</span>
-  </p>
-  <p class="element">
-    <span class="text-wrapper-7">すでに活躍しているメンバーに</br>アドバイスをもらったり、</br>同じ目標を持つメンバーとやりとりして</br>モチベを上げたりと</br>サロンを思いっきり活用してください♪</span>
-  </p>
-  <p class="element">
-    <span class="text-wrapper-7">サロンメンバーに聞いた！</span>
-  </p>
-  <!-- <Title title_small="サロンメンバーに聞いた！" title1="サロンメンバーはどんな存在？" title2="" /> -->
+  <Title
+    title_small="協力しあえば成果もUP！"
+    title1="頼れる"
+    title2="サロンメンバー"
+  />
 
-  <div class="bubbles absolute mt-[44rem]">
-    <Voice
-      side="left"
-      name="れいなさん"
-      title="メンバー"
-      icon={voice_reina}
-      useStar={false}
-    >
-      <div class="mb-4 flex w-[15rem] flex-col">
-        <span class="text-wrapper-7"
-          >SNSでの日々交流はもちろ</br>ん、オフ会に行った後は皆</br>さんの仕事や美容への姿勢</br>や生き方が刺激となり活力</br>が湧いてきます。自分もも</br>っと頑張ろうと思える</span
-        >
-        <span class="text-wrapper-8">かけがえのない存在</span>
-        <span class="text-wrapper-7">です!</span>
-      </div>
-    </Voice>
-    <!-- <Voice
-      side="left"
-      name="haruさん"
-      title="メンバー"
-      icon={voice_haru}
-      useStar={false}
-    >
-      <div class="mb-4 flex w-[15rem] flex-col">
-        <span class="text-wrapper-7"
-          >サロンメンバーには本当に</br>頑張り屋さんが多いです。</br>更に高みを目指す皆を見て</br>いると、頑張ることが楽し</br>くなります。次に会った時</br>にレベルアップしていたい</br>という</span
-        >
-        <span class="text-wrapper-8">モチベーション</span>
-        <span class="text-wrapper-7">になっています。</span>
-      </div>
-    </Voice> -->
-    <Voice
-      side="right"
-      name="karenさん"
-      title="メンバー"
-      icon={voice_karen}
-      useStar={false}
-    >
-      <div class="mb-4 flex w-[15rem] flex-col">
-        <span class="text-wrapper-7"
-          >かわいくて賢く向上心があ</br>る人たちで、常に</span
-        >
-        <span class="text-wrapper-8">刺激を与えてくれる存在</span>
-        <span class="text-wrapper-7"
-          >です！♡世界のどこに行っ</br>てもサロンメンバーがいて</br>色んなところで頑張ってい</br>る仲間がいると思うと自然</br>に自分の行動力にも繋がり</br>ます。</span
-        >
-      </div>
-    </Voice>
+  <p class="element">
+    <span>＼こんなときは支え合って／</span>
+  </p>
+  <div>
+    <div class="flex w-full flex-col">
+      <ZigzagContainer align="left">
+        <div class="my-2 h-max w-max rounded-full bg-white p-4 shadow-lg">
+          問題や悩みがあって先に進めない…。
+        </div>
+      </ZigzagContainer>
+      <ZigzagContainer align="right">
+        <div class="my-2 h-max w-max rounded-full bg-white p-4 shadow-lg">
+          次のキャリアが見えない…。
+        </div>
+      </ZigzagContainer>
+      <ZigzagContainer align="left">
+        <div class="my-2 h-max w-max rounded-full bg-white p-4 shadow-lg">
+          挑戦したいけど1人では不安…。
+        </div>
+      </ZigzagContainer>
+    </div>
+
+    <p class="py-4">
+      <i>
+        すでに活躍しているメンバーにアドバイスをもらったり、同じ目標を持つメンバーとやりとりしてモチベを上げたりとサロンを思いっきり活用してください♪
+      </i>
+    </p>
+  </div>
+
+  <p class="element">
+    <span>サロンメンバーに聞いた！</span>
+  </p>
+
+  <div class="bubbles">
+    <ZigzagContainer align="left">
+      <Voice
+        side="left"
+        name="れいなさん"
+        title="メンバー"
+        icon={voice_reina}
+        useStar={false}
+      >
+        <div class="mb-4">
+          SNSでの日々交流はもちろん、オフ会に行った後は皆さんの仕事や美容への姿勢や生き方が刺激となり活力が湧いてきます。自分ももっと頑張ろうと思える
+          <span class="text-wrapper-8">かけがえのない存在</span>
+          <span class="text-wrapper-7">です!</span>
+        </div>
+      </Voice>
+    </ZigzagContainer>
+    <ZigzagContainer align="right">
+      <Voice
+        side="right"
+        name="karenさん"
+        title="メンバー"
+        icon={voice_karen}
+        useStar={false}
+      >
+        <div class="mb-4">
+          かわいくて賢く向上心がある人たちで、常に
+
+          <span class="text-wrapper-8">刺激を与えてくれる存在</span>
+          です！♡世界のどこに行ってもサロンメンバーがいて 色んなところで頑張っている仲間がいると思うと自然に自分の行動力にも繋がります。
+        </div>
+      </Voice>
+    </ZigzagContainer>
   </div>
 </div>
-<!-- <div class="box">
-  <div class="support">
-    <div class="overlap">
-      <Image
-        class="absolute w-full mix-blend-lighten md:top-[280px]"
-        src={layer}
-        alt=""
-      />
-      <div class="title">
-        <div class="overlap-group">
-          <div class="group">
-            <div class="overlap-group">
-              <div class="rectangle"></div>
-              <div class="div"></div>
-            </div>
-          </div>
-          <div class="title-2">
-            <div class="header-mark"></div>
-            <div class="overlap-group-wrapper">
-              <div class="overlap-group-2">
-                <div class="text-wrapper">頼れる</div>
-                <div class="text-wrapper-2">サロンメンバー</div>
-              </div>
-            </div>
-          </div>
-          <div class="group-2">
-            <p class="UP">
-              <span class="span">協力</span>
-              <span class="text-wrapper-3">するほど</span>
-              <span class="span">成果UP</span>
-              <span class="text-wrapper-3">！</span>
-            </p>
-            <Image class="underline" src={underline} alt="" />
-          </div>
-        </div>
-      </div>
-      <div class="concerns">
-        <div class="overlap-2">
-          <div class="concern">
-            <div class="overlap-2">
-              <div class="woman">
-                <div class="overlap-group-3">
-                  <div class="rectangle-2"></div>
-                  <div class="rectangle-3"></div>
-                  <Image class="img" src={voice2image} alt="" />
-                </div>
-              </div>
-              <div class="ellipse"></div>
-            </div>
-          </div>
-          <div class="subtitle">
-            <div class="subtitle-2">
-              <img class="line" src="img/line-15.svg" />
-              <img class="line-2" src="img/line-16.svg" />
-              <div class="text-wrapper-4">こんなときは支え合って</div>
-            </div>
-          </div>
-          <div class="concern-2">
-            <div class="frame">
-              <div class="text-wrapper-5">
-                問題や悩みがあって先に進めない…。
-              </div>
-            </div>
-            <div class="group-3">
-              <div class="ellipse-2"></div>
-              <div class="ellipse-3"></div>
-            </div>
-          </div>
-          <div class="concern-3">
-            <div class="div-wrapper">
-              <div class="text-wrapper-6">次のキャリアが<br />見えない…。</div>
-            </div>
-            <div class="group-4">
-              <div class="ellipse-4"></div>
-              <div class="ellipse-5"></div>
-            </div>
-          </div>
-          <div class="concern-4">
-            <div class="frame-2">
-              <div class="text-wrapper-6">挑戦したいけど1人では不安…。</div>
-            </div>
-            <div class="group-5">
-              <div class="ellipse-6"></div>
-              <div class="ellipse-7"></div>
-            </div>
-          </div>
-          <div>
-            すでに活躍しているメンバーに<br />アドバイスをもらったり、<br
-            />同じ目標を持つメンバーとやりとりして<br />モチベを上げたりと<br
-            />サロンを思いっきり活用してください♪<br />
-          </div>
-          <div>
-            サロンメンバーに聞いた！<br />サロンメンバーはどんな存在？<br />
-          </div>
-        </div>
-      </div>
-      <Image
-        class="absolute w-full mix-blend-lighten md:top-[280px]"
-        src={layer2}
-        alt=""
-      />
-      <div class="bubbles">
-        <Voice
-          side="right"
-          name="れいなさん"
-          title="メンバー"
-          icon={voice_reina}
-          useStar={false}
-        >
-          <div class="mb-4 flex w-[15rem] flex-col">
-            <span class="text-wrapper-7">SNSでの日々交流はもちろん、オフ会に行った後はみなさんの仕事や美容への姿勢、生き方が刺激となり活力が湧いてきます。自分ももっと頑張ろうと思える</span>
-            <span class="text-wrapper-8">かけがえのない存在</span>
-            <span class="text-wrapper-7">です!</span>
-          </div>
-        </Voice>
-        <Voice
-          side="left"
-          name="haruさん"
-          title="メンバー"
-          icon={voice_haru}
-          useStar={false}
-        >
-          <div class="mb-4 flex w-[15rem] flex-col">
-            <span class="text-wrapper-7">サロンメンバーには本当に頑張り屋さんが多いです。更に高みを目指す皆を見ていると、頑張ることが楽しくなります。次に会った時にレベルアップしていたいという</span>
-            <span class="text-wrapper-8">モチベーション</span>
-            <span class="text-wrapper-7">になっています。</span>
-          </div>
-        </Voice>
-        <Voice
-          side="right"
-          name="karenさん"
-          title="メンバー"
-          icon={voice_karen}
-          useStar={false}
-        >
-          <div class="mb-4 flex w-[15rem] flex-col">
-            <span class="text-wrapper-7">かわいくて賢く向上心がある人たちで、常に</span>
-            <span class="text-wrapper-8">刺激を与えてくれる存在</span>
-            <span class="text-wrapper-7">です！♡世界のどこに行ってもサロンメンバーがいて、色んなところで頑張っている仲間がいると思うと自然に自分の</span>
-            <span class="text-wrapper-8">行動力</span>
-            <span class="text-wrapper-7">にもつながります。</span>
-          </div>
-        </Voice>
-  </div>
-</div>
-<Image class="arrow" src={arrow} alt="" /> -->
-
 <style>
   :root {
     --pale-pink: rgba(245, 236, 239, 1);

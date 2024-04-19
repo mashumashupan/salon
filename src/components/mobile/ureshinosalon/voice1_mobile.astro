@@ -12,16 +12,18 @@ import Title from '~/components/common/title.astro';
 ---
 
 <div
-  id="process"
-  class="-mt-[10px] flex h-[1500px] min-h-[1700px] flex-col items-center justify-center overflow-hidden pt-[125px]"
+  id="voice1"
+  class="flex flex-col items-center justify-center overflow-hidden"
 >
   <Title title_small="" title1="サロンメンバーの声" title2="" />
   <p class="element">
     <span class="text-wrapper-7">かわいさ×賢さ×ビジネス×影響力</span>
   </p>
   <p class="element">
-    <span class="text-wrapper-7">うれしのサロンには</br>あなたと同じような価値観を持った</br>かわいくて賢い女性が</br>国内外にたくさん♡</span>
-  </p>
+    <span class="text-wrapper-7">うれしのサロンには</span
+    >あなたと同じような価値観を持った
+  </p>かわいくて賢い女性が国内外にたくさん♡
+
   <!-- <Image class="bg w-full" src={bg} alt="" /> -->
   <div class="bubbles absolute mt-48">
     <Voice
@@ -32,69 +34,62 @@ import Title from '~/components/common/title.astro';
       useStar={false}
     >
       <div class="mb-4 flex w-[15rem] flex-col">
-        <span class="text-wrapper-7"
-          >モチベーションが下がった</br>とき、うれしのサロンの</br>掲示板やコラムを読むと</span
-        >
-        <span class="text-wrapper-6">気合いが入り背中を押され</br>ます♡</span>
-        <span class="text-wrapper-7"
-          >嬉野さんの有益で力強い発</br>信はもちろん、メンバーも</br>挑戦や努力を続けている方</br>ばかりなのでいつも押し上</br>げていただいている気分</br>です。</span
-        >
-      </div>
-    </Voice>
-    <Voice
-      side="right"
-      name="karenさん"
-      title="メンバー"
-      icon={voice_karen}
-      useStar={false}
+        <span class="text-wrapper-7">モチベーションが下がった</span
+        >とき、うれしのサロンの
+      </div>掲示板やコラムを読むと</Voice
     >
-      <div class="mb-4 flex w-[15rem] flex-col">
-        <span class="text-wrapper-7"
-          >周りの人と価値観や話が合</br>わなくなってきて、悩んで</br>いた時に、見つけたのが</br>きっかけで入会しました。</br>高め会える仲間ができて</span
-        >
-        <span class="text-wrapper-6">人生ががらりと変わり</br>ました。</span>
-        <span class="text-wrapper-7"
-          >メンバーと一緒に日本初の</br>AIフォトスタジオの事業を</br>することにもなりました！</span
-        >
-      </div>
-    </Voice>
-    <Voice
-      side="left"
-      name="ゆっこさん"
-      title="メンバー"
-      icon={voice_yukko}
-      useStar={false}
-    >
-      <div class="mb-4 flex w-[15rem] flex-col">
-        <span class="text-wrapper-7"
-          >今年やってよかったことの</br>1つにうれしのサロンに入</br>ったこと」があります。</br>このサロンのおかげで、</br>確実に</span
-        >
-        <span class="text-wrapper-6">行動力が上がっています✨</span>
-        <span class="text-wrapper-7"
-          >事業の話も、美容の話もで</br>きる強くて美しい女性が</br>今年はさらに色んな人と</br>話したいです！</span
-        >
-      </div>
-    </Voice>
-    <Voice
-      side="right"
-      name="chihiroさん"
-      title="メンバー"
-      icon={voice_chihiro}
-      useStar={false}
-    >
-      <div class="mb-4 flex w-[15rem] flex-col">
-        <span class="text-wrapper-7"
-          >都会に住んでいなくても、</br>切磋琢磨できる同年代の</br>女性と出会えたことに感謝</br>しています。</br>うれしのサロンのおかげで</span
-        >
-        <span class="text-wrapper-6"
-          >これまで経験したことが</br>ないことにチャレンジ</span
-        >
-        <span class="text-wrapper-7">できました！</span>
-      </div>
-    </Voice>
+    <span class="text-wrapper-6">気合いが入り背中を押され</span>ます♡
   </div>
-</div>
+  <span class="text-wrapper-7">嬉野さんの有益で力強い発</span
+  >信はもちろん、メンバーも挑戦や努力を続けている方ばかりなのでいつも押し上げていただいている気分です。
 
+  <Voice
+    side="right"
+    name="karenさん"
+    title="メンバー"
+    icon={voice_karen}
+    useStar={false}
+  >
+    <div class="mb-4 flex w-[15rem] flex-col">
+      <span class="text-wrapper-7">周りの人と価値観や話が合</span
+      >わなくなってきて、悩んで
+    </div>いた時に、見つけたのが</Voice
+  >きっかけで入会しました。高め会える仲間ができて
+  <span class="text-wrapper-6">人生ががらりと変わり</span>ました。
+  <span class="text-wrapper-7">メンバーと一緒に日本初の</span
+  >AIフォトスタジオの事業をすることにもなりました！
+
+  <Voice
+    side="left"
+    name="ゆっこさん"
+    title="メンバー"
+    icon={voice_yukko}
+    useStar={false}
+  >
+    <div class="mb-4 flex w-[15rem] flex-col">
+      <span class="text-wrapper-7">今年やってよかったことの</span
+      >1つにうれしのサロンに入
+    </div>ったこと」があります。</Voice
+  >このサロンのおかげで、確実に
+  <span class="text-wrapper-6">行動力が上がっています✨</span>
+  <span class="text-wrapper-7">事業の話も、美容の話もで</span
+  >きる強くて美しい女性が今年はさらに色んな人と話したいです！
+
+  <Voice
+    side="right"
+    name="chihiroさん"
+    title="メンバー"
+    icon={voice_chihiro}
+    useStar={false}
+  >
+    <div class="mb-4 flex w-[15rem] flex-col">
+      <span class="text-wrapper-7">都会に住んでいなくても、</span
+      >切磋琢磨できる同年代の
+    </div>女性と出会えたことに感謝</Voice
+  >しています。うれしのサロンのおかげで
+  <span class="text-wrapper-6">これまで経験したことが</span>ないことにチャレンジ
+  <span class="text-wrapper-7">できました！</span>
+</div>
 <style>
   :root {
     --pale-pink: rgba(245, 236, 239, 1);
@@ -401,7 +396,6 @@ import Title from '~/components/common/title.astro';
     width: 138px;
     /* height: 24px; */
   }
-
 
   .text-wrapper-6 {
     color: #c697a5;

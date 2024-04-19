@@ -1,0 +1,11 @@
+---
+interface Props {
+    align: 'left' | 'right';
+}
+
+const { align } = Astro.props as Props;
+---
+
+<div class={`flex ${align === 'left' ? 'justify-start' : 'justify-end'}`}>
+    <slot />
+</div>

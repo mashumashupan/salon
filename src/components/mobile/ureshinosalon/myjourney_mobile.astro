@@ -22,19 +22,26 @@ const OPTIONS = { direction: 'rtl' };
 const SLIDE_COUNT = 5;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
-const slides = [myjourneyimage1, myjourneyimage2, myjourneyimage3, myjourneyimage4, myjourneyimage5, myjourneyimage6];
+const slides = [
+  myjourneyimage1,
+  myjourneyimage2,
+  myjourneyimage3,
+  myjourneyimage4,
+  myjourneyimage5,
+  myjourneyimage6,
+];
 ---
 
 <div
   id="myjourney"
-  class="mt-6 flex min-h-[977px] flex-col items-center justify-center overflow-hidden"
+  class="flex flex-col items-center justify-center overflow-hidden"
 >
   <!-- <Image class="bg w-full" src={bg} alt="" /> -->
   <div class="absolute -mt-[40rem] block overflow-hidden">
     <Carousel client:load images={slides} />
   </div>
 </div>
-</div>
+
 <div class="box">
   <div class="my-journey">
     <div class="overlap-group">
@@ -49,20 +56,62 @@ const slides = [myjourneyimage1, myjourneyimage2, myjourneyimage3, myjourneyimag
         <Image class="flowers" src={flowers} alt="" />
         <div class="scroll">
           <div class="scroll-2">
-            <Myjourney before="電話占いに散財し恋愛に迷走", image={myjourneyimage1}, after="理想の王子様が見つかる" /></Myjourney>
-            <Myjourney before="異業種交流会に参加", image={myjourneyimage2}, after="ヨーロッパ社交界に参加" /></Myjourney>
-            <Myjourney before="美容に無頓着", image={myjourneyimage3}, after="美容情報の発信者に" /></Myjourney>
-            <Myjourney before="ぽっちゃり体型", image={myjourneyimage4}, after="女性からも憧れの的" /></Myjourney>
-            <Myjourney before="東京で会社経営", image={myjourneyimage5}, after="マレーシアに移住し新規ビジネス展開" /></Myjourney>
-            <Myjourney before="SNS未活用", image={myjourneyimage6}, after="大手出版社から写真集出版" /></Myjourney>
-             <div class="card">
-              <div class="frame"><div class="text-wrapper-2">SNS未活用</div></div>
-              <Image class="keyboard-double" src={arrow_down} alt="" />
-              <div class="frame-2">
-                <Image class="rectangle" src={myjourneyimage6} alt="" />
-                <div class="text-wrapper-3">大手出版社から写真集出版</div>
-              </div>
-            </div>
+            <Myjourney
+              before="電話占いに散財し恋愛に迷走"
+              ,
+              image={myjourneyimage1}
+              ,
+              after="理想の王子様が見つかる"
+            />
+          </div>
+          <Myjourney
+            before="異業種交流会に参加"
+            ,
+            image={myjourneyimage2}
+            ,
+            after="ヨーロッパ社交界に参加"
+          />
+        </div>
+        <Myjourney
+          before="美容に無頓着"
+          ,
+          image={myjourneyimage3}
+          ,
+          after="美容情報の発信者に"
+        />
+      </div>
+      <Myjourney
+        before="ぽっちゃり体型"
+        ,
+        image={myjourneyimage4}
+        ,
+        after="女性からも憧れの的"
+      />
+    </div>
+    <Myjourney
+      before="東京で会社経営"
+      ,
+      image={myjourneyimage5}
+      ,
+      after="マレーシアに移住し新規ビジネス展開"
+    />
+  </div>
+  <Myjourney
+    before="SNS未活用"
+    ,
+    image={myjourneyimage6}
+    ,
+    after="大手出版社から写真集出版"
+  />
+</div>
+<div class="card">
+  <div class="frame"><div class="text-wrapper-2">SNS未活用</div></div>
+  <Image class="keyboard-double" src={arrow_down} alt="" />
+  <div class="frame-2">
+    <Image class="rectangle" src={myjourneyimage6} alt="" />
+    <div class="text-wrapper-3">大手出版社から写真集出版</div>
+  </div>
+</div>
 
 <div class="dots">
   <div class="ellipse"></div>
@@ -73,8 +122,6 @@ const slides = [myjourneyimage1, myjourneyimage2, myjourneyimage3, myjourneyimag
 <Image class="pearl-2" src={pearl2} alt="" />
 
 <Image class="pearl-2" src={pearl1} alt="" />
-
-
 
 <style>
   :root {
