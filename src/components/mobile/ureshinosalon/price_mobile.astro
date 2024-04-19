@@ -14,8 +14,15 @@ import Title from '~/components/common/title.astro';
   id="price"
   class="-mt-28 flex min-h-[1200px] flex-col items-center justify-center overflow-hidden"
 >
-  <Title title_small="" title1="会費のご案内" title2="" />
-  <Title title_small="月会費" title1="3,480円" title2="" />
+  <Title title_small="" title1="PRICE" title2="" />
+  <div class="price">
+    <div class="overlap-2">
+      <div class="title-2">
+        <div class="text-wrapper-14">月会費</div>
+        <div class="text-wrapper-13">3,480円</div>
+      </div>
+    </div>
+  </div>
   <p class="element">
     <span class="text-wrapper-12">・月払い</br>・クレジットカード（Visa、Mastercardのみ）</br>・毎月同日に自動カード決済となります。</span>
   </p>
@@ -868,6 +875,28 @@ import Title from '~/components/common/title.astro';
     line-height: var(--mobile-body-line-height);
     font-size: var(--mobile-body-font-size);
   }
+
+  .text-wrapper-13 {
+    margin-top: -1px;
+    font-family: var(--mobile-h1-font-family);
+    font-weight: var(--mobile-h1-font-weight);
+    color: var(--grey);
+    font-size: var(--mobile-h1-font-size);
+    letter-spacing: var(--mobile-h1-letter-spacing);
+    line-height: var(--mobile-h1-line-height);
+    font-style: var(--mobile-h1-font-style);
+  }
+
+  .text-wrapper-14 {
+    margin-top: -1px;
+    font-family: var(--mobile-h1-font-family);
+    font-weight: var(--mobile-h1-font-weight);
+    color: var(--grey);
+    font-size: var(--mobile-h2-font-size);
+    letter-spacing: var(--mobile-h1-letter-spacing);
+    line-height: var(--mobile-h1-line-height);
+    font-style: var(--mobile-h1-font-style);
+ }
 
   .box .white-border {
     width: 360px;
