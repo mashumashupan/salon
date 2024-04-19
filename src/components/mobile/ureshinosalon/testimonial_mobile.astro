@@ -8,21 +8,25 @@ import testimonial_muto from '~/assets/testimonial/testimonial_muto.png';
 import testimonial_nanao from '~/assets/testimonial/testimonial_nanao.png';
 import JoinButton from '~/components/common/joinButton.astro';
 import Voice from '~/components/common/voice.astro';
-import logo from '~/assets/testimonial/logo.png';
-import deadline from '~/assets/testimonial/deadline.png';
+// import logo from '~/assets/testimonial/logo.png';
+
+import Title from '~/components/common/title.astro';
+import ZigzagContainer from '~/layouts/ZigzagRow.astro';
 ---
 
 <div id="testimonials" class="flex flex-col justify-center overflow-hidden">
-  <div class="absolute -z-10 w-full">
-    <Image class="w-full mix-blend-normal" src={bg} alt="" />
-  </div>
+  <Title
+    title_small=""
+    title1="推薦者コメント"
+    title2=""
+  />
   <div class="z-10 -mt-32 mt-16 flex flex-col items-center gap-14">
-    <div class="ureshino-salon -mb-20 w-80">
+    <!-- <div class="ureshino-salon -mb-20 w-80">
       <Image class="logo" src={logo} alt="" />
     </div>
     <div class="">
       <div class="text-wrapper">推薦者コメント</div>
-    </div>
+    </div> -->
     <div class="">
       <div
         class="overlap-group relative flex flex-col items-center justify-center"
@@ -37,70 +41,39 @@ import deadline from '~/assets/testimonial/deadline.png';
       </div>
     </div>
     <div class="bubble flex flex-col gap-10">
-      <Voice
-        side="left"
-        name="武藤静香さん"
-        title="Rady ブランドデザイナー"
-        icon={testimonial_muto}
-        useStar={true}
-      >
-        <div class="mb-4 flex w-[15rem] flex-col">
-          <div class="mb-4 flex w-[15rem] flex-col">
-            <span class="text-wrapper-4">世代が違う私は自分と違う</span
-            >考えや、最新の思考を聞け
-          </div>るのが嬉しくて、うれしの
-        </div>ちゃんから学ぶ時間がとっ</Voice
-      >ても好き♡かわいくて賢い
-    </div>女子がたくさんのサロン💓
-  </div>
-  <span class="text-wrapper-3">みんなで高め会える</span>
-  <span class="text-wrapper-4">のが素敵♡</span>
-</div>
-
-<Voice
-  side="right"
-  name="七尾エレナさん"
-  title="株）プリンシパル代表取締役"
-  icon={testimonial_nanao}
-  useStar={true}
->
-  <div class="mb-4 flex w-[15rem] flex-col">
-    <span class="text-wrapper-4">今までありそうでなかった</span
-    >コンセプトのオンライン
-  </div>サロン💓<br />うれしのちゃんという</Voice
->
-<span class="text-wrapper-3">圧倒的なロールモデル</span>
-<span class="text-wrapper-4">がいるからこそ、軸がブレ</span
->ずにみんなで一緒に頑張れるし、高め合える最高なオンラインサロンだと思います！✨😆
-
-<div class="w-full">
-  <div class="flex flex-col justify-center">
-    <div class="absolute w-full">
-      <Image class="" src={deadline} alt="" />
-    </div>
-    <p class="element z-10">
-      <span class="text-wrapper-7">2024</span>
-      <span class="text-wrapper-8">年</span>
-      <span class="text-wrapper-7">4</span>
-      <span class="text-wrapper-8">月</span>
-      <span class="text-wrapper-7">21</span>
-      <span class="text-wrapper-8">日(日) まで</span>
-    </p>
-  </div>
-</div>
-<!-- 後回し -->
-<!-- <div class="label">
-      <div class="overlap-5">
-        <div class="group-2">
-          <div class="overlap-group-5">
-            <img class="watercolor" src="img/watercolor1-1.png" />
-            <img class="watercolor" src="img/watercolor1-2.png" />
+      <ZigzagContainer align="left">
+        <Voice
+          side="left"
+          name="武藤静香さん"
+          title="Rady ブランドデザイナー"
+          icon={testimonial_muto}
+          useStar={true}
+        >
+          <div class="mb-4">
+            世代が違う私は自分と違う考えや、最新の思考を聞けるのが嬉しくて、うれしのちゃんから学ぶ時間がとっても好き♡かわいくて賢い女子がたくさんのサロン💓
+            <span class="text-wrapper-3">みんなで高め会える</span>
+            のが素敵♡</span>
           </div>
-        </div>
-        <div class="text-wrapper-9">第２期メンバー</div>
-        <div class="text-wrapper-10">募集中！</div>
-      </div>
-    </div> -->
+        </Voice>
+      </ZigzagContainer>
+      <ZigzagContainer align="right">
+        <Voice
+          side="right"
+          name="七尾エレナさん"
+          title="株）プリンシパル代表取締役"
+          icon={testimonial_nanao}
+          useStar={true}
+        >
+          <div class="mb-4">
+            今までありそうでなかったコンセプトのオンラインサロン💓うれしのちゃんという
+            <span class="text-wrapper-3">圧倒的なロールモデル</span>
+            がいるからこそ、軸がブレずにみんなで一緒に頑張れるし、高め合える最高なオンラインサロンだと思います！✨😆
+          </div>
+        </Voice>
+      </ZigzagContainer>
+    </div>
+  </div>
+
 <div class="default-button">
   <div class="overlap-9">
     <JoinButton
