@@ -1,73 +1,86 @@
 ---
 import { Image } from 'astro:assets';
 
-import aboutover from '~/assets/layer/about_white_bokeh.svg';
-import aboutpink from '~/assets/layer/about_pink.png';
+// import aboutover from '~/assets/layer/about_white_bokeh.svg';
+// import aboutpink from '~/assets/layer/about_pink.png';
 
 import aboutimage from '~/assets/aboutimage.png';
 import underline4 from '~/assets/underline4.png';
 import underline5 from '~/assets/underline5.png';
+
+import Title from '~/components/common/title.astro';
 ---
 
 <div
   id="about"
   class="about flex w-full flex-col justify-center overflow-hidden"
 >
-  <div class="bg-layer z-10 mt-[70px] flex min-h-full flex-col">
-    <div class="min-h-20">
-      <!-- TODO: blendが効かない -->
-      <Image
-        class="white-bokeh w-full mix-blend-lighten"
-        src={aboutover}
-        alt=""
-      />
-      <div class="title absolute top-10 z-30 w-full">
-        <div class="flex flex-col">
-          <div class="self-center">
-            <div class="rectangle"></div>
-            <div class="text-wrapper-2">うれしのサロン</div>
-          </div>
-          <div class="text-wrapper mr-8 text-end">とは？</div>
-        </div>
+</div>
+<div class="box">
+  <div class="about">
+    <div class="overlap">
+      <div class="absolute w-full bg-[#ffffffba]">
+        <Title title_small="" title1="うれしのサロン" title2=""/>
       </div>
-    </div>
-    <div class="pic relative z-20 -mb-1 -mt-36">
       <Image class="aboutimage" src={aboutimage} alt="" />
-      <div class="rectangle-2"></div>
-      <div class="rectangle-wrapper absolute left-0 top-[17px] z-40 w-full">
-        <div class="subtitle top-10 z-30 h-28 pt-2">
-          <div class="h ml-12 text-start">
-            <div class="text-wrapper-3 pb-2">互いに高め合う</div>
-            <p class="p">
-              <span class="span">女性限定</span>
-              <span class="text-wrapper-4">コミュニティ</span>
-            </p>
-            <!-- TODO: 画像入れる -->
-            <div class="underline">
-              <img class="img" src="img/underline-1.png" />
+      <div class="bg-layer z-10 mt-[70px] flex min-h-full flex-col">
+        <div class="min-h-20">
+          <!-- TODO: blendが効かない -->
+          <!-- <Image
+            class="white-bokeh w-full mix-blend-lighten"
+            src={aboutover}
+            alt=""
+          /> -->
+          <div class="title absolute top-10 z-30 w-full">
+            <!-- <div class="flex flex-col">
+              <div class="self-center">
+                <div class="rectangle"></div>
+                <div class="text-wrapper-2">うれしのサロン</div>
+              </div>
+              <div class="text-wrapper mr-8 text-end">とは？</div>
+            </div> -->
+          </div>
+        </div>
+        <div class="pic relative z-20 -mb-1 -mt-36">
+          <!-- <Image class="aboutimage" src={aboutimage} alt="" /> -->
+          <div class="rectangle-2"></div>
+          <!-- <div class="rectangle-wrapper absolute left-0 top-[17px] z-40 w-full">
+            <div class="subtitle top-10 z-30 h-28 pt-2">
+              <div class="h ml-12 text-start">
+                <div class="text-wrapper-3 pb-2">互いに高め合う</div>
+                <p class="p">
+                  <span class="span">女性限定</span>
+                  <span class="text-wrapper-4">コミュニティ</span>
+                </p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        <div class="flex flex-col">
+          <!-- <Image class="pink w-full mix-blend-lighten" src={aboutpink} alt="" /> -->
+          <div
+            class="overlap absolute flex h-48 w-full flex-col justify-center text-center"
+          >
+            <div class="rectangle-wrapper absolute left-0 top-[17px] z-40 w-full">
+              <div class="subtitle top-10 z-30 h-28 pt-2">
+                <div class="h ml-12 text-start">
+                  <div class="text-wrapper-3 pb-2">互いに高め合う</div>
+                  <p class="p">
+                    <span class="span">女性限定</span>
+                    <span class="text-wrapper-4">コミュニティ</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="div-2">
+              <span class="text-wrapper-5 relative -mr-2">
+                あなたは今の自分に満足していますか？<br />
+              </span>
+              <span class="text-wrapper-6"
+                >自分らしさを大切にしながら<br />価値観の合う仲間、新しい可能性を<br />一緒に見つけませんか？
+              </span>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="flex flex-col">
-      <Image class="pink w-full mix-blend-lighten" src={aboutpink} alt="" />
-      <div
-        class="overlap absolute flex h-48 w-full flex-col justify-center text-center"
-      >
-        <div class="div-2">
-          <span class="text-wrapper-5 relative -mr-2 inline-block">
-            自分らしさ
-            <Image class="-mt-2" src={underline4} alt="" />
-          </span>
-          <span class="text-wrapper-6"
-            >を大切にしながら<br />価値観の合う仲間、<br />
-          </span>
-          <span class="text-wrapper-5 relative -mr-3 inline-block">
-            新しい可能性
-            <Image class="-mt-2 ml-2 w-[7.4rem]" src={underline4} alt="" />
-          </span>
-          <span class="text-wrapper-6">を<br />一緒に見つけませんか？</span>
         </div>
       </div>
     </div>
