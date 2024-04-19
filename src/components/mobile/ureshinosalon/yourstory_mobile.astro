@@ -3,7 +3,6 @@ import { Image } from 'astro:assets';
 
 import layer from '~/assets/layer/layer_yourstory.png';
 import yourstoryimage from '~/assets/yourstory/yourstoryimage.png';
-// import bg from '~/assets/yourstory/yourstory_fake.png';
 import JoinButton from '~/components/common/joinButton.astro';
 import Title from '~/components/common/title.astro';
 ---
@@ -12,12 +11,6 @@ import Title from '~/components/common/title.astro';
   id="yourjourney"
   class="-mt-96 flex min-h-[1700px] flex-col items-center justify-center overflow-hidden"
 >
-  <!-- <Image class="bg w-full" src={bg} alt="" /> -->
-  <div class="default-button -mt-16">
-    <div class="overlap-9">
-      <JoinButton microcopy1="2024年4月21日(日)まで" microcopy2="＼第2期メンバー募集中！／" text="　　今すぐ入会　　>" />
-    </div>
-  </div>
 </div>
 <div class="box">
   <div class="yourstory">
@@ -30,15 +23,15 @@ import Title from '~/components/common/title.astro';
       <div class="pic"><div class="gradient"></div></div>
       <div class="title">
         <div class="header-mark"></div>
-        <Title title_small="次はあなたのストーリーを" title1="" title2="描いてみませんか？" />
+        <Title title_small="" title1="START YOUR" title2="STORY" />
       </div>
       <Image class="yourstoryimage" src={yourstoryimage} alt="" />
       <div class="rectangle"></div>
       <div class="div"></div>
       <div class="text">
         <div class="group">
-          <div class="text-wrapper">自分らしく</div>
-          <div class="text-wrapper-2">成長できる環境</div>
+          <div class="text-wrapper">あなたらしく成長できる環境</div>
+          <!-- <div class="text-wrapper-2">成長できる環境</div> -->
         </div>
         <div class="overlap-group-wrapper">
           <div class="overlap-group">
@@ -46,16 +39,36 @@ import Title from '~/components/common/title.astro';
             <div class="underline-2"></div>
             <p class="p">
               <span class="span"
-                >自分自身に漠然とした違和感を感じているのならそれはあなたの<br />せいではありません。<br /><br />違和感の正体は、あなたが<br
-              /></span>
-              <span class="text-wrapper-3">本来いるべき場所</span>
-              <span class="span"> にいないだけ。<br /><br /></span>
-              <span class="text-wrapper-3">かわいく賢く</span>
-              <span class="span">生きる女性たちとの交流で変化が生まれます。<br /></span>
+                >「自分に自信を持ちたい」「理想の自分に近づきたい」<br /><br />このように感じていても行動できないのはあなたが本来いるべき場所にいないだけ。<br /><br />かわいく賢く生きる女性たちと同じ環境に身を置くことで<br />あなた自身の価値観や行動も変わり自信を持てるようになります。</span>
+            </p>
+          </div>
+        </div>
+        <div class="group">
+          <div class="text-wrapper">かわいく賢い女性たちが<br />自分をアップデートする場所</div>
+        </div>
+        <div class="overlap-group-wrapper">
+          <div class="overlap-group">
+            <div class="underline"></div>
+            <div class="underline-2"></div>
+            <p class="p">
+              <span class="span"
+                >うれしのサロンには、<br /><br />“かわいく賢く生きる”を体現しているうれしのちゃんをはじめ<br /><br />仕事や恋愛、美容といった輝く女性にとって欠かせない要素を<br />磨き続ける心強い仲間がいます。<br /><br />自立した女性たちが切磋琢磨する質の高いコミュニティで<br />一緒に人生をアップデートしませんか？</span>
             </p>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="w-full">
+  <div class="default-button">
+    <div class="overlap-9">
+      <JoinButton
+        microcopy1="　　 先着200名限定"
+        microcopy2="＼第2期メンバー募集中！／"
+        text="　　今すぐ入会　　>"
+      />
     </div>
   </div>
 </div>
