@@ -32,7 +32,7 @@ import Title from '~/components/common/title.astro';
     description=`うれしのちゃんのビジネスや
     恋愛テク・美容情報をシェア♪`
   >
-    <div class="flex flex-col">
+    <div class="bullet flex flex-col">
       <span>・ビジネスマインド</span>
       <span>・韓国美容/整形情報</span>
       <span>・ハイスペ恋愛/モテテク</span>
@@ -46,7 +46,7 @@ import Title from '~/components/common/title.astro';
     description=`向上心のある女性たちが集まり
       高め合っていける場所！`
   >
-    <div class="flex flex-col">
+    <div class="bullet flex flex-col">
       <span>・情報交換ができる</span>
       <span>・モチベがUPする</span>
       <span>・人生の視野が広がる</span>
@@ -60,7 +60,7 @@ import Title from '~/components/common/title.astro';
     description=`様々な分野で活躍する女性がいるから
         選択肢や可能性が広がる！`
   >
-    <div class="flex flex-col">
+    <div class="bullet flex flex-col">
       <span>・ビジネスパートナー探し</span>
       <span>・クライアントの紹介</span>
       <span>・コラボで売上＆影響力UP</span>
@@ -166,6 +166,16 @@ import Title from '~/components/common/title.astro';
       --variable-collection-purple: rgba(158, 135, 190, 1);
     }
 
+    .bullet {
+      color: #71717A;
+      font-family: "Sawarabi Gothic";
+      font-size: 19px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 40px; /* 166.667% */
+      letter-spacing: -2.16px;
+    }
+    
     .p {
       top: 99px;
       left: 14px;
