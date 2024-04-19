@@ -17,10 +17,12 @@ import beforeafter from '~/assets/mystory/beforeafter.svg';
 // import underline4 from '~/assets/mystory/underline9.png';
 
 import Title from '~/components/common/title.astro';
+import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
 ---
+
 <div
   id="mystory"
-  class="-mt-44 w-full flex min-h-[1471px] flex-col items-center justify-center overflow-hidden"
+  class="flex w-full flex-col items-center justify-center overflow-hidden"
 >
   <Title title_small="うれしのちゃんの" title1="" title2="垢抜けストーリー" />
   <!-- <Image class="bg w-full" src={layer} alt="" /> -->
@@ -31,31 +33,34 @@ import Title from '~/components/common/title.astro';
       alt=""
     /> -->
     <p class="element">
-      <span class="text-wrapper">SNSや美容をきっかけに、<br />私の人生は大きく変わりました。</span>
+      <span class="text-wrapper"
+        >SNSや美容をきっかけに、<br />私の人生は大きく変わりました。</span
+      >
     </p>
-    <div class="before-after">
-      <div class="overlap-2">
-        <div class="frame-2">
-          <div class="card">
-            <div class="overlap-group-2">
-              <div class="frame-3">
-                <Image class="rectangle" src={beforeimage} alt="" />
-              </div>
-              <div class="div-wrapper"><div class="text-wrapper-5">5年前</div></div>
+    <ResponsiveGrid>
+      <Fragment slot="top">
+        <div class="card">
+          <div class="overlap-group-2">
+            <div class="frame-3">
+              <Image class="rectangle" src={beforeimage} alt="" />
             </div>
-          </div>
-          <!-- <Image class="play-arrow" src={beforeafter} alt="" /> -->
-          <div class="overlap-wrapper">
-            <div class="overlap-group-2">
-              <div class="frame-3">
-                <Image class="rectangle" src={afterimage} alt="" />
-              </div>
-              <div class="frame-4"><div class="text-wrapper-5">現在</div></div>
+            <div class="div-wrapper">
+              <div class="text-wrapper-5">5年前</div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </Fragment>
+      <Fragment slot="bottom">
+        <div class="card">
+          <div class="overlap-group-2">
+            <div class="frame-3">
+              <Image class="rectangle" src={afterimage} alt="" />
+            </div>
+            <div class="frame-4"><div class="text-wrapper-5">現在</div></div>
+          </div>
+        </div>
+      </Fragment>
+    </ResponsiveGrid>
     <!-- <Image 
       class="absolute w-full mix-blend-lighten md:top-[280px]"
       src={layer2}
@@ -67,10 +72,19 @@ import Title from '~/components/common/title.astro';
       <div class="overlap-3">
         <div class="rectangle-2"></div>
         <p class="p">
-          <span class="text-wrapper-7">まるで別人</span> <span class="text-wrapper-8">ですよね？</span>
+          <span class="text-wrapper-7">まるで別人</span>
+          <span class="text-wrapper-8">ですよね？</span>
         </p>
         <div class="SNS-UP">
-          5年前は家に引きこもりがちで、ファッションや美容にも疎かった私。<br /><br />しかし、SNSを始めたことで自分磨きを頑張るようになり、どんどん垢抜けていきました。<br /><br />さらに環境と意識を変えたことで、<br />出会う人やチャンスも大きく変わりました。<br />理想の王子様を手に入れ、<br />仕事のステージや収入も上がったのです。<br /><br />現在はマレーシアに会社設立＆移住し、<br />新たなビジネスに取り組んでいます。
+          5年前は家に引きこもりがちで、ファッションや美容にも疎かった私。<br
+          /><br />しかし、SNSを始めたことで自分磨きを頑張るようになり、<br
+          />どんどん垢抜けていきました。<br /><br
+          />さらに環境と意識を変えたことで、<br
+          />出会う人やチャンスも大きく変わりました。<br
+          />理想の王子様を手に入れ、<br
+          />仕事のステージや収入も上がったのです。<br /><br
+          />現在はマレーシアに会社設立＆移住し、<br
+          />新たなビジネスに取り組んでいます。
         </div>
       </div>
     </div>
@@ -162,19 +176,19 @@ import Title from '~/components/common/title.astro';
     --variable-collection-purple: rgba(158, 135, 190, 1);
   }
 
-   .mystory {
+  .mystory {
     /* width: 361px; */
     /* height: 1471px; */
     top: 0;
     left: 0;
   }
 
-   .overlap {
+  .overlap {
     width: 360px;
     /* height: 1471px; */
   }
 
-   .bg {
+  .bg {
     width: 360px;
     /* height: 727px; */
     top: 744px;
@@ -182,7 +196,7 @@ import Title from '~/components/common/title.astro';
     object-fit: cover;
   }
 
-   .img {
+  .img {
     width: 359px;
     /* height: 744px; */
     top: 0;
@@ -190,7 +204,7 @@ import Title from '~/components/common/title.astro';
     object-fit: cover;
   }
 
-   .element {
+  .element {
     top: 139px;
     left: 48px;
     font-family: 'Ryo Gothic PlusN-Regular', Helvetica;
@@ -202,7 +216,7 @@ import Title from '~/components/common/title.astro';
     line-height: 22px;
   }
 
-   .text-wrapper {
+  .text-wrapper {
     color: #a1a1aa;
     letter-spacing: var(--mobile-body-letter-spacing);
     font-family: var(--mobile-body-font-family);
@@ -211,14 +225,14 @@ import Title from '~/components/common/title.astro';
     line-height: var(--mobile-body-line-height);
     font-size: var(--mobile-body-font-size);
   }
-   .title {
+  .title {
     width: 293px;
     /* height: 81px; */
     top: 35px;
     left: 34px;
   }
 
-   .frame {
+  .frame {
     gap: 5px;
     top: 0;
     left: 0;
@@ -226,7 +240,7 @@ import Title from '~/components/common/title.astro';
     align-items: center;
   }
 
-   .header-mark-wrapper {
+  .header-mark-wrapper {
     justify-content: center;
     gap: 24px;
     flex: 0 0 auto;
@@ -234,7 +248,7 @@ import Title from '~/components/common/title.astro';
     align-items: center;
   }
 
-   .header-mark {
+  .header-mark {
     width: 66px;
     /* height: 8px; */
     margin-left: -29px;
@@ -243,18 +257,18 @@ import Title from '~/components/common/title.astro';
     transform: rotate(90deg);
   }
 
-   .group {
+  .group {
     width: 284px;
     /* height: 81px; */
     margin-right: -4px;
   }
 
-   .div {
+  .div {
     width: 280px;
     /* height: 81px; */
   }
 
-   .text-wrapper-2 {
+  .text-wrapper-2 {
     top: 0;
     left: 8px;
     font-family: 'Hina Mincho-Regular', Helvetica;
@@ -265,7 +279,7 @@ import Title from '~/components/common/title.astro';
     line-height: normal;
   }
 
-   .text-wrapper-3 {
+  .text-wrapper-3 {
     top: 23px;
     left: 0;
     font-family: var(--mobile-h1-font-family);
@@ -277,14 +291,14 @@ import Title from '~/components/common/title.astro';
     font-style: var(--mobile-h1-font-style);
   }
 
-   .group-2 {
+  .group-2 {
     width: 53px;
     /* height: 14px; */
     top: 15px;
     left: 226px;
   }
 
-   .ellipse {
+  .ellipse {
     left: 0;
     width: 14px;
     /* height: 14px; */
@@ -299,7 +313,7 @@ import Title from '~/components/common/title.astro';
     );
   }
 
-   .ellipse-2 {
+  .ellipse-2 {
     left: 39px;
     width: 14px;
     /* height: 14px; */
@@ -314,25 +328,25 @@ import Title from '~/components/common/title.astro';
     );
   }
 
-   .before-after {
+  .before-after {
     width: 258px;
     /* height: 580px; */
     top: 242px;
     left: 43px;
   }
 
-   .overlap-2 {
+  .overlap-2 {
     /* height: 580px; */
   }
 
-   .play-arrow {
+  .play-arrow {
     width: 56px;
     /* height: 56px; */
     top: 263px;
     left: 109px;
   }
 
-   .frame-2 {
+  .frame-2 {
     flex-direction: row;
     /* gap: 64px; */
     top: 0;
@@ -341,16 +355,7 @@ import Title from '~/components/common/title.astro';
     align-items: center;
   }
 
-   .card {
-    width: 258px;
-    /* height: 258px; */
-  }
-
-   .overlap-group-2 {
-    /* height: 258px; */
-  }
-
-   .frame-3 {
+  .frame-3 {
     flex-direction: column;
     gap: 16px;
     padding: 10px;
@@ -363,13 +368,13 @@ import Title from '~/components/common/title.astro';
     align-items: center;
   }
 
-   .rectangle {
-    width: 200px;
-    /* height: 200px; */
+  .rectangle {
+    /* width: 200px; */
+    height: 300px;
     object-fit: cover;
   }
 
-   .text-wrapper-4 {
+  .text-wrapper-4 {
     width: fit-content;
     font-family: var(--mobile-body-font-family);
     font-weight: var(--mobile-body-font-weight);
@@ -381,7 +386,7 @@ import Title from '~/components/common/title.astro';
     font-style: var(--mobile-body-font-style);
   }
 
-   .div-wrapper {
+  .div-wrapper {
     position: relative;
     top: -20rem;
     justify-content: center;
@@ -395,7 +400,7 @@ import Title from '~/components/common/title.astro';
     align-items: center;
   }
 
-   .text-wrapper-5 {
+  .text-wrapper-5 {
     width: fit-content;
     margin-top: -1px;
     font-family: 'Montserrat-Bold', Helvetica;
@@ -407,12 +412,12 @@ import Title from '~/components/common/title.astro';
     white-space: nowrap;
   }
 
-   .overlap-wrapper {
+  .overlap-wrapper {
     width: 244px;
     /* height: 258px; */
   }
 
-   .frame-4 {
+  .frame-4 {
     position: relative;
     top: -20rem;
     display: inline-flex;
@@ -427,14 +432,14 @@ import Title from '~/components/common/title.astro';
     opacity: 0.85;
   }
 
-   .mrn {
+  .mrn {
     width: 360px;
     /* height: 440px; */
     top: 790px;
     left: 0;
   }
 
-   .text-wrapper-6 {
+  .text-wrapper-6 {
     /* height: 149px; */
     top: 923px;
     left: 27px;
@@ -447,20 +452,20 @@ import Title from '~/components/common/title.astro';
     line-height: normal;
   }
 
-   .text {
+  .text {
     width: 340px;
     /* height: 369px; */
     top: 1082px;
     left: 12px;
   }
 
-   .overlap-3 {
+  .overlap-3 {
     width: 336px;
     /* height: 369px; */
     border-radius: 8px;
   }
 
-   .rectangle-2 {
+  .rectangle-2 {
     width: 336px;
     /* height: 369px; */
     top: 0;
@@ -471,7 +476,7 @@ import Title from '~/components/common/title.astro';
     opacity: 0.73;
   }
 
-   .p {
+  .p {
     top: 10px;
     left: 31px;
     font-family: 'Hina Mincho-Regular', Helvetica;
@@ -482,7 +487,7 @@ import Title from '~/components/common/title.astro';
     line-height: 30px;
   }
 
-   .text-wrapper-7 {
+  .text-wrapper-7 {
     letter-spacing: var(--h2-j-letter-spacing);
     line-height: var(--h2-j-line-height);
     font-family: var(--h2-j-font-family);
@@ -491,22 +496,33 @@ import Title from '~/components/common/title.astro';
     font-size: var(--h2-j-font-size);
   }
 
-   .text-wrapper-8 {
+  .text-wrapper-8 {
     font-size: 20px;
     letter-spacing: 0.48px;
   }
-   .SNS-UP {
-    top: 0;
-    left: 0;
-    font-family: var(--body-j-font-family);
-    font-weight: var(--body-j-font-weight);
+
+  .SNS-UP {
+    width: 305px;
+    top: 83px;
+    left: 16px;
+    font-family: var(--mobile-body-font-family);
+    font-weight: var(--mobile-body-font-weight);
     color: var(--grey);
     font-size: 0.7rem;
     letter-spacing: var(--body-j-letter-spacing);
     line-height: var(--body-j-line-height);
     font-style: var(--body-j-font-style);
   }
-   .underline {
+
+  .single-underline {
+    width: 185px;
+    /* height: 71px; */
+    top: 39px;
+    left: 20px;
+    object-fit: cover;
+  }
+
+  .underline {
     width: 127px;
     top: 186px;
     left: 16px;
@@ -514,7 +530,7 @@ import Title from '~/components/common/title.astro';
     object-fit: cover;
   }
 
-   .underline-2 {
+  .underline-2 {
     width: 178px;
     top: 276px;
     left: 15px;
@@ -522,7 +538,7 @@ import Title from '~/components/common/title.astro';
     object-fit: cover;
   }
 
-   .underline-3 {
+  .underline-3 {
     width: 113px;
     top: 320px;
     left: 16px;
@@ -530,7 +546,7 @@ import Title from '~/components/common/title.astro';
     object-fit: cover;
   }
 
-   .underline-4 {
+  .underline-4 {
     width: 74px;
     top: 320px;
     left: 231px;
@@ -538,7 +554,7 @@ import Title from '~/components/common/title.astro';
     object-fit: cover;
   }
 
-   .arrow {
+  .arrow {
     width: 59px;
     /* height: 69px; */
     top: 173px;
