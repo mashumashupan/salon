@@ -1,10 +1,6 @@
 ---
 import { Image } from 'astro:assets';
 
-import priceimage from '~/assets/priceimage.png';
-import diamond from '~/assets/diamond_purple.svg';
-import button from '~/assets/button.svg';
-
 import JoinButton from '~/components/common/joinButton.astro';
 import Title from '~/components/common/title.astro';
 ---
@@ -38,7 +34,7 @@ import Title from '~/components/common/title.astro';
     <div class="mt-6 flex flex-col text-center text-gray-600">
       <i class="text-wrapper-8">
         次回の募集は未定です。<br />
-        また募集期間中でも定員に達した場合は<br />
+        募集期間中でも定員に達した場合は<br />
         入会を締め切らせていただきます。
       </i>
     </div>
@@ -205,6 +201,16 @@ import Title from '~/components/common/title.astro';
     line-height: 24px;
     white-space: nowrap;
   }
+
+  .text-wrapper-8 {
+    font-family: var(--small-title-j-font-family);
+    font-weight: var(--small-title-j-font-weight);
+    color: #b1a4aacc;
+    font-size: var(--small-title-j-font-size);
+    letter-spacing: var(--small-title-j-letter-spacing);
+    font-style: var(--small-title-j-font-style);
+    line-height: var(--small-title-j-line-height);
+  }
   .flexcontainer-2 {
     width: 283px;
     gap: 5px;
@@ -212,4 +218,5 @@ import Title from '~/components/common/title.astro';
     flex-direction: column;
     align-items: flex-start;
   }
+
 </style>
