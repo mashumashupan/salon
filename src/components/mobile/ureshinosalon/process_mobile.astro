@@ -47,24 +47,22 @@ const steps: StepProps[] = [
   class="flex flex-col items-center justify-center overflow-hidden"
 >
   <Title title_small="" title1="入会プロセス" title2="" />
-  <div class="overlap">
+  <div class="flex w-3/4 flex-col">
     <div class="process-2">
       <div class="frame">
         <div class="header-mark"></div>
       </div>
       <div class="text-wrapper-2 mt-2">ご入会と活動開始までの流れ</div>
     </div>
-    <div class="steps">
-      <div class="overlap-group">
-        <div class="vline"></div>
-        {
-          steps.map((obj, i) => (
-            <div class="my-2">
-              <Step {...obj} showVerticalLine={i !== steps.length - 1} />
-            </div>
-          ))
-        }
-      </div>
+    <div class="">
+      <div class="vline"></div>
+      {
+        steps.map((obj, i) => (
+          <div class="my-2 w-full">
+            <Step {...obj} showVerticalLine={i !== steps.length - 1} />
+          </div>
+        ))
+      }
     </div>
   </div>
   <div>

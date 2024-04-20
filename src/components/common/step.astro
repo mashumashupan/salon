@@ -13,11 +13,11 @@ export interface Props {
 const { number, title, description, small, showVerticalLine } = Astro.props;
 ---
 
-<div class="frame-2 relative">
-    <div class="flex flex-col">
-        <div class="frame-4 relative h-16">
+<div class="frame-2 relative w-full">
+    <div class="flex w-full flex-col">
+        <div class="frame-4 relative h-16 w-full">
             <div class="cinzel font-thin text-sm">Step</div>
-            <div class="cinzel text-6xl">{number}</div>
+            <div class="cinzel my-1 text-6xl">{number}</div>
         </div>
         <div class="frame-3 -mt-4">
             <span class="hannari mb-2 text-lg">{title}</span>

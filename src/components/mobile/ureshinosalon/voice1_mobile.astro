@@ -16,24 +16,20 @@ import ZigzagContainer from '~/layouts/ZigzagRow.astro';
   id="voice1"
   class="flex flex-col items-center justify-center overflow-hidden"
 >
-  <Title
-    title_small=""
-    title1="サロンメンバーの声"
-    title2=""
-  />
+  <Title title_small="" title1="サロンメンバーの声" title2="" />
   <p class="element">
     <span class="text-wrapper-7">かわいさ×賢さ×ビジネス×影響力</span>
   </p>
 
-  <div>
-    <p class="py-4">
+  <div class="flex w-full flex-col items-center">
+    <p class="w-3/4 py-4">
       <i>
         うれしのサロンにはあなたと同じような価値観を持ったかわいくて賢い女性が国内外にたくさん♡
       </i>
     </p>
   </div>
 
-  <div class="bubbles">
+  <div class="bubbles flex w-3/4 flex-col gap-8">
     <ZigzagContainer align="left">
       <Voice
         side="left"
@@ -45,7 +41,7 @@ import ZigzagContainer from '~/layouts/ZigzagRow.astro';
         <div class="mb-4">
           モチベーションが下がったとき、うれしのサロンの掲示板やコラムを読むと
           <span class="text-wrapper-6">気合いが入り背中を押されます♡</span>
-          嬉野さんの有益で力強い発信はもちろん、メンバーも挑戦や努力を続けている方ばかりなのでいつも押し上げていただいている気分です。</span>
+          嬉野さんの有益で力強い発信はもちろん、メンバーも挑戦や努力を続けている方ばかりなのでいつも押し上げていただいている気分です。
         </div>
       </Voice>
     </ZigzagContainer>
@@ -75,7 +71,7 @@ import ZigzagContainer from '~/layouts/ZigzagRow.astro';
         <div class="mb-4">
           今年やってよかったことの1つにうれしのサロンに入ったこと」があります。このサロンのおかげで、確実に
           <span class="text-wrapper-6">行動力が上がっています✨</span>
-          事業の話も、美容の話もできる強くて美しい女性が今年はさらに色んな人と話したいです！</span>
+          事業の話も、美容の話もできる強くて美しい女性が今年はさらに色んな人と話したいです！
         </div>
       </Voice>
     </ZigzagContainer>
@@ -96,7 +92,6 @@ import ZigzagContainer from '~/layouts/ZigzagRow.astro';
     </ZigzagContainer>
   </div>
 </div>
-
 <style>
   :root {
     --pale-pink: rgba(245, 236, 239, 1);
