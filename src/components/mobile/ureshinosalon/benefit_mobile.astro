@@ -22,53 +22,72 @@ import Title from '~/components/common/title.astro';
   id="benefit"
   class="relative flex min-h-max flex-col items-center justify-center overflow-hidden"
 >
-  <div class="pt-5">
+  <div>
     <Title title_small="" title1="うれしのサロンで" title2="　　得られること" />
   </div>
-  <Benefit
-    bg={benefit1}
-    number="01"
-    title="かわいく賢く生きるためのスキル"
-    description=`うれしのちゃんのビジネスや
+  <div class="flex w-[90%] flex-col bg-[#FAFAF9]">
+    <div
+      class="pb-10"
+      style="
+      background:linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(245, 236, 239, 0.48) 50.5%, rgba(221, 180, 193, 0.48) 100%);"
+    >
+      <Benefit
+        bg={benefit1}
+        number="01"
+        title="かわいく賢く生きるためのスキル"
+        description=`うれしのちゃんのビジネスや
     恋愛テク・美容情報をシェア♪`
-  >
-    <div class="bullet flex flex-col">
-      <span>・ビジネスマインド</span>
-      <span>・韓国美容/整形情報</span>
-      <span>・ハイスペ恋愛/モテテク</span>
-      <span>・SNS/ブランディング</span>
+      >
+        <div class="bullet sawarabi flex flex-col">
+          <span>・ビジネスマインド</span>
+          <span>・韓国美容/整形情報</span>
+          <span>・ハイスペ恋愛/モテテク</span>
+          <span>・SNS/ブランディング</span>
+        </div>
+      </Benefit>
     </div>
-  </Benefit>
-  <Benefit
-    bg={benefit2}
-    number="02"
-    title="一緒に成長できる仲間と環境"
-    description=`向上心のある女性たちが集まり
+    <div
+      class="pb-10"
+      style="
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(229, 213, 203, 0.56) 100%);"
+    >
+      <Benefit
+        bg={benefit2}
+        number="02"
+        title="一緒に成長できる仲間と環境"
+        description=`向上心のある女性たちが集まり
       高め合っていける場所！`
-  >
-    <div class="bullet flex flex-col">
-      <span>・情報交換ができる</span>
-      <span>・モチベがUPする</span>
-      <span>・人生の視野が広がる</span>
-      <span>・会って刺激をもらえる</span>
+      >
+        <div class="bullet sawarabi flex flex-col">
+          <span>・情報交換ができる</span>
+          <span>・モチベがUPする</span>
+          <span>・人生の視野が広がる</span>
+          <span>・会って刺激をもらえる</span>
+        </div>
+      </Benefit>
     </div>
-  </Benefit>
-  <Benefit
-    bg={benefit3}
-    number="03"
-    title="ビジネスチャンスの拡大化"
-    description=`様々な分野で活躍する女性がいるから
+    <div
+      class="pb-10"
+      style="
+      background:linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(245, 236, 239, 0.48) 50.5%, rgba(221, 180, 193, 0.48) 100%);"
+    >
+      <Benefit
+        bg={benefit3}
+        number="03"
+        title="ビジネスチャンスの拡大化"
+        description=`様々な分野で活躍する女性がいるから
         選択肢や可能性が広がる！`
-  >
-    <div class="bullet flex flex-col">
-      <span>・ビジネスパートナー探し</span>
-      <span>・クライアントの紹介</span>
-      <span>・コラボで売上＆影響力UP</span>
-      <span>・協力してSNSアカウント強化</span>
+      >
+        <div class="bullet sawarabi flex flex-col">
+          <span>・ビジネスパートナー探し</span>
+          <span>・クライアントの紹介</span>
+          <span>・コラボで売上＆影響力UP</span>
+          <span>・協力してSNSアカウント強化</span>
+        </div>
+      </Benefit>
     </div>
-  </Benefit>
-
-  <div class="w-full">
+  </div>
+  <div class="mt-10 w-full">
     <div class="default-button">
       <div class="overlap-9">
         <JoinButton
@@ -167,15 +186,16 @@ import Title from '~/components/common/title.astro';
     }
 
     .bullet {
-      color: #71717A;
-      font-family: "Sawarabi Gothic";
+      color: #71717a;
+      font-family: 'Sawarabi Gothic';
       font-size: 19px;
+      font-weight: 100;
       font-style: normal;
-      font-weight: 400;
-      line-height: 40px; /* 166.667% */
+      line-height: 1.6rem; /* 166.667% */
       letter-spacing: -2.16px;
+      -webkit-font-smoothing: antialiased;
     }
-    
+
     .p {
       top: 99px;
       left: 14px;
@@ -220,6 +240,10 @@ import Title from '~/components/common/title.astro';
       letter-spacing: 3.2px;
       line-height: 24px;
       white-space: nowrap;
+    }
+    .sawarabi {
+      font-family: 'Sawarabi Gothic', Helvetica;
+      letter-spacing: 0;
     }
   </style>
 </div>

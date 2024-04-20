@@ -25,13 +25,7 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
   class="flex w-full flex-col items-center justify-center overflow-hidden"
 >
   <Title title_small="うれしのちゃんの" title1="" title2="垢抜けストーリー" />
-  <!-- <Image class="bg w-full" src={layer} alt="" /> -->
   <div class="overlap">
-    <!-- <Image 
-      class="absolute w-full mix-blend-lighten md:top-[280px]"
-      src={layer}
-      alt=""
-    /> -->
     <p class="element mb-4">
       <span class="text-wrapper"
         >SNSや美容をきっかけに、<br />私の人生は大きく変わりました。</span
@@ -61,21 +55,14 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
         </div>
       </Fragment>
     </ResponsiveGrid>
-    <!-- <Image 
-      class="absolute w-full mix-blend-lighten md:top-[280px]"
-      src={layer2}
-      alt=""
-    /> -->
-    <!-- <Image class="mrn" src={mystoryimage} alt="" /> -->
-    <!-- <div class="text-wrapper-6">My Story</div> -->
-    <div class="text">
+    <div class="mb-10 rounded-lg bg-[#ffffff9f] p-3 shadow-lg backdrop-blur-lg">
       <div class="overlap-3">
         <div class="rectangle-2"></div>
-        <p class="p">
+        <p class="p hina-mincho mb-4">
           <span class="text-wrapper-7">まるで別人</span>
           <span class="text-wrapper-8">ですよね？</span>
         </p>
-        <div class="SNS-UP">
+        <div class="SNS-UP zenkaku-gothic">
           5年前は家に引きこもりがちで、ファッションや美容にも疎かった私。<br
           /><br />しかし、SNSを始めたことで自分磨きを頑張るようになり、<br
           />どんどん垢抜けていきました。<br /><br
@@ -207,7 +194,6 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
   .element {
     top: 139px;
     left: 48px;
-    font-family: 'Ryo Gothic PlusN-Regular', Helvetica;
     font-weight: 400;
     color: transparent;
     font-size: 16px;
@@ -452,13 +438,6 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
     line-height: normal;
   }
 
-  .text {
-    width: 340px;
-    /* height: 369px; */
-    top: 1082px;
-    left: 12px;
-  }
-
   .overlap-3 {
     width: 336px;
     /* height: 369px; */
@@ -488,11 +467,6 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
   }
 
   .text-wrapper-7 {
-    letter-spacing: var(--h2-j-letter-spacing);
-    line-height: var(--h2-j-line-height);
-    font-family: var(--h2-j-font-family);
-    font-style: var(--h2-j-font-style);
-    font-weight: var(--h2-j-font-weight);
     font-size: var(--h2-j-font-size);
   }
 
@@ -508,9 +482,9 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
     font-family: var(--mobile-body-font-family);
     font-weight: var(--mobile-body-font-weight);
     color: var(--grey);
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     letter-spacing: var(--body-j-letter-spacing);
-    line-height: var(--body-j-line-height);
+    line-height: 1.3rem;
     font-style: var(--body-j-font-style);
   }
 
@@ -561,5 +535,20 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
     left: 77px;
     mix-blend-mode: multiply;
     object-fit: cover;
+  }
+
+  .hina-mincho {
+    font-family: 'Hina Mincho';
+    font-style: normal !important;
+    font-weight: 100 !important;
+    line-height: normal !important;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .zenkaku-gothic {
+    font-family: 'Zen Kaku Gothic New';
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
   }
 </style>

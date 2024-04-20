@@ -15,72 +15,41 @@ import Title from '~/components/common/title.astro';
   id="about"
   class="about flex w-full flex-col justify-center overflow-hidden"
 >
-</div>
-<div class="box">
-  <div class="about">
-    <div class="overlap">
-      <div class="absolute w-full bg-[#ffffffba]">
-        <Title title_small="" title1="うれしのサロン" title2=""/>
-      </div>
-      <Image class="aboutimage" src={aboutimage} alt="" />
-      <div class="bg-layer z-10 mt-[70px] flex min-h-full flex-col">
-        <div class="min-h-20">
-          <!-- TODO: blendが効かない -->
-          <!-- <Image
-            class="white-bokeh w-full mix-blend-lighten"
-            src={aboutover}
-            alt=""
-          /> -->
-          <div class="title absolute top-10 z-30 w-full">
-            <!-- <div class="flex flex-col">
-              <div class="self-center">
-                <div class="rectangle"></div>
-                <div class="text-wrapper-2">うれしのサロン</div>
-              </div>
-              <div class="text-wrapper mr-8 text-end">とは？</div>
-            </div> -->
+  <div class="flex flex-col gap-4">
+    <div class="h-max">
+      <div class="relative">
+        <Image class="aboutimage mb-14" src={aboutimage} alt="" />
+        <div
+          class="absolute top-0 flex h-full w-full flex-col justify-between gap-56"
+        >
+          <div class="w-full bg-[#ffffffba]">
+            <Title title_small="" title1="" title2="うれしのサロン" />
           </div>
-        </div>
-        <div class="pic relative z-20 -mb-1 -mt-36">
-          <!-- <Image class="aboutimage" src={aboutimage} alt="" /> -->
-          <div class="rectangle-2"></div>
-          <!-- <div class="rectangle-wrapper absolute left-0 top-[17px] z-40 w-full">
-            <div class="subtitle top-10 z-30 h-28 pt-2">
-              <div class="h ml-12 text-start">
-                <div class="text-wrapper-3 pb-2">互いに高め合う</div>
-                <p class="p">
+          <div class="z-40 w-full">
+            <div class="subtitle top-10 z-30 pt-2">
+              <div class="ml-12 text-start">
+                <div class="text-wrapper-3">互いに高め合う</div>
+                <p class="p pb-2">
                   <span class="span">女性限定</span>
                   <span class="text-wrapper-4">コミュニティ</span>
                 </p>
               </div>
             </div>
-          </div> -->
-        </div>
-        <div class="flex flex-col">
-          <!-- <Image class="pink w-full mix-blend-lighten" src={aboutpink} alt="" /> -->
-          <div
-            class="overlap absolute flex h-48 w-full flex-col justify-center text-center"
-          >
-            <div class="rectangle-wrapper absolute left-0 top-[17px] z-40 w-full">
-              <div class="subtitle top-10 z-30 h-28 pt-2">
-                <div class="h ml-12 text-start">
-                  <div class="text-wrapper-3 pb-2">互いに高め合う</div>
-                  <p class="p">
-                    <span class="span">女性限定</span>
-                    <span class="text-wrapper-4">コミュニティ</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="div-2">
-              <span class="text-wrapper-5 relative -mr-2">
-                あなたは今の自分に満足していますか？<br />
-              </span>
-              <span class="text-wrapper-6"
-                >自分らしさを大切にしながら<br />価値観の合う仲間、新しい可能性を<br />一緒に見つけませんか？
-              </span>
-            </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col">
+      <!-- <Image class="pink w-full mix-blend-lighten" src={aboutpink} alt="" /> -->
+      <div class="flex w-full flex-col justify-center text-center">
+        <div class="div-2">
+          <span class="text-wrapper-5 relative -mr-2">
+            あなたは今の自分に満足していますか？<br />
+          </span>
+          <span class="text-wrapper-6"
+            >自分らしさを大切にしながら<br />価値観の合う仲間、新しい可能性を<br
+            />一緒に見つけませんか？
+          </span>
         </div>
       </div>
     </div>
@@ -250,7 +219,7 @@ import Title from '~/components/common/title.astro';
     background-color: #ffffffab;
     backdrop-filter: blur(6.3px) brightness(100%);
     -webkit-backdrop-filter: blur(6.3px) brightness(100%);
-    border-radius: 2px 100px 2px 2px;
+    /* border-radius: 2px 100px 2px 2px; */
     background: rgba(255, 255, 255, 0.67);
     backdrop-filter: blur(3.1500000953674316px);
   }
