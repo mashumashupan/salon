@@ -9,7 +9,7 @@ import shadowover from '~/assets/layer/layer_firstview.png';
 
 import hero_top from '~/assets/firstview/hero_top.png';
 import bg from '~/assets/firstview/bg.svg';
-import frame from '~/assets/firstview/frame.svg';
+import title from '~/assets/firstview/title.png';
 import JoinButton from '~/components/common/joinButton.astro';
 ---
 
@@ -25,7 +25,7 @@ import JoinButton from '~/components/common/joinButton.astro';
   <div class="flex flex-col pt-[52px]">
     <!-- TODO: テキストを調整 -->
     <div class="title-area text-center">
-      <div class="title-text hina-mincho back">うれしのサロン</div>
+      <!-- <div class="title-text hina-mincho back">うれしのサロン</div>
       <div class="title-text hina-mincho mid">うれしのサロン</div>
       <div class="title-text hina-mincho front">うれしのサロン</div>
       <div class="subtitle">
@@ -46,13 +46,18 @@ import JoinButton from '~/components/common/joinButton.astro';
             <Image src={frame} alt="" />
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <div>
       <Image class="hero-top" src={hero_top} alt="" />
       <Image
-        class="absolute top-[160px] w-full mix-blend-lighten md:top-[280px]"
+        class="absolute top-[160px] w-full mix-blend-lighten"
         src={shadowover}
+        alt=""
+      />
+      <Image
+        class="absolute top-[400px] w-full"
+        src={title}
         alt=""
       />
     </div>
