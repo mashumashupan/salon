@@ -1,0 +1,93 @@
+---
+import '@fontsource/sawarabi-gothic';
+import '@fontsource/cinzel-decorative';
+
+export interface Props {
+    number: string;
+    title: string;
+    description: string;
+    small: string;
+    showVerticalLine?: boolean;
+}
+
+const { number, title, description, small, showVerticalLine } = Astro.props;
+---
+
+<div class="frame-2 relative">
+    <div class="flex flex-col">
+        <div class="frame-4 relative h-16">
+            <div class="cinzel font-thin text-sm">Step</div>
+            <div class="cinzel text-6xl">{number}</div>
+        </div>
+        <div class="frame-3 -mt-4">
+            <span class="hannari mb-2 text-lg">{title}</span>
+            <div class="sawarabi font-thin text-sm">
+                {description}
+            </div>
+            <small class="sawarabi font-thin text-gray-400">
+                {small}
+            </small>
+        </div>
+        {
+            showVerticalLine && (
+                <div class="absolute -bottom-20 -z-10 inline-block h-[6rem] min-h-[1em] w-[0.05rem] self-center bg-gray-400" />
+            )
+        }
+    </div>
+</div>
+<style>
+    .frame-2 {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        top: 0;
+        left: 0;
+    }
+    .frame-4 {
+        color: white;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0px 10px;
+        top: 0;
+        left: 15px;
+        background-color: var(--grey);
+        border-radius: 2px 10px 0px 0px;
+        width: fit-content;
+        font-family: 'Cinzel Decorative-Regular', Helvetica;
+        font-weight: 400;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+    .frame-3 {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        padding: 20px 24px;
+        top: 68px;
+        left: 0;
+        background-color: var(--variable-collection-white);
+        border-radius: 2px;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-color: var(--grey);
+    }
+    .cinzel {
+        font-family: 'Cinzel Decorative', Helvetica;
+        letter-spacing: 0;
+    }
+    .hannari {
+        font-family: 'Hannari Mincho', Helvetica;
+        letter-spacing: 0;
+    }
+    .sawarabi {
+        font-family: 'Sawarabi Gothic', Helvetica;
+        letter-spacing: 0;
+    }
+    .font-thin {
+        -webkit-font-smoothing: antialiased;
+    }
+</style>

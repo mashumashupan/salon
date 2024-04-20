@@ -2,24 +2,35 @@
 import button_bg from '~/assets/join_button.svg';
 import { Image } from 'astro:assets';
 
-const { microcopy1, microcopy2 , text } = Astro.props;
+const { microcopy1, microcopy2, text } = Astro.props;
 ---
 
-<div class="mb-[10px] flex flex-col justify-center items-center overflow-hidden">
-    <div class="cv-copy text-[#C697A5] "><span>{microcopy1}</br>{microcopy2}</span></div>
-    <a href="https://buy.stripe.com/6oE7uS6lq4mP3oQdR2" class="flex flex-col -mb-8 ">
-        <Image src={button_bg} alt="Join" width="260" height={84} />
-        <span class="relative top-[-60px] self-center text-lg">{text}</span>
-    </a>
-    <div class="w-72">
-        <p class="font-thin text-[#98989c] text-xs">
-          <span>*決済完了を以って</span>
-          <a class="underline hover:text-blue-800 visited:text-[#727296]"
-            href="https://empression-co.com/lp/salon-terms/"
-            target="_blank"
-            rel="noopener noreferrer"><span>利用規約</span></a
-          >
-          <span>に同意したものとみなし、入会手続きが完了します。</span>
-        </p>
-      </div>
+<div
+  class="mb-[10px] flex flex-col items-center justify-center overflow-hidden"
+>
+  <div class="cv-copy text-[#C697A5]">
+    <span>{microcopy1}<br />{microcopy2}</span>
+  </div>
+  <a
+    href="https://buy.stripe.com/6oE7uS6lq4mP3oQdR2"
+    class="-mb-8 flex flex-col"
+  >
+    <Image src={button_bg} alt="Join" width="260" height={84} />
+    <span class="relative top-[-60px] self-center text-gray-50 text-lg"
+      >{text}</span
+    >
+  </a>
+  <div class="w-72">
+    <p class="font-thin text-[#98989c] text-xs">
+      <span>*決済完了を以って</span>
+      <a
+        class="underline visited:text-[#727296] hover:text-blue-800"
+        href="https://empression-co.com/lp/salon-terms/"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><span>利用規約</span>
+      </a>
+      <span>に同意したものとみなし、入会手続きが完了します。</span>
+    </p>
+  </div>
 </div>
