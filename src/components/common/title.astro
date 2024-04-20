@@ -15,7 +15,7 @@ interface Props {
 const { title_small, title1, title2 } = Astro.props;
 ---
 
-<div class="title">
+<div class="title my-6 flex w-full flex-col items-center">
   <div class="ureshino-salon absolute w-80">
     <Image class="logo" src={logo} alt="" />
   </div>
@@ -32,11 +32,6 @@ const { title_small, title1, title2 } = Astro.props;
 </div>
 
 <style>
-  .title {
-    top: 40px;
-    left: 34px;
-  }
-
   .rectangle {
     margin-left: -19px;
     background-color: var(--variable-collection-salmon);
