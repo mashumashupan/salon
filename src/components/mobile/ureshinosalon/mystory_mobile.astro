@@ -1,15 +1,10 @@
 ---
 import { Image } from 'astro:assets';
 
-import layer from '~/assets/layer/layer_mystory.png';
-// import layer2 from '~/assets/layer/layer_mystory2.png';
-
-// import arrow from '~/assets/mystory/arrow.svg';
 import beforeimage from '~/assets/mystory/beforeiamge.png';
 import afterimage from '~/assets/mystory/afterimage.png';
-// import mystoryimage from '~/assets/mystory/mystoryimage.png';
-import beforeafter from '~/assets/mystory/beforeafter.svg';
-
+import bg from '~/assets/mystory/flowers3.png';
+// import beforeafter from '~/assets/mystory/beforeafter.svg';
 // import singleunderline from '~/assets/mystory/single_underline.png';
 // import underline1 from '~/assets/mystory/underline6.png';
 // import underline2 from '~/assets/mystory/underline7.png';
@@ -24,6 +19,13 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
   id="mystory"
   class="flex w-full flex-col items-center justify-center overflow-hidden"
 >
+  <div class="relative w-full">
+    <Image
+    class="absolute top-0 -z-10"
+    src={bg}
+    alt="background image"
+    />
+  </div>
   <Title title_small="うれしのちゃんの" title1="" title2="垢抜けストーリー" />
   <div class="overlap">
     <p class="element mb-4">
@@ -75,6 +77,13 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
         </div>
       </div>
     </div>
+    <!-- <div class="relative w-full top-[300rem]">
+      <Image
+      class="absolute top-0 -z-10"
+      src={bg}
+      alt="background image"
+      />
+    </div> -->
   </div>
 </div>
 <style>

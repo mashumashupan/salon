@@ -1,20 +1,25 @@
 ---
 import { Image } from 'astro:assets';
 
-// import bg from '~/assets/testimonial/bg.png';
-
 import rect from '~/assets/testimonial/rect.png';
 import testimonial_muto from '~/assets/testimonial/testimonial_muto.png';
 import testimonial_nanao from '~/assets/testimonial/testimonial_nanao.png';
 import JoinButton from '~/components/common/joinButton.astro';
 import Voice from '~/components/common/voice.astro';
-// import logo from '~/assets/testimonial/logo.png';
+import bg from '~/assets/mystory/flowers2.png';
 
 import Title from '~/components/common/title.astro';
 import ZigzagContainer from '~/layouts/ZigzagRow.astro';
 ---
 
 <div id="testimonials" class="flex flex-col justify-center overflow-hidden">
+  <div class="relative w-full">
+    <Image
+    class="absolute top-0 -z-10"
+    src={bg}
+    alt="background image"
+    />
+  </div>
   <Title
     title_small=""
     title1="推薦者コメント"

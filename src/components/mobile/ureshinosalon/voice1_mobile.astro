@@ -6,6 +6,7 @@ import voice_ayu from '~/assets/voice/voice_ayu.png';
 import voice_yukko from '~/assets/voice/voice_yukko.png';
 import voice_chihiro from '~/assets/voice/voice_chihiro.png';
 import voice_karen from '~/assets/voice/voice_karen.png';
+import bg from '~/assets/mystory/flowers3.png';
 
 import Title from '~/components/common/title.astro';
 import Voice from '~/components/common/voice.astro';
@@ -16,6 +17,13 @@ import ZigzagContainer from '~/layouts/ZigzagRow.astro';
   id="voice1"
   class="flex flex-col items-center justify-center overflow-hidden"
 >
+  <div class="relative w-full">
+    <Image
+    class="absolute top-0 -z-10"
+    src={bg}
+    alt="background image"
+    />
+  </div>
   <Title title_small="" title1="サロンメンバーの声" title2="" />
   <p class="element">
     <span class="text-wrapper-7">かわいさ×賢さ×ビジネス×影響力</span>
