@@ -10,6 +10,7 @@ import meetup from 'src/assets/contents/fake_meetup.png';
 import slack from 'src/assets/contents/fake_slack.png';
 
 import schedule from 'src/assets/contents/schedule.png';
+import bg from 'src/assets/contents/leafshadow.png';
 import { Carousel } from '~/components/common/carousel.tsx';
 
 import Title from '~/components/common/title.astro';
@@ -21,6 +22,13 @@ const slides = [live, meetup, korean, column, slack, club];
   id="contents"
   class="z-20 flex flex-col items-center justify-center overflow-hidden"
 >
+  <div class="relative w-full">
+    <Image
+    class="absolute  top-0 -z-10"
+    src={bg}
+    alt="background image"
+    />
+  </div>
   <Title title_small="メンバーだけの" title1="特典コンテンツ" title2="" />
   <div class="mt-10 block overflow-hidden">
     <Carousel client:load images={slides} />
