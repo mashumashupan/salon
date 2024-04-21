@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import JoinButton from '~/components/common/joinButton.astro';
 
 import club from 'src/assets/contents/fake_club.png';
@@ -7,6 +8,8 @@ import korean from 'src/assets/contents/fake_korean.png';
 import live from 'src/assets/contents/fake_live.png';
 import meetup from 'src/assets/contents/fake_meetup.png';
 import slack from 'src/assets/contents/fake_slack.png';
+
+import schedule from 'src/assets/contents/schedule.png';
 import { Carousel } from '~/components/common/carousel.tsx';
 
 import Title from '~/components/common/title.astro';
@@ -21,6 +24,14 @@ const slides = [live, meetup, korean, column, slack, club];
   <Title title_small="メンバーだけの" title1="特典コンテンツ" title2="" />
   <div class="mt-10 block overflow-hidden">
     <Carousel client:load images={slides} />
+  </div>
+  <div class="mt-10">
+    <Image class="" src={schedule} alt="" />
+  </div>
+  <div class="">
+    <p class="font-thin text-[#98989c]" style="font-size:0.5rem">
+      <span>*定員が埋まり次第締め切りとなります。なるべく多くの方が参加できるように枠を設けておりますが、</br>満員になることが多いので、入会後お早めにお申し込みください。</span>
+    </p>
   </div>
   <div class="default-button z-30">
     <div class="overlap-9">
