@@ -1,32 +1,20 @@
 ---
 import { Image } from 'astro:assets';
 
-// import bg from '~/assets/testimonial/bg.png';
-
 import rect from '~/assets/testimonial/rect.png';
 import testimonial_muto from '~/assets/testimonial/testimonial_muto.png';
 import testimonial_nanao from '~/assets/testimonial/testimonial_nanao.png';
 import JoinButton from '~/components/common/joinButton.astro';
 import Voice from '~/components/common/voice.astro';
-// import logo from '~/assets/testimonial/logo.png';
 
 import Title from '~/components/common/title.astro';
-import ZigzagContainer from '~/layouts/ZigzagRow.astro';
+import ZigzagRow from '~/layouts/ZigzagRow.astro';
+import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
 ---
 
 <div id="testimonials" class="flex flex-col justify-center overflow-hidden">
-  <Title
-    title_small=""
-    title1="推薦者コメント"
-    title2=""
-  />
-  <div class="z-10 -mt-32 mt-16 flex flex-col items-center gap-14">
-    <!-- <div class="ureshino-salon -mb-20 w-80">
-      <Image class="logo" src={logo} alt="" />
-    </div>
-    <div class="">
-      <div class="text-wrapper">推薦者コメント</div>
-    </div> -->
+  <Title title_small="" title1="推薦者コメント" title2="" />
+  <div class="lg:-gap-5 z-10 mt-16 flex flex-col items-center gap-14">
     <div class="">
       <div
         class="overlap-group relative flex flex-col items-center justify-center"
@@ -40,39 +28,41 @@ import ZigzagContainer from '~/layouts/ZigzagRow.astro';
         </div>
       </div>
     </div>
-    <div class="bubble flex flex-col gap-10">
-      <ZigzagContainer align="left">
-        <Voice
-          side="left"
-          name="武藤静香さん"
-          title="Rady ブランドデザイナー"
-          icon={testimonial_muto}
-          useStar={true}
-        >
-          <div class="mb-4">
-            世代が違う私は自分と違う考えや、最新の思考を聞けるのが嬉しくて、うれしのちゃんから学ぶ時間がとっても好き♡かわいくて賢い女子がたくさんのサロン💓
-            <span class="text-wrapper-3">みんなで高め会える</span>
-            のが素敵♡</span>
-          </div>
-        </Voice>
-      </ZigzagContainer>
-      <ZigzagContainer align="right">
-        <Voice
-          side="right"
-          name="七尾エレナさん"
-          title="株）プリンシパル代表取締役"
-          icon={testimonial_nanao}
-          useStar={true}
-        >
-          <div class="mb-4">
-            今までありそうでなかったコンセプトのオンラインサロン💓うれしのちゃんという
-            <span class="text-wrapper-3">圧倒的なロールモデル</span>
-            がいるからこそ、軸がブレずにみんなで一緒に頑張れるし、高め合える最高なオンラインサロンだと思います！✨😆
-          </div>
-        </Voice>
-      </ZigzagContainer>
+    <div class="bubble flex flex-col gap-10 lg:w-3/4 lg:gap-0">
+      <ResponsiveGrid>
+        <ZigzagRow align="left" slot="top">
+          <Voice
+            side="left"
+            name="武藤静香さん"
+            title="Rady ブランドデザイナー"
+            icon={testimonial_muto}
+            useStar={true}
+          >
+            <div class="mb-4">
+              世代が違う私は自分と違う考えや、最新の思考を聞けるのが嬉しくて、うれしのちゃんから学ぶ時間がとっても好き♡かわいくて賢い女子がたくさんのサロン💓
+              <span class="text-wrapper-3">みんなで高め会える</span>のが素敵♡
+            </div>
+          </Voice>
+        </ZigzagRow>
+        <ZigzagRow align="right" slot="bottom">
+          <Voice
+            side="right"
+            name="七尾エレナさん"
+            title="株）プリンシパル代表取締役"
+            icon={testimonial_nanao}
+            useStar={true}
+          >
+            <div class="mb-4">
+              今までありそうでなかったコンセプトのオンラインサロン💓うれしのちゃんという
+              <span class="text-wrapper-3">圧倒的なロールモデル</span>
+              がいるからこそ、軸がブレずにみんなで一緒に頑張れるし、高め合える最高なオンラインサロンだと思います！✨😆
+            </div>
+          </Voice>
+        </ZigzagRow>
+      </ResponsiveGrid>
     </div>
   </div>
+</div>
 
 <div class="default-button">
   <div class="overlap-9">

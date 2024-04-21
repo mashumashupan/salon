@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 
 import JoinButton from '~/components/common/joinButton.astro';
 import Title from '~/components/common/title.astro';
+import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
 ---
 
 <div
@@ -11,34 +12,35 @@ import Title from '~/components/common/title.astro';
 >
   <Title title_small="" title1="PRICE" title2="" />
 
-  <div class="monthly">
-    <div class="frame">
-      <div class="frame-2">
-        <div class="text-wrapper-5">月会費</div>
-        <div class="frame-3">
-          <div class="text-wrapper-6">3,480</div>
-          <div class="text-wrapper-7">円</div>
+  <ResponsiveGrid>
+    <div class="monthly" slot="top">
+      <div class="frame">
+        <div class="frame-2">
+          <div class="text-wrapper-5">月会費</div>
+          <div class="frame-3">
+            <div class="text-wrapper-6">3,480</div>
+            <div class="text-wrapper-7">円</div>
+          </div>
         </div>
       </div>
+      <div class="text-sm">
+        <ul>
+          <li>クレジットカード（Visa、Mastercard）のみ</li>
+          <li>毎月同日に自動カード決済となります。</li>
+        </ul>
+      </div>
     </div>
-    <div class="text-sm">
-      <ul>
-        <li>クレジットカード（Visa、Mastercard）のみ</li>
-        <li>毎月同日に自動カード決済となります。</li>
-      </ul>
+    <div slot="bottom">
+      <JoinButton text="　　今すぐ入会　　>" />
+      <div class="#FFFFFF mt-6 flex flex-col text-center">
+        <i class="text-wrapper-8">
+          次回の募集は未定です。<br />
+          募集期間中でも定員に達した場合は<br />
+          入会を締め切らせていただきます。
+        </i>
+      </div>
     </div>
-  </div>
-
-  <div>
-    <JoinButton text="　　今すぐ入会　　>" />
-    <div class="mt-6 flex flex-col text-center #FFFFFF">
-      <i class="text-wrapper-8">
-        次回の募集は未定です。<br />
-        募集期間中でも定員に達した場合は<br />
-        入会を締め切らせていただきます。
-      </i>
-    </div>
-  </div>
+  </ResponsiveGrid>
 </div>
 <style>
   :root {
@@ -218,5 +220,4 @@ import Title from '~/components/common/title.astro';
     flex-direction: column;
     align-items: flex-start;
   }
-
 </style>

@@ -22,39 +22,22 @@ import JoinButton from '~/components/common/joinButton.astro';
     alt="background image"
   />
   <div class="flex flex-col pt-[52px]">
-    <!-- TODO: テキストを調整 -->
-    <div class="title-area text-center">
-      <!-- <div class="title-text hina-mincho back">うれしのサロン</div>
-      <div class="title-text hina-mincho mid">うれしのサロン</div>
-      <div class="title-text hina-mincho front">うれしのサロン</div>
-      <div class="subtitle">
-        <div class="overlap-2">
-          <p class="p">
-            <span class="hina-mincho span">かわいく賢く</span>
-            <span class="text-wrapper-3">生きる</span>
-            <span class="hina-mincho span">女性</span>
-            <span class="text-wrapper-4">のコミュニティ</span>
-          </p>
-          <p class="div-2">
-            <span class="hina-mincho text-wrapper-5">かわいく賢く</span>
-            <span class="text-wrapper-6">生きる</span>
-            <span class="hina-mincho text-wrapper-5">女性</span>
-            <span class="text-wrapper-7">のコミュニティ</span>
-          </p>
-          <div class="quotation">
-            <Image src={frame} alt="" />
-          </div>
-        </div>
-      </div> -->
-    </div>
-    <div>
-      <Image class="hero-top" src={hero_top} alt="" />
-      <Image
-        class="absolute top-[160px] w-full mix-blend-lighten"
-        src={shadowover}
-        alt=""
-      />
-      <Image class="absolute top-[400px] w-full" src={title} alt="" />
+    <div class="lg:relative lg:flex lg:flex-row-reverse">
+      <div class="lg:relative lg:w-2/3">
+        <Image class="hero-top lg:relative lg:-top-24" src={hero_top} alt="" />
+        <Image
+          class="absolute top-0 w-full mix-blend-lighten"
+          src={shadowover}
+          alt=""
+        />
+      </div>
+      <div class="lg:w-1/3">
+        <Image
+          class="absolute top-[400px] w-full lg:left-20 lg:top-60 lg:w-1/2"
+          src={title}
+          alt=""
+        />
+      </div>
     </div>
   </div>
   <div class="pt-5">

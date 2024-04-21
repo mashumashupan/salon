@@ -1,13 +1,16 @@
 ---
+interface Props {
+    nogap?: boolean;
+}
 
+const { nogap } = Astro.props;
 ---
 
-<!-- <div class="relative grid gap-4 sm:grid-cols-1 md:grid-cols-2"> -->
-<div class="relative grid gap-4 sm:grid-cols-1">
-    <div class="relative">
+<div class=`relative grid ${nogap ? '': 'gap-4'} sm:grid-cols-1 lg:grid-cols-6`>
+    <div class="relative lg:col-span-2 lg:col-start-2">
         <slot name="top" />
     </div>
-    <div class="relative">
+    <div class="relative lg:col-span-2">
         <slot name="bottom" />
     </div>
 </div>

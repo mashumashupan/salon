@@ -5,6 +5,7 @@ import layer from '~/assets/layer/layer_yourstory.png';
 import yourstoryimage from '~/assets/yourstory/yourstoryimage.png';
 import JoinButton from '~/components/common/joinButton.astro';
 import Title from '~/components/common/title.astro';
+import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
 ---
 
 <div
@@ -13,79 +14,84 @@ import Title from '~/components/common/title.astro';
 >
   <div class="yourstory mt-20 flex w-full flex-col">
     <div class="relative">
-      <div class="absolute -top-14 w-full bg-[#ffffffba]">
+      <div class="absolute -top-14 z-20 w-full bg-[#ffffffba]">
         <Title title_small="" title1="START YOUR" title2="STORY" />
       </div>
-      <Image class="yourstoryimage" src={yourstoryimage} alt="" />
-      <div class="relative -top-10 left-6 h-max w-[90%]">
+      <ResponsiveGrid nogap={true}>
+        <Image class="yourstoryimage" src={yourstoryimage} alt="" slot="top" />
         <div
-          class="absolute left-0 top-0 h-full w-full rounded-lg bg-[#db92a8ca] backdrop-blur-lg"
+          class="relative -top-10 left-6 h-max w-[90%] lg:top-40"
+          slot="bottom"
         >
-        </div>
-        <div
-          class="relative -top-6 left-4 mb-10 h-max rounded-lg bg-[#ffffff] p-3 shadow-lg backdrop-blur-lg"
-        >
-          <div class="group">
-            <div
-              class="text-wrapper hina-mincho"
-              style="background: linear-gradient(90deg, #9E87BE 0%, #C697A5 100%);
+          <div
+            class="absolute left-0 top-0 h-full w-full rounded-lg bg-[#db92a8ca] backdrop-blur-lg"
+          >
+          </div>
+          <div
+            class="relative -top-6 left-4 mb-10 h-max rounded-lg bg-[#ffffff] p-3 shadow-lg backdrop-blur-lg"
+          >
+            <div class="group">
+              <div
+                class="text-wrapper hina-mincho"
+                style="background: linear-gradient(90deg, #9E87BE 0%, #C697A5 100%);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;"
-            >
-              あなたらしく成長できる環境
+              >
+                あなたらしく成長できる環境
+              </div>
+              <!-- <div class="text-wrapper-2">成長できる環境</div> -->
             </div>
-            <!-- <div class="text-wrapper-2">成長できる環境</div> -->
-          </div>
-          <div class="overlap-group-wrapper">
-            <div class="overlap-group">
-              <div class="underline"></div>
-              <div class="underline-2"></div>
-              <p class="p">
-                <span class="span zenkaku-gothic">
-                  「自分に自信を持ちたい」「理想の自分に近づきたい」<br />
-                  <br />
-                  このように感じていても行動できないのは<br />
-                  あなたが本来いるべき場所にいないだけ。<br />
-                  <br />
-                  かわいく賢く生きる女性たちと同じ環境に身を置くことで<br />
-                  あなた自身の価値観や行動も変わり自信を持てるようになります。<br
-                  />
-                  <br />
-                </span>
-              </p>
+            <div class="overlap-group-wrapper">
+              <div class="overlap-group">
+                <div class="underline"></div>
+                <div class="underline-2"></div>
+                <p class="p">
+                  <span class="span zenkaku-gothic">
+                    「自分に自信を持ちたい」「理想の自分に近づきたい」<br />
+                    <br />
+                    このように感じていても行動できないのは<br />
+                    あなたが本来いるべき場所にいないだけ。<br />
+                    <br />
+                    かわいく賢く生きる女性たちと同じ環境に身を置くことで<br />
+                    あなた自身の価値観や行動も変わり自信を持てるようになります。<br
+                    />
+                    <br />
+                  </span>
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="group">
-            <div
-              class="text-wrapper hina-mincho"
-              style="background: var(--bicolor, linear-gradient(90deg, #9E87BE 0%, #C697A5 100%));
+            <div class="group">
+              <div
+                class="text-wrapper hina-mincho"
+                style="background: var(--bicolor, linear-gradient(90deg, #9E87BE 0%, #C697A5 100%));
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;"
-            >
-              かわいく賢い女性たちが<br />自分をアップデートする場所
+              >
+                かわいく賢い女性たちが<br />自分をアップデートする場所
+              </div>
             </div>
-          </div>
-          <div class="overlap-group-wrapper">
-            <div class="overlap-group">
-              <p class="p">
-                <span class="span zenkaku-gothic">
-                  うれしのサロンには、かわいく賢く生きる”を<br />
-                  “体現しているうれしのちゃんをはじめ<br />
-                  <br />
-                  仕事や恋愛、美容といった輝く女性にとって<br />
-                  欠かせない要素を磨き続ける心強い仲間がいます。<br />
-                  <br />
-                  自立した女性たちが切磋琢磨する質の高いコミュニティで<br />
-                  一緒に人生をアップデートしませんか？<br />
-                  <br />
-                </span>
-              </p>
+            <div class="overlap-group-wrapper">
+              <div class="overlap-group">
+                <p class="p">
+                  <span class="span zenkaku-gothic">
+                    うれしのサロンには、かわいく賢く生きる”を<br />
+                    “体現しているうれしのちゃんをはじめ<br />
+                    <br />
+                    仕事や恋愛、美容といった輝く女性にとって<br />
+                    欠かせない要素を磨き続ける心強い仲間がいます。<br />
+                    <br />
+                    自立した女性たちが切磋琢磨する質の高いコミュニティで<br />
+                    一緒に人生をアップデートしませんか？<br />
+                    <br />
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </ResponsiveGrid>
       <div class="w-full">
         <div class="default-button">
           <div class="overlap-9">
