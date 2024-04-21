@@ -1,15 +1,15 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 const widths = [450, 800];
-const sizes = '(min-width: 640px) 42vw, 67vw';
+const sizes = "(min-width: 640px) 42vw, 67vw";
 
-import shadowover from '~/assets/layer/layer_firstview.png';
+import shadowover from "~/assets/firstview/layer_firstview.png";
 
-import hero_top from '~/assets/firstview/hero_top.png';
-import bg from '~/assets/firstview/bg.svg';
-import title from '~/assets/firstview/title.png';
-import JoinButton from '~/components/common/joinButton.astro';
+import hero_top from "~/assets/firstview/hero_top.png";
+import bg from "~/assets/firstview/bg.svg";
+import title from "~/assets/firstview/title.png";
+import JoinButton from "~/components/common/joinButton.astro";
 ---
 
 <div
@@ -41,28 +41,13 @@ import JoinButton from '~/components/common/joinButton.astro';
     </div>
   </div>
   <div class="pt-5">
-    <JoinButton
-      microcopy1="4月21日(日)までの期間限定"
-      microcopy2="＼第2期メンバー募集中！／"
-      text="　　今すぐ入会　　>"
-    />
+    <JoinButton microcopy1="" microcopy2="＼募集は締め切りました／" />
   </div>
-  <!-- <div class="w-72">
-    <p class="font-thin text-[#71717A] text-xs">
-      <span>*決済完了を以って</span>
-      <a
-        href="https://empression-co.com/lp/salon-terms/"
-        target="_blank"
-        rel="noopener noreferrer"><span>利用規約</span></a
-      >
-      <span>に同意したものとみなし、入会手続きが完了します。</span>
-    </p>
-  </div> -->
 </div>
 
 <style>
   .hina-mincho {
-    font-family: 'Hina Mincho';
+    font-family: "Hina Mincho";
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -123,7 +108,7 @@ import JoinButton from '~/components/common/joinButton.astro';
         top: 10px;
         left: 18px;
         opacity: 0.7;
-        font-family: 'Hina Mincho-Regular', Helvetica;
+        font-family: "Hina Mincho-Regular", Helvetica;
         font-weight: 400;
         color: white;
         font-size: 24px;

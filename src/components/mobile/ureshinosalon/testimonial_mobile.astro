@@ -6,6 +6,7 @@ import testimonial_muto from '~/assets/testimonial/testimonial_muto.png';
 import testimonial_nanao from '~/assets/testimonial/testimonial_nanao.png';
 import JoinButton from '~/components/common/joinButton.astro';
 import Voice from '~/components/common/voice.astro';
+import bg from '~/assets/mystory/flowers2.png';
 
 import Title from '~/components/common/title.astro';
 import ZigzagRow from '~/layouts/ZigzagRow.astro';
@@ -13,6 +14,9 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
 ---
 
 <div id="testimonials" class="flex flex-col justify-center overflow-hidden">
+  <div class="relative w-full">
+    <Image class="absolute top-0 -z-10" src={bg} alt="background image" />
+  </div>
   <Title title_small="" title1="推薦者コメント" title2="" />
   <div class="lg:-gap-5 z-10 mt-16 flex flex-col items-center gap-14">
     <div class="">
@@ -66,11 +70,7 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
 
 <div class="default-button">
   <div class="overlap-9">
-    <JoinButton
-      microcopy1=""
-      microcopy2="＼第2期メンバー募集中！／"
-      text="　　今すぐ入会　　>"
-    />
+    <JoinButton microcopy1="" microcopy2="" />
   </div>
 </div>
 

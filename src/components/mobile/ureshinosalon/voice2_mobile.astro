@@ -1,15 +1,14 @@
 ---
 import { Image } from 'astro:assets';
 
-import layer from '~/assets/layer/layer_voice2.png';
-import layer2 from '~/assets/layer/layer_voice2_2.png';
-
 import arrow from '~/assets/voice/arrow.png';
 import underline from '~/assets/voice/underline.png';
 
 import voice2image from '~/assets/voice/voice2image.png';
 import voice_reina from '~/assets/voice/voice_reina.png';
 import voice_karen from '~/assets/voice/voice_karen.png';
+
+import bg from '~/assets/mystory/flowers3.png';
 
 import Title from '~/components/common/title.astro';
 import Voice from '~/components/common/voice.astro';
@@ -21,6 +20,13 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
   id="voice2"
   class="flex flex-col items-center justify-center overflow-hidden"
 >
+  <div class="relative w-full">
+    <Image
+    class="absolute top-0 -z-10"
+    src={bg}
+    alt="background image"
+    />
+  </div>
   <Title
     title_small="協力しあえば成果もUP！"
     title1="頼れる"

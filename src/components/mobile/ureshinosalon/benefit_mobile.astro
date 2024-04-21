@@ -1,249 +1,234 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
-import bg from '~/assets/benefit/bg.png';
+import benefit1 from "~/assets/benefit/benefit1.png";
+import benefit2 from "~/assets/benefit/benefit2.png";
+import benefit3 from "~/assets/benefit/benefit3.png";
 
-import benefit1 from '~/assets/benefit/benefit1.png';
-import benefit2 from '~/assets/benefit/benefit2.png';
-import benefit3 from '~/assets/benefit/benefit3.png';
+import bg from "~/assets/benefit/benefit_bg.png";
 
-// import highlight from '~/assets/benefit/highlight.png';
+import JoinButton from "~/components/common/joinButton.astro";
+import Circle from "./benefit/circle.astro";
+import Benefit from "./benefit/benefit.astro";
 
-import JoinButton from '~/components/common/joinButton.astro';
-// import Title from './benefit/title.astro';
-import Circle from './benefit/circle.astro';
-import Benefit from './benefit/benefit.astro';
-// import bg2 from '~/assets/benefit/benefits_fake.png';
-
-import Title from '~/components/common/title.astro';
+import Title from "~/components/common/title.astro";
 ---
 
 <div
   id="benefit"
   class="relative flex min-h-max flex-col items-center justify-center overflow-hidden"
 >
+  <div class="relative w-full">
+    <Image class="absolute top-0 -z-10" src={bg} alt="background image" />
+  </div>
   <div>
     <Title title_small="" title1="うれしのサロンで" title2="　　得られること" />
   </div>
-  <div class="flex w-[90%] flex-col bg-[#FAFAF9]">
-    <div
-      class="pb-10"
-      style="
-      background:linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(245, 236, 239, 0.48) 50.5%, rgba(221, 180, 193, 0.48) 100%);"
-    >
+  <div class="flex w-[90%] flex-col">
+    <div class="pb-10">
       <Benefit
         bg={benefit1}
         number="01"
         title="かわいく賢く生きるためのスキル"
         description=`うれしのちゃんのビジネスや
-    恋愛テク・美容情報をシェア♪`
-      >
-        <div class="bullet sawarabi flex flex-col">
-          <span>・ビジネスマインド</span>
-          <span>・韓国美容/整形情報</span>
-          <span>・ハイスペ恋愛/モテテク</span>
-          <span>・SNS/ブランディング</span>
-        </div>
-      </Benefit>
+    恋愛テク・美容情報をシェア♪
+    ・ビジネスマインド
+    ・韓国美容/整形情報
+    ・ハイスペ恋愛/モテテク
+    ・SNS/ブランディング`
+      />
     </div>
-    <div
-      class="pb-10"
-      style="
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(229, 213, 203, 0.56) 100%);"
-    >
+    <div class="pb-10">
       <Benefit
         bg={benefit2}
         number="02"
         title="一緒に成長できる仲間と環境"
         description=`向上心のある女性たちが集まり
-      高め合っていける場所！`
-      >
-        <div class="bullet sawarabi flex flex-col">
-          <span>・情報交換ができる</span>
-          <span>・モチベがUPする</span>
-          <span>・人生の視野が広がる</span>
-          <span>・会って刺激をもらえる</span>
-        </div>
-      </Benefit>
+      高め合っていける場所！
+      ・情報交換ができる
+      ・モチベがUPする
+      ・人生の視野が広がる
+      ・会って刺激をもらえる`
+      />
     </div>
-    <div
-      class="pb-10"
-      style="
-      background:linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(245, 236, 239, 0.48) 50.5%, rgba(221, 180, 193, 0.48) 100%);"
-    >
+    <div class="pb-10">
       <Benefit
         bg={benefit3}
         number="03"
         title="ビジネスチャンスの拡大化"
         description=`様々な分野で活躍する女性がいるから
-        選択肢や可能性が広がる！`
-      >
-        <div class="bullet sawarabi flex flex-col">
-          <span>・ビジネスパートナー探し</span>
-          <span>・クライアントの紹介</span>
-          <span>・コラボで売上＆影響力UP</span>
-          <span>・協力してSNSアカウント強化</span>
-        </div>
-      </Benefit>
+          選択肢や可能性が広がる！
+          ・ビジネスパートナー探し
+          ・クライアントの紹介
+          ・コラボで売上＆影響力UP
+          ・協力してSNSアカウント強化`
+      />
     </div>
   </div>
-  <div class="mt-10 w-full">
-    <div class="default-button">
-      <div class="overlap-9">
-        <JoinButton
-          microcopy1="　　 先着200名限定"
-          microcopy2="＼第2期メンバー募集中！／"
-          text="　　今すぐ入会　　>"
-        />
-      </div>
-    </div>
-  </div>
-
-  <style>
-    :root {
-      --pale-pink: rgba(245, 236, 239, 1);
-      --neutral: rgba(250, 250, 249, 1);
-      --lightest-grey: rgba(228, 228, 231, 1);
-      --light-grey: rgba(161, 161, 170, 1);
-      --grey: rgba(113, 113, 122, 1);
-      --dark-grey: rgba(82, 82, 91, 1);
-      --black: rgba(39, 39, 42, 1);
-      --mobile-h1-font-family: 'Hina Mincho', Helvetica;
-      --mobile-h1-font-weight: 400;
-      --mobile-h1-font-size: 40px;
-      --mobile-h1-letter-spacing: 0px;
-      --mobile-h1-line-height: normal;
-      --mobile-h1-font-style: normal;
-      --mobile-h2-font-family: 'Hina Mincho', Helvetica;
-      --mobile-h2-font-weight: 400;
-      --mobile-h2-font-size: 24px;
-      --mobile-h2-letter-spacing: 2.88px;
-      --mobile-h2-line-height: 144.9303150177002%;
-      --mobile-h2-font-style: normal;
-      --mobile-body-font-family: 'Ryo Gothic PlusN', Helvetica;
-      --mobile-body-font-weight: 400;
-      --mobile-body-font-size: 16px;
-      --mobile-body-letter-spacing: 2.08px;
-      --mobile-body-line-height: 22px;
-      --mobile-body-font-style: normal;
-      --small-title-j-font-family: 'Ryo Gothic PlusN', Helvetica;
-      --small-title-j-font-weight: 400;
-      --small-title-j-font-size: 20px;
-      --small-title-j-letter-spacing: 0px;
-      --small-title-j-line-height: normal;
-      --small-title-j-font-style: normal;
-      --small-text-j-font-family: 'Ryo Gothic PlusN', Helvetica;
-      --small-text-j-font-weight: 400;
-      --small-text-j-font-size: 14px;
-      --small-text-j-letter-spacing: -0.42px;
-      --small-text-j-line-height: normal;
-      --small-text-j-font-style: normal;
-      --script-font-family: 'Charlotte', Helvetica;
-      --script-font-weight: 400;
-      --script-font-size: 20px;
-      --script-letter-spacing: 0px;
-      --script-line-height: normal;
-      --script-font-style: normal;
-      --h1-e-font-family: 'Cinzel Decorative', Helvetica;
-      --h1-e-font-weight: 400;
-      --h1-e-font-size: 64px;
-      --h1-e-letter-spacing: 1.92px;
-      --h1-e-line-height: normal;
-      --h1-e-font-style: normal;
-      --h2-j-font-family: 'Hina Mincho', Helvetica;
-      --h2-j-font-weight: 400;
-      --h2-j-font-size: 30px;
-      --h2-j-letter-spacing: 3.6px;
-      --h2-j-line-height: 144.9303150177002%;
-      --h2-j-font-style: normal;
-      --body-j-font-family: 'Ryo Gothic PlusN', Helvetica;
-      --body-j-font-weight: 400;
-      --body-j-font-size: 16px;
-      --body-j-letter-spacing: 2.56px;
-      --body-j-line-height: 24px;
-      --body-j-font-style: normal;
-      --montserrat-font-family: 'Montserrat', Helvetica;
-      --montserrat-font-weight: 500;
-      --montserrat-font-size: 14px;
-      --montserrat-letter-spacing: 0.10000000149011612px;
-      --montserrat-line-height: 20px;
-      --montserrat-font-style: normal;
-      --h1-j-font-family: 'Hina Mincho', Helvetica;
-      --h1-j-font-weight: 400;
-      --h1-j-font-size: 64px;
-      --h1-j-letter-spacing: 4.48px;
-      --h1-j-line-height: normal;
-      --h1-j-font-style: normal;
-      --pink-shadow: 3px 4px 5.800000190734863px 0px rgba(193, 157, 169, 1);
-      --drop: 0px 2px 4px 0px rgba(177, 165, 171, 0.8);
-      --variable-collection-beige: rgba(229, 213, 203, 1);
-      --variable-collection-pink: rgba(198, 151, 165, 1);
-      --variable-collection-white: rgba(255, 255, 255, 1);
-      --variable-collection-pale-pink: rgba(245, 236, 239, 1);
-      --variable-collection-salmon: rgba(215, 169, 159, 1);
-      --variable-collection-beige-gradient: rgba(255, 255, 255, 0);
-      --variable-collection-purple: rgba(158, 135, 190, 1);
-    }
-
-    .bullet {
-      color: #71717a;
-      font-family: 'Sawarabi Gothic';
-      font-size: 19px;
-      font-weight: 100;
-      font-style: normal;
-      line-height: 1.6rem; /* 166.667% */
-      letter-spacing: -2.16px;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .p {
-      top: 99px;
-      left: 14px;
-      font-family: var(--small-title-j-font-family);
-      font-weight: var(--small-title-j-font-weight);
-      color: transparent;
-      font-size: var(--small-title-j-font-size);
-      letter-spacing: var(--small-title-j-letter-spacing);
-      line-height: var(--small-title-j-line-height);
-      font-style: var(--small-title-j-font-style);
-    }
-
-    .span {
-      color: #71717a;
-      font-family: var(--small-title-j-font-family);
-      font-style: var(--small-title-j-font-style);
-      font-weight: var(--small-title-j-font-weight);
-      letter-spacing: var(--small-title-j-letter-spacing);
-      line-height: var(--small-title-j-line-height);
-      font-size: var(--small-title-j-font-size);
-    }
-
-    .text-wrapper-4 {
-      color: #c697a5;
-      font-family: var(--small-title-j-font-family);
-      font-style: var(--small-title-j-font-style);
-      font-weight: var(--small-title-j-font-weight);
-      letter-spacing: var(--small-title-j-letter-spacing);
-      line-height: var(--small-title-j-line-height);
-      font-size: var(--small-title-j-font-size);
-    }
-
-    .text-wrapper-5 {
-      top: 41px;
-      left: 8px;
-      transform: rotate(-2.09deg);
-      font-family: 'Ryo Gothic PlusN-B', Helvetica;
-      font-weight: 400;
-      color: var(--variable-collection-white);
-      font-size: 20px;
-      text-align: center;
-      letter-spacing: 3.2px;
-      line-height: 24px;
-      white-space: nowrap;
-    }
-    .sawarabi {
-      font-family: 'Sawarabi Gothic', Helvetica;
-      letter-spacing: 0;
-    }
-  </style>
 </div>
+
+<div class="mt-10 w-full">
+  <div class="default-button">
+    <div class="overlap-9">
+      <JoinButton microcopy1="" microcopy2="" />
+    </div>
+  </div>
+</div>
+
+<style>
+  :root {
+    --pale-pink: rgba(245, 236, 239, 1);
+    --neutral: rgba(250, 250, 249, 1);
+    --lightest-grey: rgba(228, 228, 231, 1);
+    --light-grey: rgba(161, 161, 170, 1);
+    --grey: rgba(113, 113, 122, 1);
+    --dark-grey: rgba(82, 82, 91, 1);
+    --black: rgba(39, 39, 42, 1);
+    --mobile-h1-font-family: "Hina Mincho", Helvetica;
+    --mobile-h1-font-weight: 400;
+    --mobile-h1-font-size: 40px;
+    --mobile-h1-letter-spacing: 0px;
+    --mobile-h1-line-height: normal;
+    --mobile-h1-font-style: normal;
+    --mobile-h2-font-family: "Hina Mincho", Helvetica;
+    --mobile-h2-font-weight: 400;
+    --mobile-h2-font-size: 24px;
+    --mobile-h2-letter-spacing: 2.88px;
+    --mobile-h2-line-height: 144.9303150177002%;
+    --mobile-h2-font-style: normal;
+    --mobile-body-font-family: "Ryo Gothic PlusN", Helvetica;
+    --mobile-body-font-weight: 400;
+    --mobile-body-font-size: 16px;
+    --mobile-body-letter-spacing: 2.08px;
+    --mobile-body-line-height: 22px;
+    --mobile-body-font-style: normal;
+    --small-title-j-font-family: "Ryo Gothic PlusN", Helvetica;
+    --small-title-j-font-weight: 400;
+    --small-title-j-font-size: 20px;
+    --small-title-j-letter-spacing: 0px;
+    --small-title-j-line-height: normal;
+    --small-title-j-font-style: normal;
+    --small-text-j-font-family: "Ryo Gothic PlusN", Helvetica;
+    --small-text-j-font-weight: 400;
+    --small-text-j-font-size: 14px;
+    --small-text-j-letter-spacing: -0.42px;
+    --small-text-j-line-height: normal;
+    --small-text-j-font-style: normal;
+    --script-font-family: "Charlotte", Helvetica;
+    --script-font-weight: 400;
+    --script-font-size: 20px;
+    --script-letter-spacing: 0px;
+    --script-line-height: normal;
+    --script-font-style: normal;
+    --h1-e-font-family: "Cinzel Decorative", Helvetica;
+    --h1-e-font-weight: 400;
+    --h1-e-font-size: 64px;
+    --h1-e-letter-spacing: 1.92px;
+    --h1-e-line-height: normal;
+    --h1-e-font-style: normal;
+    --h2-j-font-family: "Hina Mincho", Helvetica;
+    --h2-j-font-weight: 400;
+    --h2-j-font-size: 30px;
+    --h2-j-letter-spacing: 3.6px;
+    --h2-j-line-height: 144.9303150177002%;
+    --h2-j-font-style: normal;
+    --body-j-font-family: "Ryo Gothic PlusN", Helvetica;
+    --body-j-font-weight: 400;
+    --body-j-font-size: 16px;
+    --body-j-letter-spacing: 2.56px;
+    --body-j-line-height: 24px;
+    --body-j-font-style: normal;
+    --montserrat-font-family: "Montserrat", Helvetica;
+    --montserrat-font-weight: 500;
+    --montserrat-font-size: 14px;
+    --montserrat-letter-spacing: 0.10000000149011612px;
+    --montserrat-line-height: 20px;
+    --montserrat-font-style: normal;
+    --h1-j-font-family: "Hina Mincho", Helvetica;
+    --h1-j-font-weight: 400;
+    --h1-j-font-size: 64px;
+    --h1-j-letter-spacing: 4.48px;
+    --h1-j-line-height: normal;
+    --h1-j-font-style: normal;
+    --pink-shadow: 3px 4px 5.800000190734863px 0px rgba(193, 157, 169, 1);
+    --drop: 0px 2px 4px 0px rgba(177, 165, 171, 0.8);
+    --variable-collection-beige: rgba(229, 213, 203, 1);
+    --variable-collection-pink: rgba(198, 151, 165, 1);
+    --variable-collection-white: rgba(255, 255, 255, 1);
+    --variable-collection-pale-pink: rgba(245, 236, 239, 1);
+    --variable-collection-salmon: rgba(215, 169, 159, 1);
+    --variable-collection-beige-gradient: rgba(255, 255, 255, 0);
+    --variable-collection-purple: rgba(158, 135, 190, 1);
+  }
+
+  .bullet {
+    color: #71717a;
+    font-family: "Sawarabi Gothic";
+    font-size: 19px;
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1.6rem; /* 166.667% */
+    letter-spacing: -2.16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .p {
+    top: 99px;
+    left: 14px;
+    font-family: var(--small-title-j-font-family);
+    font-weight: var(--small-title-j-font-weight);
+    color: transparent;
+    font-size: var(--small-title-j-font-size);
+    letter-spacing: var(--small-title-j-letter-spacing);
+    line-height: var(--small-title-j-line-height);
+    font-style: var(--small-title-j-font-style);
+  }
+
+  .span {
+    color: #71717a;
+    font-family: var(--small-title-j-font-family);
+    font-style: var(--small-title-j-font-style);
+    font-weight: var(--small-title-j-font-weight);
+    letter-spacing: var(--small-title-j-letter-spacing);
+    line-height: var(--small-title-j-line-height);
+    font-size: var(--small-title-j-font-size);
+  }
+  .text-wrapper {
+    top: 0;
+    left: 0;
+    font-family: var(--h2-j-font-family);
+    font-weight: var(--h2-j-font-weight);
+    color: var(--light-grey);
+    letter-spacing: var(--h2-j-letter-spacing);
+    line-height: var(--h2-j-line-height);
+    font-style: var(--h2-j-font-style);
+  }
+
+  .text-wrapper-4 {
+    color: #c697a5;
+    font-family: var(--small-title-j-font-family);
+    font-style: var(--small-title-j-font-style);
+    font-weight: var(--small-title-j-font-weight);
+    letter-spacing: var(--small-title-j-letter-spacing);
+    line-height: var(--small-title-j-line-height);
+    font-size: var(--small-title-j-font-size);
+  }
+
+  .text-wrapper-5 {
+    top: 41px;
+    left: 8px;
+    transform: rotate(-2.09deg);
+    font-family: "Ryo Gothic PlusN-B", Helvetica;
+    font-weight: 400;
+    color: var(--variable-collection-white);
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 3.2px;
+    line-height: 24px;
+    white-space: nowrap;
+  }
+  .sawarabi {
+    font-family: "Sawarabi Gothic", Helvetica;
+    letter-spacing: 0;
+  }
+</style>

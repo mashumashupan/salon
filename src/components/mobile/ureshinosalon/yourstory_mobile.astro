@@ -1,8 +1,9 @@
 ---
 import { Image } from 'astro:assets';
 
-import layer from '~/assets/layer/layer_yourstory.png';
+// import layer from '~/assets/layer/layer_yourstory.png';
 import yourstoryimage from '~/assets/yourstory/yourstoryimage.png';
+
 import JoinButton from '~/components/common/joinButton.astro';
 import Title from '~/components/common/title.astro';
 import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
@@ -95,11 +96,7 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
       <div class="w-full">
         <div class="default-button">
           <div class="overlap-9">
-            <JoinButton
-              microcopy1="　　 先着200名限定"
-              microcopy2="＼第2期メンバー募集中！／"
-              text="　　今すぐ入会　　>"
-            />
+            <JoinButton microcopy1="" microcopy2="" />
           </div>
         </div>
       </div>

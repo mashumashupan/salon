@@ -1,43 +1,43 @@
 ---
-import JoinButton from '~/components/common/joinButton.astro';
-import Title from '~/components/common/title.astro';
-import Step, { type Props as StepProps } from '~/components/common/step.astro';
+import JoinButton from "~/components/common/joinButton.astro";
+import Title from "~/components/common/title.astro";
+import Step, { type Props as StepProps } from "~/components/common/step.astro";
 
 const steps: StepProps[] = [
   {
-    number: '01',
-    title: '会費のお支払い',
+    number: "01",
+    title: "会費のお支払い",
     description:
-      '＜今すぐ入会＞ボタンより必要情報をご登録の上、決済をお願いいたします。',
-    small: '*次月以降はご登録のクレジットカードにて毎月同日に決済されます。',
+      "＜今すぐ入会＞ボタンより必要情報をご登録の上、決済をお願いいたします。",
+    small: "*次月以降はご登録のクレジットカードにて毎月同日に決済されます。",
   },
   {
-    number: '02',
-    title: 'Slackご招待',
+    number: "02",
+    title: "Slackご招待",
     description:
-      '決済後、うれしのサロン公式LINEの画面に遷移し、Slackへの招待リンクが記載されたメッセージが届きます。Slackのアカウントをご用意の上、ご参加ください。',
-    small: '',
+      "決済後、うれしのサロン公式LINEの画面に遷移し、Slackへの招待リンクが記載されたメッセージが届きます。Slackのアカウントをご用意の上、ご参加ください。",
+    small: "",
   },
   {
-    number: '03',
-    title: 'ガイダンス・自己紹介',
+    number: "03",
+    title: "ガイダンス・自己紹介",
     description:
-      'Slackチャンネル「01_まず初めに-ガイダンス」をお読みいただき、自己紹介ルームで自己紹介をお願いいたします。',
-    small: '',
+      "Slackチャンネル「01_まず初めに-ガイダンス」をお読みいただき、自己紹介ルームで自己紹介をお願いいたします。",
+    small: "",
   },
   {
-    number: '04',
-    title: 'Instagramご招待',
+    number: "04",
+    title: "Instagramご招待",
     description:
-      'Slackで自己紹介が完了したら、送付されたサロンメンバー限定のInstagramアカウントへフォローリクエストをお願いいたします。',
-    small: '',
+      "Slackで自己紹介が完了したら、送付されたサロンメンバー限定のInstagramアカウントへフォローリクエストをお願いいたします。",
+    small: "",
   },
   {
-    number: '05',
-    title: '活動開始！',
+    number: "05",
+    title: "活動開始！",
     description:
-      'Instagramアカウントのフォロー承認後は、うれしのコラムやライブ配信(アーカイブあり)をお楽しみいただけます。Slackでの交流や、部活動・オフ会などのイベントにもぜひご参加ください。',
-    small: '',
+      "Instagramアカウントのフォロー承認後は、うれしのコラムやライブ配信(アーカイブあり)をお楽しみいただけます。Slackでの交流や、部活動・オフ会などのイベントにもぜひご参加ください。",
+    small: "",
   },
 ];
 ---
@@ -66,7 +66,19 @@ const steps: StepProps[] = [
     </div>
   </div>
   <div>
-    <JoinButton text="　　今すぐ入会　　>" />
+    <JoinButton />
+  </div>
+  <div class="w-72">
+    <p class="font-thin text-[#98989c] text-xs">
+      <span>▶サポートページは</span>
+      <a
+        class="underline visited:text-[#727296] hover:text-blue-800"
+        href="https://empression-co.com/lp/support/"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><span>こちら</span>
+      </a>
+    </p>
   </div>
 </div>
 
@@ -79,55 +91,55 @@ const steps: StepProps[] = [
     --grey: rgba(113, 113, 122, 1);
     --dark-grey: rgba(82, 82, 91, 1);
     --black: rgba(39, 39, 42, 1);
-    --script-font-family: 'Charlotte', Helvetica;
+    --script-font-family: "Charlotte", Helvetica;
     --script-font-weight: 400;
     --script-font-size: 20px;
     --script-letter-spacing: 0px;
     --script-line-height: normal;
     --script-font-style: normal;
-    --h1-e-font-family: 'Cinzel Decorative', Helvetica;
+    --h1-e-font-family: "Cinzel Decorative", Helvetica;
     --h1-e-font-weight: 400;
     --h1-e-font-size: 64px;
     --h1-e-letter-spacing: 0px;
     --h1-e-line-height: normal;
     --h1-e-font-style: normal;
-    --h2-j-font-family: 'HannariMincho', Helvetica;
+    --h2-j-font-family: "HannariMincho", Helvetica;
     --h2-j-font-weight: 400;
     --h2-j-font-size: 28px;
     --h2-j-letter-spacing: 0px;
     --h2-j-line-height: normal;
     --h2-j-font-style: normal;
-    --body-j-font-family: 'Sawarabi Gothic', Helvetica;
+    --body-j-font-family: "Sawarabi Gothic", Helvetica;
     --body-j-font-weight: 400;
     --body-j-font-size: 16px;
     --body-j-letter-spacing: 1.12px;
     --body-j-line-height: 24px;
     --body-j-font-style: normal;
-    --button-j-font-family: 'Sawarabi Gothic', Helvetica;
+    --button-j-font-family: "Sawarabi Gothic", Helvetica;
     --button-j-font-weight: 400;
     --button-j-font-size: 14px;
     --button-j-letter-spacing: 0.10000000149011612px;
     --button-j-line-height: 20px;
     --button-j-font-style: normal;
-    --small-text-j-font-family: 'Sawarabi Gothic', Helvetica;
+    --small-text-j-font-family: "Sawarabi Gothic", Helvetica;
     --small-text-j-font-weight: 400;
     --small-text-j-font-size: 14px;
     --small-text-j-letter-spacing: -0.42px;
     --small-text-j-line-height: normal;
     --small-text-j-font-style: normal;
-    --small-title-j-font-family: 'Sawarabi Gothic', Helvetica;
+    --small-title-j-font-family: "Sawarabi Gothic", Helvetica;
     --small-title-j-font-weight: 400;
     --small-title-j-font-size: 20px;
     --small-title-j-letter-spacing: 0px;
     --small-title-j-line-height: normal;
     --small-title-j-font-style: normal;
-    --list-j-font-family: 'Sawarabi Gothic', Helvetica;
+    --list-j-font-family: "Sawarabi Gothic", Helvetica;
     --list-j-font-weight: 400;
     --list-j-font-size: 16px;
     --list-j-letter-spacing: -1.44px;
     --list-j-line-height: 30px;
     --list-j-font-style: normal;
-    --montserrat-font-family: 'Montserrat', Helvetica;
+    --montserrat-font-family: "Montserrat", Helvetica;
     --montserrat-font-weight: 500;
     --montserrat-font-size: 14px;
     --montserrat-letter-spacing: 0.10000000149011612px;
@@ -151,5 +163,4 @@ const steps: StepProps[] = [
     line-height: var(--mobile-body-line-height);
     font-size: var(--mobile-body-font-size);
   }
-
 </style>

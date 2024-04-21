@@ -1,8 +1,8 @@
 ---
-import button_bg from '~/assets/join_button.svg';
-import { Image } from 'astro:assets';
+import button_bg from "~/assets/join_button.svg";
+import { Image } from "astro:assets";
 
-const { microcopy1, microcopy2, text } = Astro.props;
+const { microcopy1, microcopy2 } = Astro.props;
 ---
 
 <div
@@ -11,15 +11,16 @@ const { microcopy1, microcopy2, text } = Astro.props;
   <div class="cv-copy text-[#C697A5]">
     <span>{microcopy1}<br />{microcopy2}</span>
   </div>
-  <a
+  <!-- <a
     href="https://buy.stripe.com/6oE7uS6lq4mP3oQdR2"
     class="-mb-8 flex flex-col"
-  >
-    <Image src={button_bg} alt="Join" width="260" height={84} />
-    <span class="relative top-[-60px] self-center text-gray-50 text-lg"
-      >{text}</span
-    >
-  </a>
+  > -->
+  <Image src={button_bg} alt="Join" width="260" height={84} />
+  <span class="relative top-[-60px] self-center text-gray-50 text-lg">
+    <!-- {"　　今すぐ入会　　>"} -->
+    {"　次回募集は未定　"}
+  </span>
+  <!-- </a> -->
   <div class="w-72">
     <p class="font-thin text-[#98989c] text-xs">
       <span>*決済完了を以って</span>

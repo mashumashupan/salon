@@ -1,8 +1,8 @@
 ---
-import { Image } from 'astro:assets';
-import Title from './title.astro';
-import breakLine from '~/util/breakLine.ts';
-import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
+import { Image } from "astro:assets";
+import Title from "./title.astro";
+import breakLine from "~/util/breakLine.ts";
+import ResponsiveGrid from "~/layouts/responsiveGrid.astro";
 
 interface Props {
     bg: ImageMetadata;
@@ -22,8 +22,8 @@ const descriptionHtml = breakLine(description);
         <div class="absolute top-0 flex h-full w-full flex-col justify-between">
             <Title number={number} title={title} />
             <div class="subtitle">
-                <div class="div-wrapper mb-4 backdrop-blur-sm">
-                    <div class="text-wrapper-3 hannari font-thin">
+                <div class="div-wrapper -mb-10 backdrop-blur-sm">
+                    <div class="text-wrapper-3 hannari font-thin text-white">
                         <Fragment set:html={descriptionHtml} />
                     </div>
                 </div>
@@ -42,8 +42,8 @@ const descriptionHtml = breakLine(description);
         justify-content: center;
         gap: 10px;
         padding: 10px;
-        background-color: #e9e5e7cd;
-        /* background: linear-gradient(
+        /* background-color: #e9e5e7cd; */
+        background: linear-gradient(
                 0deg,
                 rgba(209, 151, 188, 0.3) 0%,
                 rgba(209, 151, 188, 0.3) 100%
@@ -53,7 +53,7 @@ const descriptionHtml = breakLine(description);
                 #fff 0%,
                 rgba(245, 236, 239, 0.61) 18%,
                 #ddb4c1 100%
-            ); */
+            );
         border-radius: 2px 50px 50px 2px;
         box-shadow: 0px 2px 4px #b1a4aacc;
     }
@@ -70,7 +70,7 @@ const descriptionHtml = breakLine(description);
         font-style: var(--small-title-j-font-style);
     }
     .hannari {
-        font-family: 'Hannari Mincho', Helvetica;
+        font-family: "Hannari Mincho", Helvetica;
         letter-spacing: 0;
     }
     .font-thin {
