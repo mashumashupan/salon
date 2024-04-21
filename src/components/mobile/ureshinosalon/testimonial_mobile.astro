@@ -1,30 +1,22 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
-import rect from '~/assets/testimonial/rect.png';
-import testimonial_muto from '~/assets/testimonial/testimonial_muto.png';
-import testimonial_nanao from '~/assets/testimonial/testimonial_nanao.png';
-import JoinButton from '~/components/common/joinButton.astro';
-import Voice from '~/components/common/voice.astro';
-import bg from '~/assets/mystory/flowers2.png';
+import rect from "~/assets/testimonial/rect.png";
+import testimonial_muto from "~/assets/testimonial/testimonial_muto.png";
+import testimonial_nanao from "~/assets/testimonial/testimonial_nanao.png";
+import JoinButton from "~/components/common/joinButton.astro";
+import Voice from "~/components/common/voice.astro";
+import bg from "~/assets/mystory/flowers2.png";
 
-import Title from '~/components/common/title.astro';
-import ZigzagContainer from '~/layouts/ZigzagRow.astro';
+import Title from "~/components/common/title.astro";
+import ZigzagContainer from "~/layouts/ZigzagRow.astro";
 ---
 
 <div id="testimonials" class="flex flex-col justify-center overflow-hidden">
   <div class="relative w-full">
-    <Image
-    class="absolute top-0 -z-10"
-    src={bg}
-    alt="background image"
-    />
+    <Image class="absolute top-0 -z-10" src={bg} alt="background image" />
   </div>
-  <Title
-    title_small=""
-    title1="推薦者コメント"
-    title2=""
-  />
+  <Title title_small="" title1="推薦者コメント" title2="" />
   <div class="z-10 -mt-32 mt-16 flex flex-col items-center gap-14">
     <!-- <div class="ureshino-salon -mb-20 w-80">
       <Image class="logo" src={logo} alt="" />
@@ -57,27 +49,28 @@ import ZigzagContainer from '~/layouts/ZigzagRow.astro';
           <div class="mb-4">
             世代が違う私は自分と違う考えや、最新の思考を聞けるのが嬉しくて、うれしのちゃんから学ぶ時間がとっても好き♡かわいくて賢い女子がたくさんのサロン💓
             <span class="text-wrapper-3">みんなで高め会える</span>
-            のが素敵♡</span>
-          </div>
-        </Voice>
-      </ZigzagContainer>
-      <ZigzagContainer align="right">
-        <Voice
-          side="right"
-          name="七尾エレナさん"
-          title="株）プリンシパル代表取締役"
-          icon={testimonial_nanao}
-          useStar={true}
-        >
-          <div class="mb-4">
-            今までありそうでなかったコンセプトのオンラインサロン💓うれしのちゃんという
-            <span class="text-wrapper-3">圧倒的なロールモデル</span>
-            がいるからこそ、軸がブレずにみんなで一緒に頑張れるし、高め合える最高なオンラインサロンだと思います！✨😆
+            のが素敵♡
           </div>
         </Voice>
       </ZigzagContainer>
     </div>
+    <ZigzagContainer align="right">
+      <Voice
+        side="right"
+        name="七尾エレナさん"
+        title="株）プリンシパル代表取締役"
+        icon={testimonial_nanao}
+        useStar={true}
+      >
+        <div class="mb-4">
+          今までありそうでなかったコンセプトのオンラインサロン💓うれしのちゃんという
+          <span class="text-wrapper-3">圧倒的なロールモデル</span>
+          がいるからこそ、軸がブレずにみんなで一緒に頑張れるし、高め合える最高なオンラインサロンだと思います！✨😆
+        </div>
+      </Voice>
+    </ZigzagContainer>
   </div>
+</div>
 
 <div class="default-button">
   <div class="overlap-9">
@@ -98,67 +91,67 @@ import ZigzagContainer from '~/layouts/ZigzagRow.astro';
     --grey: rgba(113, 113, 122, 1);
     --dark-grey: rgba(82, 82, 91, 1);
     --black: rgba(39, 39, 42, 1);
-    --mobile-h1-font-family: 'Hina Mincho', Helvetica;
+    --mobile-h1-font-family: "Hina Mincho", Helvetica;
     --mobile-h1-font-weight: 400;
     --mobile-h1-font-size: 40px;
     --mobile-h1-letter-spacing: 0px;
     --mobile-h1-line-height: normal;
     --mobile-h1-font-style: normal;
-    --mobile-h2-font-family: 'Hina Mincho', Helvetica;
+    --mobile-h2-font-family: "Hina Mincho", Helvetica;
     --mobile-h2-font-weight: 400;
     --mobile-h2-font-size: 24px;
     --mobile-h2-letter-spacing: 2.88px;
     --mobile-h2-line-height: 144.9303150177002%;
     --mobile-h2-font-style: normal;
-    --mobile-body-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --mobile-body-font-family: "Ryo Gothic PlusN", Helvetica;
     --mobile-body-font-weight: 400;
     --mobile-body-font-size: 16px;
     --mobile-body-letter-spacing: 2.08px;
     --mobile-body-line-height: 22px;
     --mobile-body-font-style: normal;
-    --small-title-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --small-title-j-font-family: "Ryo Gothic PlusN", Helvetica;
     --small-title-j-font-weight: 400;
     --small-title-j-font-size: 20px;
     --small-title-j-letter-spacing: 0px;
     --small-title-j-line-height: normal;
     --small-title-j-font-style: normal;
-    --small-text-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --small-text-j-font-family: "Ryo Gothic PlusN", Helvetica;
     --small-text-j-font-weight: 400;
     --small-text-j-font-size: 14px;
     --small-text-j-letter-spacing: -0.42px;
     --small-text-j-line-height: normal;
     --small-text-j-font-style: normal;
-    --script-font-family: 'Charlotte', Helvetica;
+    --script-font-family: "Charlotte", Helvetica;
     --script-font-weight: 400;
     --script-font-size: 20px;
     --script-letter-spacing: 0px;
     --script-line-height: normal;
     --script-font-style: normal;
-    --h1-e-font-family: 'Cinzel Decorative', Helvetica;
+    --h1-e-font-family: "Cinzel Decorative", Helvetica;
     --h1-e-font-weight: 400;
     --h1-e-font-size: 64px;
     --h1-e-letter-spacing: 1.92px;
     --h1-e-line-height: normal;
     --h1-e-font-style: normal;
-    --h2-j-font-family: 'Hina Mincho', Helvetica;
+    --h2-j-font-family: "Hina Mincho", Helvetica;
     --h2-j-font-weight: 400;
     --h2-j-font-size: 30px;
     --h2-j-letter-spacing: 3.6px;
     --h2-j-line-height: 144.9303150177002%;
     --h2-j-font-style: normal;
-    --body-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --body-j-font-family: "Ryo Gothic PlusN", Helvetica;
     --body-j-font-weight: 400;
     --body-j-font-size: 16px;
     --body-j-letter-spacing: 2.56px;
     --body-j-line-height: 24px;
     --body-j-font-style: normal;
-    --montserrat-font-family: 'Montserrat', Helvetica;
+    --montserrat-font-family: "Montserrat", Helvetica;
     --montserrat-font-weight: 500;
     --montserrat-font-size: 14px;
     --montserrat-letter-spacing: 0.10000000149011612px;
     --montserrat-line-height: 20px;
     --montserrat-font-style: normal;
-    --h1-j-font-family: 'Hina Mincho', Helvetica;
+    --h1-j-font-family: "Hina Mincho", Helvetica;
     --h1-j-font-weight: 400;
     --h1-j-font-size: 64px;
     --h1-j-letter-spacing: 4.48px;
@@ -215,7 +208,7 @@ import ZigzagContainer from '~/layouts/ZigzagRow.astro';
     left: 7px;
     transform: rotate(-12.46deg);
     opacity: 0.6;
-    font-family: 'Charlotte-Regular', Helvetica;
+    font-family: "Charlotte-Regular", Helvetica;
     font-weight: 400;
     color: #c697a57a;
     font-size: 64px;
@@ -234,7 +227,7 @@ import ZigzagContainer from '~/layouts/ZigzagRow.astro';
   .p {
     top: 40px;
     left: 29px;
-    font-family: 'Ryo Gothic PlusN-Regular', Helvetica;
+    font-family: "Ryo Gothic PlusN-Regular", Helvetica;
     font-weight: 400;
     color: transparent;
     font-size: 32px;
@@ -382,7 +375,7 @@ import ZigzagContainer from '~/layouts/ZigzagRow.astro';
   .element {
     top: 18px;
     left: 62px;
-    font-family: 'Ryo Gothic PlusN-Regular', Helvetica;
+    font-family: "Ryo Gothic PlusN-Regular", Helvetica;
     font-weight: 400;
     color: var(--variable-collection-white);
     font-size: 24px;
@@ -436,7 +429,7 @@ import ZigzagContainer from '~/layouts/ZigzagRow.astro';
     left: 37px;
     transform: rotate(-24.87deg);
     mix-blend-mode: multiply;
-    font-family: 'Ryo Gothic PlusN-B', Helvetica;
+    font-family: "Ryo Gothic PlusN-B", Helvetica;
     font-weight: 400;
     color: var(--variable-collection-purple);
     font-size: 14px;
@@ -459,7 +452,7 @@ import ZigzagContainer from '~/layouts/ZigzagRow.astro';
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-fill-color: transparent;
-    font-family: 'Hina Mincho-Regular', Helvetica;
+    font-family: "Hina Mincho-Regular", Helvetica;
     font-weight: 400;
     color: transparent;
     font-size: 32px;
@@ -488,7 +481,7 @@ import ZigzagContainer from '~/layouts/ZigzagRow.astro';
   .text-wrapper-11 {
     width: fit-content;
     margin-top: -1px;
-    font-family: 'Ryo Gothic PlusN-B', Helvetica;
+    font-family: "Ryo Gothic PlusN-B", Helvetica;
     font-weight: 400;
     color: var(--variable-collection-white);
     font-size: 18px;
