@@ -1,8 +1,8 @@
 ---
-import { Image } from "astro:assets";
-import Title from "./title.astro";
-import breakLine from "~/util/breakLine.ts";
-import ResponsiveGrid from "~/layouts/responsiveGrid.astro";
+import { Image } from 'astro:assets';
+import Title from './title.astro';
+import breakLine from '~/util/breakLine.ts';
+import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
 
 interface Props {
     bg: ImageMetadata;
@@ -16,7 +16,7 @@ const descriptionHtml = breakLine(description);
 ---
 
 <!-- 入会メリット -->
-<ResponsiveGrid>
+<div class="relative">
     <Fragment slot="top">
         <Image class="w-full" src={bg} alt="" />
         <div class="absolute top-0 flex h-full w-full flex-col justify-between">
@@ -33,7 +33,7 @@ const descriptionHtml = breakLine(description);
     <Fragment slot="bottom">
         <slot />
     </Fragment>
-</ResponsiveGrid>
+</div>
 
 <style>
     .div-wrapper {
@@ -70,7 +70,7 @@ const descriptionHtml = breakLine(description);
         font-style: var(--small-title-j-font-style);
     }
     .hannari {
-        font-family: "Hannari Mincho", Helvetica;
+        font-family: 'Hannari Mincho', Helvetica;
         letter-spacing: 0;
     }
     .font-thin {

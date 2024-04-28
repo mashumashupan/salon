@@ -12,7 +12,8 @@ import bg from '~/assets/mystory/flowers3.png';
 
 import Title from '~/components/common/title.astro';
 import Voice from '~/components/common/voice.astro';
-import ZigzagContainer from '~/layouts/ZigzagRow.astro';
+import ZigzagRow from '~/layouts/ZigzagRow.astro';
+import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
 ---
 
 <div
@@ -21,9 +22,9 @@ import ZigzagContainer from '~/layouts/ZigzagRow.astro';
 >
   <div class="relative w-full">
     <Image
-    class="absolute top-0 -z-10"
-    src={bg}
-    alt="background image"
+      class="absolute left-0 right-0 top-0 -z-10 mx-auto"
+      src={bg}
+      alt="background image"
     />
   </div>
   <Title
@@ -36,22 +37,22 @@ import ZigzagContainer from '~/layouts/ZigzagRow.astro';
     <span>＼こんなときは支え合って／</span>
   </p>
   <div class="flex flex-col items-center">
-    <div class="flex w-full max-w-[80%] flex-col">
-      <ZigzagContainer align="left">
+    <div class="flex w-[80%] max-w-96 flex-col">
+      <ZigzagRow align="left">
         <div class="my-2 h-max w-max rounded-full bg-white p-4 shadow-lg">
           問題や悩みがあって先に進めない…。
         </div>
-      </ZigzagContainer>
-      <ZigzagContainer align="right">
+      </ZigzagRow>
+      <ZigzagRow align="right">
         <div class="my-2 h-max w-max rounded-full bg-white p-4 shadow-lg">
           次のキャリアが見えない…。
         </div>
-      </ZigzagContainer>
-      <ZigzagContainer align="left">
+      </ZigzagRow>
+      <ZigzagRow align="left">
         <div class="my-2 h-max w-max rounded-full bg-white p-4 shadow-lg">
           挑戦したいけど1人では不安…。
         </div>
-      </ZigzagContainer>
+      </ZigzagRow>
     </div>
 
     <p class="text-wrapper-7 w-3/4 py-4">
@@ -64,36 +65,38 @@ import ZigzagContainer from '~/layouts/ZigzagRow.astro';
   </p>
 
   <div class="bubbles flex w-3/4 flex-col gap-8">
-    <ZigzagContainer align="left">
-      <Voice
-        side="left"
-        name="れいなさん"
-        title="メンバー"
-        icon={voice_reina}
-        useStar={false}
-      >
-        <div class="mb-4">
-          SNSでの日々交流はもちろん、オフ会に行った後は皆さんの仕事や美容への姿勢や生き方が刺激となり活力が湧いてきます。自分ももっと頑張ろうと思える
-          <span class="text-wrapper-8">かけがえのない存在</span>
-          <span class="text-wrapper-7">です!</span>
-        </div>
-      </Voice>
-    </ZigzagContainer>
-    <ZigzagContainer align="right">
-      <Voice
-        side="right"
-        name="karenさん"
-        title="メンバー"
-        icon={voice_karen}
-        useStar={false}
-      >
-        <div class="mb-4">
-          かわいくて賢く向上心がある人たちで、常に
-          <span class="text-wrapper-8">刺激を与えてくれる存在</span>
-          です！♡世界のどこに行ってもサロンメンバーがいて 色んなところで頑張っている仲間がいると思うと自然に自分の行動力にも繋がります。
-        </div>
-      </Voice>
-    </ZigzagContainer>
+    <ResponsiveGrid>
+      <ZigzagRow align="left" slot="top">
+        <Voice
+          side="left"
+          name="れいなさん"
+          title="メンバー"
+          icon={voice_reina}
+          useStar={false}
+        >
+          <div class="mb-4">
+            SNSでの日々交流はもちろん、オフ会に行った後は皆さんの仕事や美容への姿勢や生き方が刺激となり活力が湧いてきます。自分ももっと頑張ろうと思える
+            <span class="text-wrapper-8">かけがえのない存在</span>
+            <span class="text-wrapper-7">です!</span>
+          </div>
+        </Voice>
+      </ZigzagRow>
+      <ZigzagRow align="right" slot="bottom">
+        <Voice
+          side="right"
+          name="karenさん"
+          title="メンバー"
+          icon={voice_karen}
+          useStar={false}
+        >
+          <div class="mb-4">
+            かわいくて賢く向上心がある人たちで、常に
+            <span class="text-wrapper-8">刺激を与えてくれる存在</span>
+            です！♡世界のどこに行ってもサロンメンバーがいて 色んなところで頑張っている仲間がいると思うと自然に自分の行動力にも繋がります。
+          </div>
+        </Voice>
+      </ZigzagRow>
+    </ResponsiveGrid>
   </div>
 </div>
 <style>

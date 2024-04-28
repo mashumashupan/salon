@@ -1,37 +1,37 @@
 ---
-import "@fontsource-variable/inter";
-import "@fontsource/sawarabi-gothic";
-import "@fontsource/cinzel-decorative";
-import "@fontsource/hina-mincho";
-import "@fontsource/zen-kaku-gothic-new";
+import '@fontsource-variable/inter';
+import '@fontsource/sawarabi-gothic';
+import '@fontsource/cinzel-decorative';
+import '@fontsource/hina-mincho';
+import '@fontsource/zen-kaku-gothic-new';
 
-import Header_mobile from "~/components/mobile/common/header_mobile.astro";
-import Footer_mobile from "~/components/mobile/common/footer_mobile.astro";
-import FirstView_mobile from "~/components/mobile/common/firstview_mobile.astro";
-import About_mobile from "~/components/mobile/ureshinosalon/about_mobile.astro";
-import Check_mobile from "~/components/mobile/ureshinosalon/check_mobile.astro";
-import Benefit_mobile from "~/components/mobile/ureshinosalon/benefit_mobile.astro";
-import Testimonial_mobile from "~/components/mobile/ureshinosalon/testimonial_mobile.astro";
-import Contents_mobile from "~/components/mobile/ureshinosalon/contents_mobile.astro";
-import Mystory_mobile from "~/components/mobile/ureshinosalon/mystory_mobile.astro";
-import Myjourney_mobile from "~/components/mobile/ureshinosalon/myjourney_mobile.astro";
-import Yourstory_mobile from "~/components/mobile/ureshinosalon/yourstory_mobile.astro";
-import Voice2_mobile from "~/components/mobile/ureshinosalon/voice2_mobile.astro";
-import Price_mobile from "~/components/mobile/ureshinosalon/price_mobile.astro";
-import Voice1_mobile from "~/components/mobile/ureshinosalon/voice1_mobile.astro";
-import Profile_mobile from "~/components/mobile/ureshinosalon/profile_mobile.astro";
-import Message_mobile from "~/components/mobile/ureshinosalon/message_mobile.astro";
-import Process_mobile from "~/components/mobile/ureshinosalon/process_mobile.astro";
-import Terms_mobile from "~/components/mobile/ureshinosalon/terms_mobile.astro";
-import Contact_mobile from "~/components/mobile/ureshinosalon/contact_mobile.astro";
+import Header_mobile from '~/components/mobile/common/header_mobile.astro';
+import Footer_mobile from '~/components/mobile/common/footer_mobile.astro';
+import FirstView_mobile from '~/components/mobile/ureshinosalon/firstview_mobile.astro';
+import About_mobile from '~/components/mobile/ureshinosalon/about_mobile.astro';
+import Check_mobile from '~/components/mobile/ureshinosalon/check_mobile.astro';
+import Benefit_mobile from '~/components/mobile/ureshinosalon/benefit_mobile.astro';
+import Testimonial_mobile from '~/components/mobile/ureshinosalon/testimonial_mobile.astro';
+import Contents_mobile from '~/components/mobile/ureshinosalon/contents_mobile.astro';
+import Mystory_mobile from '~/components/mobile/ureshinosalon/mystory_mobile.astro';
+import Myjourney_mobile from '~/components/mobile/ureshinosalon/myjourney_mobile.astro';
+import Yourstory_mobile from '~/components/mobile/ureshinosalon/yourstory_mobile.astro';
+import Voice2_mobile from '~/components/mobile/ureshinosalon/voice2_mobile.astro';
+import Price_mobile from '~/components/mobile/ureshinosalon/price_mobile.astro';
+import Voice1_mobile from '~/components/mobile/ureshinosalon/voice1_mobile.astro';
+import Profile_mobile from '~/components/mobile/ureshinosalon/profile_mobile.astro';
+import Message_mobile from '~/components/mobile/ureshinosalon/message_mobile.astro';
+import Process_mobile from '~/components/mobile/ureshinosalon/process_mobile.astro';
+import Terms_mobile from '~/components/mobile/ureshinosalon/terms_mobile.astro';
+import Contact_mobile from '~/components/mobile/ureshinosalon/contact_mobile.astro';
 
-import "~/styles/index.css";
+import '~/styles/index.css';
 
 const { generator } = Astro;
-const site = "https://ureshinosalon.com";
-const image = new URL("social.png", site);
+const site = 'https://ureshinosalon.com';
+const image = new URL('social.png', site);
 const description =
-  "「かわいく賢く生きる」ための女性向けオンラインサロンうれしのサロン";
+  '「かわいく賢く生きる」ための女性向けオンラインサロンうれしのサロン';
 ---
 
 <!doctype html>
@@ -57,7 +57,7 @@ const description =
   <body
     class="flex h-full w-full flex-col items-center overflow-x-hidden bg-[#F5ECEF] text-default text-base selection:bg-secondary selection:text-white"
   >
-    <div class="relative flex flex-col gap-8 sm:max-w-sm">
+    <div class="relative flex flex-col gap-8 sm:max-w-sm lg:max-w-full">
       <Header_mobile />
       <FirstView_mobile />
       <About_mobile />

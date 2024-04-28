@@ -9,6 +9,7 @@ import underline4 from '~/assets/underline4.png';
 import underline5 from '~/assets/underline5.png';
 
 import Title from '~/components/common/title.astro';
+import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
 ---
 
 <div
@@ -16,43 +17,45 @@ import Title from '~/components/common/title.astro';
   class="about flex w-full flex-col justify-center overflow-hidden"
 >
   <div class="flex flex-col gap-4">
-    <div class="h-max">
-      <div class="relative">
-        <Image class="aboutimage mb-14" src={aboutimage} alt="" />
-        <div
-          class="absolute top-0 flex h-full w-full flex-col justify-between gap-56"
-        >
-          <div class="w-full bg-[#ffffffba]">
-            <Title title_small="" title1="" title2="うれしのサロン" />
-          </div>
-          <div class="z-40 w-full">
-            <div class="subtitle top-10 z-30 pt-2">
-              <div class="ml-12 text-start">
-                <div class="text-wrapper-3">互いに高め合う</div>
-                <p class="p pb-2">
-                  <span class="span">女性限定</span>
-                  <span class="text-wrapper-4">コミュニティ</span>
-                </p>
+    <ResponsiveGrid nogap={false}>
+      <div class="h-max" slot="top">
+        <div class="relative">
+          <Image class="aboutimage mb-14" src={aboutimage} alt="" />
+          <div
+            class="absolute top-0 flex h-full w-full flex-col justify-between gap-56"
+          >
+            <div class="w-full bg-[#ffffffba]">
+              <Title title_small="" title1="" title2="うれしのサロン" />
+            </div>
+            <div class="z-40 w-full">
+              <div class="subtitle top-10 z-30 pt-2">
+                <div class="ml-12 text-start">
+                  <div class="text-wrapper-3">互いに高め合う</div>
+                  <p class="p pb-2">
+                    <span class="span">女性限定</span>
+                    <span class="text-wrapper-4">コミュニティ</span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="flex flex-col">
-      <!-- <Image class="pink w-full mix-blend-lighten" src={aboutpink} alt="" /> -->
-      <div class="flex w-full flex-col justify-center text-center">
-        <div class="div-2">
-          <span class="text-wrapper-5 relative -mr-2">
-            あなたは今の自分に満足していますか？<br />
-          </span>
-          <span class="text-wrapper-6"
-            >自分らしさを大切にしながら<br />価値観の合う仲間、新しい可能性を<br
-            />一緒に見つけませんか？
-          </span>
+      <div class="flex h-full flex-col justify-center" slot="bottom">
+        <!-- <Image class="pink w-full mix-blend-lighten" src={aboutpink} alt="" /> -->
+        <div class="flex w-full flex-col justify-center text-center">
+          <div class="div-2">
+            <span class="text-wrapper-5 relative -mr-2">
+              あなたは今の自分に満足していますか？<br />
+            </span>
+            <span class="text-wrapper-6"
+              >自分らしさを大切にしながら<br
+              />価値観の合う仲間、新しい可能性を<br />一緒に見つけませんか？
+            </span>
+          </div>
         </div>
       </div>
-    </div>
+    </ResponsiveGrid>
   </div>
 </div>
 

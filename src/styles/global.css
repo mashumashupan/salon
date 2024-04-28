@@ -1,3 +1,12 @@
+img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-touch-callout: none;
+  -moz-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
 .embla {
   max-width: 48rem;
   margin: auto;

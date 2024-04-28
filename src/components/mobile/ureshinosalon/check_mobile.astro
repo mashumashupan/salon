@@ -11,6 +11,7 @@ import dots from '~/assets/check/dots.svg';
 import Checklist from '~/components/common/checklist.astro';
 
 import Title from '~/components/common/title.astro';
+import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
 ---
 
 <div class="box" id="check">
@@ -19,7 +20,7 @@ import Title from '~/components/common/title.astro';
   >
     <Title title_small="" title1="こんな人に" title2="　おすすめ" />
     <Image class="absolute w-full" src={layer} alt="" />
-    <div class="overlap z-10">
+    <div class="z-10 flex flex-col items-center">
       <div class="bg">
         <div class="overlap-group">
           <div class="div"></div>
@@ -36,55 +37,65 @@ import Title from '~/components/common/title.astro';
         </div>
       </div>
       <div class="frame">
-        <Checklist>
-          <span class="span">女性は「</span>
-          <span class="text-wrapper-4">かわいさ</span>
-          <span class="span">」だけでなく、「</span>
-          <span class="text-wrapper-4">賢さ</span>
-          <span class="span">」も必要だと考えている</span>
-        </Checklist>
-        <Checklist>
-          <span class="text-wrapper-4">向上心</span>
-          <span class="span">や</span>
-          <span class="text-wrapper-4">成長意欲</span>
-          <span class="span">が高い</span>
-        </Checklist>
-        <Checklist>
-          <span class="text-wrapper-4">夢</span>
-          <span class="span">や</span>
-          <span class="text-wrapper-4">目標</span>
-          <span class="span">を持っている</span>
-        </Checklist>
-        <Checklist>
-          <span class="span">惜しみなく</span>
-          <span class="text-wrapper-4">自己投資</span>
-          <span class="span">をする覚悟を持っている</span>
-        </Checklist>
-        <Checklist>
-          <span class="text-wrapper-4">美容</span>
-          <span class="span">や</span>
-          <span class="text-wrapper-4">ビジネス</span>
-          <span class="span">の話が好き</span>
-        </Checklist>
-        <Checklist>
-          <span class="text-wrapper-4">グローバル</span>
-          <span class="span">な思考を持っている</span>
-        </Checklist>
-        <Checklist>
-          <span class="span">男性には頼るけど、</span>
-          <span class="text-wrapper-4">依存はしたくない</span>
-        </Checklist>
+        <ResponsiveGrid nogap={true}>
+          <div slot="top">
+            <Checklist>
+              <span class="span">女性は「</span>
+              <span class="text-wrapper-4">かわいさ</span>
+              <span class="span">」だけでなく、「</span>
+              <span class="text-wrapper-4">賢さ</span>
+              <span class="span">」も必要だと考えている</span>
+            </Checklist>
+            <Checklist>
+              <span class="text-wrapper-4">向上心</span>
+              <span class="span">や</span>
+              <span class="text-wrapper-4">成長意欲</span>
+              <span class="span">が高い</span>
+            </Checklist>
+            <Checklist>
+              <span class="text-wrapper-4">夢</span>
+              <span class="span">や</span>
+              <span class="text-wrapper-4">目標</span>
+              <span class="span">を持っている</span>
+            </Checklist>
+            <Checklist>
+              <span class="span">惜しみなく</span>
+              <span class="text-wrapper-4">自己投資</span>
+              <span class="span">をする覚悟を持っている</span>
+            </Checklist>
+          </div>
+          <div slot="bottom">
+            <Checklist>
+              <span class="text-wrapper-4">美容</span>
+              <span class="span">や</span>
+              <span class="text-wrapper-4">ビジネス</span>
+              <span class="span">の話が好き</span>
+            </Checklist>
+            <Checklist>
+              <span class="text-wrapper-4">グローバル</span>
+              <span class="span">な思考を持っている</span>
+            </Checklist>
+            <Checklist>
+              <span class="span">男性には頼るけど、</span>
+              <span class="text-wrapper-4">依存はしたくない</span>
+            </Checklist>
+          </div>
+        </ResponsiveGrid>
       </div>
     </div>
-    <div class="check-image absolute z-50 mt-[38.5rem] max-w-md">
-      <Image src={checkimage} alt="" class="trim h-[400px] object-cover" />
-    </div>
-    <div class="go-on-reading absolute z-[60] mt-[53rem]">
-      <p class="element-2">
-        <span class="span">この続きは</span>
-        <span class="text-wrapper-5">3</span>
-        <span class="span">つ以上当てはまった人だけ<br />読んでください。</span>
-      </p>
+    <div
+      class="check-image relative z-50 -mt-9 flex max-w-md flex-col items-center"
+    >
+      <Image src={checkimage} alt="" class="trim h-[300px] object-cover" />
+      <div class="go-on-reading absolute bottom-10 z-[60]">
+        <p class="element-2">
+          <span class="span">この続きは</span>
+          <span class="text-wrapper-5">3</span>
+          <span class="span"
+            >つ以上当てはまった人だけ<br />読んでください。</span
+          >
+        </p>
+      </div>
     </div>
   </div>
 </div>
@@ -175,32 +186,6 @@ import Title from '~/components/common/title.astro';
     --variable-collection-purple: rgba(158, 135, 190, 1);
   }
 
-  .box {
-  }
-
-  .box .check {
-    top: 0;
-    left: 0;
-  }
-
-  .box .overlap {
-    height: 900px;
-  }
-
-  .box .bg {
-    top: 0;
-    left: 0;
-  }
-
-  .box .overlap-group {
-  }
-
-  .box .element {
-    object-fit: cover;
-    top: 0;
-    left: 0;
-  }
-
   .box .div {
     background: linear-gradient(
       180deg,
@@ -215,9 +200,6 @@ import Title from '~/components/common/title.astro';
   .box .title {
     top: 40px;
     left: 34px;
-  }
-
-  .box .overlap-2 {
   }
 
   .box .title-2 {
@@ -442,6 +424,6 @@ import Title from '~/components/common/title.astro';
   }
 
   .trim {
-    object-position: 50% 60%;
+    object-position: 50% 80%;
   }
 </style>

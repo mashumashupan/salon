@@ -10,7 +10,8 @@ import bg from '~/assets/mystory/flowers3.png';
 
 import Title from '~/components/common/title.astro';
 import Voice from '~/components/common/voice.astro';
-import ZigzagContainer from '~/layouts/ZigzagRow.astro';
+import ZigzagRow from '~/layouts/ZigzagRow.astro';
+import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
 ---
 
 <div
@@ -19,9 +20,9 @@ import ZigzagContainer from '~/layouts/ZigzagRow.astro';
 >
   <div class="relative w-full">
     <Image
-    class="absolute top-0 -z-10"
-    src={bg}
-    alt="background image"
+      class="absolute left-0 right-0 top-0 -z-10 mx-auto"
+      src={bg}
+      alt="background image"
     />
   </div>
   <Title title_small="" title1="サロンメンバーの声" title2="" />
@@ -35,67 +36,73 @@ import ZigzagContainer from '~/layouts/ZigzagRow.astro';
     </p>
   </div>
 
-  <div class="bubbles flex w-3/4 flex-col gap-8">
-    <ZigzagContainer align="left">
-      <Voice
-        side="left"
-        name="タフ子ちゃん"
-        title="美容モデル"
-        icon={voice_ayu}
-        useStar={false}
-      >
-        <div class="mb-4">
-          モチベーションが下がったとき、うれしのサロンの掲示板やコラムを読むと
-          <span class="text-wrapper-6">気合いが入り背中を押されます♡</span>
-          嬉野さんの有益で力強い発信はもちろん、メンバーも挑戦や努力を続けている方ばかりなのでいつも押し上げていただいている気分です。
-        </div>
-      </Voice>
-    </ZigzagContainer>
-    <ZigzagContainer align="right">
-      <Voice
-        side="right"
-        name="karenさん"
-        title="メンバー"
-        icon={voice_karen}
-        useStar={false}
-      >
-        <div class="mb-4">
-          周りの人と価値観や話が合わなくなってきて悩んでいた時に見つけたのがきっかけで入会しました。高め会える仲間ができて
-          <span class="text-wrapper-6">人生ががらりと変わり</span>
-          ました。メンバーと一緒に日本初のAIフォトスタジオの事業をすることにもなりました！
-        </div>
-      </Voice>
-    </ZigzagContainer>
-    <ZigzagContainer align="left">
-      <Voice
-        side="left"
-        name="ゆっこさん"
-        title="メンバー"
-        icon={voice_yukko}
-        useStar={false}
-      >
-        <div class="mb-4">
-          今年やってよかったことの1つにうれしのサロンに入ったこと」があります。このサロンのおかげで、確実に
-          <span class="text-wrapper-6">行動力が上がっています✨</span>
-          事業の話も、美容の話もできる強くて美しい女性が今年はさらに色んな人と話したいです！
-        </div>
-      </Voice>
-    </ZigzagContainer>
-    <ZigzagContainer align="right">
-      <Voice
-        side="right"
-        name="chihiroさん"
-        title="メンバー"
-        icon={voice_chihiro}
-        useStar={false}
-      >
-        <div class="mb-4">
-          都会に住んでいなくても、切磋琢磨できる同年代の女性と出会えたことに感謝しています。うれしのサロンのおかげで
-          <span class="text-wrapper-6">経験したことがないことにチャレンジ</span>
-          できました！
-        </div>
-      </Voice>
-    </ZigzagContainer>
+  <div class="bubbles flex w-3/4 flex-col gap-8 lg:gap-0">
+    <ResponsiveGrid>
+      <ZigzagRow align="left" slot="top">
+        <Voice
+          side="left"
+          name="タフ子ちゃん"
+          title="美容モデル"
+          icon={voice_ayu}
+          useStar={false}
+        >
+          <div class="mb-4">
+            モチベーションが下がったとき、うれしのサロンの掲示板やコラムを読むと
+            <span class="text-wrapper-6">気合いが入り背中を押されます♡</span>
+            嬉野さんの有益で力強い発信はもちろん、メンバーも挑戦や努力を続けている方ばかりなのでいつも押し上げていただいている気分です。
+          </div>
+        </Voice>
+      </ZigzagRow>
+      <ZigzagRow align="right" slot="bottom">
+        <Voice
+          side="right"
+          name="karenさん"
+          title="メンバー"
+          icon={voice_karen}
+          useStar={false}
+        >
+          <div class="mb-4">
+            周りの人と価値観や話が合わなくなってきて悩んでいた時に見つけたのがきっかけで入会しました。高め会える仲間ができて
+            <span class="text-wrapper-6">人生ががらりと変わり</span>
+            ました。メンバーと一緒に日本初のAIフォトスタジオの事業をすることにもなりました！
+          </div>
+        </Voice>
+      </ZigzagRow>
+    </ResponsiveGrid>
+    <ResponsiveGrid>
+      <ZigzagRow align="left" slot="top">
+        <Voice
+          side="left"
+          name="ゆっこさん"
+          title="メンバー"
+          icon={voice_yukko}
+          useStar={false}
+        >
+          <div class="mb-4">
+            今年やってよかったことの1つにうれしのサロンに入ったこと」があります。このサロンのおかげで、確実に
+            <span class="text-wrapper-6">行動力が上がっています✨</span>
+            事業の話も、美容の話もできる強くて美しい女性が今年はさらに色んな人と話したいです！
+          </div>
+        </Voice>
+      </ZigzagRow>
+      <ZigzagRow align="right" slot="bottom">
+        <Voice
+          side="right"
+          name="chihiroさん"
+          title="メンバー"
+          icon={voice_chihiro}
+          useStar={false}
+        >
+          <div class="mb-4">
+            都会に住んでいなくても、切磋琢磨できる同年代の女性と出会えたことに感謝しています。うれしのサロンのおかげで
+            <span class="text-wrapper-6"
+              >経験したことがないことにチャレンジ</span
+            >
+            できました！
+          </div>
+        </Voice>
+      </ZigzagRow>
+    </ResponsiveGrid>
   </div>
 </div>
 <style>
