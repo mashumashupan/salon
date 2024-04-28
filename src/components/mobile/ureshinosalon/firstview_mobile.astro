@@ -1,15 +1,15 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 
 const widths = [450, 800];
-const sizes = "(min-width: 640px) 42vw, 67vw";
+const sizes = '(min-width: 640px) 42vw, 67vw';
 
-import shadowover from "~/assets/firstview/layer_firstview.png";
+import shadowover from '~/assets/firstview/layer_firstview.png';
 
-import hero_top from "~/assets/firstview/hero_top.png";
-import bg from "~/assets/firstview/bg.svg";
-import title from "~/assets/firstview/title.png";
-import JoinButton from "~/components/common/joinButton.astro";
+import hero_top from '~/assets/firstview/hero_top.png';
+import bg from '~/assets/firstview/bg.svg';
+import title from '~/assets/firstview/title.png';
+import JoinButton from '~/components/common/joinButton.astro';
 ---
 
 <div
@@ -17,14 +17,18 @@ import JoinButton from "~/components/common/joinButton.astro";
   class="flex min-h-[800px] w-full flex-col items-center justify-center overflow-hidden pt-[68px] md:pt-[96px]"
 >
   <Image
-    class="absolute top-[68px] -z-10 w-full md:top-[96px]"
+    class="absolute left-0 right-0 top-[68px] -z-10 mx-auto w-full md:top-[96px]"
     src={bg}
     alt="background image"
   />
   <div class="flex flex-col pt-[52px]">
     <div class="lg:relative lg:flex lg:flex-row-reverse">
       <div class="lg:relative lg:w-2/3">
-        <Image class="hero-top lg:relative lg:-top-24" src={hero_top} alt="" />
+        <Image
+          class="hero-top lg:relative lg:-top-10 lg:right-[-26%] lg:w-1/2"
+          src={hero_top}
+          alt=""
+        />
         <Image
           class="absolute top-0 w-full mix-blend-lighten"
           src={shadowover}
@@ -32,22 +36,25 @@ import JoinButton from "~/components/common/joinButton.astro";
         />
       </div>
       <div class="lg:w-1/3">
-        <Image
-          class="absolute top-[400px] w-full lg:left-20 lg:top-60 lg:w-1/2"
-          src={title}
-          alt=""
-        />
+        <div
+          class="absolute top-[400px] w-full lg:left-32 lg:top-0 lg:mt-10 lg:w-1/2"
+        >
+          <Image src={title} alt="" />
+          <div class="-mt-12 mr-40 hidden lg:block">
+            <JoinButton microcopy1="" microcopy2="＼募集は締め切りました／" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="pt-5">
+  <div class="pt-5 lg:hidden">
     <JoinButton microcopy1="" microcopy2="＼募集は締め切りました／" />
   </div>
 </div>
 
 <style>
   .hina-mincho {
-    font-family: "Hina Mincho";
+    font-family: 'Hina Mincho';
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -108,7 +115,7 @@ import JoinButton from "~/components/common/joinButton.astro";
         top: 10px;
         left: 18px;
         opacity: 0.7;
-        font-family: "Hina Mincho-Regular", Helvetica;
+        font-family: 'Hina Mincho-Regular', Helvetica;
         font-weight: 400;
         color: white;
         font-size: 24px;

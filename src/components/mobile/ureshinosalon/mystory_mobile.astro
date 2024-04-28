@@ -21,69 +21,72 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
 >
   <div class="relative w-full">
     <Image
-    class="absolute top-0 -z-10"
-    src={bg}
-    alt="background image"
+      class="absolute left-0 right-0 top-0 -z-10 mx-auto"
+      src={bg}
+      alt="background image"
     />
   </div>
   <Title title_small="うれしのちゃんの" title1="" title2="垢抜けストーリー" />
-  <div class="overlap">
+  <div class="w-4/6">
     <p class="element mb-4">
       <span class="text-wrapper"
         >SNSや美容をきっかけに、<br />私の人生は大きく変わりました。</span
       >
     </p>
-    <ResponsiveGrid>
+    <ResponsiveGrid wide={true}>
       <Fragment slot="top">
-        <div class="card">
-          <div class="overlap-group-2">
-            <div class="frame-3">
-              <Image class="rectangle" src={beforeimage} alt="" />
+        <ResponsiveGrid wide={true}>
+          <Fragment slot="top">
+            <div class="card">
+              <div class="overlap-group-2">
+                <div class="frame-3">
+                  <Image class="rectangle" src={beforeimage} alt="" />
+                </div>
+                <div class="div-wrapper">
+                  <div class="text-wrapper-5">5年前</div>
+                </div>
+              </div>
             </div>
-            <div class="div-wrapper">
-              <div class="text-wrapper-5">5年前</div>
+          </Fragment>
+          <Fragment slot="bottom">
+            <div class="card">
+              <div class="overlap-group-2">
+                <div class="frame-3">
+                  <Image class="rectangle" src={afterimage} alt="" />
+                </div>
+                <div class="frame-4">
+                  <div class="text-wrapper-5">現在</div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </Fragment>
+        </ResponsiveGrid>
       </Fragment>
       <Fragment slot="bottom">
-        <div class="card">
-          <div class="overlap-group-2">
-            <div class="frame-3">
-              <Image class="rectangle" src={afterimage} alt="" />
+        <div
+          class="mb-10 rounded-lg bg-[#ffffff9f] p-3 shadow-lg backdrop-blur-lg"
+        >
+          <div class="overlap-3">
+            <div class="rectangle-2"></div>
+            <p class="p hina-mincho mb-4">
+              <span class="text-wrapper-7">まるで別人</span>
+              <span class="text-wrapper-8">ですよね？</span>
+            </p>
+            <div class="SNS-UP zenkaku-gothic">
+              5年前は家に引きこもりがちで、ファッションや美容にも疎かった私。<br
+              /><br />しかし、SNSを始めたことで自分磨きを頑張るようになり、<br
+              />どんどん垢抜けていきました。<br /><br
+              />さらに環境と意識を変えたことで、<br
+              />出会う人やチャンスも大きく変わりました。<br
+              />理想の王子様を手に入れ、<br
+              />仕事のステージや収入も上がったのです。<br /><br
+              />現在はマレーシアに会社設立＆移住し、<br
+              />新たなビジネスに取り組んでいます。
             </div>
-            <div class="frame-4"><div class="text-wrapper-5">現在</div></div>
           </div>
         </div>
       </Fragment>
     </ResponsiveGrid>
-    <div class="mb-10 rounded-lg bg-[#ffffff9f] p-3 shadow-lg backdrop-blur-lg">
-      <div class="overlap-3">
-        <div class="rectangle-2"></div>
-        <p class="p hina-mincho mb-4">
-          <span class="text-wrapper-7">まるで別人</span>
-          <span class="text-wrapper-8">ですよね？</span>
-        </p>
-        <div class="SNS-UP zenkaku-gothic">
-          5年前は家に引きこもりがちで、ファッションや美容にも疎かった私。<br
-          /><br />しかし、SNSを始めたことで自分磨きを頑張るようになり、<br
-          />どんどん垢抜けていきました。<br /><br
-          />さらに環境と意識を変えたことで、<br
-          />出会う人やチャンスも大きく変わりました。<br
-          />理想の王子様を手に入れ、<br
-          />仕事のステージや収入も上がったのです。<br /><br
-          />現在はマレーシアに会社設立＆移住し、<br
-          />新たなビジネスに取り組んでいます。
-        </div>
-      </div>
-    </div>
-    <!-- <div class="relative w-full top-[300rem]">
-      <Image
-      class="absolute top-0 -z-10"
-      src={bg}
-      alt="background image"
-      />
-    </div> -->
   </div>
 </div>
 <style>
