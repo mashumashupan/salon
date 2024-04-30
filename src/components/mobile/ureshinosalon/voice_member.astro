@@ -1,17 +1,17 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
-import layer from '~/assets/layer/layer_voice1.png';
-import voice_ayu from '~/assets/voice/voice_ayu.png';
-import voice_yukko from '~/assets/voice/voice_yukko.png';
-import voice_chihiro from '~/assets/voice/voice_chihiro.png';
-import voice_karen from '~/assets/voice/voice_karen.png';
-import bg from '~/assets/mystory/flowers3.png';
+import layer from "~/assets/layer/layer_voice1.png";
+import voice_ayu from "~/assets/voice/voice_ayu.png";
+import voice_yukko from "~/assets/voice/voice_yukko.png";
+import voice_chihiro from "~/assets/voice/voice_chihiro.png";
+import voice_karen from "~/assets/voice/voice_karen.png";
+import bg from "~/assets/mystory/flowers3.png";
 
-import Title from '~/components/common/title.astro';
-import Voice from '~/components/common/voice.astro';
-import ZigzagRow from '~/layouts/ZigzagRow.astro';
-import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
+import Title from "~/components/common/title.astro";
+import Voice from "~/components/common/voice.astro";
+import ZigzagRow from "~/layouts/ZigzagRow.astro";
+import ResponsiveGrid from "~/layouts/responsiveGrid.astro";
 ---
 
 <div
@@ -46,9 +46,9 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
           icon={voice_ayu}
           useStar={false}
         >
-          <div class="mb-4">
+          <div class="textblack mb-4">
             モチベーションが下がったとき、うれしのサロンの掲示板やコラムを読むと
-            <span class="text-wrapper-6">気合いが入り背中を押されます♡</span>
+            <span class="textpink">気合いが入り背中を押されます♡</span>
             嬉野さんの有益で力強い発信はもちろん、メンバーも挑戦や努力を続けている方ばかりなのでいつも押し上げていただいている気分です。
           </div>
         </Voice>
@@ -61,9 +61,9 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
           icon={voice_karen}
           useStar={false}
         >
-          <div class="mb-4">
+          <div class="textblack mb-4">
             周りの人と価値観や話が合わなくなってきて悩んでいた時に見つけたのがきっかけで入会しました。高め会える仲間ができて
-            <span class="text-wrapper-6">人生ががらりと変わり</span>
+            <span class="textpink">人生ががらりと変わり</span>
             ました。メンバーと一緒に日本初のAIフォトスタジオの事業をすることにもなりました！
           </div>
         </Voice>
@@ -78,9 +78,9 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
           icon={voice_yukko}
           useStar={false}
         >
-          <div class="mb-4">
+          <div class="textblack mb-4">
             今年やってよかったことの1つにうれしのサロンに入ったこと」があります。このサロンのおかげで、確実に
-            <span class="text-wrapper-6">行動力が上がっています✨</span>
+            <span class="textpink">行動力が上がっています✨</span>
             事業の話も、美容の話もできる強くて美しい女性が今年はさらに色んな人と話したいです！
           </div>
         </Voice>
@@ -93,11 +93,9 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
           icon={voice_chihiro}
           useStar={false}
         >
-          <div class="mb-4">
+          <div class="textblack mb-4">
             都会に住んでいなくても、切磋琢磨できる同年代の女性と出会えたことに感謝しています。うれしのサロンのおかげで
-            <span class="text-wrapper-6"
-              >経験したことがないことにチャレンジ</span
-            >
+            <span class="textpink">経験したことがないことにチャレンジ</span>
             できました！
           </div>
         </Voice>
@@ -114,67 +112,67 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
     --grey: rgba(113, 113, 122, 1);
     --dark-grey: rgba(82, 82, 91, 1);
     --black: rgba(39, 39, 42, 1);
-    --mobile-h1-font-family: 'Hina Mincho', Helvetica;
+    --mobile-h1-font-family: "Hina Mincho", Helvetica;
     --mobile-h1-font-weight: 400;
     --mobile-h1-font-size: 40px;
     --mobile-h1-letter-spacing: 0px;
     --mobile-h1-line-height: normal;
     --mobile-h1-font-style: normal;
-    --mobile-h2-font-family: 'Hina Mincho', Helvetica;
+    --mobile-h2-font-family: "Hina Mincho", Helvetica;
     --mobile-h2-font-weight: 400;
     --mobile-h2-font-size: 24px;
     --mobile-h2-letter-spacing: 2.88px;
     --mobile-h2-line-height: 144.9303150177002%;
     --mobile-h2-font-style: normal;
-    --mobile-body-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --mobile-body-font-family: "Ryo Gothic PlusN", Helvetica;
     --mobile-body-font-weight: 400;
     --mobile-body-font-size: 16px;
     --mobile-body-letter-spacing: 2.08px;
     --mobile-body-line-height: 22px;
     --mobile-body-font-style: normal;
-    --small-title-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --small-title-j-font-family: "Ryo Gothic PlusN", Helvetica;
     --small-title-j-font-weight: 400;
     --small-title-j-font-size: 20px;
     --small-title-j-letter-spacing: 0px;
     --small-title-j-line-height: normal;
     --small-title-j-font-style: normal;
-    --small-text-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --small-text-j-font-family: "Ryo Gothic PlusN", Helvetica;
     --small-text-j-font-weight: 400;
     --small-text-j-font-size: 14px;
     --small-text-j-letter-spacing: -0.42px;
     --small-text-j-line-height: normal;
     --small-text-j-font-style: normal;
-    --script-font-family: 'Charlotte', Helvetica;
+    --script-font-family: "Charlotte", Helvetica;
     --script-font-weight: 400;
     --script-font-size: 20px;
     --script-letter-spacing: 0px;
     --script-line-height: normal;
     --script-font-style: normal;
-    --h1-e-font-family: 'Cinzel Decorative', Helvetica;
+    --h1-e-font-family: "Cinzel Decorative", Helvetica;
     --h1-e-font-weight: 400;
     --h1-e-font-size: 64px;
     --h1-e-letter-spacing: 1.92px;
     --h1-e-line-height: normal;
     --h1-e-font-style: normal;
-    --h2-j-font-family: 'Hina Mincho', Helvetica;
+    --h2-j-font-family: "Hina Mincho", Helvetica;
     --h2-j-font-weight: 400;
     --h2-j-font-size: 30px;
     --h2-j-letter-spacing: 3.6px;
     --h2-j-line-height: 144.9303150177002%;
     --h2-j-font-style: normal;
-    --body-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --body-j-font-family: "Ryo Gothic PlusN", Helvetica;
     --body-j-font-weight: 400;
     --body-j-font-size: 16px;
     --body-j-letter-spacing: 2.56px;
     --body-j-line-height: 24px;
     --body-j-font-style: normal;
-    --montserrat-font-family: 'Montserrat', Helvetica;
+    --montserrat-font-family: "Montserrat", Helvetica;
     --montserrat-font-weight: 500;
     --montserrat-font-size: 14px;
     --montserrat-letter-spacing: 0.10000000149011612px;
     --montserrat-line-height: 20px;
     --montserrat-font-style: normal;
-    --h1-j-font-family: 'Hina Mincho', Helvetica;
+    --h1-j-font-family: "Hina Mincho", Helvetica;
     --h1-j-font-weight: 400;
     --h1-j-font-size: 64px;
     --h1-j-letter-spacing: 4.48px;
@@ -268,7 +266,7 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
     left: 2px;
     transform: rotate(-12.46deg);
     opacity: 0.38;
-    font-family: 'Charlotte-Regular', Helvetica;
+    font-family: "Charlotte-Regular", Helvetica;
     font-weight: 400;
     color: #c697a5ad;
     font-size: 64px;
@@ -279,7 +277,7 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
   .box .p {
     top: 141px;
     left: 0;
-    font-family: 'Ryo Gothic PlusN-Regular', Helvetica;
+    font-family: "Ryo Gothic PlusN-Regular", Helvetica;
     font-weight: 400;
     color: transparent;
     font-size: 16px;
@@ -383,7 +381,7 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
   .box .div-2 {
     width: 210px;
     margin-top: -1px;
-    font-family: 'Ryo Gothic PlusN-Regular', Helvetica;
+    font-family: "Ryo Gothic PlusN-Regular", Helvetica;
     font-weight: 400;
     color: transparent;
     font-size: 16px;
@@ -401,18 +399,22 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
     font-size: var(--mobile-body-font-size);
   }
 
-  /* .box .text-wrapper-6 {
-    color: #d6a99f;
-    font-size: 20px;
-    letter-spacing: 0.52px;
-  } */
-
   .box .group {
     width: 138px;
     /* height: 24px; */
   }
 
-  .text-wrapper-6 {
+  .textblack {
+    color: #71717a;
+    letter-spacing: var(--mobile-body-letter-spacing);
+    font-family: var(--mobile-body-font-family);
+    font-style: var(--mobile-body-font-style);
+    font-weight: var(--mobile-body-font-weight);
+    line-height: var(--mobile-body-line-height);
+    font-size: var(--mobile-body-font-size);
+  }
+
+  .textpink {
     color: #c697a5;
     letter-spacing: var(--mobile-body-letter-spacing);
     font-family: var(--mobile-body-font-family);
@@ -435,7 +437,7 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
   .box .text-wrapper-8 {
     top: 2px;
     left: 0;
-    font-family: 'Ryo Gothic PlusN-R', Helvetica;
+    font-family: "Ryo Gothic PlusN-R", Helvetica;
     font-weight: 400;
     color: var(--variable-collection-salmon);
     font-size: 10px;
@@ -503,7 +505,7 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
   .box .div-3 {
     width: 210px;
     margin-top: -1px;
-    font-family: 'Ryo Gothic PlusN-Regular', Helvetica;
+    font-family: "Ryo Gothic PlusN-Regular", Helvetica;
     font-weight: 400;
     color: transparent;
     font-size: 20px;

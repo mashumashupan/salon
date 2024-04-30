@@ -1,17 +1,17 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
-import layer from '~/assets/check/layer_check.svg';
+import layer from "~/assets/check/layer_check.svg";
 
-import checkimage from '~/assets/check/checkimage.png';
-import check from '~/assets/check/check.svg';
-import checkline1 from '~/assets/check/checkline1.svg';
-import checkline2 from '~/assets/check/checkline2.svg';
-import dots from '~/assets/check/dots.svg';
-import Checklist from '~/components/common/checklist.astro';
+import checkimage from "~/assets/check/checkimage.png";
+import check from "~/assets/check/check.svg";
+import checkline1 from "~/assets/check/checkline1.svg";
+import checkline2 from "~/assets/check/checkline2.svg";
+import dots from "~/assets/check/dots.svg";
+import Checklist from "~/components/common/checklist.astro";
 
-import Title from '~/components/common/title.astro';
-import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
+import Title from "~/components/common/title.astro";
+import ResponsiveGrid from "~/layouts/responsiveGrid.astro";
 ---
 
 <div class="box" id="check">
@@ -40,44 +40,44 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
         <ResponsiveGrid nogap={true}>
           <div slot="top">
             <Checklist>
-              <span class="span">女性は「</span>
-              <span class="text-wrapper-4">かわいさ</span>
-              <span class="span">」だけでなく、「</span>
-              <span class="text-wrapper-4">賢さ</span>
-              <span class="span">」も必要だと考えている</span>
+              <span class="textblack">女性は「</span>
+              <span class="textpink">かわいさ</span>
+              <span class="textblack">」だけでなく、「</span>
+              <span class="textpink">賢さ</span>
+              <span class="textblack">」も必要だと考えている</span>
             </Checklist>
             <Checklist>
-              <span class="text-wrapper-4">向上心</span>
-              <span class="span">や</span>
-              <span class="text-wrapper-4">成長意欲</span>
-              <span class="span">が高い</span>
+              <span class="textpink">向上心</span>
+              <span class="textblack">や</span>
+              <span class="textpink">成長意欲</span>
+              <span class="textblack">が高い</span>
             </Checklist>
             <Checklist>
-              <span class="text-wrapper-4">夢</span>
-              <span class="span">や</span>
-              <span class="text-wrapper-4">目標</span>
-              <span class="span">を持っている</span>
+              <span class="textpink">夢</span>
+              <span class="textblack">や</span>
+              <span class="textpink">目標</span>
+              <span class="textblack">を持っている</span>
             </Checklist>
             <Checklist>
-              <span class="span">惜しみなく</span>
-              <span class="text-wrapper-4">自己投資</span>
-              <span class="span">をする覚悟を持っている</span>
+              <span class="textblack">惜しみなく</span>
+              <span class="textpink">自己投資</span>
+              <span class="textblack">をする覚悟を持っている</span>
             </Checklist>
           </div>
           <div slot="bottom">
             <Checklist>
-              <span class="text-wrapper-4">美容</span>
-              <span class="span">や</span>
-              <span class="text-wrapper-4">ビジネス</span>
-              <span class="span">の話が好き</span>
+              <span class="textpink">美容</span>
+              <span class="textblack">や</span>
+              <span class="textpink">ビジネス</span>
+              <span class="textblack">の話が好き</span>
             </Checklist>
             <Checklist>
-              <span class="text-wrapper-4">グローバル</span>
-              <span class="span">な思考を持っている</span>
+              <span class="textpink">グローバル</span>
+              <span class="textblack">な思考を持っている</span>
             </Checklist>
             <Checklist>
-              <span class="span">男性には頼るけど、</span>
-              <span class="text-wrapper-4">依存はしたくない</span>
+              <span class="textblack">男性には頼るけど、</span>
+              <span class="textpink">依存はしたくない</span>
             </Checklist>
           </div>
         </ResponsiveGrid>
@@ -109,67 +109,67 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
     --grey: rgba(113, 113, 122, 1);
     --dark-grey: rgba(82, 82, 91, 1);
     --black: rgba(39, 39, 42, 1);
-    --mobile-h1-font-family: 'Hina Mincho', Helvetica;
+    --mobile-h1-font-family: "Hina Mincho", Helvetica;
     --mobile-h1-font-weight: 400;
     --mobile-h1-font-size: 40px;
     --mobile-h1-letter-spacing: 0px;
     --mobile-h1-line-height: normal;
     --mobile-h1-font-style: normal;
-    --mobile-h2-font-family: 'Hina Mincho', Helvetica;
+    --mobile-h2-font-family: "Hina Mincho", Helvetica;
     --mobile-h2-font-weight: 400;
     --mobile-h2-font-size: 24px;
     --mobile-h2-letter-spacing: 2.88px;
     --mobile-h2-line-height: 144.9303150177002%;
     --mobile-h2-font-style: normal;
-    --mobile-body-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --mobile-body-font-family: "Ryo Gothic PlusN", Helvetica;
     --mobile-body-font-weight: 400;
     --mobile-body-font-size: 16px;
     --mobile-body-letter-spacing: 2.08px;
     --mobile-body-line-height: 22px;
     --mobile-body-font-style: normal;
-    --small-title-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --small-title-j-font-family: "Ryo Gothic PlusN", Helvetica;
     --small-title-j-font-weight: 400;
     --small-title-j-font-size: 20px;
     --small-title-j-letter-spacing: 0px;
     --small-title-j-line-height: normal;
     --small-title-j-font-style: normal;
-    --small-text-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --small-text-j-font-family: "Ryo Gothic PlusN", Helvetica;
     --small-text-j-font-weight: 400;
     --small-text-j-font-size: 14px;
     --small-text-j-letter-spacing: -0.42px;
     --small-text-j-line-height: normal;
     --small-text-j-font-style: normal;
-    --script-font-family: 'Charlotte', Helvetica;
+    --script-font-family: "Charlotte", Helvetica;
     --script-font-weight: 400;
     --script-font-size: 20px;
     --script-letter-spacing: 0px;
     --script-line-height: normal;
     --script-font-style: normal;
-    --h1-e-font-family: 'Cinzel Decorative', Helvetica;
+    --h1-e-font-family: "Cinzel Decorative", Helvetica;
     --h1-e-font-weight: 400;
     --h1-e-font-size: 64px;
     --h1-e-letter-spacing: 1.92px;
     --h1-e-line-height: normal;
     --h1-e-font-style: normal;
-    --h2-j-font-family: 'Hina Mincho', Helvetica;
+    --h2-j-font-family: "Hina Mincho", Helvetica;
     --h2-j-font-weight: 400;
     --h2-j-font-size: 30px;
     --h2-j-letter-spacing: 3.6px;
     --h2-j-line-height: 144.9303150177002%;
     --h2-j-font-style: normal;
-    --body-j-font-family: 'Ryo Gothic PlusN', Helvetica;
+    --body-j-font-family: "Ryo Gothic PlusN", Helvetica;
     --body-j-font-weight: 400;
     --body-j-font-size: 16px;
     --body-j-letter-spacing: 2.56px;
     --body-j-line-height: 24px;
     --body-j-font-style: normal;
-    --montserrat-font-family: 'Montserrat', Helvetica;
+    --montserrat-font-family: "Montserrat", Helvetica;
     --montserrat-font-weight: 500;
     --montserrat-font-size: 14px;
     --montserrat-letter-spacing: 0.10000000149011612px;
     --montserrat-line-height: 20px;
     --montserrat-font-style: normal;
-    --h1-j-font-family: 'Hina Mincho', Helvetica;
+    --h1-j-font-family: "Hina Mincho", Helvetica;
     --h1-j-font-weight: 400;
     --h1-j-font-size: 64px;
     --h1-j-letter-spacing: 4.48px;
@@ -308,7 +308,7 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
   .box .text-wrapper-3 {
     top: 0;
     left: 23px;
-    font-family: 'Ryo Gothic PlusN-M', Helvetica;
+    font-family: "Ryo Gothic PlusN-M", Helvetica;
     font-weight: 400;
     color: var(--variable-collection-pink);
     font-size: 14px;
@@ -347,7 +347,7 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
     font-style: var(--mobile-body-font-style);
   }
 
-  .box .span {
+  .box .textblack {
     color: #71717a;
     letter-spacing: var(--mobile-body-letter-spacing);
     font-family: var(--mobile-body-font-family);
@@ -357,7 +357,7 @@ import ResponsiveGrid from '~/layouts/responsiveGrid.astro';
     font-size: var(--mobile-body-font-size);
   }
 
-  .box .text-wrapper-4 {
+  .box .textpink {
     color: #c697a5;
     letter-spacing: var(--mobile-body-letter-spacing);
     font-family: var(--mobile-body-font-family);
