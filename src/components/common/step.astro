@@ -3,11 +3,12 @@ export interface Props {
     number: string;
     title: string;
     description: string;
-    small: string;
+    annotation: string;
     showVerticalLine?: boolean;
 }
 
-const { number, title, description, small, showVerticalLine } = Astro.props;
+const { number, title, description, annotation, showVerticalLine } =
+    Astro.props;
 ---
 
 <div class="frame-2 relative w-full">
@@ -22,7 +23,7 @@ const { number, title, description, small, showVerticalLine } = Astro.props;
                 {description}
             </div>
             <small class="sawarabi font-thin text-gray-400">
-                {small}
+                {annotation}
             </small>
         </div>
         {
@@ -52,7 +53,7 @@ const { number, title, description, small, showVerticalLine } = Astro.props;
         background-color: var(--grey);
         border-radius: 2px 10px 0px 0px;
         width: fit-content;
-        font-family: 'Cinzel Decorative-Regular', Helvetica;
+        font-family: "Cinzel Decorative-Regular", Helvetica;
         font-weight: 400;
         font-size: 20px;
         letter-spacing: 0;
@@ -73,15 +74,15 @@ const { number, title, description, small, showVerticalLine } = Astro.props;
         border-color: var(--grey);
     }
     .cinzel {
-        font-family: 'Cinzel Decorative', Helvetica;
+        font-family: "Cinzel Decorative", Helvetica;
         letter-spacing: 0;
     }
     .hannari {
-        font-family: 'Hannari Mincho', Helvetica;
+        font-family: "Hannari Mincho", Helvetica;
         letter-spacing: 0;
     }
     .sawarabi {
-        font-family: 'Sawarabi Gothic', Helvetica;
+        font-family: "Sawarabi Gothic", Helvetica;
         letter-spacing: 0;
     }
     .font-thin {
