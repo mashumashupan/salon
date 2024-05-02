@@ -1,19 +1,19 @@
 ---
-import { Image } from 'astro:assets';
-import JoinButton from '~/components/common/joinButton.astro';
+import { Image } from "astro:assets";
+import JoinButton from "~/components/common/joinButton.astro";
 
-import club from 'src/assets/contents/fake_club.png';
-import column from 'src/assets/contents/fake_column.png';
-import korean from 'src/assets/contents/fake_korean.png';
-import live from 'src/assets/contents/fake_live.png';
-import meetup from 'src/assets/contents/fake_meetup.png';
-import slack from 'src/assets/contents/fake_slack.png';
+import club from "src/assets/contents/fake_club.png";
+import column from "src/assets/contents/fake_column.png";
+import korean from "src/assets/contents/fake_korean.png";
+import live from "src/assets/contents/fake_live.png";
+import meetup from "src/assets/contents/fake_meetup.png";
+import slack from "src/assets/contents/fake_slack.png";
 
-import schedule from 'src/assets/contents/schedule.png';
-import bg from 'src/assets/contents/leafshadow.png';
-import { Carousel } from '~/components/common/carousel.tsx';
+import schedule from "src/assets/contents/schedule.png";
+import bg from "src/assets/contents/leafshadow.png";
+import { Carousel } from "~/components/common/carousel.tsx";
 
-import Title from '~/components/common/title.astro';
+import Title from "~/components/common/title.astro";
 
 const slides = [live, meetup, korean, column, slack, club];
 ---
@@ -48,6 +48,6 @@ const slides = [live, meetup, korean, column, slack, club];
 </div>
 <div class="default-button z-30">
   <div class="overlap-9">
-    <JoinButton microcopy1="" microcopy2="" />
+    <JoinButton />
   </div>
 </div>

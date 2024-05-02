@@ -1,15 +1,15 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 const widths = [450, 800];
-const sizes = '(min-width: 640px) 42vw, 67vw';
+const sizes = "(min-width: 640px) 42vw, 67vw";
 
-import shadowover from '~/assets/firstview/layer_firstview.png';
+import shadowover from "~/assets/firstview/layer_firstview.png";
 
-import hero_top from '~/assets/firstview/hero_top.png';
-import bg from '~/assets/firstview/bg.svg';
-import title from '~/assets/firstview/title.png';
-import JoinButton from '~/components/common/joinButton.astro';
+import hero_top from "~/assets/firstview/hero_top.png";
+import bg from "~/assets/firstview/bg.svg";
+import title from "~/assets/firstview/title.png";
+import JoinButton from "~/components/common/joinButton.astro";
 ---
 
 <div
@@ -41,20 +41,20 @@ import JoinButton from '~/components/common/joinButton.astro';
         >
           <Image src={title} alt="" />
           <div class="-mt-12 mr-40 hidden lg:block">
-            <JoinButton microcopy1="" microcopy2="＼募集は締め切りました／" />
+            <JoinButton />
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="pt-5 lg:hidden">
-    <JoinButton microcopy1="" microcopy2="＼募集は締め切りました／" />
+    <JoinButton />
   </div>
 </div>
 
 <style>
   .hina-mincho {
-    font-family: 'Hina Mincho';
+    font-family: "Hina Mincho";
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -115,7 +115,7 @@ import JoinButton from '~/components/common/joinButton.astro';
         top: 10px;
         left: 18px;
         opacity: 0.7;
-        font-family: 'Hina Mincho-Regular', Helvetica;
+        font-family: "Hina Mincho-Regular", Helvetica;
         font-weight: 400;
         color: white;
         font-size: 24px;
