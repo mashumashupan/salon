@@ -11,7 +11,7 @@
     "astro": "astro",
     "format": "prettier --write **/*.astro .",
     "clean": "rimraf dist .astro node_modules/.astro",
-    "generate": "npx tsx src/scripts/saveSchema.js"
+    "generate": "npx tsx src/scripts/saveSchema.ts"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^5.1.0",

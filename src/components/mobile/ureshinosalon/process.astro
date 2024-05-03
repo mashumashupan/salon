@@ -2,9 +2,12 @@
 import JoinButton from '~/components/common/joinButton.astro';
 import Title from '~/components/common/title.astro';
 import Step, { type Props as StepProps } from '~/components/common/step.astro';
-import client from '~/util/client';
+import { Client } from '~/util/client';
 import { readItems } from '@directus/sdk';
 
+// Directusクライアント取得
+const client = await new Client().create();
+// Directusからprocessのデータを配列で取得
 const steps = await client.request(readItems('process'));
 ---
 
@@ -26,7 +29,7 @@ const steps = await client.request(readItems('process'));
         steps.map((obj, i) => (
           <div class="my-2 w-full">
             <Step
-              number={obj.number.toString()}
+              number={obj.id?.toString()}
               title={obj.title}
               description={obj.description}
               annotation={obj.annotation}
