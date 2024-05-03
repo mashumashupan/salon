@@ -2,10 +2,6 @@ FROM mcr.microsoft.com/devcontainers/base:bullseye
 
 # update packages
 RUN apt update -y && apt install -y gpg sudo wget curl
-# RUN install -dm 755 /etc/apt/keyrings
-# RUN wget -qO - https://mise.jdx.dev/gpg-key.pub | gpg --dearmor | sudo tee /etc/apt/keyrings/mise-archive-keyring.gpg 1> /dev/null
-# RUN echo "deb [signed-by=/etc/apt/keyrings/mise-archive-keyring.gpg arch=arm64] https://mise.jdx.dev/deb stable main" | sudo tee /etc/apt/sources.list.d/mise.list
-# RUN apt update && apt install -y mise
 
 USER vscode
 
@@ -21,5 +17,7 @@ RUN echo 'eval "$(~/.local/bin/mise activate bash && mise install)"' >> ~/.bashr
 RUN mkdir -p /home/vscode/.ssh
 
 RUN rsync -av --ignore-missing-args $HOME/.ssh/config /home/vscode/.ssh/config
+
+COPY --chown=vscode:vscode ./.bash_aliases /home/vscode/.bash_aliases
 
 CMD [ "bash" ]

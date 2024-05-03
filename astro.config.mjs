@@ -18,6 +18,7 @@ export default defineConfig({
     ssr: {
       // 例: 必要な場合、壊れたパッケージがSSRの処理を行うのをスキップさせます
       external: ['astro-icon']
-    }
+    },
+
   }
 });

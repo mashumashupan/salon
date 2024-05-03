@@ -4,7 +4,12 @@ services:
       context: .
       dockerfile: ./Dockerfile
     volumes:
+      - /var/run/docker.sock:/var/run/docker-host.sock
       - ../../:/workspaces:cached
     ports:
       - "3000:3000"
     command: sleep infinity
+    environment:
+      DIRECTUS_EMAIL: admin@example.com
+      DIRECTUS_PASSWORD: d1r3ctu5
+      DIRECTUS_ENDPOINT: http://host.docker.internal:8055

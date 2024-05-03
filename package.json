@@ -10,7 +10,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write **/*.astro .",
-    "clean": "rimraf dist .astro node_modules/.astro"
+    "clean": "rimraf dist .astro node_modules/.astro",
+    "generate": "npx tsx src/scripts/saveSchema.js"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^5.1.0",
@@ -38,9 +39,11 @@
     "@fontsource/zen-kaku-gothic-new": "^5.0.18",
     "@types/react": "^18.2.78",
     "@types/react-dom": "^18.2.25",
+    "dotenv": "^16.4.5",
     "embla-carousel": "^8.0.2",
     "embla-carousel-react": "^8.0.2",
     "micromodal": "^0.4.10",
+    "openapi-typescript": "^6.7.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sharp": "^0.33.3",

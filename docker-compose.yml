@@ -1,13 +1,12 @@
-version: "3"
 services:
   directus:
     image: directus/directus:10.10.5
     ports:
       - 8055:8055
     volumes:
-      - ./database:/directus/database
-      - ./uploads:/directus/uploads
-      - ./extensions:/directus/extensions
+      - $LOCAL_WORKSPACE_FOLDER/database:/directus/database
+      - $LOCAL_WORKSPACE_FOLDER/uploads:/directus/uploads
+      - $LOCAL_WORKSPACE_FOLDER/extensions:/directus/extensions
     environment:
       KEY: "replace-with-random-value"
       SECRET: "replace-with-random-value"
