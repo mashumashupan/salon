@@ -282,3 +282,37 @@ img {
   line-height: inherit !important;
   font-style: normal;
 }
+
+.privacy {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 20px;
+  top: 248px;
+  left: 38px;
+}
+
+.privacy_text {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Ryo Gothic PlusN", Helvetica;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  font-size: 14px;
+  letter-spacing: -0.42px;
+  line-height: normal;
+  font-style: normal;
+}
+
+.element-all-rights {
+  top: 296px;
+  left: 7px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  font-size: 14px;
+  letter-spacing: 0.10000000149011612px;
+  line-height: 20px;
+  white-space: nowrap;
+  font-style: normal;
+}

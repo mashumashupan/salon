@@ -784,45 +784,6 @@ export interface paths {
      */
     patch: operations["updateWebhook"];
   };
-  "/items/global": {
-    /**
-     * List Items
-     * @description List the global items.
-     */
-    get: operations["readItemsGlobal"];
-    /**
-     * Create an Item
-     * @description Create a new global item.
-     */
-    post: operations["createItemsGlobal"];
-    /**
-     * Delete Multiple Items
-     * @description Delete multiple existing global items.
-     */
-    delete: operations["deleteItemsGlobal"];
-    /**
-     * Update Multiple Items
-     * @description Update multiple global items at the same time.
-     */
-    patch: operations["updateItemsGlobal"];
-  };
-  "/items/global/{id}": {
-    /**
-     * Retrieve an Item
-     * @description Retrieve a single global item by unique identifier.
-     */
-    get: operations["readSingleItemsGlobal"];
-    /**
-     * Delete an Item
-     * @description Delete an existing global item.
-     */
-    delete: operations["deleteSingleItemsGlobal"];
-    /**
-     * Update an Item
-     * @description Update an existing global item.
-     */
-    patch: operations["updateSingleItemsGlobal"];
-  };
   "/items/testimonial": {
     /**
      * List Items
@@ -1135,83 +1096,122 @@ export interface paths {
      */
     patch: operations["updateSingleItemsPrice"];
   };
-  "/items/voice_support": {
+  "/items/global": {
     /**
      * List Items
-     * @description List the voice_support items.
+     * @description List the global items.
+     */
+    get: operations["readItemsGlobal"];
+    /**
+     * Create an Item
+     * @description Create a new global item.
+     */
+    post: operations["createItemsGlobal"];
+    /**
+     * Delete Multiple Items
+     * @description Delete multiple existing global items.
+     */
+    delete: operations["deleteItemsGlobal"];
+    /**
+     * Update Multiple Items
+     * @description Update multiple global items at the same time.
+     */
+    patch: operations["updateItemsGlobal"];
+  };
+  "/items/global/{id}": {
+    /**
+     * Retrieve an Item
+     * @description Retrieve a single global item by unique identifier.
+     */
+    get: operations["readSingleItemsGlobal"];
+    /**
+     * Delete an Item
+     * @description Delete an existing global item.
+     */
+    delete: operations["deleteSingleItemsGlobal"];
+    /**
+     * Update an Item
+     * @description Update an existing global item.
+     */
+    patch: operations["updateSingleItemsGlobal"];
+  };
+  "/items/voiceSupport": {
+    /**
+     * List Items
+     * @description List the voiceSupport items.
      */
     get: operations["readItemsVoiceSupport"];
     /**
      * Create an Item
-     * @description Create a new voice_support item.
+     * @description Create a new voiceSupport item.
      */
     post: operations["createItemsVoiceSupport"];
     /**
      * Delete Multiple Items
-     * @description Delete multiple existing voice_support items.
+     * @description Delete multiple existing voiceSupport items.
      */
     delete: operations["deleteItemsVoiceSupport"];
     /**
      * Update Multiple Items
-     * @description Update multiple voice_support items at the same time.
+     * @description Update multiple voiceSupport items at the same time.
      */
     patch: operations["updateItemsVoiceSupport"];
   };
-  "/items/voice_support/{id}": {
+  "/items/voiceSupport/{id}": {
     /**
      * Retrieve an Item
-     * @description Retrieve a single voice_support item by unique identifier.
+     * @description Retrieve a single voiceSupport item by unique identifier.
      */
     get: operations["readSingleItemsVoiceSupport"];
     /**
      * Delete an Item
-     * @description Delete an existing voice_support item.
+     * @description Delete an existing voiceSupport item.
      */
     delete: operations["deleteSingleItemsVoiceSupport"];
     /**
      * Update an Item
-     * @description Update an existing voice_support item.
+     * @description Update an existing voiceSupport item.
      */
     patch: operations["updateSingleItemsVoiceSupport"];
   };
-  "/items/voice_member": {
+  "/items/voiceMembers": {
     /**
      * List Items
-     * @description List the voice_member items.
+     * @description List the voiceMembers items.
      */
-    get: operations["readItemsVoiceMember"];
+    get: operations["readItemsVoiceMembers"];
     /**
      * Create an Item
-     * @description Create a new voice_member item.
+     * @description Create a new voiceMembers item.
      */
-    post: operations["createItemsVoiceMember"];
+    post: operations["createItemsVoiceMembers"];
     /**
      * Delete Multiple Items
-     * @description Delete multiple existing voice_member items.
+     * @description Delete multiple existing voiceMembers items.
      */
-    delete: operations["deleteItemsVoiceMember"];
+    delete: operations["deleteItemsVoiceMembers"];
     /**
      * Update Multiple Items
-     * @description Update multiple voice_member items at the same time.
+     * @description Update multiple voiceMembers items at the same time.
      */
-    patch: operations["updateItemsVoiceMember"];
+    patch: operations["updateItemsVoiceMembers"];
   };
-  "/items/voice_member/{id}": {
+  "/items/voiceMembers/{id}": {
     /**
      * Retrieve an Item
-     * @description Retrieve a single voice_member item by unique identifier.
+     * @description Retrieve a single voiceMembers item by unique identifier.
      */
-    get: operations["readSingleItemsVoiceMember"];
+    get: operations["readSingleItemsVoiceMembers"];
     /**
      * Delete an Item
-     * @description Delete an existing voice_member item.
+     * @description Delete an existing voiceMembers item.
      */
-    delete: operations["deleteSingleItemsVoiceMember"];
+    delete: operations["deleteSingleItemsVoiceMembers"];
     /**
      * Update an Item
-     * @description Update an existing voice_member item.
+     * @description Update an existing voiceMembers item.
      */
-    patch: operations["updateSingleItemsVoiceMember"];
+    patch: operations["updateSingleItemsVoiceMembers"];
   };
 }
 
@@ -2157,12 +2157,6 @@ export interface components {
       was_active_before_deprecation?: boolean;
       migrated_flow?: string | components["schemas"]["Flows"] | null;
     };
-    ItemsGlobal: {
-      id?: number;
-      microcopy?: string | null;
-      button?: string | null;
-      attention?: string | null;
-    };
     ItemsTestimonial: {
       id?: number;
       name?: string | null;
@@ -2221,35 +2215,48 @@ export interface components {
       attention?: string | null;
       description?: string;
     };
+    ItemsGlobal: {
+      id?: number;
+      microcopy?: string | null;
+      button?: string | null;
+      attention?: string | null;
+      header?: string | null;
+      privacy?: string | null;
+      supportPage?: string | null;
+      URLX?: string | null;
+      URLInstagram?: string | null;
+      URLNote?: string | null;
+      URLLine?: string | null;
+    };
     ItemsVoiceSupport: {
       id?: number;
       name?: string | null;
       title?: string | null;
-      round_icon?: string | components["schemas"]["Files"] | null;
       description?: string | null;
+      roundicon?: string | components["schemas"]["Files"] | null;
       name2?: string | null;
       title2?: string | null;
       description2?: string | null;
-      round_icon2?: string | components["schemas"]["Files"] | null;
+      roundicon2?: string | components["schemas"]["Files"] | null;
     };
-    ItemsVoiceMember: {
+    ItemsVoiceMembers: {
       id?: number;
       name?: string | null;
       title?: string | null;
       description?: string | null;
-      round_icon?: string | components["schemas"]["Files"] | null;
+      roundicon?: string | components["schemas"]["Files"] | null;
       name2?: string | null;
       title2?: string | null;
       description2?: string | null;
-      round_icon2?: string | components["schemas"]["Files"] | null;
+      roundicon2?: string | components["schemas"]["Files"] | null;
       name3?: string | null;
       name4?: string | null;
       title3?: string | null;
       title4?: string | null;
       description3?: string | null;
+      roundicon3?: string | components["schemas"]["Files"] | null;
+      roundicon4?: string | components["schemas"]["Files"] | null;
       description4?: string | null;
-      round_icon3?: string | components["schemas"]["Files"] | null;
-      round_icon4?: string | components["schemas"]["Files"] | null;
     };
   };
   responses: {
@@ -6624,189 +6631,6 @@ export interface operations {
   };
   /**
    * List Items
-   * @description List the global items.
-   */
-  readItemsGlobal: {
-    parameters: {
-      query?: {
-        fields?: components["parameters"]["Fields"];
-        limit?: components["parameters"]["Limit"];
-        meta?: components["parameters"]["Meta"];
-        offset?: components["parameters"]["Offset"];
-        sort?: components["parameters"]["Sort"];
-        filter?: components["parameters"]["Filter"];
-        search?: components["parameters"]["Search"];
-      };
-    };
-    responses: {
-      /** @description Successful request */
-      200: {
-        content: {
-          "application/json": {
-            data?: components["schemas"]["ItemsGlobal"][];
-            meta?: components["schemas"]["x-metadata"];
-          };
-        };
-      };
-      401: components["responses"]["UnauthorizedError"];
-    };
-  };
-  /**
-   * Create an Item
-   * @description Create a new global item.
-   */
-  createItemsGlobal: {
-    parameters: {
-      query?: {
-        meta?: components["parameters"]["Meta"];
-      };
-    };
-    requestBody?: {
-      content: {
-        "application/json": components["schemas"]["ItemsGlobal"][] | components["schemas"]["ItemsGlobal"];
-      };
-    };
-    responses: {
-      /** @description Successful request */
-      200: {
-        content: {
-          "application/json": {
-            data?: unknown;
-          };
-        };
-      };
-      401: components["responses"]["UnauthorizedError"];
-    };
-  };
-  /**
-   * Delete Multiple Items
-   * @description Delete multiple existing global items.
-   */
-  deleteItemsGlobal: {
-    responses: {
-      /** @description Successful request */
-      200: {
-        content: never;
-      };
-      401: components["responses"]["UnauthorizedError"];
-    };
-  };
-  /**
-   * Update Multiple Items
-   * @description Update multiple global items at the same time.
-   */
-  updateItemsGlobal: {
-    parameters: {
-      query?: {
-        fields?: components["parameters"]["Fields"];
-        limit?: components["parameters"]["Limit"];
-        meta?: components["parameters"]["Meta"];
-        offset?: components["parameters"]["Offset"];
-        sort?: components["parameters"]["Sort"];
-        filter?: components["parameters"]["Filter"];
-        search?: components["parameters"]["Search"];
-      };
-    };
-    requestBody?: {
-      content: {
-        "application/json": components["schemas"]["ItemsGlobal"][] | components["schemas"]["ItemsGlobal"];
-      };
-    };
-    responses: {
-      /** @description Successful request */
-      200: {
-        content: {
-          "application/json": {
-            data?: unknown;
-          };
-        };
-      };
-    };
-  };
-  /**
-   * Retrieve an Item
-   * @description Retrieve a single global item by unique identifier.
-   */
-  readSingleItemsGlobal: {
-    parameters: {
-      query?: {
-        fields?: components["parameters"]["Fields"];
-        meta?: components["parameters"]["Meta"];
-        version?: components["parameters"]["Version"];
-      };
-      path: {
-        /** @description Index of the item. */
-        id: number | string;
-      };
-    };
-    responses: {
-      /** @description Successful request */
-      200: {
-        content: {
-          "application/json": {
-            data?: components["schemas"]["ItemsGlobal"];
-          };
-        };
-      };
-      401: components["responses"]["UnauthorizedError"];
-      404: components["responses"]["NotFoundError"];
-    };
-  };
-  /**
-   * Delete an Item
-   * @description Delete an existing global item.
-   */
-  deleteSingleItemsGlobal: {
-    parameters: {
-      path: {
-        /** @description Index of the item. */
-        id: number | string;
-      };
-    };
-    responses: {
-      /** @description Successful request */
-      200: {
-        content: never;
-      };
-      401: components["responses"]["UnauthorizedError"];
-      404: components["responses"]["NotFoundError"];
-    };
-  };
-  /**
-   * Update an Item
-   * @description Update an existing global item.
-   */
-  updateSingleItemsGlobal: {
-    parameters: {
-      query?: {
-        fields?: components["parameters"]["Fields"];
-        meta?: components["parameters"]["Meta"];
-      };
-      path: {
-        /** @description Index of the item. */
-        id: number | string;
-      };
-    };
-    requestBody?: {
-      content: {
-        "application/json": components["schemas"]["ItemsGlobal"];
-      };
-    };
-    responses: {
-      /** @description Successful request */
-      200: {
-        content: {
-          "application/json": {
-            data?: components["schemas"]["ItemsGlobal"];
-          };
-        };
-      };
-      401: components["responses"]["UnauthorizedError"];
-      404: components["responses"]["NotFoundError"];
-    };
-  };
-  /**
-   * List Items
    * @description List the testimonial items.
    */
   readItemsTestimonial: {
@@ -8271,7 +8095,190 @@ export interface operations {
   };
   /**
    * List Items
-   * @description List the voice_support items.
+   * @description List the global items.
+   */
+  readItemsGlobal: {
+    parameters: {
+      query?: {
+        fields?: components["parameters"]["Fields"];
+        limit?: components["parameters"]["Limit"];
+        meta?: components["parameters"]["Meta"];
+        offset?: components["parameters"]["Offset"];
+        sort?: components["parameters"]["Sort"];
+        filter?: components["parameters"]["Filter"];
+        search?: components["parameters"]["Search"];
+      };
+    };
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          "application/json": {
+            data?: components["schemas"]["ItemsGlobal"][];
+            meta?: components["schemas"]["x-metadata"];
+          };
+        };
+      };
+      401: components["responses"]["UnauthorizedError"];
+    };
+  };
+  /**
+   * Create an Item
+   * @description Create a new global item.
+   */
+  createItemsGlobal: {
+    parameters: {
+      query?: {
+        meta?: components["parameters"]["Meta"];
+      };
+    };
+    requestBody?: {
+      content: {
+        "application/json": components["schemas"]["ItemsGlobal"][] | components["schemas"]["ItemsGlobal"];
+      };
+    };
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          "application/json": {
+            data?: unknown;
+          };
+        };
+      };
+      401: components["responses"]["UnauthorizedError"];
+    };
+  };
+  /**
+   * Delete Multiple Items
+   * @description Delete multiple existing global items.
+   */
+  deleteItemsGlobal: {
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never;
+      };
+      401: components["responses"]["UnauthorizedError"];
+    };
+  };
+  /**
+   * Update Multiple Items
+   * @description Update multiple global items at the same time.
+   */
+  updateItemsGlobal: {
+    parameters: {
+      query?: {
+        fields?: components["parameters"]["Fields"];
+        limit?: components["parameters"]["Limit"];
+        meta?: components["parameters"]["Meta"];
+        offset?: components["parameters"]["Offset"];
+        sort?: components["parameters"]["Sort"];
+        filter?: components["parameters"]["Filter"];
+        search?: components["parameters"]["Search"];
+      };
+    };
+    requestBody?: {
+      content: {
+        "application/json": components["schemas"]["ItemsGlobal"][] | components["schemas"]["ItemsGlobal"];
+      };
+    };
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          "application/json": {
+            data?: unknown;
+          };
+        };
+      };
+    };
+  };
+  /**
+   * Retrieve an Item
+   * @description Retrieve a single global item by unique identifier.
+   */
+  readSingleItemsGlobal: {
+    parameters: {
+      query?: {
+        fields?: components["parameters"]["Fields"];
+        meta?: components["parameters"]["Meta"];
+        version?: components["parameters"]["Version"];
+      };
+      path: {
+        /** @description Index of the item. */
+        id: number | string;
+      };
+    };
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          "application/json": {
+            data?: components["schemas"]["ItemsGlobal"];
+          };
+        };
+      };
+      401: components["responses"]["UnauthorizedError"];
+      404: components["responses"]["NotFoundError"];
+    };
+  };
+  /**
+   * Delete an Item
+   * @description Delete an existing global item.
+   */
+  deleteSingleItemsGlobal: {
+    parameters: {
+      path: {
+        /** @description Index of the item. */
+        id: number | string;
+      };
+    };
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never;
+      };
+      401: components["responses"]["UnauthorizedError"];
+      404: components["responses"]["NotFoundError"];
+    };
+  };
+  /**
+   * Update an Item
+   * @description Update an existing global item.
+   */
+  updateSingleItemsGlobal: {
+    parameters: {
+      query?: {
+        fields?: components["parameters"]["Fields"];
+        meta?: components["parameters"]["Meta"];
+      };
+      path: {
+        /** @description Index of the item. */
+        id: number | string;
+      };
+    };
+    requestBody?: {
+      content: {
+        "application/json": components["schemas"]["ItemsGlobal"];
+      };
+    };
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          "application/json": {
+            data?: components["schemas"]["ItemsGlobal"];
+          };
+        };
+      };
+      401: components["responses"]["UnauthorizedError"];
+      404: components["responses"]["NotFoundError"];
+    };
+  };
+  /**
+   * List Items
+   * @description List the voiceSupport items.
    */
   readItemsVoiceSupport: {
     parameters: {
@@ -8300,7 +8307,7 @@ export interface operations {
   };
   /**
    * Create an Item
-   * @description Create a new voice_support item.
+   * @description Create a new voiceSupport item.
    */
   createItemsVoiceSupport: {
     parameters: {
@@ -8327,7 +8334,7 @@ export interface operations {
   };
   /**
    * Delete Multiple Items
-   * @description Delete multiple existing voice_support items.
+   * @description Delete multiple existing voiceSupport items.
    */
   deleteItemsVoiceSupport: {
     responses: {
@@ -8340,7 +8347,7 @@ export interface operations {
   };
   /**
    * Update Multiple Items
-   * @description Update multiple voice_support items at the same time.
+   * @description Update multiple voiceSupport items at the same time.
    */
   updateItemsVoiceSupport: {
     parameters: {
@@ -8372,7 +8379,7 @@ export interface operations {
   };
   /**
    * Retrieve an Item
-   * @description Retrieve a single voice_support item by unique identifier.
+   * @description Retrieve a single voiceSupport item by unique identifier.
    */
   readSingleItemsVoiceSupport: {
     parameters: {
@@ -8401,7 +8408,7 @@ export interface operations {
   };
   /**
    * Delete an Item
-   * @description Delete an existing voice_support item.
+   * @description Delete an existing voiceSupport item.
    */
   deleteSingleItemsVoiceSupport: {
     parameters: {
@@ -8421,7 +8428,7 @@ export interface operations {
   };
   /**
    * Update an Item
-   * @description Update an existing voice_support item.
+   * @description Update an existing voiceSupport item.
    */
   updateSingleItemsVoiceSupport: {
     parameters: {
@@ -8454,9 +8461,9 @@ export interface operations {
   };
   /**
    * List Items
-   * @description List the voice_member items.
+   * @description List the voiceMembers items.
    */
-  readItemsVoiceMember: {
+  readItemsVoiceMembers: {
     parameters: {
       query?: {
         fields?: components["parameters"]["Fields"];
@@ -8473,7 +8480,7 @@ export interface operations {
       200: {
         content: {
           "application/json": {
-            data?: components["schemas"]["ItemsVoiceMember"][];
+            data?: components["schemas"]["ItemsVoiceMembers"][];
             meta?: components["schemas"]["x-metadata"];
           };
         };
@@ -8483,9 +8490,9 @@ export interface operations {
   };
   /**
    * Create an Item
-   * @description Create a new voice_member item.
+   * @description Create a new voiceMembers item.
    */
-  createItemsVoiceMember: {
+  createItemsVoiceMembers: {
     parameters: {
       query?: {
         meta?: components["parameters"]["Meta"];
@@ -8493,7 +8500,7 @@ export interface operations {
     };
     requestBody?: {
       content: {
-        "application/json": components["schemas"]["ItemsVoiceMember"][] | components["schemas"]["ItemsVoiceMember"];
+        "application/json": components["schemas"]["ItemsVoiceMembers"][] | components["schemas"]["ItemsVoiceMembers"];
       };
     };
     responses: {
@@ -8510,9 +8517,9 @@ export interface operations {
   };
   /**
    * Delete Multiple Items
-   * @description Delete multiple existing voice_member items.
+   * @description Delete multiple existing voiceMembers items.
    */
-  deleteItemsVoiceMember: {
+  deleteItemsVoiceMembers: {
     responses: {
       /** @description Successful request */
       200: {
@@ -8523,9 +8530,9 @@ export interface operations {
   };
   /**
    * Update Multiple Items
-   * @description Update multiple voice_member items at the same time.
+   * @description Update multiple voiceMembers items at the same time.
    */
-  updateItemsVoiceMember: {
+  updateItemsVoiceMembers: {
     parameters: {
       query?: {
         fields?: components["parameters"]["Fields"];
@@ -8539,7 +8546,7 @@ export interface operations {
     };
     requestBody?: {
       content: {
-        "application/json": components["schemas"]["ItemsVoiceMember"][] | components["schemas"]["ItemsVoiceMember"];
+        "application/json": components["schemas"]["ItemsVoiceMembers"][] | components["schemas"]["ItemsVoiceMembers"];
       };
     };
     responses: {
@@ -8555,9 +8562,9 @@ export interface operations {
   };
   /**
    * Retrieve an Item
-   * @description Retrieve a single voice_member item by unique identifier.
+   * @description Retrieve a single voiceMembers item by unique identifier.
    */
-  readSingleItemsVoiceMember: {
+  readSingleItemsVoiceMembers: {
     parameters: {
       query?: {
         fields?: components["parameters"]["Fields"];
@@ -8574,7 +8581,7 @@ export interface operations {
       200: {
         content: {
           "application/json": {
-            data?: components["schemas"]["ItemsVoiceMember"];
+            data?: components["schemas"]["ItemsVoiceMembers"];
           };
         };
       };
@@ -8584,9 +8591,9 @@ export interface operations {
   };
   /**
    * Delete an Item
-   * @description Delete an existing voice_member item.
+   * @description Delete an existing voiceMembers item.
    */
-  deleteSingleItemsVoiceMember: {
+  deleteSingleItemsVoiceMembers: {
     parameters: {
       path: {
         /** @description Index of the item. */
@@ -8604,9 +8611,9 @@ export interface operations {
   };
   /**
    * Update an Item
-   * @description Update an existing voice_member item.
+   * @description Update an existing voiceMembers item.
    */
-  updateSingleItemsVoiceMember: {
+  updateSingleItemsVoiceMembers: {
     parameters: {
       query?: {
         fields?: components["parameters"]["Fields"];
@@ -8619,7 +8626,7 @@ export interface operations {
     };
     requestBody?: {
       content: {
-        "application/json": components["schemas"]["ItemsVoiceMember"];
+        "application/json": components["schemas"]["ItemsVoiceMembers"];
       };
     };
     responses: {
@@ -8627,7 +8634,7 @@ export interface operations {
       200: {
         content: {
           "application/json": {
-            data?: components["schemas"]["ItemsVoiceMember"];
+            data?: components["schemas"]["ItemsVoiceMembers"];
           };
         };
       };

@@ -1,6 +1,14 @@
 ---
 import { Icon } from "astro-icon/components";
 import Logo from "~/components/common/logo.astro";
+
+import { Client } from "~/util/client";
+import { readSingleton } from "@directus/sdk";
+
+// Directusクライアント取得
+const client = await new Client().create();
+// Directusからprocessのデータを配列で取得
+const obj = await client.request(readSingleton("global"));
 ---
 
 <div class="absolute z-50 flex min-h-[43px] w-full flex-col items-center">
@@ -8,7 +16,7 @@ import Logo from "~/components/common/logo.astro";
     <p class="element">
       <span class="text-wrapper"></span>
       <span class="span"></span>
-      <span class="text-wrapper-2">&nbsp;募集は締め切りました</span>
+      <span class="text-wrapper-2">&nbsp;{obj?.header ?? ""}</span>
       <span class="text-wrapper"></span>
       <span class="span zenkaku-gothic"></span>
     </p>
@@ -16,29 +24,6 @@ import Logo from "~/components/common/logo.astro";
   <div>
     <Logo className="md:w-40" />
   </div>
-  <!-- <div class="top-nav flex items-center gap-7 pt-[8px] md:gap-16">
-    <a
-      href="https://instagram.com/ureshino_chan"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Icon name="insta" class="text-xl md:text-4xl" />
-    </a>
-    <a
-      href="https://twitter.com/ureshino_chan"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Icon name="x" class="text-sm md:text-2xl" />
-    </a>
-    <a
-      href="https://note.com/ureshino_chan"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Icon name="note" class="text-xl md:text-4xl" />
-    </a> -->
-  <!-- <Icon name="menu" class="text-xl md:text-4xl" /> -->
 </div>
 
 <style>

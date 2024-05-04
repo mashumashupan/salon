@@ -21,7 +21,7 @@ import { readSingleton } from "@directus/sdk";
 // Directusクライアント取得
 const client = await new Client().create();
 // Directusからprocessのデータを配列で取得
-const obj = await client.request(readSingleton("voice_support"));
+const obj = await client.request(readSingleton("voiceSupport"));
 ---
 
 <div
