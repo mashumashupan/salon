@@ -19,6 +19,9 @@ export default defineConfig({
       // 例: 必要な場合、壊れたパッケージがSSRの処理を行うのをスキップさせます
       external: ['astro-icon']
     },
-
+    optimizeDeps: {
+      // 例: 必要な場合、壊れたパッケージがビルド時にスキップされるのを防ぎます
+      exclude: ['fsevents']
+    }
   }
 });

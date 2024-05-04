@@ -12,6 +12,14 @@ import Title from "~/components/common/title.astro";
 import Voice from "~/components/common/voice.astro";
 import ZigzagRow from "~/layouts/ZigzagRow.astro";
 import ResponsiveGrid from "~/layouts/responsiveGrid.astro";
+
+import { Client } from "~/util/client";
+import { readSingleton } from "@directus/sdk";
+
+// Directusクライアント取得
+const client = await new Client().create();
+// Directusからprocessのデータを配列で取得
+const obj = await client.request(readSingleton("voice_member"));
 ---
 
 <div
@@ -41,31 +49,23 @@ import ResponsiveGrid from "~/layouts/responsiveGrid.astro";
       <ZigzagRow align="left" slot="top">
         <Voice
           side="left"
-          name="タフ子ちゃん"
-          title="美容モデル"
+          name={obj?.name ?? ""}
+          title={obj?.title ?? ""}
           icon={voice_ayu}
           useStar={false}
         >
-          <div class="textblack mb-4">
-            モチベーションが下がったとき、うれしのサロンの掲示板やコラムを読むと
-            <span class="textpink">気合いが入り背中を押されます♡</span>
-            嬉野さんの有益で力強い発信はもちろん、メンバーも挑戦や努力を続けている方ばかりなのでいつも押し上げていただいている気分です。
-          </div>
+          <Fragment set:html={obj.description} />
         </Voice>
       </ZigzagRow>
       <ZigzagRow align="right" slot="bottom">
         <Voice
           side="right"
-          name="karenさん"
-          title="メンバー"
+          name={obj?.name2 ?? ""}
+          title={obj?.title2 ?? ""}
           icon={voice_karen}
           useStar={false}
         >
-          <div class="textblack mb-4">
-            周りの人と価値観や話が合わなくなってきて悩んでいた時に見つけたのがきっかけで入会しました。高め会える仲間ができて
-            <span class="textpink">人生ががらりと変わり</span>
-            ました。メンバーと一緒に日本初のAIフォトスタジオの事業をすることにもなりました！
-          </div>
+          <Fragment set:html={obj.description2} />
         </Voice>
       </ZigzagRow>
     </ResponsiveGrid>
@@ -73,31 +73,23 @@ import ResponsiveGrid from "~/layouts/responsiveGrid.astro";
       <ZigzagRow align="left" slot="top">
         <Voice
           side="left"
-          name="ゆっこさん"
-          title="メンバー"
+          name={obj?.name3 ?? ""}
+          title={obj?.title3 ?? ""}
           icon={voice_yukko}
           useStar={false}
         >
-          <div class="textblack mb-4">
-            今年やってよかったことの1つにうれしのサロンに入ったこと」があります。このサロンのおかげで、確実に
-            <span class="textpink">行動力が上がっています✨</span>
-            事業の話も、美容の話もできる強くて美しい女性が今年はさらに色んな人と話したいです！
-          </div>
+          <Fragment set:html={obj.description3} />
         </Voice>
       </ZigzagRow>
       <ZigzagRow align="right" slot="bottom">
         <Voice
           side="right"
-          name="chihiroさん"
-          title="メンバー"
+          name={obj?.name4 ?? ""}
+          title={obj?.title4 ?? ""}
           icon={voice_chihiro}
           useStar={false}
         >
-          <div class="textblack mb-4">
-            都会に住んでいなくても、切磋琢磨できる同年代の女性と出会えたことに感謝しています。うれしのサロンのおかげで
-            <span class="textpink">経験したことがないことにチャレンジ</span>
-            できました！
-          </div>
+          <Fragment set:html={obj.description4} />
         </Voice>
       </ZigzagRow>
     </ResponsiveGrid>

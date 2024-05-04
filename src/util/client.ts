@@ -15,7 +15,7 @@ type ArrayProperties = typeof arrayProperties[number];
 // Schemaの型定義からDirectusSDKが解釈できる型に変換
 type SchemaBase = components["schemas"];
 type Schema = {
-  [K in keyof SchemaBase as (K extends `Items${infer Rest}` ? Uncapitalize<Rest> : never)]:
+    [K in keyof SchemaBase as (K extends `Items${infer Rest}` ? Uncapitalize<Rest> : never)]:
     Uncapitalize<K extends `Items${infer Rest}` ? Extract<Rest, string> : never> extends ArrayProperties ? SchemaBase[K][] : SchemaBase[K]
 };
 
