@@ -192,3 +192,25 @@ img {
   line-height: var(--mobile-body-line-height);
   font-size: var(--mobile-body-font-size);
 }
+
+.title-big_mystory {
+  font-size: var(--h2-j-font-size);
+}
+
+.title-small_mystory {
+  font-size: 20px;
+  letter-spacing: 0.48px;
+}
+
+.textblack_mystory {
+  width: 305px;
+  top: 83px;
+  left: 16px;
+  font-family: var(--mobile-body-font-family);
+  font-weight: var(--mobile-body-font-weight);
+  color: var(--grey);
+  font-size: 0.9rem;
+  letter-spacing: var(--body-j-letter-spacing);
+  line-height: 1.3rem;
+  font-style: var(--body-j-font-style);
+}
