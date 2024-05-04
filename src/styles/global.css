@@ -150,6 +150,47 @@ img {
   font-weight: bold;
 }
 
+.textblack {
+  color: #71717a;
+  letter-spacing: 2.08px;
+  font-family: "Ryo Gothic PlusN", Helvetica;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  font-size: 16px;
+}
+
+.textpink {
+  color: #c697a5;
+  letter-spacing: 2.08px;
+  font-family: "Ryo Gothic PlusN", Helvetica;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  font-size: 16px;
+}
+
+.hina-mincho {
+  font-family: "Hina Mincho";
+  font-style: normal !important;
+  font-weight: 100 !important;
+  line-height: normal !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+.about {
+  top: 43px;
+  left: 0;
+  font-family: "Hina Mincho", Helvetica;
+  font-weight: 400;
+  color: transparent;
+  font-size: 24px;
+  letter-spacing: 2.88px;
+  line-height: 144.9303150177002%;
+  white-space: nowrap;
+  font-style: normal;
+}
+
 .textblack_about {
   top: 0;
   left: 0;
@@ -173,47 +214,18 @@ img {
   font-size: var(--mobile-h2-font-size);
 }
 
-.textblack {
-  color: #71717a;
-  letter-spacing: var(--mobile-body-letter-spacing);
-  font-family: var(--mobile-body-font-family);
-  font-style: var(--mobile-body-font-style);
-  font-weight: var(--mobile-body-font-weight);
-  line-height: var(--mobile-body-line-height);
-  font-size: var(--mobile-body-font-size);
-}
-
-.textpink {
-  color: #c697a5;
-  letter-spacing: var(--mobile-body-letter-spacing);
-  font-family: var(--mobile-body-font-family);
-  font-style: var(--mobile-body-font-style);
-  font-weight: var(--mobile-body-font-weight);
-  line-height: var(--mobile-body-line-height);
-  font-size: var(--mobile-body-font-size);
-}
-
-.hina-mincho {
-  font-family: "Hina Mincho";
-  font-style: normal !important;
-  font-weight: 100 !important;
-  line-height: normal !important;
-  -webkit-font-smoothing: antialiased;
-}
-
 .mystory {
   top: 10px;
   left: 31px;
-  /* font-family: "Hina Mincho-Regular", Helvetica; */
   font-weight: 400;
-  color: var(--dark-grey);
+  color: rgba(82, 82, 91, 1);
   font-size: 30px;
   letter-spacing: 3.6px;
   line-height: 30px;
 }
 
 .title-big_mystory {
-  font-size: var(--h2-j-font-size);
+  font-size: 30px;
 }
 
 .title-small_mystory {
@@ -225,11 +237,48 @@ img {
   width: 305px;
   top: 83px;
   left: 16px;
-  font-family: var(--mobile-body-font-family);
-  font-weight: var(--mobile-body-font-weight);
-  color: var(--grey);
+  font-family: "Ryo Gothic PlusN", Helvetica;
+  font-weight: 400;
+  color: rgba(113, 113, 122, 1);
   font-size: 0.9rem;
-  letter-spacing: var(--body-j-letter-spacing);
+  letter-spacing: 2.56px;
   line-height: 1.3rem;
-  font-style: var(--body-j-font-style);
+  font-style: normal;
+}
+
+.yourstory {
+  font-family: "Ryo Gothic PlusN", Helvetica;
+  font-weight: 400;
+  color: transparent;
+  font-size: 16px;
+  letter-spacing: 2.08px;
+  font-style: normal;
+  line-height: 0.8rem;
+}
+
+.title_yourstory {
+  top: 0;
+  left: 0;
+  font-family: "Hina Mincho", Helvetica;
+  font-weight: 400;
+  color: rgba(161, 161, 170, 1);
+  letter-spacing: 3.6px;
+  line-height: 144.9303150177002%;
+  font-style: normal;
+  background: linear-gradient(90deg, #9e87be 0%, #c697a5 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.textblack_yourstory {
+  top: 0;
+  left: 0;
+  font-family: "Ryo Gothic PlusN", Helvetica;
+  font-weight: 400;
+  color: rgba(113, 113, 122, 1);
+  font-size: 0.7rem;
+  letter-spacing: 2.56px;
+  line-height: inherit !important;
+  font-style: normal;
 }
