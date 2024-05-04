@@ -149,3 +149,46 @@ img {
   font-display: swap;
   font-weight: bold;
 }
+
+.textblack_about {
+  top: 0;
+  left: 0;
+  font-family: var(--mobile-h2-font-family);
+  font-weight: var(--mobile-h2-font-weight);
+  color: var(--grey);
+  font-size: var(--mobile-h2-font-size);
+  letter-spacing: var(--mobile-h2-letter-spacing);
+  line-height: var(--mobile-h2-line-height);
+  white-space: nowrap;
+  font-style: var(--mobile-h2-font-style);
+}
+
+.textpink_about {
+  color: #c697a5;
+  letter-spacing: var(--mobile-h2-letter-spacing);
+  font-family: var(--mobile-h2-font-family);
+  font-style: var(--mobile-h2-font-style);
+  font-weight: var(--mobile-h2-font-weight);
+  line-height: var(--mobile-h2-line-height);
+  font-size: var(--mobile-h2-font-size);
+}
+
+.textblack {
+  color: #71717a;
+  letter-spacing: var(--mobile-body-letter-spacing);
+  font-family: var(--mobile-body-font-family);
+  font-style: var(--mobile-body-font-style);
+  font-weight: var(--mobile-body-font-weight);
+  line-height: var(--mobile-body-line-height);
+  font-size: var(--mobile-body-font-size);
+}
+
+.textpink {
+  color: #c697a5;
+  letter-spacing: var(--mobile-body-letter-spacing);
+  font-family: var(--mobile-body-font-family);
+  font-style: var(--mobile-body-font-style);
+  font-weight: var(--mobile-body-font-weight);
+  line-height: var(--mobile-body-line-height);
+  font-size: var(--mobile-body-font-size);
+}

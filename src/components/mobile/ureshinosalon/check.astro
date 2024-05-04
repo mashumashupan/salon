@@ -12,6 +12,14 @@ import Checklist from "~/components/common/checklist.astro";
 
 import Title from "~/components/common/title.astro";
 import ResponsiveGrid from "~/layouts/responsiveGrid.astro";
+
+import { Client } from "~/util/client";
+import { readSingleton } from "@directus/sdk";
+
+// Directusクライアント取得
+const client = await new Client().create();
+// Directusからprocessのデータを配列で取得
+const obj = await client.request(readSingleton("check"));
 ---
 
 <div class="box" id="check">
@@ -40,44 +48,27 @@ import ResponsiveGrid from "~/layouts/responsiveGrid.astro";
         <ResponsiveGrid nogap={true}>
           <div slot="top">
             <Checklist>
-              <span class="textblack">女性は「</span>
-              <span class="textpink">かわいさ</span>
-              <span class="textblack">」だけでなく、「</span>
-              <span class="textpink">賢さ</span>
-              <span class="textblack">」も必要だと考えている</span>
+              <Fragment set:html={obj.check1} />
             </Checklist>
             <Checklist>
-              <span class="textpink">向上心</span>
-              <span class="textblack">や</span>
-              <span class="textpink">成長意欲</span>
-              <span class="textblack">が高い</span>
+              <Fragment set:html={obj.check2} />
             </Checklist>
             <Checklist>
-              <span class="textpink">夢</span>
-              <span class="textblack">や</span>
-              <span class="textpink">目標</span>
-              <span class="textblack">を持っている</span>
+              <Fragment set:html={obj.check3} />
             </Checklist>
             <Checklist>
-              <span class="textblack">惜しみなく</span>
-              <span class="textpink">自己投資</span>
-              <span class="textblack">をする覚悟を持っている</span>
+              <Fragment set:html={obj.check4} />
             </Checklist>
           </div>
           <div slot="bottom">
             <Checklist>
-              <span class="textpink">美容</span>
-              <span class="textblack">や</span>
-              <span class="textpink">ビジネス</span>
-              <span class="textblack">の話が好き</span>
+              <Fragment set:html={obj.check5} />
             </Checklist>
             <Checklist>
-              <span class="textpink">グローバル</span>
-              <span class="textblack">な思考を持っている</span>
+              <Fragment set:html={obj.check6} />
             </Checklist>
             <Checklist>
-              <span class="textblack">男性には頼るけど、</span>
-              <span class="textpink">依存はしたくない</span>
+              <Fragment set:html={obj.check7} />
             </Checklist>
           </div>
         </ResponsiveGrid>
@@ -89,9 +80,9 @@ import ResponsiveGrid from "~/layouts/responsiveGrid.astro";
       <Image src={checkimage} alt="" class="trim h-[300px] object-cover" />
       <div class="go-on-reading absolute bottom-10 z-[60]">
         <p class="element-2">
-          <span class="span">この続きは</span>
+          <span class="text-wrapper-4">この続きは</span>
           <span class="text-wrapper-5">3</span>
-          <span class="span"
+          <span class="text-wrapper-4"
             >つ以上当てはまった人だけ<br />読んでください。</span
           >
         </p>
@@ -214,6 +205,16 @@ import ResponsiveGrid from "~/layouts/responsiveGrid.astro";
     margin-left: -19px;
     background-color: var(--variable-collection-salmon);
     transform: rotate(90deg);
+  }
+
+  .text-wrapper-4 {
+    color: #71717a;
+    letter-spacing: var(--mobile-body-letter-spacing);
+    font-family: var(--mobile-body-font-family);
+    font-style: var(--mobile-body-font-style);
+    font-weight: var(--mobile-body-font-weight);
+    line-height: var(--mobile-body-line-height);
+    font-size: var(--mobile-body-font-size);
   }
 
   .box .text-wrapper {
@@ -345,26 +346,6 @@ import ResponsiveGrid from "~/layouts/responsiveGrid.astro";
     letter-spacing: var(--mobile-body-letter-spacing);
     line-height: var(--mobile-body-line-height);
     font-style: var(--mobile-body-font-style);
-  }
-
-  .box .textblack {
-    color: #71717a;
-    letter-spacing: var(--mobile-body-letter-spacing);
-    font-family: var(--mobile-body-font-family);
-    font-style: var(--mobile-body-font-style);
-    font-weight: var(--mobile-body-font-weight);
-    line-height: var(--mobile-body-line-height);
-    font-size: var(--mobile-body-font-size);
-  }
-
-  .box .textpink {
-    color: #c697a5;
-    letter-spacing: var(--mobile-body-letter-spacing);
-    font-family: var(--mobile-body-font-family);
-    font-style: var(--mobile-body-font-style);
-    font-weight: var(--mobile-body-font-weight);
-    line-height: var(--mobile-body-line-height);
-    font-size: var(--mobile-body-font-size);
   }
 
   .box .img {
