@@ -12,7 +12,7 @@ import { type components } from '~/schema/schema';
 // Schemaの型定義からDirectusSDKが解釈できる型に変換
 type SchemaBase = components["schemas"];
 type Schema = {
-    [K in keyof SchemaBase as (K extends `Items${infer Rest}` ? Uncapitalize<Rest> : never)]: SchemaBase[K][]
+    [K in keyof SchemaBase as (K extends `Items${infer Rest}` ? Uncapitalize<Rest> : never)]: SchemaBase[K]
 };
 
 // DirectusSDKクライアントを作成する関数
@@ -24,7 +24,7 @@ const getClient = (async (email: string, password: string, endpoint: string) => 
 });
 
 // DirectusからSchema情報を取得し、ファイルを保存する
-async function saveSchema(email:string, password:string, endpoint: string) {
+async function saveSchema(email: string, password: string, endpoint: string) {
     const result = await (await getClient(email, password, endpoint)).request(readOpenApiSpec());
     fs.writeFileSync('src/schema/schema.json', JSON.stringify(result, null, 2));
 }
@@ -43,7 +43,7 @@ class Client {
         assert(this.password, 'env.DIRECTUS_PASSWORD is not set');
         assert(this.endpoint, 'env.DIRECTUS_ENDPOINT is not set');
     }
-    
+
     async create(): Promise<ClientType> {
         return await getClient(this.email!!, this.password!!, this.endpoint!!);
     }

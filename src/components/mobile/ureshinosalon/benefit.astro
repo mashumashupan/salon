@@ -12,6 +12,14 @@ import Circle from "./benefit/circle.astro";
 import BenefitContainer from "./benefit/benefit_container.astro";
 
 import Title from "~/components/common/title.astro";
+
+import { Client } from "~/util/client";
+import { readSingleton } from "@directus/sdk";
+
+// Directusクライアント取得
+const client = await new Client().create();
+// Directusからprocessのデータを配列で取得
+const obj = await client.request(readSingleton("benefit"));
 ---
 
 <div
@@ -33,39 +41,24 @@ import Title from "~/components/common/title.astro";
       <BenefitContainer
         bg={benefit1}
         number="01"
-        title="かわいく賢く生きるためのスキル"
-        description=`うれしのちゃんのビジネスや
-    恋愛テク・美容情報をシェア♪
-    ・ビジネスマインド
-    ・韓国美容/整形情報
-    ・ハイスペ恋愛/モテテク
-    ・SNS/ブランディング`
+        title={obj?.benefit1_title ?? ""}
+        description={obj?.benefit1_description ?? ""}
       />
     </div>
     <div class="pb-10">
       <BenefitContainer
         bg={benefit2}
         number="02"
-        title="一緒に成長できる仲間と環境"
-        description=`向上心のある女性たちが集まり
-      高め合っていける場所！
-      ・情報交換ができる
-      ・モチベがUPする
-      ・人生の視野が広がる
-      ・会って刺激をもらえる`
+        title={obj?.benefit2_title ?? ""}
+        description={obj?.benefit2_description ?? ""}
       />
     </div>
     <div class="pb-10">
       <BenefitContainer
         bg={benefit3}
         number="03"
-        title="ビジネスチャンスの拡大化"
-        description=`様々な分野で活躍する女性がいるから
-          選択肢や可能性が広がる！
-          ・ビジネスパートナー探し
-          ・クライアントの紹介
-          ・コラボで売上＆影響力UP
-          ・協力してSNSアカウント強化`
+        title={obj?.benefit3_title ?? ""}
+        description={obj?.benefit3_description ?? ""}
       />
     </div>
   </div>
