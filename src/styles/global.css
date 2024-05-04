@@ -193,6 +193,25 @@ img {
   font-size: var(--mobile-body-font-size);
 }
 
+.hina-mincho {
+  font-family: "Hina Mincho";
+  font-style: normal !important;
+  font-weight: 100 !important;
+  line-height: normal !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mystory {
+  top: 10px;
+  left: 31px;
+  /* font-family: "Hina Mincho-Regular", Helvetica; */
+  font-weight: 400;
+  color: var(--dark-grey);
+  font-size: 30px;
+  letter-spacing: 3.6px;
+  line-height: 30px;
+}
+
 .title-big_mystory {
   font-size: var(--h2-j-font-size);
 }

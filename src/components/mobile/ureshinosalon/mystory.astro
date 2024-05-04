@@ -13,6 +13,14 @@ import bg from "~/assets/mystory/flowers3.png";
 
 import Title from "~/components/common/title.astro";
 import ResponsiveGrid from "~/layouts/responsiveGrid.astro";
+
+import { Client } from "~/util/client";
+import { readSingleton } from "@directus/sdk";
+
+// Directusクライアント取得
+const client = await new Client().create();
+// Directusからprocessのデータを配列で取得
+const obj = await client.request(readSingleton("mystory"));
 ---
 
 <div
@@ -68,21 +76,7 @@ import ResponsiveGrid from "~/layouts/responsiveGrid.astro";
         >
           <div class="overlap-3">
             <div class="rectangle-2"></div>
-            <p class="p hina-mincho mb-4">
-              <span class="title-big_mystory">まるで別人</span>
-              <span class="title-small_mystory">ですよね？</span>
-            </p>
-            <div class="textblack_mystory zenkaku-gothic">
-              5年前は家に引きこもりがちで、ファッションや美容にも疎かった私。<br
-              /><br />しかし、SNSを始めたことで自分磨きを頑張るようになり、<br
-              />どんどん垢抜けていきました。<br /><br
-              />さらに環境と意識を変えたことで、<br
-              />出会う人やチャンスも大きく変わりました。<br
-              />理想の王子様を手に入れ、<br
-              />仕事のステージや収入も上がったのです。<br /><br
-              />現在はマレーシアに会社設立＆移住し、<br
-              />新たなビジネスに取り組んでいます。
-            </div>
+            <Fragment set:html={obj.description} />
           </div>
         </div>
       </Fragment>
