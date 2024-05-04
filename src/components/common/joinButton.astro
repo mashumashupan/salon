@@ -17,31 +17,28 @@ const obj = await client.request(readSingleton("global"));
   <div class="cv-copy text-[#C697A5]">
     <span>{obj?.microcopy ?? ""}</span>
   </div>
-  <!-- <a
-    href="https://buy.stripe.com/6oE7uS6lq4mP3oQdR2"
-    class="-mb-8 flex flex-col"
-  > -->
-  <Image src={button_bg} alt="Join" width="260" height={84} />
-  <span class="relative top-[-60px] self-center text-gray-50 text-lg">
-    <!-- {"　　今すぐ入会　　>"} -->
-    {obj?.button ?? ""}
-  </span>
-  <!-- </a> -->
+  <a href={obj?.link ?? ""} class="-mb-8 flex flex-col">
+    <Image src={button_bg} alt="Join" width="260" height={84} />
+    <span class="relative top-[-60px] self-center text-gray-50 text-lg">
+      <!-- {"　　今すぐ入会　　>"} -->
+      {obj?.button ?? ""}
+    </span>
+  </a>
   <div class="w-72">
     <p class="font-thin text-[#98989c] text-xs">
       <Fragment set:html={obj.attention} />
     </p>
   </div>
-</div>
 
-<style>
-  .cv-copy {
-    color: #c697a5;
-    letter-spacing: 2.08px;
-    font-family: var(--mobile-body-font-family);
-    font-style: "Ryo Gothic PlusN", Helvetica;
-    font-weight: 400;
-    line-height: 22px;
-    font-size: 16px;
-  }
-</style>
+  <style>
+    .cv-copy {
+      color: #c697a5;
+      letter-spacing: 2.08px;
+      font-family: var(--mobile-body-font-family);
+      font-style: "Ryo Gothic PlusN", Helvetica;
+      font-weight: 400;
+      line-height: 22px;
+      font-size: 16px;
+    }
+  </style>
+</div>
