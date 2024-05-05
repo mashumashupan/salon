@@ -12,4 +12,10 @@ services:
     environment:
       DIRECTUS_EMAIL: admin@example.com
       DIRECTUS_PASSWORD: d1r3ctu5
-      DIRECTUS_ENDPOINT: http://host.docker.internal:8055
+      DIRECTUS_ENDPOINT: http://directus:8055
+    networks:
+      - cms_default
+
+networks:
+  cms_default:
+    external: true

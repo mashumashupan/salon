@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "host.docker.internal:8055",
+      "url": "directus:8055",
       "description": "Your current Directus instance."
     }
   ],

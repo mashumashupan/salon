@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import DImage from '~/components/common/DImage.astro';
 import Bubble from './bubble.astro';
 import star from '~/assets/testimonial/testimonial_star.png';
 
@@ -40,7 +41,7 @@ const { title, name, icon, side, useStar } = Astro.props;
       </div>
     </Bubble>
   </div>
-  <Image
+  <DImage
     class=`icon z-10 row-start-2 self-center justify-self-center ${side}`
     src={icon}
     alt=""

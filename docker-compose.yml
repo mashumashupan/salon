@@ -15,3 +15,9 @@ services:
       DB_CLIENT: "sqlite3"
       DB_FILENAME: "/directus/database/data.db"
       WEBSOCKETS_ENABLED: "true"
+    networks:
+      - cms_default
+
+networks:
+  cms_default:
+    external: true

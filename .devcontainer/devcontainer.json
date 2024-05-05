@@ -6,6 +6,7 @@
 	"dockerComposeFile": "compose.yaml",
 	"service": "dev",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"initializeCommand": "docker network inspect cms_default || docker network create cms_default",
 	// Use this environment variable if you need to bind mount your local source code into a new container.
 	"remoteEnv": {
 		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"

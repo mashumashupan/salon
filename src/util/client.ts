@@ -3,8 +3,10 @@ import {
     type DirectusClient,
     type AuthenticationClient,
     type RestClient,
-    readOpenApiSpec
+    readOpenApiSpec,
+    readFile
 } from '@directus/sdk';
+import type { ImageMetadata } from 'astro';
 import { assert } from 'console';
 import fs from 'fs';
 import { type components } from '~/schema/schema';
@@ -21,15 +23,17 @@ type Schema = {
 
 // DirectusSDKクライアントを作成する関数
 type ClientType = DirectusClient<Schema> & AuthenticationClient<Schema> & RestClient<Schema>;
-const getClient = (async (email: string, password: string, endpoint: string) => {
+const getClient = async (email: string, password: string, endpoint: string) => {
     const c = createDirectus<Schema>(endpoint).with(authentication()).with(rest());
     await c.login(email, password);
     return c;
-});
+};
 
 // DirectusからSchema情報を取得し、ファイルを保存する
 async function saveSchema(email: string, password: string, endpoint: string) {
-    const result = await (await getClient(email, password, endpoint)).request(readOpenApiSpec());
+    let result;
+    const client = await getClient(email, password, endpoint);
+    result = await client.request(readOpenApiSpec());
     fs.writeFileSync('src/schema/schema.json', JSON.stringify(result, null, 2));
 }
 
@@ -53,4 +57,19 @@ class Client {
     }
 }
 
-export { saveSchema, Client };
+async function getImage(client: ClientType, file: string | null): Promise<ImageMetadata> {
+    if (file == null) return Promise.reject();
+
+    const endpoint = import.meta.env.DIRECTUS_ENDPOINT;
+    const fileObject = await client.request(readFile(file));
+    const filename = fileObject.filename_download.split('.')[0];
+    const url = `http://localhost:8055/assets/${fileObject.id}/${filename}.webp?format=webp`;
+    return {
+        src: url,
+        format: 'webp',
+        height: fileObject.height,
+        width: fileObject.width
+    } as ImageMetadata
+}
+
+export { saveSchema, Client, getImage };

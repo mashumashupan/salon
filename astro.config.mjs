@@ -10,7 +10,7 @@ import node from "@astrojs/node";
 export default defineConfig({
   site: "https://ureshinosalon.com",
   integrations: [tailwind(), icon(), react()],
-  output: "static",
+  output: "server",
   adapter: node({
     mode: "standalone"
   }),
