@@ -8,7 +8,7 @@ const { nogap, wide } = Astro.props;
 ---
 
 <div
-    class=`relative grid ${nogap == true ? '': 'gap-4'} sm:grid-cols-1 lg:grid-cols-6`
+    class=`relative grid ${nogap == true ? '': 'gap-4'} sm:grid-cols-1 lg:grid-cols-6 place-content-center`
 >
     <div
         class=`relative ${wide == true ? 'lg:col-span-3' : 'lg:col-span-2 lg:col-start-2'}`
