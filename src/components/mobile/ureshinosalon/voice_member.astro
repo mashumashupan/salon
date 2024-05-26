@@ -13,6 +13,7 @@ import Voice from "~/components/common/voice.astro";
 import ZigzagRow from "~/layouts/ZigzagRow.astro";
 import ResponsiveGrid from "~/layouts/responsiveGrid.astro";
 
+import { getImage } from "~/util/client";
 import { Client } from "~/util/client";
 import { readSingleton } from "@directus/sdk";
 
@@ -20,6 +21,10 @@ import { readSingleton } from "@directus/sdk";
 const client = await new Client().create();
 // Directusからprocessのデータを配列で取得
 const obj = await client.request(readSingleton("voiceMembers"));
+const roundicon = await getImage(client, obj?.roundicon as string);
+const roundicon2 = await getImage(client, obj?.roundicon2 as string);
+const roundicon3 = await getImage(client, obj?.roundicon3 as string);
+const roundicon4 = await getImage(client, obj?.roundicon4 as string);
 ---
 
 <div
@@ -39,7 +44,7 @@ const obj = await client.request(readSingleton("voiceMembers"));
   </p>
 
   <div class="text-wrapper-7 flex w-full flex-col items-center">
-    <p class="w-3/4 py-4">
+    <p class="w-3/4 py-4 text-center">
       うれしのサロンにはあなたと同じような価値観を持ったかわいくて賢い女性が国内外にたくさん♡
     </p>
   </div>
@@ -51,7 +56,7 @@ const obj = await client.request(readSingleton("voiceMembers"));
           side="left"
           name={obj?.name ?? ""}
           title={obj?.title ?? ""}
-          icon={voice_ayu}
+          icon={roundicon}
           useStar={false}
         >
           <Fragment set:html={obj.description} />
@@ -62,7 +67,7 @@ const obj = await client.request(readSingleton("voiceMembers"));
           side="right"
           name={obj?.name2 ?? ""}
           title={obj?.title2 ?? ""}
-          icon={voice_karen}
+          icon={roundicon2}
           useStar={false}
         >
           <Fragment set:html={obj.description2} />
@@ -75,7 +80,7 @@ const obj = await client.request(readSingleton("voiceMembers"));
           side="left"
           name={obj?.name3 ?? ""}
           title={obj?.title3 ?? ""}
-          icon={voice_yukko}
+          icon={roundicon3}
           useStar={false}
         >
           <Fragment set:html={obj.description3} />
@@ -86,7 +91,7 @@ const obj = await client.request(readSingleton("voiceMembers"));
           side="right"
           name={obj?.name4 ?? ""}
           title={obj?.title4 ?? ""}
-          icon={voice_chihiro}
+          icon={roundicon4}
           useStar={false}
         >
           <Fragment set:html={obj.description4} />

@@ -15,6 +15,7 @@ import Voice from "~/components/common/voice.astro";
 import ZigzagRow from "~/layouts/ZigzagRow.astro";
 import ResponsiveGrid from "~/layouts/responsiveGrid.astro";
 
+import { getImage } from "~/util/client";
 import { Client } from "~/util/client";
 import { readSingleton } from "@directus/sdk";
 
@@ -22,6 +23,8 @@ import { readSingleton } from "@directus/sdk";
 const client = await new Client().create();
 // Directusからprocessのデータを配列で取得
 const obj = await client.request(readSingleton("voiceSupport"));
+const roundicon = await getImage(client, obj?.roundicon as string);
+const roundicon2 = await getImage(client, obj?.roundicon2 as string);
 ---
 
 <div
@@ -79,7 +82,7 @@ const obj = await client.request(readSingleton("voiceSupport"));
           side="left"
           name={obj?.name ?? ""}
           title={obj?.title ?? ""}
-          icon={voice_reina}
+          icon={roundicon}
           useStar={false}
         >
           <Fragment set:html={obj.description} />
@@ -90,7 +93,7 @@ const obj = await client.request(readSingleton("voiceSupport"));
           side="right"
           name={obj?.name2 ?? ""}
           title={obj?.title2 ?? ""}
-          icon={voice_karen}
+          icon={roundicon2}
           useStar={false}
         >
           <Fragment set:html={obj.description2} />
