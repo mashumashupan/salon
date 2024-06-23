@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/devcontainers/base:bullseye
 
 # update packages
-RUN apt update -y && apt install -y gpg sudo wget curl
+RUN apt update -y && apt install -y gpg sudo wget curl sqlite3
 
 USER vscode
 

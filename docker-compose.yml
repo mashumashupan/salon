@@ -1,6 +1,6 @@
 services:
   directus:
-    image: directus/directus:10.10.7
+    image: directus/directus:10.12.1
     ports:
       - 8055:8055
     volumes:

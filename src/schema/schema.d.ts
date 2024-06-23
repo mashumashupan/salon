@@ -1213,6 +1213,84 @@ export interface paths {
      */
     patch: operations["updateSingleItemsGlobal"];
   };
+  "/items/contents": {
+    /**
+     * List Items
+     * @description List the contents items.
+     */
+    get: operations["readItemsContents"];
+    /**
+     * Create an Item
+     * @description Create a new contents item.
+     */
+    post: operations["createItemsContents"];
+    /**
+     * Delete Multiple Items
+     * @description Delete multiple existing contents items.
+     */
+    delete: operations["deleteItemsContents"];
+    /**
+     * Update Multiple Items
+     * @description Update multiple contents items at the same time.
+     */
+    patch: operations["updateItemsContents"];
+  };
+  "/items/contents/{id}": {
+    /**
+     * Retrieve an Item
+     * @description Retrieve a single contents item by unique identifier.
+     */
+    get: operations["readSingleItemsContents"];
+    /**
+     * Delete an Item
+     * @description Delete an existing contents item.
+     */
+    delete: operations["deleteSingleItemsContents"];
+    /**
+     * Update an Item
+     * @description Update an existing contents item.
+     */
+    patch: operations["updateSingleItemsContents"];
+  };
+  "/items/contents_files": {
+    /**
+     * List Items
+     * @description List the contents_files items.
+     */
+    get: operations["readItemsContentsFiles"];
+    /**
+     * Create an Item
+     * @description Create a new contents_files item.
+     */
+    post: operations["createItemsContentsFiles"];
+    /**
+     * Delete Multiple Items
+     * @description Delete multiple existing contents_files items.
+     */
+    delete: operations["deleteItemsContentsFiles"];
+    /**
+     * Update Multiple Items
+     * @description Update multiple contents_files items at the same time.
+     */
+    patch: operations["updateItemsContentsFiles"];
+  };
+  "/items/contents_files/{id}": {
+    /**
+     * Retrieve an Item
+     * @description Retrieve a single contents_files item by unique identifier.
+     */
+    get: operations["readSingleItemsContentsFiles"];
+    /**
+     * Delete an Item
+     * @description Delete an existing contents_files item.
+     */
+    delete: operations["deleteSingleItemsContentsFiles"];
+    /**
+     * Update an Item
+     * @description Update an existing contents_files item.
+     */
+    patch: operations["updateSingleItemsContentsFiles"];
+  };
 }
 
 export type webhooks = Record<string, never>;
@@ -2258,6 +2336,16 @@ export interface components {
       URLNote?: string | null;
       URLLine?: string | null;
       link?: string | null;
+    };
+    ItemsContents: {
+      id?: number;
+      schedule?: string | components["schemas"]["Files"] | null;
+      collections?: ((number | components["schemas"]["ItemsContentsFiles"])[]) | null;
+    };
+    ItemsContentsFiles: {
+      id?: number;
+      contents_id?: number | components["schemas"]["ItemsContents"] | null;
+      directus_files_id?: string | components["schemas"]["Files"] | null;
     };
   };
   responses: {
@@ -8636,6 +8724,372 @@ export interface operations {
         content: {
           "application/json": {
             data?: components["schemas"]["ItemsGlobal"];
+          };
+        };
+      };
+      401: components["responses"]["UnauthorizedError"];
+      404: components["responses"]["NotFoundError"];
+    };
+  };
+  /**
+   * List Items
+   * @description List the contents items.
+   */
+  readItemsContents: {
+    parameters: {
+      query?: {
+        fields?: components["parameters"]["Fields"];
+        limit?: components["parameters"]["Limit"];
+        meta?: components["parameters"]["Meta"];
+        offset?: components["parameters"]["Offset"];
+        sort?: components["parameters"]["Sort"];
+        filter?: components["parameters"]["Filter"];
+        search?: components["parameters"]["Search"];
+      };
+    };
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          "application/json": {
+            data?: components["schemas"]["ItemsContents"][];
+            meta?: components["schemas"]["x-metadata"];
+          };
+        };
+      };
+      401: components["responses"]["UnauthorizedError"];
+    };
+  };
+  /**
+   * Create an Item
+   * @description Create a new contents item.
+   */
+  createItemsContents: {
+    parameters: {
+      query?: {
+        meta?: components["parameters"]["Meta"];
+      };
+    };
+    requestBody?: {
+      content: {
+        "application/json": components["schemas"]["ItemsContents"][] | components["schemas"]["ItemsContents"];
+      };
+    };
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          "application/json": {
+            data?: unknown;
+          };
+        };
+      };
+      401: components["responses"]["UnauthorizedError"];
+    };
+  };
+  /**
+   * Delete Multiple Items
+   * @description Delete multiple existing contents items.
+   */
+  deleteItemsContents: {
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never;
+      };
+      401: components["responses"]["UnauthorizedError"];
+    };
+  };
+  /**
+   * Update Multiple Items
+   * @description Update multiple contents items at the same time.
+   */
+  updateItemsContents: {
+    parameters: {
+      query?: {
+        fields?: components["parameters"]["Fields"];
+        limit?: components["parameters"]["Limit"];
+        meta?: components["parameters"]["Meta"];
+        offset?: components["parameters"]["Offset"];
+        sort?: components["parameters"]["Sort"];
+        filter?: components["parameters"]["Filter"];
+        search?: components["parameters"]["Search"];
+      };
+    };
+    requestBody?: {
+      content: {
+        "application/json": components["schemas"]["ItemsContents"][] | components["schemas"]["ItemsContents"];
+      };
+    };
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          "application/json": {
+            data?: unknown;
+          };
+        };
+      };
+    };
+  };
+  /**
+   * Retrieve an Item
+   * @description Retrieve a single contents item by unique identifier.
+   */
+  readSingleItemsContents: {
+    parameters: {
+      query?: {
+        fields?: components["parameters"]["Fields"];
+        meta?: components["parameters"]["Meta"];
+        version?: components["parameters"]["Version"];
+      };
+      path: {
+        /** @description Index of the item. */
+        id: number | string;
+      };
+    };
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          "application/json": {
+            data?: components["schemas"]["ItemsContents"];
+          };
+        };
+      };
+      401: components["responses"]["UnauthorizedError"];
+      404: components["responses"]["NotFoundError"];
+    };
+  };
+  /**
+   * Delete an Item
+   * @description Delete an existing contents item.
+   */
+  deleteSingleItemsContents: {
+    parameters: {
+      path: {
+        /** @description Index of the item. */
+        id: number | string;
+      };
+    };
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never;
+      };
+      401: components["responses"]["UnauthorizedError"];
+      404: components["responses"]["NotFoundError"];
+    };
+  };
+  /**
+   * Update an Item
+   * @description Update an existing contents item.
+   */
+  updateSingleItemsContents: {
+    parameters: {
+      query?: {
+        fields?: components["parameters"]["Fields"];
+        meta?: components["parameters"]["Meta"];
+      };
+      path: {
+        /** @description Index of the item. */
+        id: number | string;
+      };
+    };
+    requestBody?: {
+      content: {
+        "application/json": components["schemas"]["ItemsContents"];
+      };
+    };
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          "application/json": {
+            data?: components["schemas"]["ItemsContents"];
+          };
+        };
+      };
+      401: components["responses"]["UnauthorizedError"];
+      404: components["responses"]["NotFoundError"];
+    };
+  };
+  /**
+   * List Items
+   * @description List the contents_files items.
+   */
+  readItemsContentsFiles: {
+    parameters: {
+      query?: {
+        fields?: components["parameters"]["Fields"];
+        limit?: components["parameters"]["Limit"];
+        meta?: components["parameters"]["Meta"];
+        offset?: components["parameters"]["Offset"];
+        sort?: components["parameters"]["Sort"];
+        filter?: components["parameters"]["Filter"];
+        search?: components["parameters"]["Search"];
+      };
+    };
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          "application/json": {
+            data?: components["schemas"]["ItemsContentsFiles"][];
+            meta?: components["schemas"]["x-metadata"];
+          };
+        };
+      };
+      401: components["responses"]["UnauthorizedError"];
+    };
+  };
+  /**
+   * Create an Item
+   * @description Create a new contents_files item.
+   */
+  createItemsContentsFiles: {
+    parameters: {
+      query?: {
+        meta?: components["parameters"]["Meta"];
+      };
+    };
+    requestBody?: {
+      content: {
+        "application/json": components["schemas"]["ItemsContentsFiles"][] | components["schemas"]["ItemsContentsFiles"];
+      };
+    };
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          "application/json": {
+            data?: unknown;
+          };
+        };
+      };
+      401: components["responses"]["UnauthorizedError"];
+    };
+  };
+  /**
+   * Delete Multiple Items
+   * @description Delete multiple existing contents_files items.
+   */
+  deleteItemsContentsFiles: {
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never;
+      };
+      401: components["responses"]["UnauthorizedError"];
+    };
+  };
+  /**
+   * Update Multiple Items
+   * @description Update multiple contents_files items at the same time.
+   */
+  updateItemsContentsFiles: {
+    parameters: {
+      query?: {
+        fields?: components["parameters"]["Fields"];
+        limit?: components["parameters"]["Limit"];
+        meta?: components["parameters"]["Meta"];
+        offset?: components["parameters"]["Offset"];
+        sort?: components["parameters"]["Sort"];
+        filter?: components["parameters"]["Filter"];
+        search?: components["parameters"]["Search"];
+      };
+    };
+    requestBody?: {
+      content: {
+        "application/json": components["schemas"]["ItemsContentsFiles"][] | components["schemas"]["ItemsContentsFiles"];
+      };
+    };
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          "application/json": {
+            data?: unknown;
+          };
+        };
+      };
+    };
+  };
+  /**
+   * Retrieve an Item
+   * @description Retrieve a single contents_files item by unique identifier.
+   */
+  readSingleItemsContentsFiles: {
+    parameters: {
+      query?: {
+        fields?: components["parameters"]["Fields"];
+        meta?: components["parameters"]["Meta"];
+        version?: components["parameters"]["Version"];
+      };
+      path: {
+        /** @description Index of the item. */
+        id: number | string;
+      };
+    };
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          "application/json": {
+            data?: components["schemas"]["ItemsContentsFiles"];
+          };
+        };
+      };
+      401: components["responses"]["UnauthorizedError"];
+      404: components["responses"]["NotFoundError"];
+    };
+  };
+  /**
+   * Delete an Item
+   * @description Delete an existing contents_files item.
+   */
+  deleteSingleItemsContentsFiles: {
+    parameters: {
+      path: {
+        /** @description Index of the item. */
+        id: number | string;
+      };
+    };
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: never;
+      };
+      401: components["responses"]["UnauthorizedError"];
+      404: components["responses"]["NotFoundError"];
+    };
+  };
+  /**
+   * Update an Item
+   * @description Update an existing contents_files item.
+   */
+  updateSingleItemsContentsFiles: {
+    parameters: {
+      query?: {
+        fields?: components["parameters"]["Fields"];
+        meta?: components["parameters"]["Meta"];
+      };
+      path: {
+        /** @description Index of the item. */
+        id: number | string;
+      };
+    };
+    requestBody?: {
+      content: {
+        "application/json": components["schemas"]["ItemsContentsFiles"];
+      };
+    };
+    responses: {
+      /** @description Successful request */
+      200: {
+        content: {
+          "application/json": {
+            data?: components["schemas"]["ItemsContentsFiles"];
           };
         };
       };

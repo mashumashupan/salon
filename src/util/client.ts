@@ -4,7 +4,8 @@ import {
     type AuthenticationClient,
     type RestClient,
     readOpenApiSpec,
-    readFile
+    readFile,
+    readItems
 } from '@directus/sdk';
 import type { ImageMetadata } from 'astro';
 import { assert } from 'console';
@@ -12,7 +13,7 @@ import fs from 'fs';
 import { type components } from '~/schema/schema';
 
 // 配列の場合はプロパティを指定
-const arrayProperties = ['process'] as const;
+const arrayProperties = ['process', 'contents_files'] as const;
 type ArrayProperties = typeof arrayProperties[number];
 // Schemaの型定義からDirectusSDKが解釈できる型に変換
 type SchemaBase = components["schemas"];
@@ -71,5 +72,19 @@ async function getImage(client: ClientType, file: string | null): Promise<ImageM
         width: fileObject.width
     } as ImageMetadata
 }
+
+// async function getContents(client: ClientType, fileIds: number[]): Promise<ImageMetadata[]> {
+//     const endpoint = import.meta.env.DIRECTUS_ENDPOINT;
+//     const contents = await client.request(readItems("contentsFiles"));
+//     const fileObject = await client.request(readFile(file));
+//     const filename = fileObject.filename_download.split('.')[0];
+//     const url = `http://localhost:8055/assets/${fileObject.id}/${filename}.webp?format=webp`;
+//     return {
+//         src: url,
+//         format: 'webp',
+//         height: fileObject.height,
+//         width: fileObject.width
+//     } as ImageMetadata
+// }
 
 export { saveSchema, Client, getImage };
